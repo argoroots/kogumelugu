@@ -85,14 +85,17 @@ hr {
 .content {
     background: #3a3a3c;
     padding: 0 55px;
+    position: relative;
 }
 .content p {
     color: #fff;
 }
 .content .subnav {
     margin: -20px 0 20px;
-    padding: 35px 0 20px 35px;
+}
+#videoPage .subnav {
     background: #3f3f3f;
+    padding: 35px 0 20px 35px;
 }
 .subnav .subtitle {
     font-family: 'DINCondensedBold', sans-serif;
@@ -195,6 +198,157 @@ hr {
     background: #fff;
     color: #40bebc;
     transition: .2s;
+}
+#videoGallery .subnav {
+    padding: 0 35px;
+    margin-bottom: 320px;
+}
+#videoGallery .subnav .filters {
+    background: #40bebc;
+}
+#videoGallery .subnav .filters h1 {
+    font-family: 'DINCondensedBold';
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+    margin: 40px 0 0;
+}
+#videoGallery .subnav .filters .sort {
+    display: table;
+    width: 100%;
+    padding: 10px 0;
+}
+#videoGallery .subnav .filters .sort .images,
+#videoGallery .subnav .filters .sort .text {
+    display: table-row;
+}
+#videoGallery .subnav .filters .instruction,
+#videoGallery .subnav .filters .sortby {
+    display: table-cell;
+}
+#videoGallery .subnav .filters .instruction {
+    font-family: 'DINCondensedBold';
+    text-transform: uppercase;
+    color: #111;
+    font-size: 18px;
+}
+#videoGallery .subnav .filters .text .sortby {
+    border-right: 1px solid #111;
+    color: #111;
+    text-align: center;
+    font-size: 12px;
+}
+#videoGallery .subnav .filters .text .sortby:last-child {
+    border-right: none;
+}
+#videoGallery .subnav .filters .images img {
+    margin: 0 auto;
+    height: 40px
+}
+#videoGallery .subnav .filters img.teek {
+    padding: 10px 30px 10px 0;
+    margin: 0 auto;
+}
+#videoGallery .subnav .search {
+    width: 100%;
+    height: 93px;
+    background: #fff;
+}
+#videoGallery .subnav .search input {
+    height: 100%;
+    width: 100%;
+    padding: 60px 40px 30px;
+    background-image: url(../img/otsing.svg);
+    font-family: 'DINCondensedMedium';
+    font-size: 32px;
+    border: 0;
+    background-position: 100px center;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 2s;
+    transition: all 0.2s;
+}
+#videoGallery .subnav .search input:focus {
+    background-position: -200px center;
+}
+#videoGallery .slider {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}
+#videoGallery .content {
+    background: #fff;
+}
+#videoGallery .gallery {
+    margin: -60px 95px 0;
+    border: 2px solid #fff;
+}
+#videoGallery .video .btn-primary-outline {
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-family: 'DINCondensedMedium';
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: none;
+    transition: .2s;
+    padding: 8px 32px;
+    margin-top: 20px;
+}
+#videoGallery .video .btn-primary-outline:hover,
+#videoGallery .video .btn-primary-outline:focus {
+    background: #fff;
+    color: #40bebc;
+    transition: .2s;
+}
+#videoGallery .video {
+    position: relative;
+    display: table;
+    text-align: center;
+    text-shadow: 1px 1px 5px #111, -1px -1px 5px #111;
+    border: 1px solid #fff;
+}
+#videoGallery .col-md-4.video {
+    height: 200px;
+}
+#videoGallery .col-md-3.video {
+    height: 160px;
+}
+#videoGallery .col-md-6.video {
+    height: 320px;
+}
+#videoGallery .video .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+#videoGallery .video h4 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+#videoGallery .video p {
+    color: #40bebc;
+    font-weight: 500;
+}
+#videoGallery .loadmore {
+    text-align: center;
+    margin: 100px 0;
+}
+#videoGallery .loadmore .btn-primary-outline {
+    border: 2px solid #40bebc;
+    text-transform: uppercase;
+    font-family: 'DINCondensedBold';
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: #111;
+    text-shadow: none;
+    transition: .2s;
+    padding: 16px 48px 8px;
+}
+#videoGallery .loadmore .btn-primary-outline:hover,
+#videoGallery .loadmore .btn-primary-outline:focus {
+    background: #40bebc;
 }
 @media (max-width: 767px) {
     .navbar-default .navbar-collapse,
