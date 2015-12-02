@@ -243,7 +243,7 @@ hr {
 }
 #videoGallery .subnav .filters .images img {
     margin: 0 auto;
-    height: 40px
+    height: 40px;
 }
 #videoGallery .subnav .filters img.teek {
     padding: 10px 30px 10px 0;
@@ -350,6 +350,38 @@ hr {
 #videoGallery .loadmore .btn-primary-outline:focus {
     background: #40bebc;
 }
+#videoGallery a.topics {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+#videoGallery a.topics img {
+    height: 48px;
+}
+#videoGallery .tooltip.top {
+    font-family: 'DINCondensedBold';
+    white-space: nowrap;
+    left: 50%!important;
+    padding: 10px 0;
+}
+.tooltip.in {
+    opacity: 1;
+}
+#videoGallery .tooltip-inner {
+    background: #40bebc;
+    border-radius: 0;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 8px 12px 4px;
+}
+#videoGallery .tooltip.top .tooltip-arrow {
+    border-width: 8px 8px 0 0;
+    bottom: 2px;
+    left: 0!important;
+    margin-left: 0;
+    border-top-color: #40bebc;
+}
 @media (max-width: 767px) {
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
@@ -374,6 +406,32 @@ hr {
     }
     .content {
         padding: 0 20px;
+    }
+    #videoGallery .subnav .filters img.teek {
+        padding: 0;
+        display: none;
+    }
+    #videoGallery .gallery {
+        margin: -60px 20px 0;
+    }
+    #videoGallery .video h4 {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    #videoGallery .video p {
+        color: #40bebc;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    #videoGallery .video .btn-primary-outline {
+        font-size: 12px;
+        padding: 4px 24px 1px;
+        margin-top: 10px;
+    }
+    #videoGallery .subnav {
+        padding: 0 10px;
+        margin-bottom: 180px;
     }
 }
 @media (min-width:768px) and (max-width:1064px) {
