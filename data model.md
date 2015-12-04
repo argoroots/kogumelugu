@@ -13,7 +13,7 @@
 - titleShort (INTERVJUU PEALKIRI (lühike))
 - titleLong (INTERVJUU PEALKIRI (pikk))
 - recordingLocation (KOGUMISE / SALEVESTUSE TOIMUMISKOHT)
-- timecodedText (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA)
+- timecodedSubjects (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
 
 ## Chapter
 - story -> ***Story***
@@ -26,6 +26,7 @@
 - region(s) (MAINITUD PIIRKONNAD) -> ***Region***
 - author (VIDEOLOO AUTOR) -> ***Author***
 - tag (YOUTUBE SILDID)
+- timecodedText (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA)
 
 ## Storyteller
 - email (LOORÄÄKIJA KONTAKT)
@@ -84,8 +85,8 @@
 - VIDEOLOO AUTOR == ***Chapter.author***
 - VIDEOLOO PEALKIRI == ***Chapter.title***
 - VIDEOLOO LINK YOUTUBE-is == ***Chapter.videoUrl (VIDEOLOO LINK YOUTUBE-is)***
-- INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA
-- ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA == ***Interview.timecodedText***
+- INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA == ***Interview.timecodedSubjects***
+- ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA == ***Chapter.timecodedText***
 - KANAL
 - YOUTUBE SILDID == ***Chapter.tag***
 - LISAINFO == ***Story.legend***
