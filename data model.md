@@ -1,50 +1,86 @@
-## Story
-- language <- ***Chapter.language***
-- tellingDate(s) <- ***Chapter.tellingDate***
-- project (PROJEKT) -> ***Project***
-- category (KATEGOORIA) -> ***Category***
-- tag(s) <- ***Chapter.tag***
-- legend (LISAINFO)
+# Hierarchy
+
+- Project (keegi väljast ei näe, rahastus, lepingud)
+    - Interview
+    - Story / videolugu
+        - ~~Chapter~~
+
+# Definitions
+
+## Project
+- name
+- code (võibla me ei kasutagi koode)
+- projekti lepingu alguse aasta
+- kirjeldus
+
+
 
 ## Interview
-- date (AASTA, SALVESTUSKUUPÄEV(AD))
+- photo
+Täispikk videointervjuu, milles vestja räägib oma loo.
+- date(s) (AASTA, SALVESTUSKUUPÄEV(AD))
+- category (KATEGOORIA) -> ***Category***
 - language (KEEL)
 - storyteller(s) (LOORÄÄKIJAD) -> ***Storyteller***
-- titleShort (INTERVJUU PEALKIRI (lühike))
-- titleLong (INTERVJUU PEALKIRI (pikk))
+- title / **multilingual** - paneme kokku
+    - titleShort:public (INTERVJUU PEALKIRI (lühike))
+    - titleLong:private (INTERVJUU PEALKIRI (pikk))
 - recordingLocation (KOGUMISE / SALEVESTUSE TOIMUMISKOHT)
-- timecodedSubjects (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
-
-## Chapter
-- story -> ***Story***
-- photo
-- videoUrl (VIDEOLOO LINK YOUTUBE-is)
-- videoLength
-- storyteller(s) (LOORÄÄKIJAD) -> ***Storyteller***
-- description (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL)
-- mentions (MAINITUD ISIKUD)
+- description - est (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description - eng (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- timecodedSubjects / **multilingual** (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
+- timecodedCurriculum (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA)
+- mention(s) (MAINITUD ISIKUD) -> ***Person***
 - region(s) (MAINITUD PIIRKONNAD) -> ***Region***
-- author (VIDEOLOO AUTOR) -> ***Author***
-- tag (YOUTUBE SILDID)
-- timecodedText (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA)
+- tag (YOUTUBE SILDID) -> ***Tag***
+- lookup property: story -> ***self.Story***
+- lookup property: project -> ***self.Project***
+- videoUrl
+- storyteller(s) (LOORÄÄKIJAD) -> ***Storyteller***
+- author (VIDEOLOO AUTOR) -> ***Person***
 
-## Storyteller
+
+Supakate keel valida siit:  [vimeo supakad](https://vimeo.com/help/faq/managing-your-videos/captions-and-subtitles#what-caption-and-subtitle-file-formats-does-vimeo-support)  
+ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
+## Story
+- photo
+- category (KATEGOORIA) -> ***Category***
+- language(s) - keeled, mida kasutatakse jutus
+- subtitles - est
+- subtitles - eng
+- subtitles - rus
+- lookup property: project (PROJEKT) -> ***self.Project***
+- interview(s) -> ***Interview***
+- tag(s) -> ***Tag***
+- description - est (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description - eng (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- videoUrl (VIDEOLOO LINK YOUTUBE-is)
+- storyteller(s) (LOORÄÄKIJAD) -> ***Person***
+- author -> ***Person***
+
+
+## Tag
+- name
+
+
+## Category
+- code (võibla me ei kasutagi koode)
+- name
+- description
+
+
+## Storyteller on hoopis Person
 - email (LOORÄÄKIJA KONTAKT)
 - phone (LOORÄÄKIJA KONTAKT)
 - birthYear (LOO RÄÄKIJA SÜNNIAEG)
 - name (LOORÄÄKIJAD)
-- tuntud inimene? (TUNTUD INIMENE?)
-- background (SOTSIAALNE TAUST)
+- description (SOTSIAALNE TAUST)
 
-## Author
+## Author on hoopis Person
 - email
 - phone
-- name
-
-## Project
-- name
-
-## Category
 - name
 
 ## Region
@@ -59,7 +95,7 @@
 - PROJEKT == ***Story.project***
 - KATEGOORIA == ***Story.category***
 - LOORÄÄKIJAD == ***Chapter.storyteller***, ***Interview.storyteller***
-- TUNTUD INIMENE? == ***Storyteller.tuntud inimene***
+- TUNTUD INIMENE? == kaob ära
 - LOO RÄÄKIJA SÜNNIAEG == ***Storyteller.birthYear***
 - LOORÄÄKIJA KONTAKT == ***Storyteller.email/.phone***
 - INTERVJUU PEALKIRI (pikk) == ***Interview.titleShort***
@@ -90,3 +126,13 @@
 - KANAL
 - YOUTUBE SILDID == ***Chapter.tag***
 - LISAINFO == ***Story.legend***
+
+
+
+
+---
+
+## Toetajad
+- name
+- logo
+- link
