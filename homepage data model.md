@@ -3,7 +3,6 @@
 - Project (keegi väljast ei näe, rahastus, lepingud)
     - Interview
     - Story / videolugu
-        - ~~Chapter~~
 
 # Definitions
 
