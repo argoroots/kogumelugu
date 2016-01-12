@@ -16,8 +16,8 @@
 
 
 ## Interview
-- photo
 Täispikk videointervjuu, milles vestja räägib oma loo.
+- photo
 - date(s) (AASTA, SALVESTUSKUUPÄEV(AD))
 - category (KATEGOORIA) -> ***Category***
 - language (KEEL)
