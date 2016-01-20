@@ -20,7 +20,7 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 - date(s) (AASTA, SALVESTUSKUUPÄEV(AD))
 - category (KATEGOORIA) -> ***Category***
 - language (KEEL)
-- storyteller(s) (LOORÄÄKIJAD) -> ***Storyteller***
+- storyteller(s) (LOORÄÄKIJAD) -> ***Person***
 - title / **multilingual** - paneme kokku
     - titleShort:public (INTERVJUU PEALKIRI (lühike))
     - titleLong:private (INTERVJUU PEALKIRI (pikk))
