@@ -67,6 +67,7 @@ ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 ## Category
 - code (võibla me ei kasutagi koode)
 - name
+- color
 - description
 
 
