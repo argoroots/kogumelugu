@@ -97,8 +97,8 @@ ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - TUNTUD INIMENE? == kaob ära
 - LOO RÄÄKIJA SÜNNIAEG == ***Storyteller.birthYear***
 - LOORÄÄKIJA KONTAKT == ***Storyteller.email/.phone***
-- INTERVJUU PEALKIRI (pikk) == ***Interview.titleShort***
-- INTERVJUU PEALKIRI (lühike) == ***Interview.titleLong***
+- INTERVJUU PEALKIRI (pikk) == ***Interview.title***
+- INTERVJUU PEALKIRI (lühike) == ***Interview.title***
 - LÜHIKIRJELDUS == ***Chapter.description***
 - LÜHIKIRJELDUSE KEEL == ***Chapter.description***
 - KOGUMISE / SALEVESTUSE TOIMUMISKOHT == ***Interview.recordingLocation***
