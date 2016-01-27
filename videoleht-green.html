@@ -9,7 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+    <link href="css/green-style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,20 +38,21 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="videovaade.html">Videoteek</a></li>
-                        <li><a href="index.html#tutvustus">Tutvustus</a></li>
-                        <li><a href="index.htmlsinulugu">Ootame sinu lugu</a></li>
-                        <li><a href="index.html#teemad">Kaetud teemad</a></li>
-                        <li><a href="index.html#kaart">Kaart</a></li>
-                        <li><a href="index.html#toetajad">Toetajad ja tegijad</a></li>
-                        <li><a href="index.html#toeta">Toeta meie lugu</a></li>
-                        <li><a href="index.html">Avaleht</a></li>
+                        <li><a href="#videoGallery">Videoteek</a></li>
+                        <li><a href="index-green.html#tutvustus">Tutvustus</a></li>
+                        <li><a href="index-green.htmlsinulugu">Ootame sinu lugu</a></li>
+                        <li><a href="index-green.html#teemad">Kaetud teemad</a></li>
+                        <li><a href="index-green.html#kaart">Kaart</a></li>
+                        <li><a href="index-green.html#toetajad">Toetajad ja tegijad</a></li>
+                        <li><a href="index-green.html#toeta">Toeta meie lugu</a></li>
+                        <li><a href="index-green.html">Avaleht</a></li>
 
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" class="btn btn-inverse">Logi sisse</a></li>
                         <li><a href="#" class="btn btn-inverse">ENG</a></li>
+                        <li><a href="#" class="btn btn-inverse">RUS</a></li>
 
                     </ul>
                 </div>
@@ -61,97 +63,43 @@
 
         <div class="container-fluid content">
 
-            <div class="subnav">
-                <div class="row">
-                    <div class="col-md-5 col-sm-12">
-                        <p class="subtitle">Kes, kus, millal</p>
+
+
+
+
+
+            <div class="row" id="videoArea">
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <div class="videoWrapper">
+                        <iframe src="https://www.youtube.com/embed/1SPLV9sdvcQ?&rel=0&amp;controls=0&amp;showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>
+                        <div class="playButtonArea">
+                            <div class="btn btn-primary-outline" id="play-button">Vaata lugu</div>
+                        </div>
+                    </div>
+
+                    <div class="videoDescription">
                         <h1 class="title">Ilmar Raag - Kogu me lugu</h1>
-                    </div>
-                    <div class="col-md-7 col-sm-12">
-                        <ul class="navbar-nav nav">
-                            <li><a href="#">Ülevaade</a></li>
-                            <li><a href="#">Video</a></li>
-                            <li><a href="#">Kommentaar</a></li>
-                            <li><a href="#">Seotud videod</a></li>
-                            <li><a href="#">Lingid</a></li>
-                        </ul>
-                        <hr>
+                        <p class="subtitle">projekti taustlugu, est</p>
                     </div>
 
                 </div>
-
-            </div>
-            <!-- /.subnav -->
-
-
-            <div class="row">
-                <div class="col-md-2 col-sm-2 col-xs-12"><img src="img/Kogumelugu-white.svg" class="img-responsive"></div>
-                <div class="col-md-7 col-md-offset-1 col-sm-8 col-sm-offset-0 col-xs-12 col-xs-offset-0">
-                    <p class="description">Kogu Me Lugu kogub Nõukogude ja/või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende võimude tulemusena Eestisse sattunud inimeste mälestusi. Kogu me Lugu ühendab ka erinevaid organisatsioone Eestis ja välismaal, mis koguvad ja uurivad Eesti mälestusi ja ajalugu.</p>
-                </div>
-
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">Teema</p>
-                    <p>Antropoloogia</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">Piirkond</p>
-                    <p>Häädemeeste</p>
-                    <p>Põlvamaa</p>
-                    <p>Eesti</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">Põlvkond</p>
-                    <p>sünd. 1920 - 1950</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">Jaga</p>
-                    <p><a href="#">Facebookis</a></p>
-                    <p><a href="#">Twitteris</a></p>
-                    <p><a href="#">e-postiga</a></p>
-                </div>
-            </div>
-            <hr>
-            <div class="videoWrapper">
-                <iframe src="https://www.youtube.com/embed/KJyHTQAkfjY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <hr>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12 titlecolumn">
-                    <h3 class="title">Kommentaar</h3>
-                </div>
-                <div class="col-md-8 col-sm-9 col-xs-12">
-                    <p class="description">Kogu Me Lugu kogub Nõukogude ja/või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende võimude tulemusena Eestisse sattunud inimeste mälestusi. Kogu me Lugu ühendab ka erinevaid organisatsioone Eestis ja välismaal, mis koguvad ja uurivad Eesti mälestusi ja ajalugu.</p>
-                </div>
-
-            </div>
-            <hr>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12 titlecolumn">
-                    <h3 class="title">Seotud videod</h3>
-                </div>
-                <div class="col-md-8 col-sm-9 col-xs-12">
+                <div class="col-md-3 col-sm-4">
                     <div class="row related">
-                        <div class="col-md-4 col-sm-6 col-xs-12 video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
+                        <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
                             <h4><span>Rutt Kresling 17:02</span></h4>
                             <p>täispikk intervjuu, est/eng</p>
                             <a href="#">
                                 <div class="btn btn-primary-outline">Vaata lugu</div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
+                        <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
                             <h4><span>Laulupidu 1:03</span></h4>
                             <p>videokaadrid</p>
                             <a href="#">
                                 <div class="btn btn-primary-outline">Vaata lugu</div>
                             </a>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 video hidden-sm" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                        <div class="col-md-12 col-sm-12 col-xs-12 video hidden-sm" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
                             <h4><span>Eva Brown 12:29</span></h4>
                             <p>täispikk intervjuu, est/rus</p>
                             <a href="#">
@@ -160,32 +108,78 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="timetable">
+                        <p><a onclick="changeTime(0);">0:00</a> - <a onclick="changeTime(100);">1:40</a> Tutvustus</p>
+                        <p><a onclick="changeTime(100);">1:40</a> - <a onclick="changeTime(340);">5:40</a> Jutustus</p>
+                        <p><a onclick="changeTime(340);">5:40</a> - <a onclick="changeTime(593);">9:53</a> Lõpp</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <ul class="socialshare">
+                        <li><a href=""><span class="socicon-facebook"></span></a></li>
+                        <li><a href=""><span class="socicon-twitter"></span></a></li>
+                        <li><a href=""><span class="socicon-googleplus"></span></a></li>
+                        <li><a href=""><span class="socicon-mail"></span></a></li>
+                    </ul>
+                </div>
             </div>
             <hr>
 
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12 titlecolumn">
-                    <h3 class="title">Lingid</h3>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">Dokumendid</p>
-                    <p><a href="#">Küüditamine.doc</a></p>
-                    <p><a href="#">Okupatsioon.pdf</a></p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">Videod</p>
-                    <p><a href="#">Küüditamine</a></p>
-                    <p><a href="#">Okupatsioon</a></p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
-                    <p class="title">www</p>
-                    <p><a href="#">küüditamine.org</a></p>
-                    <p><a href="#">okupatsioon.com</a></p>
-                </div>
-
+            <div class="contentSection">
+                <h3 class="title">Kommentaar</h3>
+                <p class="description">Kogu Me Lugu kogub Nõukogude ja/või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende võimude tulemusena Eestisse sattunud inimeste mälestusi. Kogu me Lugu ühendab ka erinevaid organisatsioone Eestis ja välismaal, mis koguvad ja uurivad Eesti mälestusi ja ajalugu.</p>
             </div>
 
+            <hr>
+
+            <div class="contentSection">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
+                        <p class="title">Teema</p>
+                        <p>Antropoloogia</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
+                        <p class="title">Piirkond</p>
+                        <p>Häädemeeste</p>
+                        <p>Põlvamaa</p>
+                        <p>Eesti</p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
+                        <p class="title">Põlvkond</p>
+                        <p>sünd. 1920 - 1950</p>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+
+            <div class="contentSection">
+                <h3 class="title">Lingid</h3>
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
+                        <p class="title">Dokumendid</p>
+                        <p><a href="#">Küüditamine.doc</a></p>
+                        <p><a href="#">Okupatsioon.pdf</a></p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
+                        <p class="title">Videod</p>
+                        <p><a href="#">Küüditamine</a></p>
+                        <p><a href="#">Okupatsioon</a></p>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 infocolumn">
+                        <p class="title">www</p>
+                        <p><a href="#">küüditamine.org</a></p>
+                        <p><a href="#">okupatsioon.com</a></p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
     <!-- #videoPage -->
@@ -207,19 +201,20 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Avaleht</a></li>
-                        <li><a href="index.html#tutvustus">Tutvustus</a></li>
-                        <li><a href="index.htmlsinulugu">Ootame sinu lugu</a></li>
-                        <li><a href="index.html#teemad">Kaetud teemad</a></li>
-                        <li><a href="index.html#kaart">Kaart</a></li>
-                        <li><a href="index.html#toetajad">Toetajad ja tegijad</a></li>
-                        <li><a href="index.html#toeta">Toeta meie lugu</a></li>
+                        <li><a href="index-green.html">Avaleht</a></li>
+                        <li><a href="index-green.html#tutvustus">Tutvustus</a></li>
+                        <li><a href="index-green.htmlsinulugu">Ootame sinu lugu</a></li>
+                        <li><a href="index-green.html#teemad">Kaetud teemad</a></li>
+                        <li><a href="index-green.html#kaart">Kaart</a></li>
+                        <li><a href="index-green.html#toetajad">Toetajad ja tegijad</a></li>
+                        <li><a href="index-green.html#toeta">Toeta meie lugu</a></li>
 
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" class="btn btn-inverse">Logi sisse</a></li>
                         <li><a href="#" class="btn btn-inverse">ENG</a></li>
+                        <li><a href="#" class="btn btn-inverse">RUS</a></li>
 
                     </ul>
                 </div>
@@ -231,27 +226,25 @@
 
 
         <div class="container-fluid content">
-            <div class="slider" style="background:url('img/kogumelugu-banner-2015.png') center;background-size:bottom;"></div>
-
+            <div class="slider" style="background:url('img/poisidreas.jpg') top;background-size:cover;"></div>
             <!--- Pilt vahetatav UNITASe jaoks -->
             <div class="subnav">
                 <div class="row">
                     <div class="col-md-8 col-sm-12 filters">
                         <div class="row">
-                            <div class="col-md-2 col-sm-6 col-xs-12">
-                                <h1>Teek</h1></div>
-                            <div class="col-md-2 col-sm-6 col-xs-12"><img src="img/teek.svg" class="img-responsive teek"></div>
+                            <div class="col-md-4 col-sm-12 col-xs-12 titleImage">
+                                <img src="img/Teek.png" class="img-responsive"></div>
                             <div class="col-md-7 col-sm-12 col-xs-12">
                                 <div class="sort">
                                     <div class="images">
-                                        <div class="instruction"></div>
+                                        <div class="instruction hidden-xs"></div>
                                         <a href="" class="sortby"><img src="img/kasutaja.svg" class="img-responsive"></a>
                                         <a href="" class="sortby"><img src="img/like.svg" class="img-responsive"></a>
                                         <a href="" class="sortby"><img src="img/heart.svg" class="img-responsive"></a>
                                         <a href="" class="sortby"><img src="img/kalender.svg" class="img-responsive"></a>
                                     </div>
                                     <div class="text">
-                                        <div class="instruction">Reasta:</div>
+                                        <div class="instruction hidden-xs">Reasta:</div>
                                         <a href="" class="sortby">kasutaja järgi</a>
                                         <a href="" class="sortby">enim vaadatud</a>
                                         <a href="" class="sortby">enim hinnatud</a>
@@ -262,12 +255,47 @@
                         </div>
 
 
+
                     </div>
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-4 col-sm-12 searchcolumn">
                         <div class="search">
                             <input type="text" placeholder="OTSI">
                         </div>
                     </div>
+
+                </div>
+                <div class="row dropdowns">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <select class="form-control">
+                            <option class="placeholder" selected disabled value="">Teema</option>
+                            <option value="">Valik 1</option>
+                            <option value="">Valik 2</option>
+                            <option value="">Valik 3</option>
+                            <option value="">Valik 4</option>
+                            <option value="">Valik 5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <select class="form-control">
+                            <option class="placeholder" selected disabled value="">Piirkond</option>
+                            <option value="">Valik 1</option>
+                            <option value="">Valik 2</option>
+                            <option value="">Valik 3</option>
+                            <option value="">Valik 4</option>
+                            <option value="">Valik 5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <select class="form-control">
+                            <option class="placeholder" selected disabled value="">Põlvkond</option>
+                            <option value="">Valik 1</option>
+                            <option value="">Valik 2</option>
+                            <option value="">Valik 3</option>
+                            <option value="">Valik 4</option>
+                            <option value="">Valik 5</option>
+                        </select>
+                    </div>
+
 
                 </div>
 
@@ -445,11 +473,16 @@
                 var st = $(window).scrollTop();
                 var ot = $("#videoPage").height();
                 var s = $("#galleryNav");
+                var sub = $(".subnav");
                 if (st > ot) {
                     s.addClass('navbar-fixed-top');
+                    s.addClass('shrink');
+                    sub.addClass('fixed-top');
                 } else {
                     if (st <= ot) {
                         s.removeClass('navbar-fixed-top');
+                        s.removeClass('shrink');
+                        sub.removeClass('fixed-top');
                     }
                 }
             };
@@ -462,6 +495,104 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
+
+    </script>
+    <script>
+        if (!window['YT']) {
+            var YT = {
+                loading: 0,
+                loaded: 0
+            };
+        }
+        if (!window['YTConfig']) {
+            var YTConfig = {
+                'host': 'http://www.youtube.com'
+            };
+        }
+        if (!YT.loading) {
+            YT.loading = 1;
+            (function() {
+                var l = [];
+                YT.ready = function(f) {
+                    if (YT.loaded) {
+                        f();
+                    } else {
+                        l.push(f);
+                    }
+                };
+                window.onYTReady = function() {
+                    YT.loaded = 1;
+                    for (var i = 0; i < l.length; i++) {
+                        try {
+                            l[i]();
+                        } catch (e) {}
+                    }
+                };
+                YT.setConfig = function(c) {
+                    for (var k in c) {
+                        if (c.hasOwnProperty(k)) {
+                            YTConfig[k] = c[k];
+                        }
+                    }
+                };
+                var a = document.createElement('script');
+                a.type = 'text/javascript';
+                a.id = 'www-widgetapi-script';
+                a.src = 'http:' + '//s.ytimg.com/yts/jsbin/www-widgetapi-vfloT07bb/www-widgetapi.js';
+                a.async = true;
+                var b = document.getElementsByTagName('script')[0];
+                b.parentNode.insertBefore(a, b);
+            })();
+        }
+
+    </script>
+    <script type="text/javascript">
+        // https://developers.google.com/youtube/iframe_api_reference
+
+        // global variable for the player
+        var player;
+
+        // this function gets called when API is ready to use
+        function onYouTubePlayerAPIReady() {
+            console.log("onYouTubePlayerAPIReady");
+            // create the global player from the specific iframe (#video)
+            player = new YT.Player('video', {
+                events: {
+                    // call this function when player is ready to use
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            console.log("onPlayerReady");
+            // bind events
+            var playButton = document.getElementById("play-button");
+            playButton.addEventListener("click", function() {
+                player.playVideo();
+                $("#play-button").hide();
+                $(".playButtonArea").hide();
+            });
+
+
+
+        }
+
+        // Inject YouTube API script
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+        var currentVideo = 'https://www.youtube.com/embed/1SPLV9sdvcQ?rel=0&amp;controls=0&amp;showinfo=0;enablejsapi=1';
+
+        function changeTime(x) {
+            $('#video').attr('src', currentVideo + ";start=" + x + "&autoplay=1");
+            console.log(currentVideo + ";start=" + x + "&autoplay=1");
+            $("#play-button").hide();
+            $(".playButtonArea").hide();
+        }
 
     </script>
 </body>
