@@ -36,7 +36,6 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 - lookup property: story -> ***self.Story***
 - lookup property: project -> ***self.Project***
 - videoUrl
-- storyteller(s) (LOORÄÄKIJAD) -> ***Storyteller***
 - author (VIDEOLOO AUTOR) -> ***Person***
 
 
@@ -85,7 +84,7 @@ ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 ## Region
 - name
-- fullName
+- fullName (Kogu asukoha hierarhiline rada)
 - parent -> ***Region***
 
 ### Originaalväljad
