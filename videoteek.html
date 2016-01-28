@@ -41,14 +41,15 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Avaleht</a></li>
+                        <li><a href="#videoGallery">Videoteek</a></li>
                         <li><a href="#tutvustus">Tutvustus</a></li>
                         <li><a href="#sinulugu">Saada lugu</a></li>
                         <li><a href="#teemad">Teemad</a></li>
                         <li><a href="#kaart">Kaart</a></li>
                         <li><a href="#toetajad">Tegijad</a></li>
                         <li><a href="#toeta">Toeta</a></li>
-                        <li><img src="img/kogumelugu-black.svg" height="50px;" style="margin:0 60px;"></li>
+                        <li><a href="/">Avaleht</a></li>
+                        <li class="hidden-sm"><img src="img/kogumelugu-black.svg" height="50px;" style="margin-left:20px;"></li>
 
                     </ul>
 
@@ -68,28 +69,23 @@
 
         <div class="container-fluid content">
             <div class="slider" style="background:url('img/poisidreas.jpg') top;background-size:cover;"></div>
-
             <!--- Pilt vahetatav UNITASe jaoks -->
             <div class="subnav">
                 <div class="row">
                     <div class="col-md-8 col-sm-12 filters">
                         <div class="row">
-                            <div class="col-md-4 col-sm-12 col-xs-12 titleImage">
+                            <div class="col-md-4 col-sm-4 col-xs-6 titleImage">
                                 <img src="img/Teek.png" class="img-responsive"></div>
-                            <div class="col-md-7 col-sm-12 col-xs-12">
+                            <div class="col-md-8 col-sm-8 col-xs-6">
                                 <div class="sort">
                                     <div class="images">
                                         <div class="instruction hidden-xs"></div>
                                         <a href="" class="sortby"><img src="img/kasutaja.svg" class="img-responsive"></a>
-                                        <a href="" class="sortby"><img src="img/like.svg" class="img-responsive"></a>
-                                        <a href="" class="sortby"><img src="img/heart.svg" class="img-responsive"></a>
                                         <a href="" class="sortby"><img src="img/kalender.svg" class="img-responsive"></a>
                                     </div>
                                     <div class="text">
                                         <div class="instruction hidden-xs">Reasta:</div>
-                                        <a href="" class="sortby">kasutaja järgi</a>
                                         <a href="" class="sortby">enim vaadatud</a>
-                                        <a href="" class="sortby">enim hinnatud</a>
                                         <a href="" class="sortby">viimati sisestatud</a>
                                     </div>
                                 </div>
@@ -107,9 +103,9 @@
 
                 </div>
                 <div class="row dropdowns">
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 topic">
                         <select class="form-control">
-                            <option class="placeholder" selected disabled value="">Teema</option>
+                            <option class="placeholder" selected disabled value="">Vali teema</option>
                             <option value="">Valik 1</option>
                             <option value="">Valik 2</option>
                             <option value="">Valik 3</option>
@@ -117,9 +113,9 @@
                             <option value="">Valik 5</option>
                         </select>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 area">
                         <select class="form-control">
-                            <option class="placeholder" selected disabled value="">Piirkond</option>
+                            <option class="placeholder" selected disabled value="">Vali piirkond</option>
                             <option value="">Valik 1</option>
                             <option value="">Valik 2</option>
                             <option value="">Valik 3</option>
@@ -127,9 +123,9 @@
                             <option value="">Valik 5</option>
                         </select>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 generation">
                         <select class="form-control">
-                            <option class="placeholder" selected disabled value="">Põlvkond</option>
+                            <option class="placeholder" selected disabled value="">Vali põlvkond</option>
                             <option value="">Valik 1</option>
                             <option value="">Valik 2</option>
                             <option value="">Valik 3</option>
@@ -142,7 +138,10 @@
                 </div>
 
             </div>
+            <div id="galleryPush" style="display:none"></div>
         </div>
+
+
         <div class="gallery container">
             <div class="row">
                 <!-- Start of pattern -->
@@ -155,9 +154,7 @@
                         <a href="#">
                             <div class="btn btn-primary-outline">Vaata lugu</div>
                         </a>
-                        <!--<a href="#" class="topics">
-    <img src="img/teemad.svg" data-toggle="tooltip" data-placement="top" title="Seotud teemad">
-</a>-->
+
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
@@ -292,6 +289,7 @@
 
         </div>
 
+
         <div class="loadmore">
             <a href="#">
                 <div class="btn btn-primary-outline">Kuva rohkem</div>
@@ -309,37 +307,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- script type="text/javascript">
-        function moveScroller() {
-            var move = function() {
-                var st = $(window).scrollTop();
-                var ot = $("#videoPage").height() - 100;
-                var s = $("#galleryNav");
-                var sub = $(".subnav");
-                if (st > ot) {
-                    s.addClass('navbar-fixed-top');
-                    s.addClass('shrink');
-                    sub.addClass('fixed-top');
-                } else {
-                    if (st <= ot) {
-                        s.removeClass('navbar-fixed-top');
-                        s.removeClass('shrink');
-                        sub.removeClass('fixed-top');
-                    }
-                }
-            };
-            $(window).scroll(move);
-            move();
-        }
-        $(function() {
-            moveScroller();
-        });
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
 
-    </script> -->
-
+    <script type="text/javascript" src="js/customselect.js"></script>
 </body>
 
 </html>

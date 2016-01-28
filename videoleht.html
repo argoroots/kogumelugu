@@ -167,35 +167,52 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="row related">
                             <!--- Esimene võiks olla täpselt sama isiku teine intervjuu osa, kui on, aga kõik teised paneme, millel enim ühiseid märksõnu. --->
-                            <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
-                                <h4><span>Rutt Kresling 17:02</span></h4>
-                                <p>täispikk intervjuu, est/eng</p>
-                                <a href="#">
-                                    <div class="btn btn-primary-outline">Vaata lugu</div>
-                                </a>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
-                                <h4><span>Laulupidu 1:03</span></h4>
-                                <p>videokaadrid</p>
-                                <a href="#">
-                                    <div class="btn btn-primary-outline">Vaata lugu</div>
-                                </a>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                                <h4><span>Eva Brown 12:29</span></h4>
-                                <p>täispikk intervjuu, est/rus</p>
-                                <a href="#">
-                                    <div class="btn btn-primary-outline">Vaata lugu</div>
-                                </a>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                                <h4><span>Eva Brown 12:29</span></h4>
-                                <p>täispikk intervjuu, est/rus</p>
-                                <a href="#">
-                                    <div class="btn btn-primary-outline">Vaata lugu</div>
-                                </a>
-                            </div>
+                            <a href="#">
+                                <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
+                                    <div class="overlay"></div>
+                                    <div class="wrapper">
+                                        <h4><span>Rutt Kresling 17:02</span></h4>
+                                        <p>täispikk intervjuu, est/eng</p>
+                                        <div class="btn btn-primary-outline">Vaata lugu</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
+                                    <div class="overlay"></div>
+                                    <div class="wrapper">
+                                        <h4><span>Laulupidu 1:03</span></h4>
+                                        <p>videokaadrid</p>
 
+                                        <div class="btn btn-primary-outline">Vaata lugu</div>
+
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                                    <div class="overlay"></div>
+                                    <div class="wrapper">
+                                        <h4><span>Eva Brown 12:29</span></h4>
+                                        <p>täispikk intervjuu, est/rus</p>
+
+                                        <div class="btn btn-primary-outline">Vaata lugu</div>
+
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="col-md-12 col-sm-12 col-xs-6 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                                    <div class="overlay"></div>
+                                    <div class="wrapper">
+                                        <h4><span>Eva Brown 12:29</span></h4>
+                                        <p>täispikk intervjuu, est/rus</p>
+
+                                        <div class="btn btn-primary-outline">Vaata lugu</div>
+
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -223,13 +240,15 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Avaleht</a></li>
-                        <li><a href="index.html#tutvustus">Tutvustus</a></li>
-                        <li><a href="index.htmlsinulugu">Ootame sinu lugu</a></li>
-                        <li><a href="index.html#teemad">Kaetud teemad</a></li>
-                        <li><a href="index.html#kaart">Kaart</a></li>
-                        <li><a href="index.html#toetajad">Toetajad ja tegijad</a></li>
-                        <li><a href="index.html#toeta">Toeta meie lugu</a></li>
+                        <li><a href="#videoGallery">Videoteek</a></li>
+                        <li><a href="#tutvustus">Tutvustus</a></li>
+                        <li><a href="#sinulugu">Saada lugu</a></li>
+                        <li><a href="#teemad">Teemad</a></li>
+                        <li><a href="#kaart">Kaart</a></li>
+                        <li><a href="#toetajad">Tegijad</a></li>
+                        <li><a href="#toeta">Toeta</a></li>
+                        <li><a href="/">Avaleht</a></li>
+                        <li class="hidden-sm"><img src="img/kogumelugu-black.svg" height="50px;" style="margin-left:20px;"></li>
 
                     </ul>
 
@@ -254,22 +273,18 @@
                 <div class="row">
                     <div class="col-md-8 col-sm-12 filters">
                         <div class="row">
-                            <div class="col-md-4 col-sm-12 col-xs-12 titleImage">
+                            <div class="col-md-4 col-sm-4 col-xs-6 titleImage">
                                 <img src="img/Teek.png" class="img-responsive"></div>
-                            <div class="col-md-7 col-sm-12 col-xs-12">
+                            <div class="col-md-8 col-sm-8 col-xs-6">
                                 <div class="sort">
                                     <div class="images">
                                         <div class="instruction hidden-xs"></div>
                                         <a href="" class="sortby"><img src="img/kasutaja.svg" class="img-responsive"></a>
-                                        <a href="" class="sortby"><img src="img/like.svg" class="img-responsive"></a>
-                                        <a href="" class="sortby"><img src="img/heart.svg" class="img-responsive"></a>
                                         <a href="" class="sortby"><img src="img/kalender.svg" class="img-responsive"></a>
                                     </div>
                                     <div class="text">
                                         <div class="instruction hidden-xs">Reasta:</div>
-                                        <a href="" class="sortby">kasutaja järgi</a>
                                         <a href="" class="sortby">enim vaadatud</a>
-                                        <a href="" class="sortby">enim hinnatud</a>
                                         <a href="" class="sortby">viimati sisestatud</a>
                                     </div>
                                 </div>
@@ -287,9 +302,9 @@
 
                 </div>
                 <div class="row dropdowns">
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 topic">
                         <select class="form-control">
-                            <option class="placeholder" selected disabled value="">Teema</option>
+                            <option class="placeholder" selected disabled value="">Vali teema</option>
                             <option value="">Valik 1</option>
                             <option value="">Valik 2</option>
                             <option value="">Valik 3</option>
@@ -297,9 +312,9 @@
                             <option value="">Valik 5</option>
                         </select>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 area">
                         <select class="form-control">
-                            <option class="placeholder" selected disabled value="">Piirkond</option>
+                            <option class="placeholder" selected disabled value="">Vali piirkond</option>
                             <option value="">Valik 1</option>
                             <option value="">Valik 2</option>
                             <option value="">Valik 3</option>
@@ -307,9 +322,9 @@
                             <option value="">Valik 5</option>
                         </select>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 generation">
                         <select class="form-control">
-                            <option class="placeholder" selected disabled value="">Põlvkond</option>
+                            <option class="placeholder" selected disabled value="">Vali põlvkond</option>
                             <option value="">Valik 1</option>
                             <option value="">Valik 2</option>
                             <option value="">Valik 3</option>
@@ -322,156 +337,157 @@
                 </div>
 
             </div>
+            <div id="galleryPush" style="display:none"></div>
         </div>
-        <div class="gallery">
-            <div class="container">
-                <div class="row">
-                    <!-- Start of pattern -->
-                    <!-- first row -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Eva Brown 12:29</span></h4>
-                            <p>täispikk intervjuu, est/rus</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                            <a href="#" class="topics">
-                                <img src="img/teemad.svg" data-toggle="tooltip" data-placement="top" title="Seotud teemad">
-                            </a>
-                        </div>
+
+
+        <div class="gallery container">
+            <div class="row">
+                <!-- Start of pattern -->
+                <!-- first row -->
+                <div class="col-md-4 col-sm-4 col-xs-12 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Eva Brown 12:29</span></h4>
+                        <p>täispikk intervjuu, est/rus</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Laulupidu 1:03</span></h4>
-                            <p>videokaadrid</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Rutt Kresling 17:02</span></h4>
-                            <p>täispikk intervjuu, est/eng</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- /first row -->
-                    <!-- second row -->
-                    <div class="col-md-6 col-sm-6 col-xs-12 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Eva Brown 12:29</span></h4>
-                            <p>täispikk intervjuu, est/rus</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Laulupidu 1:03</span></h4>
-                            <p>videokaadrid</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Rutt Kresling 17:02</span></h4>
-                            <p>täispikk intervjuu, est/eng</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Eva Brown 12:29</span></h4>
-                            <p>täispikk intervjuu, est/rus</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Laulupidu 1:03</span></h4>
-                            <p>videokaadrid</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- /second row -->
-                    <!-- third row -->
-                    <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Rutt Kresling 17:02</span></h4>
-                            <p>täispikk intervjuu, est/eng</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Eva Brown 12:29</span></h4>
-                            <p>täispikk intervjuu, est/rus</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Laulupidu 1:03</span></h4>
-                            <p>videokaadrid</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- /third row -->
-                    <!-- forth row -->
-                    <div class="col-md-6 col-sm-6 col-xs-12  video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Rutt Kresling 17:02</span></h4>
-                            <p>täispikk intervjuu, est/eng</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12  video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
-                        <div class="overlay"></div>
-                        <div class="wrapper">
-                            <h4><span>Eva Brown 12:29</span></h4>
-                            <p>täispikk intervjuu, est/rus</p>
-                            <a href="#">
-                                <div class="btn btn-primary-outline">Vaata lugu</div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- /forth row -->
                 </div>
+                <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Laulupidu 1:03</span></h4>
+                        <p>videokaadrid</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Rutt Kresling 17:02</span></h4>
+                        <p>täispikk intervjuu, est/eng</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /first row -->
+                <!-- second row -->
+                <div class="col-md-6 col-sm-6 col-xs-12 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Eva Brown 12:29</span></h4>
+                        <p>täispikk intervjuu, est/rus</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Laulupidu 1:03</span></h4>
+                        <p>videokaadrid</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Rutt Kresling 17:02</span></h4>
+                        <p>täispikk intervjuu, est/eng</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Eva Brown 12:29</span></h4>
+                        <p>täispikk intervjuu, est/rus</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-6 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Laulupidu 1:03</span></h4>
+                        <p>videokaadrid</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /second row -->
+                <!-- third row -->
+                <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Rutt Kresling 17:02</span></h4>
+                        <p>täispikk intervjuu, est/eng</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12  video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Eva Brown 12:29</span></h4>
+                        <p>täispikk intervjuu, est/rus</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 video" style="background:url('img/Laulupidu.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Laulupidu 1:03</span></h4>
+                        <p>videokaadrid</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /third row -->
+                <!-- forth row -->
+                <div class="col-md-6 col-sm-6 col-xs-12  video" style="background:url('img/Rutt-Kresling.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Rutt Kresling 17:02</span></h4>
+                        <p>täispikk intervjuu, est/eng</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12  video" style="background:url('img/Eva-Brown.jpg');background-size:cover;">
+                    <div class="overlay"></div>
+                    <div class="wrapper">
+                        <h4><span>Eva Brown 12:29</span></h4>
+                        <p>täispikk intervjuu, est/rus</p>
+                        <a href="#">
+                            <div class="btn btn-primary-outline">Vaata lugu</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /forth row -->
             </div>
 
+
         </div>
+
 
         <div class="loadmore">
             <a href="#">
@@ -501,11 +517,13 @@
                     s.addClass('navbar-fixed-top');
                     s.addClass('shrink');
                     sub.addClass('fixed-top');
+                    $('#galleryPush').css('display', 'block');
                 } else {
                     if (st <= ot) {
                         s.removeClass('navbar-fixed-top');
                         s.removeClass('shrink');
                         sub.removeClass('fixed-top');
+                        $('#galleryPush').css('display', 'none');
                     }
                 }
             };
@@ -665,6 +683,7 @@
         }
 
     </script>
+    <script type="text/javascript" src="js/customselect.js"></script>
 </body>
 
 </html>
