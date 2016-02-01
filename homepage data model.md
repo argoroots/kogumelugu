@@ -41,7 +41,7 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 
 Supakate keel valida siit:  [vimeo supakad](https://vimeo.com/help/faq/managing-your-videos/captions-and-subtitles#what-caption-and-subtitle-file-formats-does-vimeo-support)  
 ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
-## Story
+## Story (videolugu)
 - photo
 - category (KATEGOORIA) -> ***Category***
 - language(s) - keeled, mida kasutatakse jutus
