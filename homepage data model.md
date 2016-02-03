@@ -3,19 +3,21 @@
 - Project (keegi väljast ei näe, rahastus, lepingud)
     - Interview
     - Story / videolugu
+- Sponsor (toetajad)
 
 # Definitions
 
-## Project
+## Project *(Project)*
 
 - name
 - code (võibla me ei kasutagi koode)
 - projekti lepingu alguse aasta
 - kirjeldus
+- toetajad -> ***Sponsor***
 
 
 
-## Interview
+## Interview *(interview)*
 Täispikk videointervjuu, milles vestja räägib oma loo.
 
 - photo
@@ -45,7 +47,8 @@ Supakate keel valida siit:  [vimeo supakad](https://vimeo.com/help/faq/managing-
 Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 
-## Story (videolugu)
+## Story *(story)*
+> videolugu
 
 - photo
 - category (KATEGOORIA) -> ***Category***
@@ -64,12 +67,12 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - author -> ***Person***
 
 
-## Tag
+## Tag *(tag)*
 
 - name
 
 
-## Category
+## Category *(category)*
 
 - code (võibla me ei kasutagi koode)
 - name
@@ -77,7 +80,7 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - description
 
 
-## Storyteller on hoopis Person
+## Storyteller on hoopis *(person)*
 
 - email (LOORÄÄKIJA KONTAKT)
 - phone (LOORÄÄKIJA KONTAKT)
@@ -86,14 +89,14 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - description (SOTSIAALNE TAUST)
 
 
-## Author on hoopis Person
+## Author on hoopis *(person)*
 
 - email
 - phone
 - name
 
 
-## Region
+## Region *(region)*
 
 - name
 - fullName (Kogu asukoha hierarhiline rada)
@@ -142,8 +145,9 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 ---
 
-## Toetajad
+## Toetajad *(sponsor)*
 
 - name
 - logo
 - link
+- contact -> ***Person***
