@@ -7,6 +7,7 @@
 # Definitions
 
 ## Project
+
 - name
 - code (võibla me ei kasutagi koode)
 - projekti lepingu alguse aasta
@@ -16,6 +17,7 @@
 
 ## Interview
 Täispikk videointervjuu, milles vestja räägib oma loo.
+
 - photo
 - date(s) (AASTA, SALVESTUSKUUPÄEV(AD))
 - category (KATEGOORIA) -> ***Category***
@@ -40,8 +42,11 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 
 
 Supakate keel valida siit:  [vimeo supakad](https://vimeo.com/help/faq/managing-your-videos/captions-and-subtitles#what-caption-and-subtitle-file-formats-does-vimeo-support)  
-ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
+Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
+
+
 ## Story (videolugu)
+
 - photo
 - category (KATEGOORIA) -> ***Category***
 - language(s) - keeled, mida kasutatakse jutus
@@ -60,10 +65,12 @@ ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 
 ## Tag
+
 - name
 
 
 ## Category
+
 - code (võibla me ei kasutagi koode)
 - name
 - color
@@ -71,23 +78,30 @@ ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 
 ## Storyteller on hoopis Person
+
 - email (LOORÄÄKIJA KONTAKT)
 - phone (LOORÄÄKIJA KONTAKT)
 - birthYear (LOO RÄÄKIJA SÜNNIAEG)
 - name (LOORÄÄKIJAD)
 - description (SOTSIAALNE TAUST)
 
+
 ## Author on hoopis Person
+
 - email
 - phone
 - name
 
+
 ## Region
+
 - name
 - fullName (Kogu asukoha hierarhiline rada)
 - parent -> ***Region***
 
+
 ### Originaalväljad
+
 - REGISTRI NR - N/A
 - AASTA == ***Interview.tellingDate***
 - KEEL == ***Interview.language***
@@ -126,12 +140,10 @@ ja oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - YOUTUBE SILDID == ***Chapter.tag***
 - LISAINFO == ***Story.legend***
 
-
-
-
 ---
 
 ## Toetajad
+
 - name
 - logo
 - link
