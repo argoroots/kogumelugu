@@ -1,0 +1,210 @@
+#videoGallery
+    nav#galleryNav.navbar-default.hidden-xs
+        .container-fluid
+            // Brand and toggle get grouped for better mobile display
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand.visible-xs(href='#')
+                    img(src='img/kogumelugu-turquoise.png')
+            // Collect the nav links, forms, and other content for toggling
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='#videoGallery') Videoteek
+                    li
+                        a(href='#tutvustus') Tutvustus
+                    li
+                        a(href='#sinulugu') Saada lugu
+                    li
+                        a(href='#teemad') Teemad
+                    li
+                        a(href='#kaart') Kaart
+                    li
+                        a(href='#toetajad') Tegijad
+                    li
+                        a(href='#toeta') Toeta
+                    li
+                        a(href='/') Avaleht
+                    li.hidden-sm
+                        img(src='img/kogumelugu-black.svg', height='50px;', style='margin-left:20px;')
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a.btn.btn-inverse(href='#') Logi sisse
+                    li
+                        a.btn.btn-inverse(href='#') ENG
+                    li
+                        a.btn.btn-inverse(href='#') RUS
+            // /.navbar-collapse
+        // /.container-fluid
+    .container-fluid.content
+        .slider(style="background:url('img/poisidreas.jpg') top;background-size:cover;")
+        // - Pilt vahetatav UNITASe jaoks
+        .subnav
+            .row
+                .col-md-8.col-sm-12.filters
+                    .row
+                        .col-md-4.col-sm-4.col-xs-6.titleImage
+                            img.img-responsive(src='img/Teek.png')
+                        .col-md-8.col-sm-8.col-xs-6
+                            .sort
+                                .images
+                                    .instruction.hidden-xs
+                                    a.sortby(href='')
+                                        img.img-responsive(src='img/kasutaja.svg')
+                                    a.sortby(href='')
+                                        img.img-responsive(src='img/kalender.svg')
+                                .text
+                                    .instruction.hidden-xs Reasta:
+                                    a.sortby(href='') enim vaadatud
+                                    a.sortby(href='') viimati sisestatud
+                .col-md-4.col-sm-12.searchcolumn
+                    .search
+                        input(type='text', placeholder='OTSI')
+            .row.dropdowns
+                .col-md-4.col-sm-4.col-xs-4.topic
+                    select.form-control
+                        option.placeholder(selected='', disabled='', value='') Vali teema
+                        option(value='') Valik 1
+                        option(value='') Valik 2
+                        option(value='') Valik 3
+                        option(value='') Valik 4
+                        option(value='') Valik 5
+                .col-md-4.col-sm-4.col-xs-4.area
+                    select.form-control
+                        option.placeholder(selected='', disabled='', value='') Vali piirkond
+                        option(value='') Valik 1
+                        option(value='') Valik 2
+                        option(value='') Valik 3
+                        option(value='') Valik 4
+                        option(value='') Valik 5
+                .col-md-4.col-sm-4.col-xs-4.generation
+                    select.form-control
+                        option.placeholder(selected='', disabled='', value='') Vali põlvkond
+                        option(value='') Valik 1
+                        option(value='') Valik 2
+                        option(value='') Valik 3
+                        option(value='') Valik 4
+                        option(value='') Valik 5
+        #galleryPush(style='display:none')
+    .gallery.container
+        .row
+            // Start of pattern
+            // first row
+            .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Eva Brown 12:29
+                    p täispikk intervjuu, est/rus
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Laulupidu 1:03
+                    p videokaadrid
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Rutt Kresling 17:02
+                    p täispikk intervjuu, est/eng
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            // /first row
+            // second row
+            .col-md-6.col-sm-6.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Eva Brown 12:29
+                    p täispikk intervjuu, est/rus
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Laulupidu 1:03
+                    p videokaadrid
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Rutt Kresling 17:02
+                    p täispikk intervjuu, est/eng
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Eva Brown 12:29
+                    p täispikk intervjuu, est/rus
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Laulupidu 1:03
+                    p videokaadrid
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            // /second row
+            // third row
+            .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Rutt Kresling 17:02
+                    p täispikk intervjuu, est/eng
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Eva Brown 12:29
+                    p täispikk intervjuu, est/rus
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Laulupidu 1:03
+                    p videokaadrid
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            // /third row
+            // forth row
+            .col-md-6.col-sm-6.col-xs-12.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Rutt Kresling 17:02
+                    p täispikk intervjuu, est/eng
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            .col-md-6.col-sm-6.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                .overlay
+                .wrapper
+                    h4
+                        span Eva Brown 12:29
+                    p täispikk intervjuu, est/rus
+                    a(href='#')
+                        .btn.btn-primary-outline Vaata lugu
+            // /forth row
+    .loadmore
+        a(href='#')
+            .btn.btn-primary-outline Kuva rohkem

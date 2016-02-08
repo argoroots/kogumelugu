@@ -1,0 +1,162 @@
+#videoPage
+    nav.navbar-default
+        .container-fluid
+            // Brand and toggle get grouped for better mobile display
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand.visible-xs(href='#')
+                    img(src='img/kogumelugu-black.svg')
+            // Collect the nav links, forms, and other content for toggling
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='#videoGallery') Videoteek
+                    li
+                        a(href='#tutvustus') Tutvustus
+                    li
+                        a(href='#sinulugu') Saada lugu
+                    li
+                        a(href='#teemad') Teemad
+                    li
+                        a(href='#kaart') Kaart
+                    li
+                        a(href='#toetajad') Tegijad
+                    li
+                        a(href='#toeta') Toeta
+                    li
+                        a(href='/') Avaleht
+                    li.hidden-sm
+                        img(src='img/kogumelugu-black.svg', height='50px;', style='margin-left:20px;')
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a.btn.btn-inverse(href='#') Logi sisse
+                    li
+                        a.btn.btn-inverse(href='#') ENG
+                    li
+                        a.btn.btn-inverse(href='#') RUS
+            // /.navbar-collapse
+        // /.container-fluid
+    .container-fluid.content
+        .container
+            #videoArea.row
+                .col-md-8.col-sm-8.col-xs-12
+                    .firstblock
+                        .videoWrapper
+                            iframe#video(src='https://www.youtube.com/embed/KJyHTQAkfjY?rel=0&controls=0&showinfo=0;enablejsapi=1', frameborder='0', allowfullscreen='')
+                            .playButtonArea
+                                #play-button.btn.btn-primary-outline Vaata lugu
+                        .videoDescription
+                            h1.title Ilmar Raag - Kogu me lugu
+                        .row
+                            .col-md-8
+                                p.description
+                                    | Intervjuu 2015, Vancouver, Kanada
+                                    br
+                                    | Intervjueerija
+                                    b Uve Poom
+                            .col-md-4
+                                ul.sharebuttons
+                                    a(href='#')
+                                        li
+                                            img.img-responsive(src='img/facebook.svg')
+                                    a(href='#')
+                                        li
+                                            img.img-responsive(src='img/twitter.svg')
+                                    a(href='#')
+                                        li
+                                            img.img-responsive(src='img/googleplus.svg')
+                                    a(href='#')
+                                        li
+                                            img.img-responsive(src='img/email.svg')
+                    .timeline
+                        ul
+                            li
+                                a(onclick='changeTime(0);', href='#')
+                                    b Nõukogude okupatsioon Eestis 1940-1941
+                                    |    0:00-0:20
+                            li
+                                a(onclick='changeTime(20);', href='#')
+                                    b Saksa okupatsioon Eestis 1941-1944
+                                    |    0:20-0:40
+                            li
+                                a(onclick='changeTime(40);', href='#')
+                                    b Omakaitse
+                                    |    0:40-1:00
+                            li
+                                a(onclick='changeTime(60);', href='#')
+                                    b UNNRA
+                                    |    1:00-1:20
+                            li
+                                a(onclick='changeTime(80);', href='#')
+                                    b DP-laagrid
+                                    |    1:20-3:00
+                    .keywords
+                        ul
+                            a(href='#')
+                                li.primary Teema 1
+                            a(href='#')
+                                li.primary Teema 2
+                            a(href='#')
+                                li.primary Teema 3
+                            a(href='#')
+                                li.primary Teema 4
+                            a(href='#')
+                                li.primary Teema 5
+                            a(href='#')
+                                li.primary Teema 6
+                            a(href='#')
+                                li.primary Teema 7
+                            a(href='#')
+                                li.secondary Generatsioon
+                            a(href='#')
+                                li.tertiary Seotud Isik
+                            a(href='#')
+                                li.tertiary Seotud Isik
+                            a(href='#')
+                                li.tertiary Seotud Isik
+                            a(href='#')
+                                li.tertiary Seotud Isik
+                            a(href='#')
+                                li.quatenary Seotud Asukoht
+                    .lastblock
+                        p.description
+                            | Kogu Me Lugu kogub Nõukogude ja/või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende võimude tulemusena Eestisse sattunud inimeste mälestusi. Kogu me Lugu ühendab ka erinevaid organisatsioone Eestis ja välismaal, mis koguvad ja uurivad Eesti mälestusi ja ajalugu.
+                .col-md-4.col-sm-4.col-xs-12
+                    .row.related
+                        // - Esimene võiks olla täpselt sama isiku teine intervjuu osa, kui on, aga kõik teised paneme, millel enim ühiseid märksõnu. -
+                        a(href='#')
+                            .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
+                                .overlay
+                                .wrapper
+                                    h4
+                                        span Rutt Kresling 17:02
+                                    p täispikk intervjuu, est/eng
+                                    .btn.btn-primary-outline Vaata lugu
+                        a(href='#')
+                            .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
+                                .overlay
+                                .wrapper
+                                    h4
+                                        span Laulupidu 1:03
+                                    p videokaadrid
+                                    .btn.btn-primary-outline Vaata lugu
+                        a(href='#')
+                            .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                                .overlay
+                                .wrapper
+                                    h4
+                                        span Eva Brown 12:29
+                                    p täispikk intervjuu, est/rus
+                                    .btn.btn-primary-outline Vaata lugu
+                        a(href='#')
+                            .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
+                                .overlay
+                                .wrapper
+                                    h4
+                                        span Eva Brown 12:29
+                                    p täispikk intervjuu, est/rus
+                                    .btn.btn-primary-outline Vaata lugu

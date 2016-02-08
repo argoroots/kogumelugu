@@ -54,6 +54,7 @@ app.use(bparser.urlencoded({extended: true}))
 
 // routes mapping
 app.use('/', require('./routes/index'))
+app.use('/video', require('./routes/video'))
 
 // logs to getsentry.com - error
 app.use(raven.middleware.express.errorHandler(ravenClient))
