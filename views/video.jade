@@ -1,8 +1,13 @@
 extends layout
 
 block body
-    include video-page
-    include video-gallery
+    #videoPage
+        include video-page-nav
+        include video-page
+
+    #videoGallery
+        include video-gallery-nav
+        include video-gallery
 
 block javascript
     script(type='text/javascript', src='js/video.js')
