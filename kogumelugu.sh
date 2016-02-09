@@ -9,7 +9,7 @@ git pull
 
 printf "\n\n"
 version=`date +"%y%m%d.%H%M%S"`
-docker build --quiet --pull --tag=kogumelugu:$version ./ && docker tag -f kogumelugu:$version kogumelugu:latest
+docker build --quiet --pull --tag=kogumelugu:$version ./ && docker tag kogumelugu:$version kogumelugu:latest
 
 printf "\n\n"
 docker stop kogumelugu
@@ -20,6 +20,7 @@ docker run -d \
     --restart="always" \
     --cpu-shares=256 \
     --memory="1g" \
+    --env="NODE_ENV=production" \
     --env="VERSION=$version" \
     --env="PORT=80" \
     --env="NEW_RELIC_APP_NAME=kogumelugu" \
