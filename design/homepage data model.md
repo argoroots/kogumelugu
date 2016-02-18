@@ -29,9 +29,7 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
     - titleShort:public (INTERVJUU PEALKIRI (lühike))
     - titleLong:private (INTERVJUU PEALKIRI (pikk))
 - recordingLocation (KOGUMISE / SALEVESTUSE TOIMUMISKOHT)
-- description - est (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
-- description - eng (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
-- description - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description / **multilingual** - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
 - timecodedSubjects / **multilingual** (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
 - timecodedCurriculum (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA)
 - mention(s) (MAINITUD ISIKUD) -> ***Person***
@@ -52,16 +50,13 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 - photo
 - category (KATEGOORIA) -> ***Category***
+- title / **multilingual** - paneme kokku
 - language(s) - keeled, mida kasutatakse jutus
-- subtitles - est
-- subtitles - eng
-- subtitles - rus
+- subtitles / **multilingual** - rus
 - lookup property: project (PROJEKT) -> ***self.Project***
 - interview(s) -> ***Interview***
 - tag(s) -> ***Tag***
-- description - est (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
-- description - eng (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
-- description - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description / **multilingual** - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
 - videoUrl (VIDEOLOO LINK YOUTUBE-is)
 - storyteller(s) (LOORÄÄKIJAD) -> ***Person***
 - author -> ***Person***
