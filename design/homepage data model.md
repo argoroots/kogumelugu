@@ -52,11 +52,11 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - category (KATEGOORIA) -> ***Category***
 - title / **multilingual** - paneme kokku
 - language(s) - keeled, mida kasutatakse jutus
-- subtitles / **multilingual** - rus
+- subtitles / **multilingual**
 - lookup property: project (PROJEKT) -> ***self.Project***
 - interview(s) -> ***Interview***
 - tag(s) -> ***Tag***
-- description / **multilingual** - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
+- description / **multilingual** - (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
 - videoUrl (VIDEOLOO LINK YOUTUBE-is)
 - storyteller(s) (LOORÄÄKIJAD) -> ***Person***
 - author -> ***Person***
