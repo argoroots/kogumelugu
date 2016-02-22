@@ -1159,6 +1159,38 @@
         border: 1px solid #fff;
         color: #f0594d;
     }
+    .overlay-logo {
+        list-style: none;
+        position: absolute;
+        z-index: 99;
+        top: 10px;
+    }
+    .overlay-logo img {
+        height: 120px
+    }
+    .home-nav {
+        position: relative;
+    }
+    .login-page {
+        text-align: center;
+    }
+    .login-page img {
+        display: inline-block;
+        padding: 20px;
+        margin: 0 20px;
+        height: 80px;
+    }
+    .login-page a:hover,
+    .login-page a:focus {
+        opacity: 0.7;
+    }
+    .login-page h1.title {
+        color: #40bebc;
+        margin: 10% 0 5%;
+    }
+    .login-page h3 {
+        margin: 5% 0 0;
+    }
     @media (max-width: 767px) {
         .navbar-default .navbar-collapse,
         .navbar-default .navbar-form {
