@@ -107,13 +107,6 @@
     .btn {
         border: 0;
     }
-    .static-logo {
-        position: absolute;
-        z-index: 1;
-        height: 360px;
-        left: 540px;
-        top: 100px;
-    }
     .navbar-nav>li>a.btn-inverse {
         background: #333;
         color: #fff;
@@ -609,15 +602,15 @@
     .homesearch input.form-control {
         height: 100%;
         width: 100%;
-        padding: 10px 15px 4px;
+        padding: 13px 15px;
         font-size: 16;
         font-weight: border: 0;
         border-radius: 2px;
     }
     .homesearch .btn-primary {
         font-family: 'AmaticSCBold';
-        font-size: 24px;
-        padding: 6px 48px;
+        font-size: 23px;
+        padding: 7px 48px;
         width: 100%;
         background: #40bebc;
         border-radius: 2px;
@@ -641,6 +634,9 @@
         border-radius: 7px;
         color: #333;
         transition: .2s;
+    }
+    .white-cta {
+        background: #fff;
     }
     .cta .btn:hover,
     .cta .btn:focus {
@@ -725,7 +721,7 @@
         background: rgba(255, 255, 255, .8);
     }
     .formcontent .fileupload.form-control {
-        background: #fff;
+        background: rgba(255, 255, 255, .8);
     }
     .formcontent .btn-primary-outline {
         border: 2px solid #fff;
@@ -746,7 +742,8 @@
     .formcontent .button {
         text-align: center;
     }
-    .formcontent input.btn-primary {
+    .formcontent input.btn-primary,
+    .formcontent .btn-default {
         background: #fff;
         text-transform: uppercase;
         font-family: 'AmaticSCBold';
@@ -757,8 +754,13 @@
         transition: .2s;
         padding: 10px 48px 5px;
     }
+    .formcontent .btn-default .buttonText {
+        padding-left: 10px;
+    }
     .formcontent input.btn-primary:hover,
-    .formcontent input.btn-primary:focus {
+    .formcontent input.btn-primary:focus,
+    .formcontent .btn-default:hover,
+    .form-content .btn-default:focus {
         background: #e9eaec;
         color: #333;
     }
@@ -816,7 +818,16 @@
     }
     .teema {
         text-align: center;
+        position: relative;
+        -webkit-perspective: 600px;
+        -moz-perspective: 600px;
+    }
+    .teema .front,
+    .teema .back {
         padding: 5px;
+    }
+    .teema .front {
+        cursor: pointer;
     }
     .teema table {
         height: 100%;
@@ -868,8 +879,66 @@
         border: 2px solid #40bebc;
         color: #40bebc;
     }
+    .teema .front {
+        height: inherit;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 900;
+        text-align: center;
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+        -moz-transform: rotateX(0deg) rotateY(0deg);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    .teema .back {
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    .teema .back table a {
+        color: #fff;
+    }
+    .teema .back table a:hover,
+    .teema .back table a:focus {
+        color: #fcd302;
+    }
+    .teema.flip .front {
+        width: 100%;
+        z-index: 900;
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+    }
+    .teema.flip .back {
+        z-index: 1000;
+        width: 100%;
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+        -moz-transform: rotateX(0deg) rotateY(0deg);
+    }
     .toetajad {
         background: #fff;
+        position: relative;
     }
     .toetajad .header {
         background: #40bebc;
@@ -879,28 +948,51 @@
         font-size: 18px;
         color: #fff;
         margin: 30px 0 240px;
+        padding-bottom: 20px;
     }
     .toetajad .text p {
         color: #fff;
+        line-height: 1.4em;
         margin: 20px 0;
+    }
+    .toetajad:after {
+        left: 0;
+        position: absolute;
+        width: 100px;
+        height: 0px;
+        border-top: 15vw solid #fff;
+        border-bottom: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
     }
     .darkened {
         color: #333;
     }
+    .tablediv {
+        background: #f3f3f3;
+        padding: 40px;
+    }
+    #bottom-table {
+        margin-top: 20px;
+        background: #f3f3f3;
+        margin: 20px 0 0;
+        padding-bottom: 20px;
+    }
     .list {
-        padding: 0 40px;
         margin: -240px 0 0;
     }
     .list table {
         width: 100%;
-        background: #f3f3f3;
     }
     .list table h3 {
+        font-size: 2em;
+        ;
         color: #40bebc;
     }
     .list table td {
         font-size: 16px;
         color: #555;
+        line-height: 1.5em;
         padding: 15px;
         font-weight: 600;
         vertical-align: middle;
@@ -914,9 +1006,7 @@
     .list table.lg td {
         width: 33.333%;
     }
-    .list table.md {
-        height: 640px;
-    }
+    .list table.md {}
     .unitas {
         padding: 30px 0;
     }
@@ -929,44 +1019,70 @@
         background: #f3f3f3;
         padding: 60px 55px 40px;
     }
+    .toetus .container {
+        position: relative;
+    }
     .toetus p {
         margin: 20px 0;
     }
     .toetus h2 {
         color: #40bebc;
+        margin: -20px 0 160px;
     }
     .toeta {
-        background: #40bebc;
         padding: 50px 0;
+    }
+    .toeta-top {
+        background: #40bebc;
+        position: relative;
+    }
+    .toeta-top:after {
+        left: 0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        margin-top: 50px;
+        border-top: 15vw solid #40bebc;
+        border-bottom: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        z-index: 9;
+    }
+    .toeta-bottom {
+        background: #339a9c;
+        margin-top: -70px;
+    }
+    .toeta-bottom .container {
+        position: relative;
+        z-index: 10;
+    }
+    .toeta-bottom .container img {
+        margin: 0 auto 120px;
     }
     .toeta .white {
         color: #fff;
         font-size: 18px;
         line-height: 21px;
         margin: 30px;
+        text-align: center;
     }
     .toeta hr {
         border-bottom: 1px solid #fff;
     }
-    .toeta table {
+    .toeta .text {
+        color: #fff;
+        text-align: center;
+        margin: 0 40px 40px;
+    }
+    .supportsum ul {
         width: 100%;
-        margin: 60px 0;
+        text-align: center;
     }
-    .toeta table td.image {
-        width: 30%;
-    }
-    .toeta table td.text {
-        width: 70%;
-    }
-    .toeta table.equal td {
-        color: #fff;
-    }
-    .toeta table img {
-        margin: 0 auto;
-    }
-    .toeta table td {
-        color: #fff;
-        padding: 10px;
+    .supportsum ul li {
+        display: inline-block;
+        list-style: none;
+        position: relative;
+        padding: 20px;
     }
     .supportsum label {
         text-align: center;
@@ -976,27 +1092,65 @@
         margin-bottom: 40px;
         position: relative;
     }
-    input[type="radio"]:checked,
+    .supportsum .customsum {
+        font-size: 32px;
+        background: #fcd302;
+        border: none;
+        border-radius: 6px;
+        text-align: center;
+        width: 120px;
+    }
+    .supportsum .label {
+        font-family: 'AmaticSCBold';
+        font-size: 36px;
+        color: #fcd302;
+    }
     input[type="radio"] {
+        display: none;
+    }
+    input[type="radio"] + label {
+        cursor: pointer;
+    }
+    input[type="radio"] + label span {
         position: absolute;
-        visibility: hidden;
+        bottom: -50px;
+        left: 25%;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin: -1px 4px 0 0;
+        vertical-align: middle;
+        cursor: pointer;
     }
-    .supportsum label:after {
-        content: url(../img/unchecked.svg);
+    #customsum + label span {
+        bottom: -30px;
+        left: 38%;
     }
-    :checked + .supportsum label:after {
-        content: url(../img/checked.svg);
+    #customsum + label {
+        font-size: 30px;
+    }
+    input[type="radio"] + label span {
+        background: url('../img/unchecked.svg');
+        background-size: cover;
+    }
+    input[type="radio"]:checked + label span {
+        background: url('../img/checked.svg');
+        background-size: cover;
+    }
+    .toeta .buttonDiv {
+        width: 100%;
+        text-align: center;
     }
     .toeta .btn-primary {
         font-family: 'AmaticSCBold';
-        font-size: 20px;
+        font-size: 24px;
         letter-spacing: 1px;
         color: #333;
-        background: #fff;
+        background: #fcd302;
         text-shadow: none;
         transition: .2s;
-        width: 100%;
-        padding: 10px 18px;
+        margin: 0 auto;
+        padding: 6px 54px;
         margin: 0 20px 10px;
     }
     .toeta .btn-primary:hover,
@@ -1163,7 +1317,7 @@
         list-style: none;
         position: absolute;
         z-index: 99;
-        top: 10px;
+        top: -20px;
     }
     .overlay-logo img {
         height: 120px
@@ -1190,6 +1344,9 @@
     }
     .login-page h3 {
         margin: 5% 0 0;
+    }
+    .teema.expanded {
+        width: 100%!important;
     }
     @media (max-width: 767px) {
         .navbar-default .navbar-collapse,
@@ -1279,6 +1436,21 @@
         }
         .dropdowns {
             display: none;
+        }
+        .quote .quotecontainer {
+            bottom: 20px;
+            width: 100%;
+            right: 0;
+        }
+        .list table td {
+            font-size: 10px;
+            padding: 5px;
+        }
+        .toetus h2 {
+            margin-bottom: 0;
+        }
+        .cta .btn {
+            font-size: 16px;
         }
     }
     @media (min-width:768px) and (max-width:1064px) {

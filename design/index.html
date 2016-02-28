@@ -21,7 +21,6 @@
 
 <body>
     <div id="carousel" class="carousel slide" data-ride="carousel">
-        <img src="img/kogumelugu-black-white.svg" class="static-logo">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -58,8 +57,8 @@
 
 
 
-    <nav class="navbar-default home-nav">
-        <div class="container-fluid">
+    <nav class="navbar-default">
+        <div class="container-fluid home-nav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -187,17 +186,17 @@
 
                 <form>
                     <div class="row">
-                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <input type="text" placeholder="Loo/Mälestise pealkiri" class="form-control">
                         </div>
-                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <input type="text" placeholder="Teema" class="form-control">
                         </div>
 
-                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" placeholder="Teie nimi">
                         </div>
-                        <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" placeholder="Teie e-post">
                         </div>
                         <div class="form-group col-md-12 col-sm-6 col-xs-12">
@@ -208,7 +207,7 @@
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
 
-                            <input type="file" class="form-control fileupload">
+                            <input type="file" class="form-control fileupload filestyle" data-input="false" data-buttonName="btn-default" data-buttonText="Lisa videofail või dokument">
                         </div>
 
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
@@ -250,9 +249,9 @@
         <h2>Kogu Me Lugu Teemapuu</h2>
 
         <div class="teemadegrid container">
-            <div class="row">
+            <div class="row" id="teemapuu">
                 <div class="teema col-md-6 lg">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
@@ -260,15 +259,51 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div href="" class="btn btn-primary-outline">Vaata teemasid</div>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
                                 </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 15 teemat, siis class teemal lg ---->
+                        <table>
 
+                            <tr>
+                                <td><a href="#">Teema 1</a></td>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 1</a></td>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 1</a></td>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 1</a></td>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 1</a></td>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
                 <div class="teema col-md-3 sm">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
@@ -280,96 +315,268 @@
                                 </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 6 teemat class sm --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
                 <div class="teema col-md-3 sm">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
                                     <h3>NSVL ja Kommunistlik süsteem</h3></td>
                             </tr>
                             <tr>
-                                <td><a href="" class="btn btn-primary-outline">Vaata teemasid</a></td>
+                                <td>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
+                                </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 6 teemat class sm --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
                 <div class="teema col-md-3 sm">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
                                     <h3>Maailm sajandivahetusel</h3></td>
                             </tr>
                             <tr>
-                                <td><a href="" class="btn btn-primary-outline">Vaata teemasid</a></td>
+                                <td>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
+                                </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 6 teemat class sm --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
                 <div class="teema col-md-3 sm">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
                                     <h3>Demokraatlik maailm pärast teist maailmasõda</h3></td>
                             </tr>
                             <tr>
-                                <td><a href="" class="btn btn-primary-outline">Vaata teemasid</a></td>
+                                <td>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
+                                </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 6 teemat class sm --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
 
-            </div>
-            <div class="row">
+
                 <div class="teema col-md-4 md">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
                                     <h3>Eesti ja maailm: Eluolu ja kultuur</h3></td>
                             </tr>
                             <tr>
-                                <td><a href="" class="btn btn-primary-outline">Vaata teemasid</a></td>
+                                <td>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
+                                </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 8 teemat class md --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
 
                 <div class="teema col-md-4 md">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
                                     <h3>Sõja ja rahu küsimus</h3></td>
                             </tr>
                             <tr>
-                                <td><a href="" class="btn btn-primary-outline">Vaata teemasid</a></td>
+                                <td>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
+                                </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 8 teemat class md --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
 
                 <div class="teema col-md-4 md">
-                    <a href="#">
+                    <div class="front">
                         <table>
                             <tr>
                                 <td>
                                     <h3>Inimsusevastased kuriteod</h3></td>
                             </tr>
                             <tr>
-                                <td><a href="" class="btn btn-primary-outline">Vaata teemasid</a></td>
+                                <td>
+                                    <div class="btn btn-primary-outline">Vaata teemasid</div>
+                                </td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
+                    <div class="back">
+                        <!--- Kuni 8 teemat class md --->
+                        <table>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="#">Teema 2</a></td>
+                                <td><a href="#">Teema 2</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="container-fluid cta">
+    <div class="container-fluid cta white-cta">
 
         <div class="container">
             <a href="#" class="btn">
@@ -380,25 +587,22 @@
         </div>
 
     </div>
-    <div class="container-fluid containsimage">
-        <img src="img/kaart.jpg" class="img-responsive" width="100%;">
-    </div>
+
 
     <div class="container-fluid toetajad" id="toetajad">
 
         <div class="row header">
             <div class="container">
-                <h2>Toetajad <span class="darkened">Ja Tegijad</span></h2>
+
 
                 <div class="text center">
                     <div class="row">
 
-                        <div class="col-md-6 col-md-offset-3">
-                            <p><b>Kogu Me Lugu on eesti elulugude kogumise ja avalikustamise algatus, mille käigus kogutakse lugusid.</b></p>
-                            <p><b>Kogume lugu võrgustiku kuuluvad:</b></p>
+                        <div class="col-md-10 col-md-offset-1">
+                            <p><b>Kogu Me Lugu on eesti elulugude kogumise ja avalikustamise algatus, mis kutsub kõiki Eestimaal elanud, siin elavaid või siit pärit inimesi koguma ja rääkima oma perede lugusid , nii traagilisi kui inspireerivaid, et neid uurida ja jagada tulevaste põlvedega üle maailma.</b></p>
                         </div>
                     </div>
-
+                    <h2>Kogu Me Lugu Koostööpartneriteks on</h2>
                 </div>
 
             </div>
@@ -407,173 +611,129 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="lg">
-                            <tr>
-                                <td>
-                                    <h3>Kogu me lugu võrgustiku kuuluvad:</h3></td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Baltic Heritage Network</td>
-                                <td><img src="img/logo-75x35.png">Black Ribbon Day Foundation</td>
-                                <td><img src="img/logo-75x35.png">Eesti Diasporaa Akadeemia</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Eesti Kirjandusmuuseum</td>
-                                <td><img src="img/logo-75x35.png">Eesti Mälu Instituut</td>
-                                <td><img src="img/logo-75x35.png">Eesti Rahva Muuseum</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">MTÜ Tulipisar</td>
-                                <td><img src="img/logo-75x35.png">Murtud Rukkilille Ühing</td>
-                                <td><img src="img/logo-75x35.png">Naiskodukaitse</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Okupatsioonide Muuseum</td>
-                                <td><img src="img/logo-75x35.png">Rahvusarhiiv</td>
-                                <td><img src="img/logo-75x35.png">Sihtasutus Unitas</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Stanfordi Ülikooli Raamatukogu</td>
-                                <td><img src="img/logo-75x35.png">TLÜ Akadeemilise Raamatukogu Väliseesti kirjanduse keskus
-                                </td>
-                                <td><img src="img/logo-75x35.png">TÜ Ajaloo ja arheoloogia instituut
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">VEMU/Eesti Õppetöö Keskus</td>
-                                <td><img src="img/logo-75x35.png">Ühendus Eesti Elulood</td>
-                            </tr>
-
-                        </table>
-
+                        <div class="tablediv">
+                            <table class="lg">
+                                <tr>
+                                    <td>Avatud Vabariik</td>
+                                    <td>Baltic Heritage Network</td>
+                                    <td>Black Ribbon Day Foundation</td>
+                                </tr>
+                                <tr>
+                                    <td>Education Development Centre</td>
+                                    <td>Edward von Lõngus</td>
+                                    <td>Eesti Diasporaa Akadeemia</td>
+                                </tr>
+                                <tr>
+                                    <td>Eesti Kirjandusmuuseum</td>
+                                    <td>Eesti Mälu Instituut</td>
+                                    <td>Eesti Rahva Muuseum</td>
+                                </tr>
+                                <tr>
+                                    <td>Eesti Rahvusringhääling</td>
+                                    <td>Eesti Vabariik 100</td>
+                                    <td>EUROCLIO</td>
+                                </tr>
+                                <tr>
+                                    <td>Eva Sepping</td>
+                                    <td>Georg Eckert Institute</td>
+                                    <td>Hooandja</td>
+                                </tr>
+                                <tr>
+                                    <td>Inimõiguste Instituut</td>
+                                    <td>Kaasaegse Kunsti Eesti Keskus</td>
+                                    <td>Kilomeeter Skulptuuri</td>
+                                </tr>
+                                <tr>
+                                    <td>Kino Artis</td>
+                                    <td>Eesti Kunstimuuseum</td>
+                                    <td>MTÜ Tulipisar</td>
+                                </tr>
+                                <tr>
+                                    <td>Murtud Rukkilille Ühing</td>
+                                    <td>Naiskodukaitse</td>
+                                    <td>Rahvusarhiiv</td>
+                                </tr>
+                                <tr>
+                                    <td>Reklaamiagentuur MUST</td>
+                                    <td>Stanfordi Ülikooli Raamatukogu</td>
+                                    <td>Tallinna Ülikool</td>
+                                </tr>
+                                <tr>
+                                    <td>Tartu Ülikool</td>
+                                    <td>VABAMU</td>
+                                    <td>VEMU/Eesti Õppetöö Keskus</td>
+                                </tr>
+                                <tr>
+                                    <td>Williams College</td>
+                                    <td>Ühendus Eesti Elulood</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="bottom-table">
                     <div class="col-md-4">
                         <table class="md">
                             <tr>
                                 <td>
-                                    <h3>Kogu Me Lugu Koostööpartnerid</h3></td>
+                                    <h3>Suurtoetajad</h3></td>
                             </tr>
 
                             <tr>
-                                <td><img src="img/logo-75x35.png">Ajapaik</td>
+                                <td>Erasmus+: Euroopa Noored</td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Allfilm</td>
+                                <td>Estonian Relief Committee</td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Avatud Vabariik</td>
+                                <td>Haridus- ja Teadusministeerium</td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Eesti Rahvusringhääling</td>
+                                <td>Kaitseministeerium</td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Eesti Vabariik 100</td>
+                                <td>Kultuuriministeerium</td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Hooandja</td>
+                                <td>Kistler-Ritso Sihtasutus</td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Inimõiguste Instituut</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Kino Artis</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Reklaamiagentuur MUST</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Tallinna Ülikool</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">ENTU</td>
+                                <td>Siseministeerium</td>
                             </tr>
                         </table>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-8">
+
                         <table class="md">
                             <tr>
                                 <td>
-                                    <h3>Me Lugu Rahastajad:</h3></td>
+                                    <h3>Tänusõnad kaastegutsejatele</h3></td>
                             </tr>
                             <tr>
-                                <td><img src="img/logo-75x35.png">Erasmus+: Euroopa Noored</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Haridus- ja Teadusministeerium</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Kaitseministeerium</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/logo-75x35.png">Kistler-Risto Sihtasutus</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;</td>
+                                <td>Uve Poom, Kadri Sikk, Maarja Merivoo-Parro, Ants Tammik, Tõnis Tuuga, Madis Tüür, Andri Allas, Helis Hirve, Marion Koppel, Sander Maran, Jüri Muttika, Marta Pulk, Maria Reinup, Rein Kotov, Merilin Mihkeles, Anne-Mai Saar, Alice Pia Kattago, Hanna Jemmer, Michaela Snopkova, jpt.</td>
                             </tr>
 
+
                         </table>
-                    </div>
-                    <div class="col-md-4">
-                        <table class="md special">
+                        <table class="md">
                             <tr>
                                 <td>
-                                    <h3>Me Lugu Pereliikmed</h3></td>
+                                    <h3>Produtsent</h3></td>
+                                <td>
+                                    <h3>Kaasprodutsendid</h3></td>
                             </tr>
                             <tr>
-                                <td><b>Projektijuht:</b> Sandra Vokk</td>
-                            </tr>
-                            <tr>
-                                <td><b>Produtsent/režissöör:</b> Anna Hints</td>
-                            </tr>
-                            <tr>
-                                <td><b>Intervjuude läbiviijad:</b> Anna Hints, Uve Poom, Kadri Sikk, Maarja Merivoo-Parro</td>
-                            </tr>
-                            <tr>
-                                <td><b>Operaatorid:</b> Ants Tammik, Tõnis Tuuga, Madis Tüür</td>
-                            </tr>
-                            <tr>
-                                <td><b>Monteerijad/toimetajad:</b> Andri Allas, Anna Hints, Helis Hirve, Marion Koppel, Sander Maran, Jüri Muttika, Marta Pulk, Maria Reinup, Kadri Sikk, Madis Tüür, Tõnis Tuuga, Rein Kotov
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><b>Uurimisassistent:</b> Merilin Mihkeles
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><b>Vabatahtlikud:</b> Anne-Mai Saar, Alice Pia Kattago, Hanna Jemmer, Michaela Snopkova
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>ja paljud teised algatuse toetajad.</td>
+                                <td>SA Unitas</td>
+                                <td>Altamira AS</td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
+                                <td>Meelis Niinepuu</td>
                             </tr>
-
                         </table>
                     </div>
+
 
                 </div>
             </div>
@@ -629,43 +789,70 @@
         </div>
     </div>
 
-    <div class="container-fluid toeta" id="toeta">
+    <div class="container-fluid toeta toeta-top" id="toeta">
         <div class="container">
-            <h2>Sinu panus loeb, toeta algatust!</h2>
-
+            <h2><span class="darkened">Sinu panus loeb,</span> toeta algatust!</h2>
             <p class="center white"><b>Löö kaasa Kogu Me Lugu kingitusega Eesti Vabariik 100. sünnipäevaks</b></p>
-            <table class="equal">
-                <tr>
-                    <td class="image"><img src="img/ev100.png" class="img-responsive"></td>
-                    <td class="text">Toetada on lisaks võimalik vaid paari klikiga internetipanga vahendusel. Vali sobiv toetussumma, kliki sellel ning Sind suunatakse Maksekeskuse lihtsasse ja turvalisse makseväravasse, kust on võimalik valida sobiv pank:</td>
-                </tr>
-            </table>
-            <form class="supportsum">
-                <label class="col-md-2">
-                    10€
-                    <input type="radio" name="sum" value="10">
-                </label>
-                <label class="col-md-2">
-                    20€
-                    <input type="radio" name="sum" value="20">
-                </label>
-                <label class="col-md-2">
-                    50€
-                    <input type="radio" name="sum" value="50">
-                </label>
-                <label class="col-md-2">
-                    100€
-                    <input type="radio" name="sum" value="100">
-                </label>
-                <label class="col-md-2" for="500">
-                    500€
-                    <input type="radio" name="sum" value="500">
-                </label>
-                <label class="col-md-2">
-                    1000€
-                    <input type="radio" name="sum" value="1000">
-                </label>
-                <input type="submit" class="btn btn-primary" value="Toeta">
+        </div>
+    </div>
+    <div class="container-fluid toeta toeta-bottom">
+        <div class="container">
+            <img src="img/ev100.png" class="img-responsive ev100">
+
+            <p class="text">Toetada on lisaks võimalik vaid paari klikiga internetipanga vahendusel. Vali sobiv toetussumma, kliki sellel ning Sind suunatakse Maksekeskuse lihtsasse ja turvalisse makseväravasse, kust on võimalik valida sobiv pank:</p>
+            <form class="supportsum" action="https://payment.maksekeskus.ee/pay/1/link.html">
+                <input type="text" name="shopId" value="23d7bb0e-3372-4644-8440-eb7bec5562b1" hidden>
+                <input type="text" name="paymentId" value="Toetan Kogu Me Lugu" hidden>
+                <ul>
+                    <li class="label">Toetan:</li>
+                    <li>
+                        <input type="radio" id="sum10" name="amount" value="10">
+                        <label for="sum10">
+                            <span></span>10€
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sum20" name="amount" value="20">
+                        <label for="sum20">
+                            <span></span>20€
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sum50" name="amount" value="50">
+                        <label for="sum50">
+                            <span></span>50€
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sum100" name="amount" value="100">
+                        <label for="sum100">
+                            <span></span>100€
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sum500" name="amount" value="500">
+                        <label for="sum500">
+                            <span></span>500€
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="sum1000" name="amount" value="1000">
+                        <label for="sum1000">
+                            <span></span>1000€
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="customsum" name="amount" value="">
+                        <label for="customsum">
+                            <span></span>
+                            <input type="number" class="customsum" onkeyup="setCustom();">
+                            <string>€</string>
+                        </label>
+                    </li>
+                </ul>
+                <div class="buttonDiv">
+                    <input type="submit" class="btn btn-primary" value="Toetan">
+                </div>
             </form>
         </div>
 
@@ -674,6 +861,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/filestyle.min.js"></script>
     <script type="text/javascript">
         function moveScroller() {
             var move = function() {
@@ -696,9 +884,17 @@
         $(function() {
             moveScroller();
         });
-        $(function() {
-            $('[data-toggle="tooltip" ] ').tooltip()
-        })
+
+        function setCustom() {
+            var value = $('.customsum').val();
+            $('#customsum').val(value);
+            console.log(value);
+        }
+
+
+        $('.teema').click(function() {
+            $(this).addClass('flip');
+        });
 
     </script>
 </body>
