@@ -808,12 +808,12 @@
     }
     .teemad {
         padding: 40px 55px;
-        background: url(../img/kml-placeholder.png);
+        background: url(../img/pilt5.jpg);
         background-size: cover;
     }
     .teemad h2 {
         text-shadow: 1px 1px 1px #333;
-        color: #333;
+        color: #fff;
         margin-bottom: 30px;
     }
     .teema {
