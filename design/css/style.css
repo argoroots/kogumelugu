@@ -1047,6 +1047,7 @@
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         z-index: 9;
+        margin-bottom: -400px;
     }
     .toeta-bottom {
         background: #339a9c;
