@@ -46,7 +46,6 @@ $(document).ready(function() {
             i += 1;
         });
 
-
         $('.' + name + 'ShowAll').click(function() {
             type.removeClass('hidden');
             $(this).addClass('hidden');
@@ -119,7 +118,6 @@ if (!YT.loading) {
 
 
 // https://developers.google.com/youtube/iframe_api_reference
-
 // global variable for the player
 var player;
 
