@@ -39,6 +39,7 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 - lookup property: project -> ***self.Project***
 - videoUrl
 - author (VIDEOLOO AUTOR) -> ***Person***
+- link(s) -> ***Link*** - references to documents/sources
 
 
 Supakate keel valida siit:  [vimeo supakad](https://vimeo.com/help/faq/managing-your-videos/captions-and-subtitles#what-caption-and-subtitle-file-formats-does-vimeo-support)  
@@ -60,6 +61,7 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - videoUrl (VIDEOLOO LINK YOUTUBE-is)
 - storyteller(s) (LOORÄÄKIJAD) -> ***Person***
 - author -> ***Person***
+- link(s) -> ***Link*** - references to documents/sources
 
 
 ## Tag *(tag)*
@@ -95,7 +97,24 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 - name
 - fullName (Kogu asukoha hierarhiline rada)
+- otherName(s) - Piirkonnal ajalooliselt olnud teised nimed
+- feature (Kas näidata kodulehe klassifikaatoris)
 - parent -> ***Region***
+
+
+## Links *(link)*
+- name - string
+- url - string
+- photo - thumbnail from attached documents/url's
+- document(s) - file - for self-hosted documents.
+
+
+## Toetajad *(sponsor)*
+
+- name
+- logo
+- link
+- contact -> ***Person***
 
 
 ### Originaalväljad
@@ -139,10 +158,3 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - LISAINFO == ***Story.legend***
 
 ---
-
-## Toetajad *(sponsor)*
-
-- name
-- logo
-- link
-- contact -> ***Person***
