@@ -63,6 +63,8 @@
     }
     p {
         color: #555;
+        font-size: 16px;
+        line-height: 20px;
     }
     b {
         font-weight: 600;
@@ -655,8 +657,8 @@
     }
     .textcontent .textcontainer {
         padding: 40px 60px;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 16px;
+        line-height: 20px;
     }
     .textcontent .skew:before {
         content: '';
@@ -774,8 +776,8 @@
         background: #40bebc;
         display: inline;
         color: #fff;
-        padding: 10px 60px 10px 30px;
-        font-size: 36px
+        padding: 10px 70px 10px 40px;
+        font-size: 36px;
     }
     .quotecontainer .righttitle {
         text-align: right;
@@ -784,7 +786,7 @@
         color: #fff;
         font-size: 36px;
         margin: 0px 200px;
-        padding: 10px 55px 10px 30px;
+        padding: 10px 70px 10px 35px;
     }
     .quotecontainer .quotetext {
         background: rgba(0, 0, 0, 0.7);
@@ -799,12 +801,12 @@
     }
     .quotecontainer .author {
         color: #40bebc;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 2em;
     }
     .teemad {
         padding: 40px 55px;
-        background: url(../img/pilt5.jpg);
+        background: url(../img/pilt4-compressor.jpg);
         background-size: cover;
     }
     .teemad h2 {
@@ -1002,9 +1004,20 @@
     .list table.lg td {
         width: 33.333%;
     }
-    .list table.md {}
+    .list table.md b {
+        color: #40bebc;
+    }
     .unitas {
         padding: 30px 0;
+    }
+    .unitas a {
+        color: #40bebc;
+    }
+    .unitas a:hover,
+    .unitas a:focus {
+        color: #555;
+        transition: .2s;
+        text-decoration: none;
     }
     .unitas h3 {
         margin-top: 0;
@@ -1058,8 +1071,8 @@
     }
     .toeta .white {
         color: #fff;
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 16px;
+        line-height: 20px;
         margin: 30px;
         text-align: center;
     }
@@ -1344,6 +1357,9 @@
     }
     .teema.expanded {
         width: 100%!important;
+    }
+    img.full-width {
+        width: 100%;
     }
     @media (max-width: 767px) {
         .navbar-default .navbar-collapse,
