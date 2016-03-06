@@ -654,9 +654,10 @@
         position: relative;
         z-index: 1;
         background: #fff;
+        margin-bottom: 0px;
     }
     .textcontent .textcontainer {
-        padding: 40px 60px;
+        padding: 40px 60px 0;
         font-size: 16px;
         line-height: 20px;
     }
@@ -677,6 +678,22 @@
         transform: skewY(-2deg);
         -webkit-backface-visibility: hidden;
     }
+    .skewed:after {
+        left: 0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 15vw solid #fff;
+        border-bottom: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+    }
+    #tutvustus-bottom {
+        margin-bottom: -100px;
+        position: relative;
+        z-index: 1;
+        margin-top: 50px;
+    }
     .textcontent p {
         margin: 20px 0 20px;
     }
@@ -690,8 +707,40 @@
         font-size: 18px;
         line-height: 21px;
     }
+    #sinulugu-top {
+        background: #9fa1a3;
+        position: relative;
+        margin-bottom: 200px;
+        padding-top: 60px;
+        padding-bottom: 0px;
+    }
+    #sinulugu-top .container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        margin-top: 30px;
+    }
+    #sinulugu-bottom {
+        position: relative;
+        margin-top: -200px;
+    }
+    #sinulugu-bottom p {
+        text-align: center;
+    }
+    #sinulugu-bottom form {
+        padding-top: 160px;
+    }
+    #sinulugu-top:after {
+        left: 0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 15vw solid #9fa1a3;
+        border-bottom: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+    }
     .formcontent {
-        padding: 45px 55px 40px;
         background: #40bebc;
     }
     .formcontent h2 {
@@ -709,7 +758,8 @@
         border-top: 1px solid #fff;
     }
     .formcontent input.form-control,
-    .formcontent textarea.form-control {
+    .formcontent textarea.form-control,
+    .toeta input.form-control {
         height: 100%;
         padding: 8px 12px 4px;
         font-size: 18px;

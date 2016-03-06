@@ -28,30 +28,17 @@
             <li class="video" data-target="#carousel" data-slide-to="1"><img src="img/play.svg" class="img-responsive"></li>
 -->
             <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-            <li data-target="#carousel" data-slide-to="3"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="img/pilt2.jpg" alt="...">
-                <div class="carousel-caption">
-
-                </div>
-            </div>
-            <div class="item">
                 <img src="img/poisidreas.jpg" alt="...">
                 <div class="carousel-caption">
 
                 </div>
             </div>
-            <div class="item">
-                <img src="img/pilt2.jpg" alt="...">
-                <div class="carousel-caption">
 
-                </div>
-            </div>
             <div class="item">
                 <img src="img/poisidreas.jpg" alt="...">
                 <div class="carousel-caption">
@@ -162,12 +149,15 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <p class="highlighted center"><b>Iga lugu on omapärane, samas osa suuremast loost. Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.</b></p>
-                        </div>
-                    </div>
 
+
+                </div>
+            </div>
+        </div>
+        <div class="container" id="tutvustus-bottom">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <p class="highlighted center"><b>Iga lugu on omapärane, samas osa suuremast loost. Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.</b></p>
                 </div>
             </div>
         </div>
@@ -177,20 +167,20 @@
     <div class="container-fluid containsimage">
         <img src="img/pilt2-compressor.jpg" class="img-responsive full-width">
     </div>
-    <div class="container-fluid formcontent" id="sinulugu">
-        <div class="container">
+    <div class="formcontent" id="sinulugu">
+        <div class="container-fluid" id="sinulugu-top">
 
-            <h2>Saada oma lugu</h2>
             <div class="container">
+                <h2>Saada oma lugu</h2>
 
+
+            </div>
+        </div>
+        <div class="container-fluid" id="sinulugu-bottom">
+            <div class="container">
                 <p>Kui Sul on materjale, mida soovid jagada või arhiveerida, või kontakte, keda intervjuuks soovitada, täida vorm ja saada meile!</p>
 
                 <p>Sobivad materjalid talletatakse Okupatsioonide Muuseumi arhiivis. Videointervjuud talletatakse Eesti Rahvusarhiivis</p>
-                <hr>
-            </div>
-
-            <div class="container">
-
                 <form>
                     <div class="row">
                         <div class="form-group col-md-6 col-sm-6 col-xs-12">
@@ -787,7 +777,7 @@
                 <div class="col-md-4 support center"><img src="img/heart.png" class="img-responsive">
                     <p>Soovitades meile loorääkijaid, keda intervjueerida</p>
                 </div>
-                <div class="col-md-4 support center"><img src="img/refresh.png" class="img-responsive">
+                <div class="col-md-4 support center"><img src="img/spread.png" class="img-responsive">
                     <p>Levitades sõna Kogu Me Lugu kohta</p>
                 </div>
 
@@ -797,7 +787,7 @@
                 <div class="col-md-4 col-md-offset-2 support center"><img src="img/people.png" class="img-responsive">
                     <p>Vanemate või vanavanematega aega veetes ja lugusid vestes</p>
                 </div>
-                <div class="col-md-4 support center"><img src="img/gear.png" class="img-responsive">
+                <div class="col-md-4 support center"><img src="img/toeta.png" class="img-responsive">
                     <p>Toetades Kogu Me Lugu tegevusi vabatahtliku töö või muude mitterahaliste vahenditega</p>
                 </div>
             </div>
@@ -815,8 +805,16 @@
         <div class="container">
             <a href="https://ev100.ee/et/kogu-me-lugu" target="_blank"><img src="img/ev100.png" class="img-responsive ev100"></a>
 
-            <p class="text">Toetada saab paari klikiga internetipanga vahendusel. Vali sobiv toetussumma, kliki "TOETAN" ning Sind suunatakse Maksekeskuse lihtsasse ja turvalisse makseväravasse.</p>
+            <p class="text">Toetada saab paari klikiga internetipanga vahendusel. Jäta meile oma nimi ja e-posti aadress, et teaksime, kellele tänusõnad estada ning vali sobiv toetussumma, kliki "TOETAN" ning Sind suunatakse Maksekeskuse lihtsasse ja turvalisse makseväravasse.</p>
             <form class="supportsum" action="https://payment.maksekeskus.ee/pay/1/link.html">
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Sinu nimi">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Sinu e-posti aadress">
+                    </div>
+                </div>
                 <input type="text" name="shopId" value="23d7bb0e-3372-4644-8440-eb7bec5562b1" hidden>
                 <input type="text" name="paymentId" value="Toetan Kogu Me Lugu" hidden>
                 <ul>
