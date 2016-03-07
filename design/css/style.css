@@ -27,12 +27,16 @@
         font-weight: normal;
         font-style: normal;
     }
+    html {
+        height: 100%;
+    }
     body {
         font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
         font-weight: 300;
         font-size: 14px;
         line-height: 18px;
         color: #555;
+        height: 100%;
     }
     h1,
     h2,
@@ -1106,7 +1110,7 @@
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         z-index: 9;
-        margin-bottom: -400px;
+        margin-bottom: -50vw;
     }
     .toeta-bottom {
         background: #339a9c;
@@ -1410,6 +1414,47 @@
     }
     img.full-width {
         width: 100%;
+    }
+    .pagewrapper {
+        min-height: 100%;
+        /* equal to footer height */
+        margin-bottom: -452px;
+    }
+    .pagewrapper:after {
+        content: "";
+        display: block;
+    }
+    .footer,
+    .pagewrapper:after {
+        height: 452px;
+    }
+    .footer {
+        background: #e9eaec;
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+    .footerlogo {
+        width: 180px;
+        margin: 0 auto 40px;
+    }
+    .footer ul {
+        margin: 0;
+        -webbkit-margin-start: 0;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0;
+    }
+    .footer ul li {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    .footer ul li a img:hover,
+    .footer ul li a img:focus {
+        opacity: 0.7;
     }
     @media (max-width: 767px) {
         .navbar-default .navbar-collapse,
