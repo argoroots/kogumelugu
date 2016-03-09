@@ -3,7 +3,7 @@ var router   = require('express').Router()
 
 
 router.get('/', function(req, res) {
-    res.render('index', {
+    res.render('index/index', {
         result: true,
         version: APP_VERSION,
         started: APP_STARTED
