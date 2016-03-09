@@ -1,13 +1,13 @@
 .container-fluid.content
-    .slider(style="background:url('img/poisidreas.jpg') top;background-size:cover;")
+    .slider(style='background:#3a3a3c;background-size:cover;')
     //- Pilt vahetatav UNITASe jaoks
     .subnav
         .row
-            .col-md-8.col-sm-12.filters
+            .col-md-12.col-sm-12.filters
                 .row
-                    .col-md-4.col-sm-4.col-xs-6.titleImage
+                    .col-md-4.col-sm-7.col-xs-6.titleImage
                         img.img-responsive(src='img/Teek.png')
-                    .col-md-8.col-sm-8.col-xs-6
+                    .col-md-4.col-md-offset-4.col-sm-offset-0.col-sm-5.col-xs-6
                         .sort
                             .images
                                 .instruction.hidden-xs
@@ -19,11 +19,8 @@
                                 .instruction.hidden-xs Reasta:
                                 a.sortby(href='') enim vaadatud
                                 a.sortby(href='') viimati sisestatud
-            .col-md-4.col-sm-12.searchcolumn
-                .search
-                    input(type='text', placeholder='OTSI')
         .row.dropdowns
-            .col-md-4.col-sm-4.col-xs-4.topic
+            .col-md-3.col-sm-3.col-xs-4.topic
                 select.form-control
                     option.placeholder(selected='', disabled='', value='') Vali teema
                     option(value='') Valik 1
@@ -31,7 +28,7 @@
                     option(value='') Valik 3
                     option(value='') Valik 4
                     option(value='') Valik 5
-            .col-md-4.col-sm-4.col-xs-4.area
+            .col-md-3.col-sm-3.col-xs-4.area
                 select.form-control
                     option.placeholder(selected='', disabled='', value='') Vali piirkond
                     option(value='') Valik 1
@@ -39,7 +36,7 @@
                     option(value='') Valik 3
                     option(value='') Valik 4
                     option(value='') Valik 5
-            .col-md-4.col-sm-4.col-xs-4.generation
+            .col-md-3.col-sm-3.col-xs-4.generation
                 select.form-control
                     option.placeholder(selected='', disabled='', value='') Vali põlvkond
                     option(value='') Valik 1
@@ -47,6 +44,9 @@
                     option(value='') Valik 3
                     option(value='') Valik 4
                     option(value='') Valik 5
+            .col-md-3.col-sm-3.col-xs-12.searchcolumn
+                .search
+                    input(type='text', placeholder='OTSI')
     #galleryPush(style='display:none')
 .gallery.container
     .row
