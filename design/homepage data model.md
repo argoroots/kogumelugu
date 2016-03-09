@@ -152,7 +152,7 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - VIDEOLOO PEALKIRI == ***Chapter.title***
 - VIDEOLOO LINK YOUTUBE-is == ***Chapter.videoUrl (VIDEOLOO LINK YOUTUBE-is)***
 - INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA == ***Interview.timecodedSubjects***
-- ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA == ***Chapter.timecodedText***
+- ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA == ***Interview.timecodedCurriculum***
 - KANAL
 - YOUTUBE SILDID == ***Chapter.tag***
 - LISAINFO == ***Story.legend***
