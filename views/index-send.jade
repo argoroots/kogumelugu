@@ -1,0 +1,29 @@
+#sinulugu.formcontent
+    #sinulugu-top.container-fluid
+        .container
+            h2 Saada oma lugu
+    #sinulugu-bottom.container-fluid
+        .container
+            p Kui Sul on materjale, mida soovid jagada või arhiveerida, või kontakte, keda intervjuuks soovitada, täida vorm ja saada meile!
+            p Sobivad materjalid talletatakse Okupatsioonide Muuseumi arhiivis. Videointervjuud talletatakse Eesti Rahvusarhiivis
+            form
+                .row
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        input.form-control(type='text', placeholder='Loo või mälestise pealkiri')
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        input.form-control(type='text', placeholder='Sinu kontakttelefon')
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        input.form-control(type='text', placeholder='Sinu nimi')
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        input.form-control(type='text', placeholder='Sinu e-posti aadress')
+                    .form-group.col-md-12.col-sm-6.col-xs-12
+                        textarea.form-control(placeholder='Loo rääkija või asja omaja nimi ja sünniaeg')
+                    .form-group.col-md-12.col-sm-6.col-xs-12
+                        textarea.form-control(placeholder='Loo või asja lühikirjeldus')
+                    .form-group.col-md-12.col-sm-12.col-xs-12
+                        input.form-control.fileupload.filestyle(type='file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
+                    .form-group.col-md-12.col-sm-12.col-xs-12
+                        textarea.form-control(placeholder='Failide kommentaarid või lisainfo')
+                p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
+                .form-group.button
+                    a.btn.btn-primary-outline(href='#') Saada lugu

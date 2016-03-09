@@ -3,7 +3,11 @@ var router   = require('express').Router()
 
 
 router.get('/', function(req, res) {
-    res.redirect('/video')
+    res.render('index', {
+        result: true,
+        version: APP_VERSION,
+        started: APP_STARTED
+    })
 })
 
 
