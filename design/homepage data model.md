@@ -31,7 +31,7 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 - recordingLocation (KOGUMISE / SALEVESTUSE TOIMUMISKOHT)
 - description / **multilingual** - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
 - timecodedSubjects / **multilingual** (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
-- timecodedCurriculum (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA)
+- curriculumSubject(s) (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA) -> *** Subject ***
 - mention(s) (MAINITUD ISIKUD) -> ***Person***
 - region(s) (MAINITUD PIIRKONNAD) -> ***Region***
 - tag (YOUTUBE SILDID) -> ***Tag***
@@ -44,6 +44,9 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
 
 Supakate keel valida siit:  [vimeo supakad](https://vimeo.com/help/faq/managing-your-videos/captions-and-subtitles#what-caption-and-subtitle-file-formats-does-vimeo-support)  
 Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
+
+
+> Märksõnu võib igaüks panna ja välja mõtelda; Teemad on etteantud klassifikaatorid
 
 
 ## Story *(story)*
@@ -62,6 +65,12 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - storyteller(s) (LOORÄÄKIJAD) -> ***Person***
 - author -> ***Person***
 - link(s) -> ***Link*** - references to documents/sources
+
+
+## Subject *(subject)*
+Is hierarchical
+
+- name
 
 
 ## Tag *(tag)*
@@ -94,12 +103,12 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 
 
 ## Region *(region)*
+Is hierarchical
 
 - name
 - fullName (Kogu asukoha hierarhiline rada)
 - otherName(s) - Piirkonnal ajalooliselt olnud teised nimed
 - feature (Kas näidata kodulehe klassifikaatoris)
-- parent -> ***Region***
 
 
 ## Links *(link)*
