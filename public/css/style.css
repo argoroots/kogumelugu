@@ -135,7 +135,6 @@
     }
     .content .subnav {
         margin: -20px 0 20px;
-        transition: .5s;
     }
     #videoPage .subnav {
         background: #3f3f3f;
@@ -148,9 +147,8 @@
         position: fixed;
         top: 80px;
         left: 0;
-        z-index: 1030;
+        z-index: 11;
         width: 100%;
-        transition: .5s;
         padding: 0 15px;
     }
     .subnav .subtitle {
@@ -1384,7 +1382,8 @@
         top: -20px;
     }
     .overlay-logo img {
-        height: 120px
+        height: 120px;
+        position: absolute;
     }
     .home-nav {
         position: relative;
