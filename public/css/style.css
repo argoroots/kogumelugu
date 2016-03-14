@@ -1509,7 +1509,10 @@
             text-align: left;
         }
         .content .subnav {
-            margin: 0 0 20px;
+            margin: 50px 0 20px;
+        }
+        .content .subnav .fixed-top{
+            margin:0 0 20px;
         }
         .content {
             padding: 0 20px;
