@@ -47,6 +47,7 @@
         each vGroup in videos
             if vGroup.length === 2
                 each v in vGroup
+                    a(href='/video/' + v.get('id'))
                     .col-md-6.col-sm-6.col-xs-12.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + v.get('id') + "/picture');background-size:cover;")
                         .overlay
                         .wrapper
@@ -58,6 +59,7 @@
 
             if vGroup.length === 3
                 each v in vGroup
+                    a(href='/video/' + v.get('id'))
                     .col-md-4.col-sm-4.col-xs-12.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + v.get('id') + "/picture');background-size:cover;")
                         .overlay
                         .wrapper
@@ -67,6 +69,7 @@
                             a(href='/video/' + v.get('id'))
                                 .btn.btn-primary-outline Vaata lugu
             if vGroup.length === 5
+                a(href='/video/' + v.get('id'))
                 .col-md-6.col-sm-6.col-xs-12.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + vGroup[0].get('id') + "/picture');background-size:cover;")
                     .overlay
                     .wrapper
@@ -76,6 +79,7 @@
                         a(href='/video/' + vGroup[0].get('id'))
                             .btn.btn-primary-outline Vaata lugu
                 each v in vGroup.slice(1)
+                    a(href='/video/' + v.get('id'))
                     .col-md-3.col-sm-3.col-xs-6.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + v.get('id') + "/picture');background-size:cover;")
                         .overlay
                         .wrapper

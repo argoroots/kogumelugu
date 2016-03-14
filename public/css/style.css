@@ -499,6 +499,9 @@
         font-size: 18px;
         font-weight: 300;
     }
+    a #videoGallery .video{
+        text-decoration: none;
+    }
     #videoGallery .video .wrapper:hover,
     #videoGallery .video .wrapper:focus {
         background: rgba(64, 190, 188, .8);
@@ -924,9 +927,8 @@
         transition: .2s;
         padding: 6px 18px 3px;
     }
-    .teema a:hover .btn-primary-outline,
-    .teema a:focus .btn-primary-outline {
-        border: 2px solid #40bebc;
+    .teema .btn-primary-outline:hover ,
+    .teema .btn-primary-outline:focus {
         color: #40bebc;
     }
     .teema .front {
