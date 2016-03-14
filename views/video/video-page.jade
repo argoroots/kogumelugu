@@ -4,18 +4,18 @@
             .col-md-8.col-sm-8.col-xs-12
                 .firstblock
                     .videoWrapper
-                        iframe#video(src='https://www.youtube.com/embed/KJyHTQAkfjY?rel=0&controls=0&showinfo=0;enablejsapi=1', frameborder='0', allowfullscreen='')
-                        .playButtonArea
-                            #play-button.btn.btn-primary-outline Vaata lugu
+                        iframe#video(src=video.get('videoUrl.value'), frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                        //- .playButtonArea
+                        //-     #play-button.btn.btn-primary-outline Vaata lugu
                     .videoDescription
-                        h1.title Ilmar Raag - Kogu Me Lugu
+                        h1.title= video.get('title-est.value')
                     .row
                         .col-md-8
-                            p.description
-                                | Intervjuu 2015, Vancouver, Kanada
-                                br
-                                | Intervjueerija
-                                b Uve Poom
+                            p.description= video.get('description-est.value')
+                                //- | Intervjuu 2015, Vancouver, Kanada
+                                //- br
+                                //- | Intervjueerija
+                                //- b Uve Poom
                         .col-md-4
                             ul.sharebuttons
                                 a(href='#')

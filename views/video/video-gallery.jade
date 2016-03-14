@@ -23,19 +23,13 @@
             .col-md-3.col-sm-3.col-xs-4.topic
                 select.form-control
                     option.placeholder(selected='', disabled='', value='') Vali teema
-                    option(value='') Valik 1
-                    option(value='') Valik 2
-                    option(value='') Valik 3
-                    option(value='') Valik 4
-                    option(value='') Valik 5
+                    each s in subjects
+                        option(value='')= s.get('name')
             .col-md-3.col-sm-3.col-xs-4.area
                 select.form-control
                     option.placeholder(selected='', disabled='', value='') Vali piirkond
-                    option(value='') Valik 1
-                    option(value='') Valik 2
-                    option(value='') Valik 3
-                    option(value='') Valik 4
-                    option(value='') Valik 5
+                    each c in regions
+                        option(value='')= c.get('name')
             .col-md-3.col-sm-3.col-xs-4.generation
                 select.form-control
                     option.placeholder(selected='', disabled='', value='') Vali põlvkond
@@ -50,119 +44,46 @@
     #galleryPush(style='display:none')
 .gallery.container
     .row
-        //- Start of pattern
-        //- first row
-        .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Eva Brown 12:29
-                p täispikk intervjuu, est/rus
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Laulupidu 1:03
-                p videokaadrid
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Rutt Kresling 17:02
-                p täispikk intervjuu, est/eng
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        //- /first row
-        //- second row
-        .col-md-6.col-sm-6.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Eva Brown 12:29
-                p täispikk intervjuu, est/rus
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Laulupidu 1:03
-                p videokaadrid
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Rutt Kresling 17:02
-                p täispikk intervjuu, est/eng
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Eva Brown 12:29
-                p täispikk intervjuu, est/rus
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-3.col-sm-3.col-xs-6.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Laulupidu 1:03
-                p videokaadrid
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        //- /second row
-        //- third row
-        .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Rutt Kresling 17:02
-                p täispikk intervjuu, est/eng
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Eva Brown 12:29
-                p täispikk intervjuu, est/rus
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-4.col-sm-4.col-xs-12.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Laulupidu 1:03
-                p videokaadrid
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        //- /third row
-        //- forth row
-        .col-md-6.col-sm-6.col-xs-12.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Rutt Kresling 17:02
-                p täispikk intervjuu, est/eng
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        .col-md-6.col-sm-6.col-xs-12.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-            .overlay
-            .wrapper
-                h4
-                    span Eva Brown 12:29
-                p täispikk intervjuu, est/rus
-                a(href='#')
-                    .btn.btn-primary-outline Vaata lugu
-        //- /forth row
+        each vGroup in videos
+            if vGroup.length === 2
+                each v in vGroup
+                    .col-md-6.col-sm-6.col-xs-12.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + v.get('id') + "/picture');background-size:cover;")
+                        .overlay
+                        .wrapper
+                            h4
+                                span= v.get('name')
+                            p= v.get('info')
+                            a(href='/video/' + v.get('id'))
+                                .btn.btn-primary-outline Vaata lugu
+
+            if vGroup.length === 3
+                each v in vGroup
+                    .col-md-4.col-sm-4.col-xs-12.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + v.get('id') + "/picture');background-size:cover;")
+                        .overlay
+                        .wrapper
+                            h4
+                                span= v.get('name')
+                            p= v.get('info')
+                            a(href='/video/' + v.get('id'))
+                                .btn.btn-primary-outline Vaata lugu
+            if vGroup.length === 5
+                .col-md-6.col-sm-6.col-xs-12.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + vGroup[0].get('id') + "/picture');background-size:cover;")
+                    .overlay
+                    .wrapper
+                        h4
+                            span= vGroup[0].get('name')
+                        p= vGroup[0].get('info')
+                        a(href='/video/' + vGroup[0].get('id'))
+                            .btn.btn-primary-outline Vaata lugu
+                each v in vGroup.slice(1)
+                    .col-md-3.col-sm-3.col-xs-6.video(style="background:url('https://kogumelugu.entu.ee/api2/entity-" + v.get('id') + "/picture');background-size:cover;")
+                        .overlay
+                        .wrapper
+                            h4
+                                span= v.get('name')
+                            p= v.get('info')
+                            a(href='/video/' + v.get('id'))
+                                .btn.btn-primary-outline Vaata lugu
 .loadmore
     a(href='#')
         .btn.btn-primary-outline Kuva rohkem

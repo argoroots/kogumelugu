@@ -5,27 +5,37 @@ var cparser  = require('cookie-parser')
 var express  = require('express')
 var path     = require('path')
 var raven    = require('raven')
+var random   = require('randomstring')
 
 var entu     = require('./helpers/entu')
 
 
 
 // global variables (and list of all used environment variables)
-APP_VERSION        = process.env.VERSION || require('./package').version
-APP_STARTED        = new Date().toISOString()
-APP_PORT           = process.env.PORT || 3000
-APP_COOKIE_DOMAIN  = process.env.COOKIE_DOMAIN || ''
+APP_VERSION         = process.env.VERSION || require('./package').version
+APP_STARTED         = new Date().toISOString()
+APP_PORT            = process.env.PORT || 4000
+APP_CACHE_DIR       = process.env.CACHEDIR || path.join(__dirname, 'cache')
+APP_COOKIE_SECRET   = process.env.COOKIE_SECRET || random.generate(16)
+APP_ENTU_URL        = process.env.ENTU_URL || 'https://kogumelugu.entu.ee/api2'
+APP_ENTU_USER       = process.env.ENTU_USER
+APP_ENTU_KEY        = process.env.ENTU_KEY
+APP_SENTRY          = process.env.SENTRY_DSN
+APP_DEFAULT_LOCALE  = process.env.DEFAULT_LOCALE || 'en'
+APP_TIMEZONE        = process.env.TIMEZONE || 'Europe/Tallinn'
 
 
 
 // initialize getsentry.com client
-var ravenClient = new raven.Client({
-    release: APP_VERSION,
-    dataCallback: function(data) {
-        delete data.request.env
-        return data
-    }
-})
+if(APP_SENTRY) {
+    var ravenClient = new raven.Client({
+        release: APP_VERSION,
+        dataCallback: function(data) {
+            delete data.request.env
+            return data
+        }
+    })
+}
 
 
 
@@ -40,7 +50,9 @@ app.set('view engine', 'jade')
 app.set('views', path.join(__dirname, 'views'))
 
 // logs to getsentry.com - start
-app.use(raven.middleware.express.requestHandler(ravenClient))
+if(APP_SENTRY) {
+    app.use(raven.middleware.express.requestHandler(ravenClient))
+}
 
 //serve static files
 app.use(express.static(path.join(__dirname, 'public')))
@@ -58,7 +70,9 @@ app.use('/video', require('./routes/video'))
 app.use('/user', require('./routes/user'))
 
 // logs to getsentry.com - error
-app.use(raven.middleware.express.errorHandler(ravenClient))
+if(APP_SENTRY) {
+    app.use(raven.middleware.express.errorHandler(ravenClient))
+}
 
 // show error
 app.use(function(err, req, res) {
@@ -70,8 +84,6 @@ app.use(function(err, req, res) {
 
     if(err.status !== 404) { console.log(err) }
 })
-
-
 
 // start server
 app.listen(APP_PORT, function() {
