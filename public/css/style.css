@@ -575,7 +575,7 @@
         width: 16px;
         height: 12px;
         border-radius: 2px;
-        margin: 0;
+        margin: 0 2px;
         border: 1px solid #40bebc;
         background: #40bebc;
     }
@@ -589,6 +589,7 @@
     .carousel-indicators .active {
         width: 16px;
         height: 12px;
+        margin: 0 2px;
         border: 1px solid #fff;
     }
     .searchcontainer {
@@ -1288,7 +1289,7 @@
     .keywords ul a li {
         display: inline-block;
         padding: 4px 6px;
-        margin: 2px 0;
+        margin: 2px;
         border-radius: 2px;
         border: 1px solid #fff;
     }
@@ -1638,6 +1639,8 @@
         padding: 6px 9px;
         list-style: none;
         background-color: #fff;
+        height: 50vh;
+        overflow-y: scroll;
     }
     .topic .select-options li {
         color: #40bebc;
