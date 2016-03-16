@@ -11,11 +11,13 @@
                         h1.title= video.get('title-est.value')
                     .row
                         .col-md-8
-                            p.description= video.get('description-est.value')
+                            p.description
                                 //- | Intervjuu 2015, Vancouver, Kanada
-                                //- br
-                                //- | Intervjueerija
-                                //- b Uve Poom
+                                | Intervjueerija
+                                br
+                                each author in video.get('author')
+                                    b #{ author.value }
+                                    br
                         .col-md-4
                             ul.sharebuttons
                                 a(href='#')
@@ -54,20 +56,9 @@
                                 |  1:20-3:00
                 .keywords
                     ul
-                        a(href='#')
-                            li.primary Teema 1
-                        a(href='#')
-                            li.primary Teema 2
-                        a(href='#')
-                            li.primary Teema 3
-                        a(href='#')
-                            li.primary Teema 4
-                        a(href='#')
-                            li.primary Teema 5
-                        a(href='#')
-                            li.primary Teema 6
-                        a(href='#')
-                            li.primary Teema 7
+                        each category in video.get('curriculumSubjects')
+                            a(href='#')
+                                li.primary= category.value
                         a(href='#')
                             li.secondary Generatsioon
                         a(href='#')
@@ -78,11 +69,11 @@
                             li.tertiary Seotud Isik
                         a(href='#')
                             li.tertiary Seotud Isik
-                        a(href='#')
-                            li.quatenary Seotud Asukoht
+                        each region in video.get('region')
+                            a(href='#')
+                                li.quatenary= region.value
                 .lastblock
-                    p.description
-                        | Kogu Me Lugu kogub Nõukogude ja/või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende võimude tulemusena Eestisse sattunud inimeste mälestusi. Kogu Me Lugu ühendab ka erinevaid organisatsioone Eestis ja välismaal, mis koguvad ja uurivad Eesti mälestusi ja ajalugu.
+                    p.description= video.get('description-est.value')
             .col-md-4.col-sm-4.col-xs-12
                 .row.related
                     //- Esimene võiks olla täpselt sama isiku teine intervjuu osa, kui on, aga kõik teised paneme, millel enim ühiseid märksõnu.
