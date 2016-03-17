@@ -2,7 +2,10 @@
 
 - Project (keegi väljast ei näe, rahastus, lepingud)
     - Interview
+        - Chapter
+        - TimecodedSubject
     - Story / videolugu
+        - TimecodedSubject
 - Sponsor (toetajad)
 
 # Definitions
@@ -30,8 +33,6 @@ Täispikk videointervjuu, milles vestja räägib oma loo.
     - titleLong:private (INTERVJUU PEALKIRI (pikk))
 - recordingLocation (KOGUMISE / SALEVESTUSE TOIMUMISKOHT)
 - description / **multilingual** - rus (LÜHIKIRJELDUS, LÜHIKIRJELDUSE KEEL) + (LISAINFO)
-- timecodedSubjects / **multilingual** (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
-- curriculumSubject(s) (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA) -> *** Subject ***
 - mention(s) (MAINITUD ISIKUD) -> ***Person***
 - region(s) (MAINITUD PIIRKONNAD) -> ***Region***
 - tag (YOUTUBE SILDID) -> ***Tag***
@@ -67,10 +68,20 @@ Oleks hea, kui see sobiks ka muude ajakodeeritud väljade jaoks.
 - link(s) -> ***Link*** - references to documents/sources
 
 
+## Chapter
+- time (hh:mm:ss)
+- chapter name / **multilingual** - (INTERVJUUS KÄSITLETUD TEEMAD AJAKOODIDEGA)
+
+
+## Timecoded Subject
+- time (hh:mm:ss)
+- subject -> ***Subject***
+
+
 ## Subject *(subject)*
 Is hierarchical
 
-- name
+- name / **multilingual** - (ÕPPEKAVAGA SEOTUD MÄRKSÕNAD / MÕISTED AJAKOODIDEGA) 
 
 
 ## Tag *(tag)*
