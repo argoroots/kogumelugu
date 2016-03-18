@@ -320,7 +320,7 @@
         max-height: 73px;
     }
     #videoGallery .subnav .filters {
-        background: #40bebc;
+        background: #ccc;
     }
     #videoGallery .subnav .filters h1 {
         font-family: 'AmaticSCBold';
@@ -1258,7 +1258,9 @@
         border-right: 1px solid #333;
     }
     .timeline ul,
-    .keywords ul {
+    .keywords ul,
+    ul.sharebuttons
+     {
         margin: 0;
         -webbkit-margin-start: 0;
         -webkit-margin-before: 0;
@@ -1268,14 +1270,12 @@
         -webkit-padding-start: 0;
     }
     .timeline ul li {
-        display: inline-block;
+        display: block;
         padding: 8px 6px;
         margin: 5px 0;
         border-left: 1px solid #40bebc;
     }
-    .timeline ul li:last-child {
-        border-right: 1px solid #40bebc;
-    }
+  
     .timeline ul li a {
         color: #fff;
         transition: .2s;
@@ -1285,6 +1285,19 @@
         color: #40bebc;
         transition: .2s;
         text-decoration: none;
+    }
+    .timeline ul li.showall {
+        border-left: 0;
+        display: inline-block;
+        border: 1px solid #40bebc;
+        border-radius: 4px;
+        color: #40bebc;
+        transition: .2s;
+    }
+    .timeline ul li.showall:hover,
+    .timeline ul li.showall:focus {
+        background: #40bebc;
+        color: #fff;
     }
     .keywords ul a li {
         display: inline-block;

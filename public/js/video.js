@@ -31,14 +31,20 @@ $(document).ready(function() {
     var secondary = "secondary";
     var tertiary = "tertiary";
     var quatenary = "quatenary";
+    var timecode = "timecode";
     var primaryKeywords = $('.primary');
     var secondaryKeywords = $('.secondary');
     var tertiaryKeywords = $('.tertiary');
     var quatenaryKeywords = $('.quatenary');
+    var timeCodes = $('.timecode');
 
     function hideExcessive(name, type) {
         var i = 0;
-        $('<a href="javascript:void(0)" class="' + name + 'ShowAll"><li class="' + name + ' showall">+' + (type.length - 3) + '</li></a>').insertAfter(type.last());
+        if (name == "timecode") {
+            $('<a href="javascript:void(0)" class="' + name + 'ShowAll"><li class="' + name + ' showall">Näita kõiki järjehoidjaid</li></a>').insertAfter(type.last());
+        } else {
+            $('<a href="javascript:void(0)" class="' + name + 'ShowAll"><li class="' + name + ' showall">+' + (type.length - 3) + '</li></a>').insertAfter(type.last());
+        }
         type.each(function(index, element) {
             if (i > 2 && i < type.length) {
                 $(this).addClass('hidden');
@@ -63,6 +69,9 @@ $(document).ready(function() {
     }
     if (quatenaryKeywords.length > 3) {
         hideExcessive(quatenary, quatenaryKeywords)
+    }
+    if (timeCodes.length > 3){
+        hideExcessive(time, timecode)
     }
 });
 

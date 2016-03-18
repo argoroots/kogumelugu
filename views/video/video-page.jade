@@ -10,7 +10,7 @@
                     .videoDescription
                         h1.title= video.get('title-est.value')
                     .row
-                        .col-md-8
+                        .col-md-12
                             p.description
                                 //- | Intervjuu 2015, Vancouver, Kanada
                                 | Intervjueerija
@@ -18,20 +18,9 @@
                                 each author in video.get('author')
                                     b #{ author.value }
                                     br
-                        .col-md-4
-                            ul.sharebuttons
-                                a(href='#')
-                                    li
-                                        img.img-responsive(src='img/facebook.svg')
-                                a(href='#')
-                                    li
-                                        img.img-responsive(src='img/twitter.svg')
-                                a(href='#')
-                                    li
-                                        img.img-responsive(src='img/googleplus.svg')
-                                a(href='#')
-                                    li
-                                        img.img-responsive(src='img/email.svg')
+
+                            p.description= video.get('description-est.value')
+                        
                 .timeline
                     ul
                         li
@@ -73,7 +62,19 @@
                             a(href='#')
                                 li.quatenary= region.value
                 .lastblock
-                    p.description= video.get('description-est.value')
+                    ul.sharebuttons
+                                a(href="https://www.facebook.com/sharer/sharer.php?u=" /* + lehe URL */)
+                                    li
+                                        img.img-responsive(src='img/facebook.svg')
+                                a(href="http://twitter.com/share?url=" /* + lehe URl */)
+                                    li
+                                        img.img-responsive(src='img/twitter.svg')
+                                a(href="https://plus.google.com/share?url=" /* + lehe URl */)
+                                    li
+                                        img.img-responsive(src='img/googleplus.svg')
+                                a(href="mailto:?subject=" + video.get('title-est.value') + "&body=" /* + lehe URl */))
+                                    li
+                                        img.img-responsive(src='img/email.svg')
             .col-md-4.col-sm-4.col-xs-12
                 .row.related
                     //- Esimene võiks olla täpselt sama isiku teine intervjuu osa, kui on, aga kõik teised paneme, millel enim ühiseid märksõnu.
