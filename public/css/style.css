@@ -1218,9 +1218,12 @@
         margin: 0 20px 10px;
     }
     .toeta .btn-primary:hover,
-    .toeta .btn-primary:focus,
+    .toeta .btn-primary:hover{
+        background: #333;
+        color: #fcd302;
+    }
     .toeta .btn-alternative:hover,
-    .toeta .btn-alternative:fovus {
+    .toeta .btn-alternative:focus {
         color: #333;
         background: #ecf0f1;
     }
@@ -1445,15 +1448,22 @@
     .footer {
         background: #e9eaec;
         padding: 100px 0;
-        text-align: center;
         position: relative;
         z-index: 10;
+    }
+    .unitasfooter{
+        margin: 20px 0;
+    }
+    .unitaslogo{
+        height: 100px;
+        margin-bottom: 10px;
     }
     .footerlogo {
         width: 180px;
         margin: 0 auto 40px;
     }
     .footer ul {
+        text-align: center;
         margin: 0;
         -webbkit-margin-start: 0;
         -webkit-margin-before: 0;
@@ -1470,6 +1480,36 @@
     .footer ul li a img:focus {
         opacity: 0.7;
     }
+    .footer .btn-submit{
+        font-family: 'AmaticSCBold';
+        font-size: 24px;
+        height: 100%;
+        width: 100%;
+        border: 0;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 2s;
+        transition: all 0.2s;
+        background: #fcd302;
+        margin:10px 0;
+    }
+    .mailfooter{
+        margin:20px 0;
+    }
+    .footer .btn-submit:hover,
+    .footer .btn-submit:focus{
+        background: #333;
+        color: #fcd302;
+    }
+    .mailfooter input.form-control{
+        height: 100%;
+        padding: 8px 12px 4px;
+        font-size: 18px;
+        line-height: 21px;
+        border: 0;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, .8);
+    }
+
     @media (max-width: 767px) {
         .navbar-default .navbar-collapse,
         .navbar-default .navbar-form {

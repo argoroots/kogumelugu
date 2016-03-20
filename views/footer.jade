@@ -1,10 +1,25 @@
 .footer
-    .container
-        img.img-responsive.footerlogo(src='img/kogumelugu-turquoise.svg')
-        ul
-            li
-                a(href='https://www.facebook.com/KoguMeLugu/')
-                    img.img-responsive(src='img/facebook-black.svg')
-            li
-                a(href='mailto:info@unitasfoundation.org')
-                    img.img-responsive(src='img/email-black.svg')
+	.container
+		.row
+			.col-md-4.unitasfooter
+				a(href='http://unitas.ee' target='_blank')
+					img.img-responsive.unitaslogo(src='img/unitas+logo.jpg')
+				p
+					b Unitas Foundation
+				p Roseni 7, Tallinn, Estonia, 10111
+			.col-md-4
+				img.img-responsive.footerlogo(src='img/kogumelugu-turquoise.svg')
+				p.center Jälgi meid Facebookis või kirjuta meile
+				ul
+					li
+						a(href='https://www.facebook.com/KoguMeLugu/')
+							img.img-responsive(src='img/facebook-black.svg')
+					li
+						a(href='mailto:info@unitasfoundation.org')
+							img.img-responsive(src='img/email-black.svg')
+			.col-md-4.mailfooter
+				p
+					b Telli Kogu Me Lugu uudiskiri
+				form
+					input.form-control(type='text', placeholder='Sinu e-posti aadress')
+					input.btn.btn-submit(type='submit', value='Telli uudiskiri')
