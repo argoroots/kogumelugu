@@ -21,44 +21,10 @@ router.get('/', function(req, res, next) {
                 fullObject: false
             }, callback)
         },
-        stories: function(callback) {
-            entu.getEntities({
-                definition: 'story',
-                fullObject: true
-            }, callback)
-        },
-        interviews: function(callback) {
-            entu.getEntities({
-                definition: 'interview',
-                fullObject: true
-            }, callback)
-        },
     },
     function(err, results) {
         if (err) return next(err)
 
-        var videos = results.stories.concat(results.interviews)
-        var groupedVideos = []
-        var lastWasFive = false
-
-        videos.sort(function() {
-            return 0.5 - Math.random()
-        })
-
-        while(videos.length > 0) {
-            groupedVideos.push(videos.slice(0, 3))
-            videos.splice(0, 3)
-
-            if (lastWasFive) {
-                groupedVideos.push(videos.slice(0, 2))
-                videos.splice(0, 2)
-            } else {
-                groupedVideos.push(videos.slice(0, 5))
-                videos.splice(0, 5)
-            }
-            lastWasFive = !lastWasFive
-        }
-        results.videos = groupedVideos
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
         res.render('video/videolist', results)
@@ -90,6 +56,74 @@ router.get('/picture', function(req, res, next) {
 
 
 
+router.get('/json', function(req, res, next) {
+    async.parallel({
+        stories: function(callback) {
+            entu.getEntities({
+                definition: 'story',
+                query: req.query.q,
+                fullObject: true
+            }, callback)
+        },
+        interviews: function(callback) {
+            entu.getEntities({
+                definition: 'interview',
+                query: req.query.q,
+                fullObject: true
+            }, callback)
+        },
+    },
+    function(err, results) {
+        if (err) return next(err)
+
+        var videos = results.stories.concat(results.interviews)
+        var results = []
+
+        for (var i in videos) {
+            if (!videos.hasOwnProperty(i)) { continue }
+
+            var video = videos[i]
+            var regions = []
+            var categories = []
+            var generations = []
+
+            for (var r in video.get('region', [])) {
+                if (!video.get('region', []).hasOwnProperty(r)) { continue }
+
+                regions.push(video.get('region', [])[r].value)
+            }
+
+            for (var c in video.get('curriculumSubjects', [])) {
+                if (!video.get('curriculumSubjects', []).hasOwnProperty(c)) { continue }
+
+                categories.push(video.get('curriculumSubjects', [])[c].value)
+            }
+
+            storytellerBirthYear = video.get('storytellerBirthYear.value', '').split(';')
+            for (var g in storytellerBirthYear) {
+                if (!storytellerBirthYear.hasOwnProperty(g)) { continue }
+
+                generations.push(Math.floor(parseInt(storytellerBirthYear[g].trim(), 10) / 10) * 10)
+            }
+            generations = _.union(generations)
+
+            results.push({
+                id: video.get('_id'),
+                name: video.get('_name'),
+                info: video.get('_info'),
+                video: video.get('videoUrl.value'),
+                generation: generations,
+                regions: regions,
+                categories: categories,
+            })
+
+        }
+        res.send(results)
+    })
+})
+
+
+
 router.get('/:id', function(req, res, next) {
     async.parallel({
         subjects: function(callback) {
@@ -102,18 +136,6 @@ router.get('/:id', function(req, res, next) {
             entu.getEntities({
                 definition: 'region',
                 fullObject: false
-            }, callback)
-        },
-        stories: function(callback) {
-            entu.getEntities({
-                definition: 'story',
-                fullObject: true
-            }, callback)
-        },
-        interviews: function(callback) {
-            entu.getEntities({
-                definition: 'interview',
-                fullObject: true
             }, callback)
         },
         video: function(callback) {
@@ -132,31 +154,33 @@ router.get('/:id', function(req, res, next) {
     function(err, results) {
         if (err) return next(err)
 
-        var videos = results.stories.concat(results.interviews)
-        var groupedVideos = []
-        var lastWasFive = false
+        var query = results.video.get('_name')
 
-        videos.sort(function() {
-            return 0.5 - Math.random()
+        async.parallel({
+            stories: function(callback) {
+                entu.getEntities({
+                    definition: 'story',
+                    query: query,
+                    fullObject: true
+                }, callback)
+            },
+            interviews: function(callback) {
+                entu.getEntities({
+                    definition: 'interview',
+                    query: query,
+                    fullObject: true
+                }, callback)
+            },
+        },
+        function(err, related) {
+            if (err) return next(err)
+
+            results.related = related.stories.concat(related.interviews)
+            results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
+
+            res.render('video/video', results)
         })
 
-        while(videos.length > 0) {
-            groupedVideos.push(videos.slice(0, 3))
-            videos.splice(0, 3)
-
-            if (lastWasFive) {
-                groupedVideos.push(videos.slice(0, 2))
-                videos.splice(0, 2)
-            } else {
-                groupedVideos.push(videos.slice(0, 5))
-                videos.splice(0, 5)
-            }
-            lastWasFive = !lastWasFive
-        }
-        results.videos = groupedVideos
-        results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
-
-        res.render('video/video', results)
     })
 })
 

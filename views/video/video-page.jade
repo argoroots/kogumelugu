@@ -64,35 +64,12 @@
             .col-md-4.col-sm-4.col-xs-12
                 .row.related
                     //- Esimene võiks olla täpselt sama isiku teine intervjuu osa, kui on, aga kõik teised paneme, millel enim ühiseid märksõnu.
-                    a(href='#')
-                        .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Rutt-Kresling.jpg');background-size:cover;")
-                            .overlay
-                            .wrapper
-                                h4
-                                    span Rutt Kresling 17:02
-                                p täispikk intervjuu, est/eng
-                                .btn.btn-primary-outline Vaata lugu
-                    a(href='#')
-                        .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Laulupidu.jpg');background-size:cover;")
-                            .overlay
-                            .wrapper
-                                h4
-                                    span Laulupidu 1:03
-                                p videokaadrid
-                                .btn.btn-primary-outline Vaata lugu
-                    a(href='#')
-                        .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-                            .overlay
-                            .wrapper
-                                h4
-                                    span Eva Brown 12:29
-                                p täispikk intervjuu, est/rus
-                                .btn.btn-primary-outline Vaata lugu
-                    a(href='#')
-                        .col-md-12.col-sm-12.col-xs-6.video(style="background:url('img/Eva-Brown.jpg');background-size:cover;")
-                            .overlay
-                            .wrapper
-                                h4
-                                    span Eva Brown 12:29
-                                p täispikk intervjuu, est/rus
-                                .btn.btn-primary-outline Vaata lugu
+                    each r in related
+                        a(href='/video/' + r.get('_id') )
+                            .col-md-12.col-sm-12.col-xs-6.video(style="background:url('/video/picture?id=" + r.get('videoUrl.value') + "');background-position: center center; background-size:cover;")
+                                .overlay
+                                .wrapper
+                                    h4
+                                        span= r.get('_name')
+                                    p= r.get('_info')
+                                    .btn.btn-primary-outline Vaata lugu
