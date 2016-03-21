@@ -41,6 +41,10 @@ router.get('/', function(req, res, next) {
         var groupedVideos = []
         var lastWasFive = false
 
+        videos.sort(function() {
+            return 0.5 - Math.random()
+        })
+
         while(videos.length > 0) {
             groupedVideos.push(videos.slice(0, 3))
             videos.splice(0, 3)
@@ -65,14 +69,14 @@ router.get('/', function(req, res, next) {
 
 router.get('/picture', function(req, res, next) {
     if(!parseInt(req.query.vimeoid, 10)) {
-        res.redirect('https://placehold.it/579x318')
+        res.redirect('https://placehold.it/579x318/?text=Kogu Me Lugu!')
         return
     }
 
     var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
     v.request({ path: '/videos/' + req.query.vimeoid + '/pictures' }, function(error, body, status_code, headers) {
         if(error) {
-            res.redirect('https://placehold.it/579x318')
+            res.redirect('https://placehold.it/579x318/?text=Kogu Me Lugu!')
         } else {
             var urlList = op.get(body, ['data', 0, 'sizes'], [])
             var url = op.get(urlList, [urlList.length - 1, 'link'])
@@ -128,6 +132,10 @@ router.get('/:id', function(req, res, next) {
         var videos = results.stories.concat(results.interviews)
         var groupedVideos = []
         var lastWasFive = false
+
+        videos.sort(function() {
+            return 0.5 - Math.random()
+        })
 
         while(videos.length > 0) {
             groupedVideos.push(videos.slice(0, 3))

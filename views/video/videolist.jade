@@ -1,9 +1,9 @@
 extends ../layout
 
+block javascript
+    script(type='text/javascript', src='js/video.js')
+
 block body
     #videoGallery
         include video-gallery-nav
         include video-gallery
-
-block javascript
-    script(type='text/javascript', src='js/video.js')
