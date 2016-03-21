@@ -1,5 +1,5 @@
 .container-fluid.content
-    .slider(style='background:#3a3a3c;background-size:cover;')
+    .slider(style='background:#3a3a3c;background-position: center center; background-size: cover;')
     //- Pilt vahetatav UNITASe jaoks
     .subnav
         .row
@@ -48,7 +48,7 @@
             if vGroup.length === 2
                 each v in vGroup
                     a(href='/video/' + v.get('_id'))
-                    .col-md-6.col-sm-6.col-xs-12.video(style="background:url('/video/picture?vimeoid=" + v.get('videoUrl.value') + "');background-size:cover;")
+                    .col-md-6.col-sm-6.col-xs-12.video(style="background:url('/video/picture?id=" + v.get('videoUrl.value') + "');background-position: center center; background-size: cover;")
                         .overlay
                         .wrapper
                             h4
@@ -60,7 +60,7 @@
             if vGroup.length === 3
                 each v in vGroup
                     a(href='/video/' + v.get('_id'))
-                    .col-md-4.col-sm-4.col-xs-12.video(style="background:url('/video/picture?vimeoid=" + v.get('videoUrl.value') + "');background-size:cover;")
+                    .col-md-4.col-sm-4.col-xs-12.video(style="background:url('/video/picture?id=" + v.get('videoUrl.value') + "');background-position: center center; background-size: cover;")
                         .overlay
                         .wrapper
                             h4
@@ -70,7 +70,7 @@
                                 .btn.btn-primary-outline Vaata lugu
             if vGroup.length === 5
                 a(href='/video/' + vGroup[0].get('_id'))
-                .col-md-6.col-sm-6.col-xs-12.video(style="background:url('/video/picture?vimeoid=" + vGroup[0].get('videoUrl.value') + "');background-size:cover;")
+                .col-md-6.col-sm-6.col-xs-12.video(style="background:url('/video/picture?id=" + vGroup[0].get('videoUrl.value') + "');background-position: center center; background-size: cover;")
                     .overlay
                     .wrapper
                         h4
@@ -80,7 +80,7 @@
                             .btn.btn-primary-outline Vaata lugu
                 each v in vGroup.slice(1)
                     a(href='/video/' + v.get('_id'))
-                    .col-md-3.col-sm-3.col-xs-6.video(style="background:url('/video/picture?vimeoid=" + v.get('videoUrl.value') + "');background-size:cover;")
+                    .col-md-3.col-sm-3.col-xs-6.video(style="background:url('/video/picture?id=" + v.get('videoUrl.value') + "');background-position: center center; background-size: cover;")
                         .overlay
                         .wrapper
                             h4

@@ -4,7 +4,11 @@
             .col-md-8.col-sm-8.col-xs-12
                 .firstblock
                     .videoWrapper
-                        iframe#video(src='https://player.vimeo.com/video/' + video.get('videoUrl.value') + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                        if parseInt(video.get('videoUrl.value')).toString() === video.get('videoUrl.value')
+                            iframe#video(src='https://player.vimeo.com/video/' + video.get('videoUrl.value') + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                        else
+                            iframe#video(src='https://www.youtube.com/embed/' + video.get('videoUrl.value') + '?autoplay=1&controls=0&showinfo=0&rel=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+
                         //- .playButtonArea
                         //-     #play-button.btn.btn-primary-outline Vaata lugu
                     .videoDescription
@@ -34,8 +38,8 @@
                         each category in video.get('curriculumSubjects', [])
                             a(href='#')
                                 li.primary= category.value
-                        a(href='#')
-                            li.secondary Generatsioon
+                        //- a(href='#')
+                        //-     li.secondary Generatsioon
                         each storyteller in video.get('storyteller', [])
                             a(href='#')
                                 li.tertiary= storyteller.value

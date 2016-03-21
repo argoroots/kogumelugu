@@ -35,7 +35,7 @@ router.get('/', function(req, res, next) {
         },
     },
     function(err, results) {
-        if(err) return next(err)
+        if (err) return next(err)
 
         var videos = results.stories.concat(results.interviews)
         var groupedVideos = []
@@ -49,7 +49,7 @@ router.get('/', function(req, res, next) {
             groupedVideos.push(videos.slice(0, 3))
             videos.splice(0, 3)
 
-            if(lastWasFive) {
+            if (lastWasFive) {
                 groupedVideos.push(videos.slice(0, 2))
                 videos.splice(0, 2)
             } else {
@@ -68,21 +68,24 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/picture', function(req, res, next) {
-    if(!parseInt(req.query.vimeoid, 10)) {
-        res.redirect('https://placehold.it/579x318/?text=Kogu Me Lugu!')
-        return
-    }
+    if (parseInt(req.query.id, 10).toString() === parseInt(req.query.id, 10)) {
 
-    var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
-    v.request({ path: '/videos/' + req.query.vimeoid + '/pictures' }, function(error, body, status_code, headers) {
-        if(error) {
-            res.redirect('https://placehold.it/579x318/?text=Kogu Me Lugu!')
-        } else {
-            var urlList = op.get(body, ['data', 0, 'sizes'], [])
-            var url = op.get(urlList, [urlList.length - 1, 'link'])
-            res.redirect(url)
-        }
-    })
+        var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
+        v.request({ path: '/videos/' + req.query.id + '/pictures' }, function(error, body, status_code, headers) {
+            if (error) {
+                res.redirect('https://placehold.it/579x318/?text=Kogu Me Lugu!')
+            } else {
+                var urlList = op.get(body, ['data', 0, 'sizes'], [])
+                var url = op.get(urlList, [urlList.length - 1, 'link'])
+                res.redirect(url)
+            }
+        })
+
+    } else {
+
+        res.redirect('https://img.youtube.com/vi/' + req.query.id + '/0.jpg')
+
+    }
 })
 
 
@@ -127,7 +130,7 @@ router.get('/:id', function(req, res, next) {
         },
     },
     function(err, results) {
-        if(err) return next(err)
+        if (err) return next(err)
 
         var videos = results.stories.concat(results.interviews)
         var groupedVideos = []
@@ -141,7 +144,7 @@ router.get('/:id', function(req, res, next) {
             groupedVideos.push(videos.slice(0, 3))
             videos.splice(0, 3)
 
-            if(lastWasFive) {
+            if (lastWasFive) {
                 groupedVideos.push(videos.slice(0, 2))
                 videos.splice(0, 2)
             } else {
