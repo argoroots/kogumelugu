@@ -154,20 +154,26 @@ router.get('/:id', function(req, res, next) {
     function(err, results) {
         if (err) return next(err)
 
-        var query = results.video.get('_name')
+        var storytellers = results.video.get('storyteller', [])
+        var query = []
+        for (var i in storytellers) {
+            if (!storytellers.hasOwnProperty(i)) { continue }
+
+            query.push(storytellers[i].value)
+        }
 
         async.parallel({
             stories: function(callback) {
                 entu.getEntities({
                     definition: 'story',
-                    query: query,
+                    query: query.join(' '),
                     fullObject: true
                 }, callback)
             },
             interviews: function(callback) {
                 entu.getEntities({
                     definition: 'interview',
-                    query: query,
+                    query: query.join(' '),
                     fullObject: true
                 }, callback)
             },
