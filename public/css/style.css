@@ -728,7 +728,7 @@
     }
     #sinulugu-bottom {
         position: relative;
-        margin-top: -200px;
+        margin-top: -230px;
     }
     #sinulugu-bottom p {
         text-align: center;
@@ -1141,6 +1141,11 @@
     .supportsum ul {
         width: 100%;
         text-align: center;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-start: 0;
     }
     .supportsum ul li {
         display: inline-block;
@@ -1602,7 +1607,7 @@
             display: none;
         }
         .quote .quotecontainer {
-            bottom: 20px;
+            bottom: 10px;
             width: 100%;
             right: 0;
         }
@@ -1611,10 +1616,88 @@
             padding: 5px;
         }
         .toetus h2 {
-            margin-bottom: 0;
+            margin: -160px 0 30px;
         }
         .cta .btn {
             font-size: 16px;
+        }
+        .textcontent .textcontainer{
+            padding:0 15px;
+        }
+        .carousel{
+            margin-top: 50px;
+        }
+        #tutvustus-bottom{
+            margin-bottom: 0;
+        }
+        #sinulugu-top{
+            padding-top: 0;
+            margin-bottom: 300px;
+        }
+        #sinulugu-bottom form{
+            padding-top: 20px;
+        }
+        .quotecontainer .quotetext{
+            padding: 40px 15px 0;
+        }
+        .quotecontainer .lefttitle {
+            text-align: right;
+            background: #40bebc;
+            display: inline-block;
+            width: 50%;
+            color: #fff;
+            padding: 10px 20px 10px 24px;
+            font-size: 20px;
+        }
+        .quotecontainer .righttitle {
+            text-align: left;
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            width: 50%;
+            font-size: 20px;
+            padding: 10px 20px 10px 24px;
+        }
+        .quotetext p{
+            font-size: 12px;
+        }
+        .quotecontainer .author{
+            font-size: 16px;
+        }
+        .teemad{
+            padding: 0 15px;
+        }
+        #toetajad h2{
+            font-size: 48px;
+        }
+        .tablediv{
+            padding: 10px;
+        }
+        .toetajad{
+            padding-bottom: 100px;
+        }
+        .toetajad:after{
+            margin-top: 100px;
+        }
+        .toeta input.form-control{
+            margin-bottom: 10px;
+        }
+        .footer{
+            height: 100%;
+        }
+        .footer,
+    .pagewrapper:after {
+        height: auto;
+    }
+        .unitaslogo{
+            margin: 0 auto 10px;
+        }
+        .unitasfooter{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .toeta-bottom .container img{
+            margin: 100px auto 20px;
         }
     }
     @media (min-width:768px) and (max-width:1064px) {
@@ -1626,6 +1709,45 @@
         .navbar-nav>li>a.btn-inverse {
             margin: 11px 5px;
             padding: 4px 12px;
+        }
+        #sinulugu-bottom{
+            margin-top: -60px;
+        }
+        #sinulugu-bottom form{
+            padding-top: 20px;
+        }
+        #sinulugu-top{
+            padding-top: 0;
+        }
+        .teemad{
+            padding: 40px 15px;
+        }
+        .toetajad{
+            padding-bottom: 80px;
+        }
+        .toetajad:after{
+            margin-top: 80px;
+        }
+        .toetus h2{
+            margin: -100px 0 160px;
+        }
+        .toeta input.form-control{
+            margin-bottom: 10px;
+        }
+        .footer{
+            padding: 50px 0 0;
+            height: 100%;
+        }
+        .unitaslogo{
+            margin: 0 auto 10px;
+        }
+        .unitasfooter{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .footer,
+        .pagewrapper:after {
+            height: auto;
         }
     }
     select.topic {
