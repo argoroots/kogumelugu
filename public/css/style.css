@@ -717,8 +717,7 @@
         background: #9fa1a3;
         position: relative;
         margin-bottom: 200px;
-        padding-top: 60px;
-        padding-bottom: 0px;
+        padding: 0 15px;
     }
     #sinulugu-top .container {
         position: relative;
@@ -728,13 +727,12 @@
     }
     #sinulugu-bottom {
         position: relative;
-        margin-top: -230px;
     }
     #sinulugu-bottom p {
         text-align: center;
     }
     #sinulugu-bottom form {
-        padding-top: 160px;
+        padding-top: 20px;
     }
     #sinulugu-top:after {
         left: 0;
@@ -1137,6 +1135,13 @@
         color: #fff;
         text-align: center;
         margin: 0 40px 40px;
+    }
+    .bankinfo{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .bankinfo p{
+        color: #fff;
     }
     .supportsum ul {
         width: 100%;
