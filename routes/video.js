@@ -5,7 +5,7 @@ var router = require('express').Router()
 var entu   = require('../helpers/entu')
 
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
     async.parallel({
         subjects: function(callback) {
             entu.getEntities({
@@ -61,7 +61,7 @@ router.get('/', function(req, res) {
 
 
 
-router.get('/:id', function(req, res) {
+router.get('/:id', function(req, res, next) {
     async.parallel({
         subjects: function(callback) {
             entu.getEntities({
