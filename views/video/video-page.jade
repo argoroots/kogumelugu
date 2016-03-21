@@ -15,12 +15,12 @@
                                 //- | Intervjuu 2015, Vancouver, Kanada
                                 | Intervjueerija
                                 br
-                                each author in video.get('author')
+                                each author in video.get('author', [])
                                     b #{ author.value }
                                     br
 
                             p.description= video.get('description-est.value')
-                        
+
                 .timeline
                     ul
                         li.timecode
@@ -45,7 +45,7 @@
                                 |  1:20-3:00
                 .keywords
                     ul
-                        each category in video.get('curriculumSubjects')
+                        each category in video.get('curriculumSubjects', [])
                             a(href='#')
                                 li.primary= category.value
                         a(href='#')
@@ -58,7 +58,7 @@
                             li.tertiary Seotud Isik
                         a(href='#')
                             li.tertiary Seotud Isik
-                        each region in video.get('region')
+                        each region in video.get('region', [])
                             a(href='#')
                                 li.quatenary= region.value
                 .lastblock
