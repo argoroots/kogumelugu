@@ -22,13 +22,13 @@ router.get('/', function(req, res) {
         stories: function(callback) {
             entu.getEntities({
                 definition: 'story',
-                fullObject: false
+                fullObject: true
             }, callback)
         },
         interviews: function(callback) {
             entu.getEntities({
                 definition: 'interview',
-                fullObject: false
+                fullObject: true
             }, callback)
         },
     },
@@ -53,6 +53,7 @@ router.get('/', function(req, res) {
             lastWasFive = !lastWasFive
         }
         results.videos = groupedVideos
+        results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
         res.render('video/videolist', results)
     })
@@ -77,13 +78,13 @@ router.get('/:id', function(req, res) {
         stories: function(callback) {
             entu.getEntities({
                 definition: 'story',
-                fullObject: false
+                fullObject: true
             }, callback)
         },
         interviews: function(callback) {
             entu.getEntities({
                 definition: 'interview',
-                fullObject: false
+                fullObject: true
             }, callback)
         },
         video: function(callback) {
@@ -113,6 +114,7 @@ router.get('/:id', function(req, res) {
             lastWasFive = !lastWasFive
         }
         results.videos = groupedVideos
+        results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
         res.render('video/video', results)
     })
