@@ -4,7 +4,7 @@
             .col-md-8.col-sm-8.col-xs-12
                 .firstblock
                     .videoWrapper
-                        iframe#video(src=video.get('videoUrl.value'), frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                        iframe#video(src='https://player.vimeo.com/video/' + video.get('videoUrl.value') + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
                         //- .playButtonArea
                         //-     #play-button.btn.btn-primary-outline Vaata lugu
                     .videoDescription
@@ -72,7 +72,7 @@
                                 a(href='https://plus.google.com/share?url=' + pageUrl)
                                     li
                                         img.img-responsive(src='img/googleplus.svg')
-                                a(href='mailto:?subject=' + video.get('title-est.value') + '&body=' + pageUrl)
+                                a(href='mailto:?subject=' + video.get('_name') + '&body=' + pageUrl)
                                     li
                                         img.img-responsive(src='img/email.svg')
             .col-md-4.col-sm-4.col-xs-12
