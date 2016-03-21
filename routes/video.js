@@ -68,7 +68,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/picture', function(req, res, next) {
-    if (parseInt(req.query.id, 10).toString() === parseInt(req.query.id, 10)) {
+    if (parseInt(req.query.id, 10).toString() === req.query.id) {
 
         var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
         v.request({ path: '/videos/' + req.query.id + '/pictures' }, function(error, body, status_code, headers) {
