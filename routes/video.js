@@ -64,7 +64,7 @@ router.get('/', function(req, res, next) {
 
 
 router.get('/picture', function(req, res, next) {
-    if(!parseInt(req.params.id, 10)) {
+    if(!parseInt(req.query.vimeoid, 10)) {
         res.redirect('https://placehold.it/579x318')
         return
     }
