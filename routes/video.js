@@ -63,14 +63,14 @@ router.get('/', function(req, res, next) {
 
 
 
-router.get('/picture/:id', function(req, res, next) {
+router.get('/picture', function(req, res, next) {
     if(!parseInt(req.params.id, 10)) {
         res.redirect('https://placehold.it/579x318')
         return
     }
 
     var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
-    v.request({ path: '/videos/' + req.params.id + '/pictures' }, function(error, body, status_code, headers) {
+    v.request({ path: '/videos/' + req.query.vimeoid + '/pictures' }, function(error, body, status_code, headers) {
         if(error) {
             res.redirect('https://placehold.it/579x318')
         } else {
@@ -112,6 +112,13 @@ router.get('/:id', function(req, res, next) {
         video: function(callback) {
             entu.getEntity({
                 id: req.params.id
+            }, callback)
+        },
+        chapters: function(callback) {
+            entu.getEntities({
+                parentEntityId: req.params.id,
+                definition: 'chapter',
+                fullObject: false
             }, callback)
         },
     },

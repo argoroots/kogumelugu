@@ -21,28 +21,14 @@
 
                             p.description= video.get('description-est.value')
 
-                .timeline
-                    ul
-                        li.timecode
-                            a(onclick='changeTime(0);', href='#')
-                                b Nõukogude okupatsioon Eestis 1940-1941
-                                |  0:00-0:20
-                        li.timecode
-                            a(onclick='changeTime(20);', href='#')
-                                b Saksa okupatsioon Eestis 1941-1944
-                                |  0:20-0:40
-                        li.timecode
-                            a(onclick='changeTime(40);', href='#')
-                                b Omakaitse
-                                |  0:40-1:00
-                        li.timecode
-                            a(onclick='changeTime(60);', href='#')
-                                b UNNRA
-                                |  1:00-1:20
-                        li.timecode
-                            a(onclick='changeTime(80);', href='#')
-                                b DP-laagrid
-                                |  1:20-3:00
+                if chapters
+                    .timeline
+                        ul
+                            each c in chapters
+                                li.timecode
+                                    a(onclick='changeTime(0);', href='#')
+                                        b= c.get('name')
+                                        |  #{ c.get('info') }
                 .keywords
                     ul
                         each category in video.get('curriculumSubjects', [])
@@ -50,14 +36,9 @@
                                 li.primary= category.value
                         a(href='#')
                             li.secondary Generatsioon
-                        a(href='#')
-                            li.tertiary Seotud Isik
-                        a(href='#')
-                            li.tertiary Seotud Isik
-                        a(href='#')
-                            li.tertiary Seotud Isik
-                        a(href='#')
-                            li.tertiary Seotud Isik
+                        each storyteller in video.get('storyteller', [])
+                            a(href='#')
+                                li.tertiary= storyteller.value
                         each region in video.get('region', [])
                             a(href='#')
                                 li.quatenary= region.value
