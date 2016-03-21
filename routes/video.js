@@ -1,6 +1,8 @@
 var _      = require('lodash')
 var async  = require('async')
+var op     = require('object-path')
 var router = require('express').Router()
+var vimeo  = require('vimeo').Vimeo
 
 var entu   = require('../helpers/entu')
 
@@ -56,6 +58,26 @@ router.get('/', function(req, res, next) {
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
         res.render('video/videolist', results)
+    })
+})
+
+
+
+router.get('/picture/:id', function(req, res, next) {
+    if(!parseInt(req.params.id, 10)) {
+        res.redirect('https://placehold.it/579x318')
+        return
+    }
+
+    var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
+    v.request({ path: '/videos/' + req.params.id + '/pictures' }, function(error, body, status_code, headers) {
+        if(error) {
+            res.redirect('https://placehold.it/579x318')
+        } else {
+            var urlList = op.get(body, ['data', 0, 'sizes'], [])
+            var url = op.get(urlList, [urlList.length - 1, 'link'])
+            res.redirect(url)
+        }
     })
 })
 

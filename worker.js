@@ -23,6 +23,9 @@ APP_ENTU_KEY        = process.env.ENTU_KEY
 APP_SENTRY          = process.env.SENTRY_DSN
 APP_DEFAULT_LOCALE  = process.env.DEFAULT_LOCALE || 'en'
 APP_TIMEZONE        = process.env.TIMEZONE || 'Europe/Tallinn'
+APP_VIMEO_ID        = process.env.VIMEO_ID
+APP_VIMEO_SECRET    = process.env.VIMEO_SECRET
+APP_VIMEO_TOKEN     = process.env.VIMEO_TOKEN
 
 
 

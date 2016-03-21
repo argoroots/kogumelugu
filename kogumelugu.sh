@@ -23,6 +23,11 @@ docker run -d \
     --env="NODE_ENV=production" \
     --env="VERSION=$version" \
     --env="PORT=80" \
+    --env="ENTU_USER=" \
+    --env="ENTU_KEY=" \
+    --env="VIMEO_ID=" \
+    --env="VIMEO_SECRET=" \
+    --env="VIMEO_TOKEN=" \
     --env="NEW_RELIC_APP_NAME=kogumelugu" \
     --env="NEW_RELIC_LICENSE_KEY=" \
     --env="NEW_RELIC_LOG=stdout" \
