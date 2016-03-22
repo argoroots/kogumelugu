@@ -74,7 +74,7 @@
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="firstblock">
                             <div class="videoWrapper">
-                                <iframe src="https://www.youtube.com/embed/KJyHTQAkfjY?rel=0&amp;controls=0&amp;showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen id="video"></iframe>
+                                <iframe src="https://player.vimeo.com/video/156425102#t=200" frameborder="0" allowfullscreen id="video"></iframe>
                                 <div class="playButtonArea">
                                     <div class="btn btn-primary-outline" id="play-button">Vaata lugu</div>
                                 </div>
@@ -110,11 +110,11 @@
                         </div>
                         <div class="timeline">
                             <ul>
-                                <li><a onclick="changeTime(0);" href="#"><b>Nõukogude okupatsioon Eestis 1940-1941</b> 0:00-0:20</a></li>
-                                <li><a onclick="changeTime(20);" href="#"><b>Saksa okupatsioon Eestis 1941-1944</b> 0:20-0:40</a></li>
-                                <li><a onclick="changeTime(40);" href="#"><b>Omakaitse</b> 0:40-1:00</a></li>
-                                <li><a onclick="changeTime(60);" href="#"><b>UNNRA</b> 1:00-1:20</a></li>
-                                <li><a onclick="changeTime(80);" href="#"><b>DP-laagrid</b> 1:20-3:00</a></li>
+                                <li class="timecode"><a onclick="changeTime(0);" href="#"><b>Nõukogude okupatsioon Eestis 1940-1941</b> 0:00-0:20</a></li>
+                                <li class="timecode"><a onclick="changeTime(20);" href="#"><b>Saksa okupatsioon Eestis 1941-1944</b> 0:20-0:40</a></li>
+                                <li class="timecode"><a onclick="changeTime(40);" href="#"><b>Omakaitse</b> 0:40-1:00</a></li>
+                                <li class="timecode"><a onclick="changeTime(60);" href="#"><b>UNNRA</b> 1:00-1:20</a></li>
+                                <li class="timecode"><a onclick="changeTime(80);" href="#"><b>DP-laagrid</b> 1:20-3:00</a></li>
                             </ul>
                         </div>
 
@@ -543,14 +543,20 @@
             var secondary = "secondary";
             var tertiary = "tertiary";
             var quatenary = "quatenary";
+            var timecode = "timecode";
             var primaryKeywords = $('.primary');
             var secondaryKeywords = $('.secondary');
             var tertiaryKeywords = $('.tertiary');
             var quatenaryKeywords = $('.quatenary');
+            var timeCodes = $('.timecode');
 
             function hideExcessive(name, type) {
                 var i = 0;
-                $('<a href="javascript:void(0)" class="' + name + 'ShowAll"><li class="' + name + ' showall">+' + (type.length - 3) + '</li></a>').insertAfter(type.last());
+                if (name == "timecode") {
+                    $('<a href="javascript:void(0)" class="' + name + 'ShowAll"><li class="' + name + ' showall">Näita kõiki järjehoidjaid</li></a>').insertAfter(type.last());
+                } else {
+                    $('<a href="javascript:void(0)" class="' + name + 'ShowAll"><li class="' + name + ' showall">+' + (type.length - 3) + '</li></a>').insertAfter(type.last());
+                }
                 type.each(function(index, element) {
                     if (i > 2 && i < type.length) {
                         $(this).addClass('hidden');
@@ -577,6 +583,10 @@
             if (quatenaryKeywords.length > 3) {
                 hideExcessive(quatenary, quatenaryKeywords)
             }
+            if (timeCodes.length > 3) {
+                hideExcessive(timecode, timeCodes)
+            }
+
 
 
 
@@ -676,12 +686,17 @@
 
 
         var currentVideo = 'https://www.youtube.com/embed/1SPLV9sdvcQ?rel=0&amp;controls=0&amp;showinfo=0;enablejsapi=1';
-
-        function changeTime(x) {
-            $('#video').attr('src', currentVideo + ";start=" + x + "&autoplay=1");
-            console.log(currentVideo + ";start=" + x + "&autoplay=1");
+        if (currentVideo.substring(0, 15) == "https://www.you") {
+            function changeTime(x) {
+                $('#video').attr('src', currentVideo + ";start=" + x + "&autoplay=1");
+                console.log(currentVideo + ";start=" + x + "&autoplay=1");
+                $("#play-button").hide();
+                $(".playButtonArea").hide();
+            }
+        } else {
             $("#play-button").hide();
             $(".playButtonArea").hide();
+            $('#video').attr('src', currentVideo + "#t=" + x);
         }
 
     </script>

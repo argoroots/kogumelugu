@@ -1268,13 +1268,23 @@
         -webkit-padding-start: 0;
     }
     .timeline ul li {
-        display: inline-block;
+        display: block;
         padding: 8px 6px;
         margin: 5px 0;
         border-left: 1px solid #40bebc;
     }
-    .timeline ul li:last-child {
-        border-right: 1px solid #40bebc;
+    .timeline ul li.showall {
+        border-left: 0;
+        display: inline-block;
+        border: 1px solid #40bebc;
+        border-radius: 4px;
+        color: #40bebc;
+        transition: .2s;
+    }
+    .timeline ul li.showall:hover,
+    .timeline ul li.showall:focus {
+        background: #40bebc;
+        color: #fff;
     }
     .timeline ul li a {
         color: #fff;
