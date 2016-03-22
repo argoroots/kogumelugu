@@ -1620,6 +1620,10 @@
         border-radius: 2px;
         background: rgba(255, 255, 255, .8);
     }
+    #tutvustus, #sinulugu, #teemad, #toetajad, #toeta{
+        position: absolute;
+        margin-top: -50px;
+    }
 
     @media (max-width: 767px) {
         .navbar-default .navbar-collapse,
@@ -1769,7 +1773,7 @@
         .teemad{
             padding: 0 15px;
         }
-        #toetajad h2{
+        .toetajad h2{
             font-size: 48px;
         }
         .tablediv{

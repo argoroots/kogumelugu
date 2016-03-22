@@ -145,7 +145,6 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady(event) {
     console.log("onPlayerReady");
     // bind events
-    var playButton = document.getElementById("play-button");
     playButton.addEventListener("click", function() {
         player.playVideo();
         $("#play-button").hide();
