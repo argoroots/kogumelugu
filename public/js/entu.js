@@ -41,6 +41,7 @@ angular.module('kmlApp', [])
 
         $scope.doFilter = function() {
             $scope.sData.videos = $filter('filter')($scope.sData.allVideos, $scope.sData.query)
+            $('html, body').animate({ scrollTop: $('.gallery.container').offset().top - 230 }, 'slow')
         }
 
     }])
