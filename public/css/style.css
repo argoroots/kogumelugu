@@ -798,6 +798,15 @@
     .formcontent {
         background: #40bebc;
     }
+    .formcontent a{
+        transition: .2s;
+        color: #fcd302;
+    }
+    .formcontent a:hover,.formcontent a:focus{
+        color: #333;
+        text-decoration: none;
+        transition: .2s;
+    }
     .formcontent h2 {
         margin-bottom: 30px;
     }
@@ -827,20 +836,23 @@
         background: rgba(255, 255, 255, .8);
     }
     .formcontent .btn-primary-outline {
-        border: 2px solid #fff;
+        border: none;
         border-radius: 7px;
         text-transform: uppercase;
         font-family: 'AmaticSCBold';
         font-size: 32px;
-        color: #fff;
+        color: #333;
+        background: #fcd302;
         text-shadow: none;
         transition: .2s;
         padding: 6px 48px;
+        margin: 0 10px;
     }
     .formcontent .btn-primary-outline:hover,
     .formcontent .btn-primary-outline:focus {
-        background: #fff;
-        color: #333;
+        background: #333;
+        color: #fcd302;
+
     }
     .formcontent .button {
         text-align: center;
@@ -866,6 +878,13 @@
     .form-content .btn-default:focus {
         background: #e9eaec;
         color: #333;
+    }
+    .formcontent .check{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .formcontent textarea {
+        resize: none;
     }
     .quote {
         position: relative;
