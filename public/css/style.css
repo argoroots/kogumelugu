@@ -1193,6 +1193,12 @@
         background: #339a9c;
         margin-top: -70px;
     }
+    .thankyou-bottom{
+        text-align: center;
+    }
+    .thankyou-bottom{
+        padding:140px 0;
+    }
     .toeta-bottom .container {
         position: relative;
         z-index: 10;
