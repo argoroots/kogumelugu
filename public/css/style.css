@@ -668,6 +668,10 @@
     .triangles{
         position: relative;
     }
+    .triangles img{
+        position: absolute;
+        bottom: 0;
+    }
    .left-triangle{
         left: -50vw;
         bottom: 0;
