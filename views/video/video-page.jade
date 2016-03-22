@@ -6,7 +6,7 @@
                     if video.get('videoUrl.value')
                         .videoWrapper
                             if parseInt(video.get('videoUrl.value'), 10).toString() === video.get('videoUrl.value')
-                                iframe#video(src='https://player.vimeo.com/video/' + video.get('videoUrl.value') + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                                iframe#video(src='https://player.vimeo.com/video/' + video.get('videoUrl.value') + '#t=' + (jumpTo ? jumpTo : 0) + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
                             else
                                 iframe#video(src='https://www.youtube.com/embed/' + video.get('videoUrl.value') + '?autoplay=1&controls=0&showinfo=0&rel=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
 
@@ -31,7 +31,7 @@
                         ul
                             each c in chapters
                                 li.timecode
-                                    a(onclick='changeTime(0);', href='#')
+                                    a(href='/video/' + video.get('_id') + '/' + c.get('info'))
                                         b= c.get('name')
                                         |  #{ c.get('info') }
                 .keywords
