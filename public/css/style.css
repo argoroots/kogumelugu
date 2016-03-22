@@ -320,6 +320,7 @@
         max-height: 73px;
     }
     #videoGallery .subnav .filters {
+        display: none;
         background: #ccc;
     }
     #videoGallery .subnav .filters h1 {
@@ -1492,10 +1493,16 @@
         list-style: none;
         position: absolute;
         z-index: 99;
+        top: 0;
+    }
+    .shrink .overlay-logo{
+        top: -15px;
+    }
+    .home.overlay-logo{
         top: -20px;
     }
     .overlay-logo img {
-        height: 120px;
+        height: 90px;
         position: absolute;
     }
     .home-nav {
