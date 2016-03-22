@@ -671,6 +671,7 @@
     .triangles img{
         position: absolute;
         bottom: 0;
+        width: 100%;
     }
    .left-triangle{
         left: -50vw;
