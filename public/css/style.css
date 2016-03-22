@@ -1571,7 +1571,6 @@
         margin-bottom: 10px;
     }
     .footerlogo {
-        width: 180px;
         margin: 0 auto 40px;
     }
     .footer ul{
@@ -1714,13 +1713,13 @@
             display: none;
         }
         .quote .quotecontainer {
-            bottom: 10px;
+            bottom: 0;
             width: 100%;
             right: 0;
         }
         .list table td {
-            font-size: 10px;
-            padding: 5px;
+            font-size: 8px;
+            padding: 4px;
         }
         .toetus h2 {
             margin: -160px 0 30px;
@@ -1741,7 +1740,7 @@
             padding-top: 20px;
         }
         .quotecontainer .quotetext{
-            padding: 40px 15px 0;
+            padding: 30px 15px 0;
         }
         .quotecontainer .lefttitle {
             text-align: right;
@@ -1749,8 +1748,8 @@
             display: inline-block;
             width: 50%;
             color: #fff;
-            padding: 10px 20px 10px 24px;
-            font-size: 20px;
+            padding: 4px 20px 4px 24px;
+            font-size: 14px;
         }
         .quotecontainer .righttitle {
             text-align: left;
@@ -1758,11 +1757,11 @@
             background: #333;
             color: #fff;
             width: 50%;
-            font-size: 20px;
-            padding: 10px 20px 10px 24px;
+            font-size: 14px;
+            padding: 4px 20px 4px 24px;
         }
         .quotetext p{
-            font-size: 12px;
+            font-size: 10px;
         }
         .quotecontainer .author{
             font-size: 16px;
@@ -1805,6 +1804,20 @@
         .envelopeimage{
             height: 600px;
         }
+        .homesearch{
+            padding: 0;
+        }
+        .btn-default{
+            padding:10px 22px 5px;
+        }
+        .formcontent .btn-primary-outline{
+            padding: 6px 18px;
+            margin: 5px 10px;
+        }
+        .footer ul li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
     }
     @media (min-width:768px) and (max-width:1064px) {
         .navbar-default .navbar-nav>li>a {
