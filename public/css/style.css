@@ -77,6 +77,7 @@
         text-align: center;
     }
     .navbar-default {
+        position: relative;
         background: #e9eaec;
         height: 100px;
         padding: 25px 0;
@@ -88,6 +89,7 @@
         transition: .5s;
     }
     .navbar-fixed-top {
+        position:fixed;
         border-bottom: 1px solid #939395;
     }
     .navbar-brand>img {
