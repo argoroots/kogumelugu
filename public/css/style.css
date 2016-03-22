@@ -656,6 +656,58 @@
     .skewed {
         padding: 0;
     }
+    .envelopeimage{
+        position: relative;
+        height: 1200px;
+        background: url('../img/pilt2-compressor.jpg') center;
+        background-size: cover;
+    }
+    .triangles{
+        position: relative;
+    }
+   .left-triangle{
+        left: -50vw;
+        bottom: 0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 50vw solid transparent;
+        border-bottom: 15vw solid #40bebc;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+    }
+    .right-triangle{
+        right: -50vw;
+        bottom: 0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 50vw solid transparent;
+        border-bottom: 15vw solid #40bebc;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+    }
+    .envelopeimage .right-triangle{
+        right: 0;
+        top:0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 15vw solid #fff;
+        border-bottom: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+    }
+    .envelopeimage:before{
+        left: 0;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 15vw solid #fff;
+        border-bottom: 50vw solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+    }
     .textcontent {
         position: relative;
         z-index: 1;
@@ -714,9 +766,8 @@
         line-height: 21px;
     }
     #sinulugu-top {
-        background: #9fa1a3;
+        background: #40bebc;
         position: relative;
-        margin-bottom: 200px;
         padding: 0 15px;
     }
     #sinulugu-top .container {
@@ -734,7 +785,7 @@
     #sinulugu-bottom form {
         padding-top: 20px;
     }
-    #sinulugu-top:after {
+    /*#sinulugu-top:after {
         left: 0;
         position: absolute;
         width: 0px;
@@ -743,7 +794,7 @@
         border-bottom: 50vw solid transparent;
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
-    }
+    }*/
     .formcontent {
         background: #40bebc;
     }
@@ -1110,6 +1161,15 @@
         z-index: 9;
         margin-bottom: -50vw;
     }
+    .toeta a{
+        color: #fcd302;
+        transition: .2s;
+    }
+    .toeta a:hover,.toeta a:focus{
+        color: #333;
+        text-decoration: none;
+        transition: .2s;
+    }
     .toeta-bottom {
         background: #339a9c;
         margin-top: -70px;
@@ -1461,18 +1521,17 @@
         position: relative;
         z-index: 10;
     }
-    .unitasfooter{
-        margin: 20px 0;
-    }
-    .unitaslogo{
-        height: 100px;
+    .logosfooter img{
+        display: inline-block;
+        height: 120px;
+        margin-right: 20px;
         margin-bottom: 10px;
     }
     .footerlogo {
         width: 180px;
         margin: 0 auto 40px;
     }
-    .footer ul {
+    .footer ul{
         text-align: center;
         margin: 0;
         -webbkit-margin-start: 0;
@@ -1482,9 +1541,12 @@
         -webkit-margin-end: 0px;
         -webkit-padding-start: 0;
     }
+    .socialfooter ul{
+        text-align: left;
+    }
     .footer ul li {
-        display: inline-block;
-        margin: 0 20px;
+        display: block;
+        margin: 0 0 5px;
     }
     .footer ul li a img:hover,
     .footer ul li a img:focus {
@@ -1494,16 +1556,13 @@
         font-family: 'AmaticSCBold';
         font-size: 24px;
         height: 100%;
-        width: 100%;
         border: 0;
         -webkit-transition: all 0.2s;
         -moz-transition: all 2s;
         transition: all 0.2s;
         background: #fcd302;
         margin:10px 0;
-    }
-    .mailfooter{
-        margin:20px 0;
+        padding: 2px 32px;
     }
     .footer .btn-submit:hover,
     .footer .btn-submit:focus{
@@ -1634,10 +1693,6 @@
         }
         #tutvustus-bottom{
             margin-bottom: 0;
-        }
-        #sinulugu-top{
-            padding-top: 0;
-            margin-bottom: 300px;
         }
         #sinulugu-bottom form{
             padding-top: 20px;
