@@ -673,6 +673,9 @@
         bottom: 0;
         width: 100%;
     }
+    #mce-responses.clear{
+        padding: 5px 0;
+    }
    .left-triangle{
         left: -50vw;
         bottom: 0;

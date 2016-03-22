@@ -167,3 +167,5 @@ function changeTime(x) {
     $("#play-button").hide();
     $(".playButtonArea").hide();
 }
+
+(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[5]='MMERGE5';ftypes[5]='number';fnames[7]='MMERGE7';ftypes[7]='text'; }(jQuery));var $mcj = jQuery.noConflict(true);
