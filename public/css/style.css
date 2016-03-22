@@ -1815,9 +1815,13 @@
             margin: 5px 10px;
         }
         .footer ul li {
-    display: inline-block;
-    margin: 0 10px 10px 0;
-}
+            display: inline-block;
+            margin: 0 10px 10px 0;
+        }
+        #videoGallery .video{
+            border: none;
+            border-top: 15px solid #3a3a3c;
+        }
     }
     @media (min-width:768px) and (max-width:1064px) {
         .navbar-default .navbar-nav>li>a {
