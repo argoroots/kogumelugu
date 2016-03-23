@@ -31,7 +31,7 @@
                         ul
                             each c in chapters
                                 li.timecode
-                                    a(href='/video/' + video.get('_id') + '/' + c.get('info'))
+                                    a(href='/video/' + video.get('_id') + '?time=' + c.get('info'))
                                         b= c.get('name')
                                         |  #{ c.get('info') }
                 .keywords

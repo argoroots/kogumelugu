@@ -130,11 +130,6 @@ router.get('/json', function(req, res, next) {
 
 
 router.get('/:id', function(req, res, next) {
-    res.redirect('/video/' + req.params.id + '/0')
-})
-
-
-router.get('/:id/:t', function(req, res, next) {
     async.parallel({
         subjects: function(callback) {
             entu.getEntities({
@@ -193,7 +188,7 @@ router.get('/:id/:t', function(req, res, next) {
 
             results.related = related.stories.concat(related.interviews)
             results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
-            results.jumpTo = req.params.t
+            results.jumpTo = req.query.time
 
             res.render('video/video', results)
         })
