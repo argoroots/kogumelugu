@@ -9,13 +9,13 @@ var entu   = require('../helpers/entu')
 
 router.get('/', function(req, res, next) {
     async.parallel({
-        subjects: function(callback) {
+        subjectsFull: function(callback) {
             entu.getEntities({
                 definition: 'subject',
                 fullObject: false
             }, callback)
         },
-        regions: function(callback) {
+        regionsFull: function(callback) {
             entu.getEntities({
                 definition: 'region',
                 fullObject: false
@@ -25,7 +25,28 @@ router.get('/', function(req, res, next) {
     function(err, results) {
         if (err) return next(err)
 
+        results.subjects = _.map(results.subjectsFull, function(n) {
+            return n.get('name')
+        })
+        results.regions = _.map(results.regionsFull, function(n) {
+            return n.get('name')
+        })
+        results.generations = [
+            '1920',
+            '1930',
+            '1940',
+            '1950',
+            '1960',
+            '1970',
+            '1980',
+            '1990',
+        ]
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
+
+        delete results.subjectsFull
+        delete results.regionsFull
+
+        console.log(results);
 
         res.render('video/videolist', results)
     })

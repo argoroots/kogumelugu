@@ -1,3 +1,18 @@
+var parseQueryString = function( queryString ) {
+    var params = {}, queries, temp, i, l
+
+    queries = queryString.replace('?', '').split("&")
+
+    for ( i = 0, l = queries.length; i < l; i++ ) {
+        temp = queries[i].split('=')
+        params[temp[0]] = temp[1]
+    }
+
+    return params
+};
+
+
+
 angular.module('kmlApp', [])
 
 
@@ -18,8 +33,14 @@ angular.module('kmlApp', [])
 
 
 
-    .controller('vidoeGallery', ['$scope', '$http', '$filter', function($scope, $http, $filter) {
+    .controller('vidoeGallery', ['$scope', '$http', '$filter', '$location', function($scope, $http, $filter, $location) {
         if(!$scope.sData) { $scope.sData = {} }
+
+        var search = parseQueryString(decodeURI(window.location.search))
+        $scope.sData.subject = search.subject || null
+        $scope.sData.region = search.region || null
+        $scope.sData.generation = search.generation || null
+        $scope.sData.query = search.query || null
 
         $http.get('/video/json')
             .success(function(videos) {
@@ -50,18 +71,20 @@ angular.module('kmlApp', [])
 
                 $scope.sData.videos = $scope.sData.allVideos
 
+                $scope.doFilter(true)
+
             })
             .error(function(error) {
                 console.log(error)
             })
 
-        $scope.doFilter = function() {
+        $scope.doFilter = function(noApply) {
             var query = [$scope.sData.subject, $scope.sData.region, $scope.sData.generation, $scope.sData.query].join(' ').trim().toLowerCase()
-            console.log(query)
 
             $scope.sData.videos = $filter('multiple')($scope.sData.allVideos, query)
-            console.log($scope.sData.videos.length)
-            $scope.$apply()
+
+            if(!noApply) { $scope.$apply() }
+
             $('html, body').animate({ scrollTop: $('.gallery.container').offset().top - 230 }, 'slow')
         }
 
