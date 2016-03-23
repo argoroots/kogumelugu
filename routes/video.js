@@ -7,6 +7,22 @@ var vimeo  = require('vimeo').Vimeo
 var entu   = require('../helpers/entu')
 
 
+var splitFormulaValues = function(v) {
+    var list = v.split(/[;\/]+/)
+    list = _.map(list, function(n) {
+        return n.trim() || null
+    })
+    list = list.filter(function(n) {
+        return !!n
+    })
+
+    list = _.union(list)
+    list.sort()
+
+    return list
+}
+
+
 router.get('/', function(req, res, next) {
     async.parallel({
         subjectsFull: function(callback) {
@@ -105,52 +121,9 @@ router.get('/json', function(req, res, next) {
 
             var video = videos[i]
 
-            var subjects = []
-            if(video.get('subjectFullname-eng.value')) {
-                var subjectFullname = video.get('subjectFullname-eng.value', '').split(';')
-                for (var s in subjectFullname) {
-                    if (!subjectFullname.hasOwnProperty(s)) { continue }
-
-                    subjects.push(subjectFullname[s].trim())
-                }
-            }
-            if(video.get('subjectFullname-est.value')) {
-                var subjectFullname = video.get('subjectFullname-est.value', '').split(';')
-                for (var s in subjectFullname) {
-                    if (!subjectFullname.hasOwnProperty(s)) { continue }
-
-                    subjects.push(subjectFullname[s].trim())
-                }
-            }
-            if(video.get('subjectFullname-rus.value')) {
-                var subjectFullname = video.get('subjectFullname-rus.value', '').split(';')
-                for (var s in subjectFullname) {
-                    if (!subjectFullname.hasOwnProperty(s)) { continue }
-
-                    subjects.push(subjectFullname[s].trim())
-                }
-            }
-
-            var regions = []
-            if(video.get('regionFullname.value')) {
-                var regionFullname = video.get('regionFullname.value', '').split(';')
-                for (var r in regionFullname) {
-                    if (!regionFullname.hasOwnProperty(r)) { continue }
-
-                    regions.push(regionFullname[r].trim())
-                }
-            }
-
-            var generations = []
-            if(video.get('storytellerBirthYear.value')) {
-                var storytellerBirthYear = video.get('storytellerBirthYear.value', '').split(';')
-                for (var g in storytellerBirthYear) {
-                    if (!storytellerBirthYear.hasOwnProperty(g)) { continue }
-
-                    generations.push(Math.floor(parseInt(storytellerBirthYear[g].trim(), 10) / 10) * 10)
-                }
-                generations = _.union(generations)
-            }
+            var subjects = splitFormulaValues(video.get('subjectFullname-eng.value', '') + ';' + video.get('subjectFullname-est.value', '') + ';' + video.get('subjectFullname-rus.value', ''))
+            var regions = splitFormulaValues(video.get('regionFullname.value', ''))
+            var generations = splitFormulaValues(video.get('storytellerBirthYear.value', ''))
 
             results.push({
                 id: video.get('_id'),
