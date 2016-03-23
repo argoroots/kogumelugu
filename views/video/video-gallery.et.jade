@@ -23,17 +23,17 @@
             .col-md-3.col-sm-3.col-xs-4.topic
                 select.form-control(ng-model='sData.subject', ng-change='doFilter()', data-field='subject')
                     option.placeholder(selected='') Vali teema
-                    each s in subjects
+                    each s in subjects || []
                         option(value=s, ng-selected='sData.subject === "' + s + '"')= s
             .col-md-3.col-sm-3.col-xs-4.area
                 select.form-control(ng-model='sData.region', ng-change='doFilter()', data-field='region')
                     option.placeholder(selected='') Vali piirkond
-                    each r in regions
+                    each r in regions || []
                         option(value=r, ng-selected='sData.region === "' + r + '"')= r
             .col-md-3.col-sm-3.col-xs-4.generation
                 select.form-control(ng-model='sData.generation', ng-change='doFilter()', data-field='generation')
                     option.placeholder(selected='') Vali põlvkond
-                    each g in generations
+                    each g in generations || []
                         option(value=g, ng-selected='sData.generation === "' + g + '"')= g
             .col-md-3.col-sm-3.col-xs-12.searchcolumn
                 .search
