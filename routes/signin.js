@@ -40,10 +40,8 @@ router.get('/done', function(req, res, next) {
 
             var url = req.signedCookies.redirect_url || '/'
 
-            console.log(url);
-
             res.clearCookie('redirect_url')
-            res.redirect('/' + url)
+            res.redirect(url)
         })
     })
 })
