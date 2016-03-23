@@ -22,25 +22,19 @@
         .row.dropdowns
             .col-md-3.col-sm-3.col-xs-4.topic
                 select.form-control(ng-model='sData.subject', ng-change='doFilter()', data-field='subject')
-                    option.placeholder(selected='', disabled='', value='') Vali teema
+                    option.placeholder(selected='') Vali teema
                     each s in subjects
-                        option(value='')= s.get('name')
+                        option(value=s, ng-selected='sData.subject === "' + s + '"')= s
             .col-md-3.col-sm-3.col-xs-4.area
                 select.form-control(ng-model='sData.region', ng-change='doFilter()', data-field='region')
-                    option.placeholder(selected='', disabled='', value='') Vali piirkond
-                    each c in regions
-                        option(value='')= c.get('name')
+                    option.placeholder(selected='') Vali piirkond
+                    each r in regions
+                        option(value=r, ng-selected='sData.region === "' + r + '"')= r
             .col-md-3.col-sm-3.col-xs-4.generation
                 select.form-control(ng-model='sData.generation', ng-change='doFilter()', data-field='generation')
-                    option.placeholder(selected='', disabled='', value='') Vali põlvkond
-                    option(value='1920') 1920
-                    option(value='1930') 1930
-                    option(value='1940') 1940
-                    option(value='1950') 1950
-                    option(value='1960') 1960
-                    option(value='1970') 1970
-                    option(value='1980') 1980
-                    option(value='1990') 1990
+                    option.placeholder(selected='') Vali põlvkond
+                    each g in generations
+                        option(value=g, ng-selected='sData.generation === "' + g + '"')= g
             .col-md-3.col-sm-3.col-xs-12.searchcolumn
                 .search
                     input(ng-model='sData.query', ng-change='doFilter()', type='text', placeholder='OTSI')
