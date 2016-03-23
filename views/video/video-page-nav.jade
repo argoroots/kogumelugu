@@ -32,7 +32,10 @@ nav.navbar-default
                         img(src='img/kogumelugu-navlogo.svg')
             ul.nav.navbar-nav.navbar-right
                 li
-                    a(href='/user/login') Logi sisse
+                    if !user
+                        a(href='/signin') Logi sisse
+                    else
+                        a(href='/signin/exit') Logi välja
                 li
                     a(href='#') ENG
                 li

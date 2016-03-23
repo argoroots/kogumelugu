@@ -3,9 +3,10 @@ if(process.env.NEW_RELIC_LICENSE_KEY) { require('newrelic') }
 var bparser  = require('body-parser')
 var cparser  = require('cookie-parser')
 var express  = require('express')
+var op       = require('object-path')
 var path     = require('path')
-var raven    = require('raven')
 var random   = require('randomstring')
+var raven    = require('raven')
 
 var entu     = require('./helpers/entu')
 
@@ -61,16 +62,56 @@ if(APP_SENTRY) {
 app.use(express.static(path.join(__dirname, 'public')))
 
 // parse Cookies
-app.use(cparser())
+app.use(cparser(APP_COOKIE_SECRET))
 
 // parse POST requests
 app.use(bparser.json())
 app.use(bparser.urlencoded({extended: true}))
 
+// set defaults for views
+app.use(function(req, res, next) {
+    console.log(res.locals);
+    res.authenticate = function() {
+        if(!res.locals.user) {
+            res.cookie('redirect_url', res.locals.path, {signed:true, maxAge:1000*60*60})
+            res.redirect('/signin')
+            return false
+        } else {
+            return true
+        }
+
+    }
+
+    res.locals.path = req.path
+    if(!req.signedCookies) next(null)
+    if(req.signedCookies.auth_id && req.signedCookies.auth_token) {
+        entu.getUser({
+            auth_id: req.signedCookies.auth_id,
+            auth_token: req.signedCookies.auth_token
+        }, function(error, user) {
+            if(user) {
+                res.locals.user = {
+                    id: parseInt(req.signedCookies.auth_id, 10),
+                    token: req.signedCookies.auth_token,
+                    picture: op.get(user, 'picture'),
+                    lang: op.get(user, 'person.language.values.0.value', APP_DEFAULT_LOCALE)
+                }
+            } else {
+                res.clearCookie('auth_id')
+                res.clearCookie('auth_token')
+            }
+            next(null)
+        })
+    } else {
+        next(null)
+    }
+})
+
+
 // routes mapping
 app.use('/', require('./routes/index'))
 app.use('/video', require('./routes/video'))
-app.use('/user', require('./routes/user'))
+app.use('/signin', require('./routes/signin'))
 
 // logs to getsentry.com - error
 if(APP_SENTRY) {
