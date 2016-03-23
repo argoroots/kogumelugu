@@ -84,9 +84,35 @@ router.get('/json', function(req, res, next) {
 
             var video = videos[i]
 
+            var subjects = []
+            if(video.get('subjectFullname-eng.value')) {
+                var subjectFullname = video.get('subjectFullname-eng.value', '').split(';')
+                for (var s in subjectFullname) {
+                    if (!subjectFullname.hasOwnProperty(s)) { continue }
+
+                    subjects.push(subjectFullname[s].trim())
+                }
+            }
+            if(video.get('subjectFullname-est.value')) {
+                var subjectFullname = video.get('subjectFullname-est.value', '').split(';')
+                for (var s in subjectFullname) {
+                    if (!subjectFullname.hasOwnProperty(s)) { continue }
+
+                    subjects.push(subjectFullname[s].trim())
+                }
+            }
+            if(video.get('subjectFullname-rus.value')) {
+                var subjectFullname = video.get('subjectFullname-rus.value', '').split(';')
+                for (var s in subjectFullname) {
+                    if (!subjectFullname.hasOwnProperty(s)) { continue }
+
+                    subjects.push(subjectFullname[s].trim())
+                }
+            }
+
             var regions = []
             if(video.get('regionFullname.value')) {
-                regionFullname = video.get('regionFullname.value', '').split(';')
+                var regionFullname = video.get('regionFullname.value', '').split(';')
                 for (var r in regionFullname) {
                     if (!regionFullname.hasOwnProperty(r)) { continue }
 
@@ -94,16 +120,9 @@ router.get('/json', function(req, res, next) {
                 }
             }
 
-            var categories = []
-            for (var c in video.get('curriculumSubjects', [])) {
-                if (!video.get('curriculumSubjects', []).hasOwnProperty(c)) { continue }
-
-                categories.push(video.get('curriculumSubjects', [])[c].value)
-            }
-
             var generations = []
             if(video.get('storytellerBirthYear.value')) {
-                storytellerBirthYear = video.get('storytellerBirthYear.value', '').split(';')
+                var storytellerBirthYear = video.get('storytellerBirthYear.value', '').split(';')
                 for (var g in storytellerBirthYear) {
                     if (!storytellerBirthYear.hasOwnProperty(g)) { continue }
 
@@ -119,7 +138,7 @@ router.get('/json', function(req, res, next) {
                 video: video.get('videoUrl.value'),
                 generation: generations,
                 regions: regions,
-                categories: categories,
+                subjects: subjects,
             })
 
         }
