@@ -18,7 +18,10 @@
                         .col-md-12
                             p.description
                                 //- | Intervjuu 2015, Vancouver, Kanada
-                                | Intervjueerija
+                                if video.get('_definition') === 'interview'
+                                    | Intervjueerija
+                                else
+                                    | Autor
                                 br
                                 each author in video.get('author', [])
                                     b #{ author.value }
