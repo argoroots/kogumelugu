@@ -1,0 +1,16 @@
+#carousel.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+        li.active(data-target='#carousel', data-slide-to='0')
+        //- <li class="video" data-target="#carousel" data-slide-to="1"><img src="img/play.svg" class="img-responsive"></li>
+        li(data-target='#carousel', data-slide-to='1')
+        li(data-target='#carousel', data-slide-to='2')
+    .carousel-inner(role='listbox')
+        .item.active
+            img(src='img/kml-headbanner_01.jpg', alt='...')
+            .carousel-caption
+        .item
+            img(src='img/kml-headbanner_02.jpg', alt='...')
+            .carousel-caption
+        .item
+            img(src='img/kml-headbanner_03.jpg', alt='...')
+            .carousel-caption

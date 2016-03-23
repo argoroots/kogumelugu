@@ -1,0 +1,9 @@
+extends ../layout
+
+block javascript
+    script(type='text/javascript', src='js/video.js')
+
+block body
+    #videoGallery(ng-controller='vidoeGallery')
+        include video-gallery-nav
+        include video-gallery

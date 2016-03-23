@@ -1,0 +1,24 @@
+extends ../layout
+
+block body
+    .pagewrapper
+
+        include signin-nav
+
+        .container-fluid.login-page
+            .textcontent
+                .textcontainer.container
+                    h1.title Sisene keskkonda
+                    if error === 'interview'
+                        .alert.alert-warning.alert-dismissible(role='alert')
+                            button.close(type='button', data-dismiss='alert', aria-label='Close')
+                                span(aria-hidden='true') ×
+                            strong Tähelepanu!
+                            br
+                            | Proovisid vaadata täispikka intervjuud, kuid selle jaoks pead olema sisselogitud.
+                    h3 Vali sobiv sotsiaalmeediateenus, mida soovid sisselogimiseks kasutada
+                    a(href='/signin/facebook')
+                        img.img-responsive(src='img/facebookicon.svg')
+                    a(href='/signin/google')
+                        img.img-responsive(src='img/googleplusicon.svg')
+                    p Sisenedes portaali nõustud, et sinu andmeid kasutatakse portaali täiustamise huvides, kuid ei avalikustata kolmandatele osapooltele.
