@@ -41,15 +41,15 @@
                 .keywords
                     ul
                         each category in video.get('curriculumSubjects', [])
-                            a(href='#')
+                            a(href='/video?subject=' + category.value)
                                 li.primary= category.value
                         //- a(href='#')
                         //-     li.secondary Generatsioon
                         each storyteller in video.get('storyteller', [])
-                            a(href='#')
+                            a(href='/video?query=' + storyteller.value)
                                 li.tertiary= storyteller.value
                         each region in video.get('region', [])
-                            a(href='#')
+                            a(href='/video?region=' + region.value)
                                 li.quatenary= region.value
                 .lastblock
                     ul.sharebuttons
