@@ -130,7 +130,7 @@ router.get('/json', function(req, res, next) {
                 name: video.get('_name'),
                 info: video.get('_info'),
                 video: video.get('videoUrl.value'),
-                generation: generations,
+                generations: generations,
                 regions: regions,
                 subjects: subjects,
             })
