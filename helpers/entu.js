@@ -48,6 +48,7 @@ exports.getEntity = getEntity = function(params, callback) {
         var properties = op.get(body, 'result.properties', {})
         var entity = {
             _id: op.get(body, 'result.id', null),
+            _definition: op.get(body, 'result.definition.keyname', null),
             _name: op.get(body, 'result.displayname', null),
             _info: op.get(body, 'result.displayinfo', null),
             _changed: op.get(body, 'result.changed', null) || op.get(body, 'result.created', null),

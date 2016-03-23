@@ -6,7 +6,9 @@ var entu   = require('../helpers/entu')
 
 // Show signin page
 router.get('/', function(req, res) {
-    res.render('signin/signin')
+    res.render('signin/signin', {
+        error: req.query.e
+    })
 })
 
 
@@ -36,7 +38,9 @@ router.get('/done', function(req, res, next) {
         }, function(error, profile) {
             if(error) return next(error)
 
-            var url = req.signedCookies.redirect_url || ''
+            var url = req.signedCookies.redirect_url || '/'
+
+            console.log(url);
 
             res.clearCookie('redirect_url')
             res.redirect('/' + url)

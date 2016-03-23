@@ -130,36 +130,17 @@ router.get('/json', function(req, res, next) {
 
 
 router.get('/:id', function(req, res, next) {
-    async.parallel({
-        subjects: function(callback) {
-            entu.getEntities({
-                definition: 'subject',
-                fullObject: false
-            }, callback)
-        },
-        regions: function(callback) {
-            entu.getEntities({
-                definition: 'region',
-                fullObject: false
-            }, callback)
-        },
-        video: function(callback) {
-            entu.getEntity({
-                id: req.params.id
-            }, callback)
-        },
-        chapters: function(callback) {
-            entu.getEntities({
-                parentEntityId: req.params.id,
-                definition: 'chapter',
-                fullObject: false
-            }, callback)
-        },
-    },
-    function(err, results) {
+
+    entu.getEntity({
+        id: req.params.id
+    }, function(err, video) {
         if (err) return next(err)
 
-        var storytellers = results.video.get('storyteller', [])
+        if (!res.locals.user && video.get('_definition') === 'interview') {
+            return res.authenticate('interview')
+        }
+
+        var storytellers = video.get('storyteller', [])
         var query = []
         for (var i in storytellers) {
             if (!storytellers.hasOwnProperty(i)) { continue }
@@ -168,6 +149,25 @@ router.get('/:id', function(req, res, next) {
         }
 
         async.parallel({
+            subjects: function(callback) {
+                entu.getEntities({
+                    definition: 'subject',
+                    fullObject: false
+                }, callback)
+            },
+            regions: function(callback) {
+                entu.getEntities({
+                    definition: 'region',
+                    fullObject: false
+                }, callback)
+            },
+            chapters: function(callback) {
+                entu.getEntities({
+                    parentEntityId: req.params.id,
+                    definition: 'chapter',
+                    fullObject: false
+                }, callback)
+            },
             stories: function(callback) {
                 entu.getEntities({
                     definition: 'story',
@@ -181,17 +181,21 @@ router.get('/:id', function(req, res, next) {
                     query: query.join(' '),
                     fullObject: true
                 }, callback)
-            },
+            }
         },
-        function(err, related) {
+        function(err, results) {
             if (err) return next(err)
 
-            results.related = related.stories.concat(related.interviews)
+            results.video = video
+            results.related = results.stories.concat(results.interviews)
             results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
             results.jumpTo = req.query.time
 
             res.render('video/video', results)
+
         })
+
+
 
     })
 })

@@ -70,10 +70,10 @@ app.use(bparser.urlencoded({extended: true}))
 
 // set defaults for views
 app.use(function(req, res, next) {
-    res.authenticate = function() {
+    res.authenticate = function(e) {
         if(!res.locals.user) {
             res.cookie('redirect_url', res.locals.path, {signed:true, maxAge:1000*60*60})
-            res.redirect('/signin')
+            res.redirect('/signin?e=' + e)
             return false
         } else {
             return true

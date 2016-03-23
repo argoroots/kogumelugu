@@ -9,11 +9,13 @@ block body
             .textcontent
                 .textcontainer.container
                     h1.title Sisene keskkonda
-                    //- .alert.alert-warning.alert-dismissible(role='alert')
-                    //-     button.close(type='button', data-dismiss='alert', aria-label='Close')
-                    //-         span(aria-hidden='true') ×
-                    //-     strong Tähelepanu!
-                    //-     | Proovisid vaadata täispikka intervjuud, kuid selle jaoks pead olema sisselogitud.
+                    if error === 'interview'
+                        .alert.alert-warning.alert-dismissible(role='alert')
+                            button.close(type='button', data-dismiss='alert', aria-label='Close')
+                                span(aria-hidden='true') ×
+                            strong Tähelepanu!
+                            br
+                            | Proovisid vaadata täispikka intervjuud, kuid selle jaoks pead olema sisselogitud.
                     h3 Vali sobiv sotsiaalmeediateenus, mida soovid sisselogimiseks kasutada
                     a(href='/signin/facebook')
                         img.img-responsive(src='img/facebookicon.svg')
