@@ -83,29 +83,34 @@ router.get('/json', function(req, res, next) {
             if (!videos.hasOwnProperty(i)) { continue }
 
             var video = videos[i]
+
             var regions = []
-            var categories = []
-            var generations = []
+            if(video.get('regionFullname.value')) {
+                regionFullname = video.get('regionFullname.value', '').split(';')
+                for (var r in regionFullname) {
+                    if (!regionFullname.hasOwnProperty(r)) { continue }
 
-            for (var r in video.get('region', [])) {
-                if (!video.get('region', []).hasOwnProperty(r)) { continue }
-
-                regions.push(video.get('region', [])[r].value)
+                    regions.push(regionFullname[r].trim())
+                }
             }
 
+            var categories = []
             for (var c in video.get('curriculumSubjects', [])) {
                 if (!video.get('curriculumSubjects', []).hasOwnProperty(c)) { continue }
 
                 categories.push(video.get('curriculumSubjects', [])[c].value)
             }
 
-            storytellerBirthYear = video.get('storytellerBirthYear.value', '').split(';')
-            for (var g in storytellerBirthYear) {
-                if (!storytellerBirthYear.hasOwnProperty(g)) { continue }
+            var generations = []
+            if(video.get('storytellerBirthYear.value')) {
+                storytellerBirthYear = video.get('storytellerBirthYear.value', '').split(';')
+                for (var g in storytellerBirthYear) {
+                    if (!storytellerBirthYear.hasOwnProperty(g)) { continue }
 
-                generations.push(Math.floor(parseInt(storytellerBirthYear[g].trim(), 10) / 10) * 10)
+                    generations.push(Math.floor(parseInt(storytellerBirthYear[g].trim(), 10) / 10) * 10)
+                }
+                generations = _.union(generations)
             }
-            generations = _.union(generations)
 
             results.push({
                 id: video.get('_id'),

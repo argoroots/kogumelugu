@@ -21,17 +21,17 @@
                                 a.sortby(href='') viimati sisestatud
         .row.dropdowns
             .col-md-3.col-sm-3.col-xs-4.topic
-                select.form-control(ng-model='sData.subject', ng-change='doFilter()')
+                select.form-control(ng-model='sData.subject', ng-change='doFilter()', data-field='subject')
                     option.placeholder(selected='', disabled='', value='') Vali teema
                     each s in subjects
                         option(value='')= s.get('name')
             .col-md-3.col-sm-3.col-xs-4.area
-                select.form-control(ng-model='sData.region', ng-change='doFilter()')
+                select.form-control(ng-model='sData.region', ng-change='doFilter()', data-field='region')
                     option.placeholder(selected='', disabled='', value='') Vali piirkond
                     each c in regions
                         option(value='')= c.get('name')
-            .col-md-3.col-sm-3.col-xs-4.generation(ng-model='sData.generation', ng-change='doFilter()')
-                select.form-control
+            .col-md-3.col-sm-3.col-xs-4.generation
+                select.form-control(ng-model='sData.generation', ng-change='doFilter()', data-field='generation')
                     option.placeholder(selected='', disabled='', value='') Vali põlvkond
                     option(value='1920') 1920
                     option(value='1930') 1930

@@ -2,6 +2,22 @@ angular.module('kmlApp', [])
 
 
 
+    .filter('multiple', ['filterFilter', function (filterFilter) {
+        return function (items, query) {
+            if (!query) return items
+
+            var terms = query.split(/\s+/)
+            var result = items
+            terms.forEach(function(term) {
+                result = filterFilter(result,term)
+            })
+
+            return result
+        }
+      }])
+
+
+
     .controller('vidoeGallery', ['$scope', '$http', '$filter', function($scope, $http, $filter) {
         if(!$scope.sData) { $scope.sData = {} }
 
@@ -40,7 +56,12 @@ angular.module('kmlApp', [])
             })
 
         $scope.doFilter = function() {
-            $scope.sData.videos = $filter('filter')($scope.sData.allVideos, $scope.sData.query)
+            var query = [$scope.sData.subject, $scope.sData.region, $scope.sData.generation, $scope.sData.query].join(' ').trim().toLowerCase()
+            console.log(query)
+
+            $scope.sData.videos = $filter('multiple')($scope.sData.allVideos, query)
+            console.log($scope.sData.videos.length)
+            $scope.$apply()
             $('html, body').animate({ scrollTop: $('.gallery.container').offset().top - 230 }, 'slow')
         }
 

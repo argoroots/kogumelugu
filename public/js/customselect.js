@@ -43,8 +43,12 @@ $('select').each(function () {
     $listItems.click(function (e) {
         e.stopPropagation();
         $styledSelect.text($(this).text()).removeClass('active');
-        $this.val($(this).attr('rel'));
+        $this.val($(this).text());
         $list.hide();
+
+        var scope = angular.element($this).scope();
+        scope.sData[$this.data('field')] = $(this).text()
+        scope.doFilter();
     });
 
     $(document).click(function () {
