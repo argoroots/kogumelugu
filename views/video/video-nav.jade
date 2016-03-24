@@ -26,10 +26,10 @@
 
         if lang !== 'et'
             li
-                a(href='/et') EST
+                a(href='/et' + path.substr(3)) EST
         if lang !== 'en'
             li
-                a(href='/en') ENG
+                a(href='/en' + path.substr(3)) ENG
         if lang !== 'ru'
             li
-                a(href='/ru') RUS
+                a(href='/ru' + path.substr(3)) RUS
