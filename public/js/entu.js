@@ -53,22 +53,6 @@ angular.module('kmlApp', [])
                     return 0.5 - Math.random()
                 })
 
-                // while(videos.length > 0) {
-                //     groupedVideos.push(videos.slice(0, 3))
-                //     videos.splice(0, 3)
-                //
-                //     if (lastWasFive) {
-                //         groupedVideos.push(videos.slice(0, 2))
-                //         videos.splice(0, 2)
-                //     } else {
-                //         groupedVideos.push(videos.slice(0, 5))
-                //         videos.splice(0, 5)
-                //     }
-                //     lastWasFive = !lastWasFive
-                // }
-                //
-                // $scope.sData.videos = groupedVideos
-
                 $scope.doFilter(false)
 
             })

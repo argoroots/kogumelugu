@@ -3,63 +3,63 @@
     h2 Kogu Me Lugu Topic Tree
     .teemadegrid.container
         #teemapuu.row
-            a(href='video?subject=Teine maailmasõda')
+            a(href='video?subject=' + subjects[0].get('name-' + lang + '.value', ''))
                 .teema.col-md-6.lg
                     .front
                         table
                             tr
                                 td
-                                    h3 Teine maailmasõda
-            a(href='video?subject=Külm sõda')
+                                    h3= subjects[0].get('name-' + lang + '.value', '')
+            a(href='video?subject=' + subjects[1].get('name-' + lang + '.value', ''))
                 .teema.col-md-3.sm
                     .front
                         table
                             tr
                                 td
-                                    h3 Külm sõda
+                                    h3= subjects[1].get('name-' + lang + '.value', '')
 
-            a(href='video?subject=NSVL ja Kommunistlik süsteem')
+            a(href='video?subject=' + subjects[2].get('name-' + lang + '.value', ''))
                 .teema.col-md-3.sm
                     .front
                         table
                             tr
                                 td
-                                    h3 NSVL ja Kommunistlik süsteem
-            a(href='video?subject=Maailm sajandivahetusel')
+                                    h3= subjects[2].get('name-' + lang + '.value', '')
+            a(href='video?subject=' + subjects[3].get('name-' + lang + '.value', ''))
                 .teema.col-md-3.sm
                     .front
                         table
                             tr
                                 td
-                                    h3 Maailm sajandivahetusel
-            a(href='video?subject=Demokraatlik maailm pärast teist maailmasõda')
+                                    h3= subjects[3].get('name-' + lang + '.value', '')
+            a(href='video?subject=' + subjects[4].get('name-' + lang + '.value', ''))
                 .teema.col-md-3.sm
                     .front
                         table
                             tr
                                 td
-                                    h3 Demokraatlik maailm pärast teist maailmasõda
-            a(href='video?subject=Eesti ja maailm: Eluolu ja kultuur')
+                                    h3= subjects[4].get('name-' + lang + '.value', '')
+            a(href='video?subject=' + subjects[5].get('name-' + lang + '.value', ''))
                 .teema.col-md-4.md
                     .front
                         table
                             tr
                                 td
-                                    h3 Eesti ja maailm: Eluolu ja kultuur
-            a(href='video?subject=Sõja ja rahu küsimus')
+                                    h3= subjects[5].get('name-' + lang + '.value', '')
+            a(href='video?subject=' + subjects[6].get('name-' + lang + '.value', ''))
                 .teema.col-md-4.md
                     .front
                         table
                             tr
                                 td
-                                    h3 Sõja ja rahu küsimus
-            a(href='video?subject=Inimsusevastased kuriteod')
+                                    h3= subjects[6].get('name-' + lang + '.value', '')
+            a(href='video?subject=' + subjects[7].get('name-' + lang + '.value', ''))
                 .teema.col-md-4.md
                     .front
                         table
                             tr
                                 td
-                                    h3 Inimsusevastased kuriteod
+                                    h3= subjects[7].get('name-' + lang + '.value', '')
 //- .container-fluid.cta.white-cta
 //-     .container
 //-         a.btn(href='#')

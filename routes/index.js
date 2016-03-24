@@ -42,6 +42,13 @@ router.get('/', function(req, res) {
                 fullObject: false
             }, callback)
         },
+        subjects: function(callback) {
+            entu.getEntities({
+                parentEntityId: 1348,
+                definition: 'subject',
+                fullObject: true
+            }, callback)
+        },
     },
     function(err, results) {
         if (err) return next(err)
@@ -49,6 +56,10 @@ router.get('/', function(req, res) {
         results.partners = results.partners1.concat(results.partners2)
         delete results.partners1
         delete results.partners2
+
+        results.subjects.sort(function() {
+            return 0.5 - Math.random()
+        })
 
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
