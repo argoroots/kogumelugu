@@ -69,8 +69,6 @@ angular.module('kmlApp', [])
                 //
                 // $scope.sData.videos = groupedVideos
 
-                $scope.sData.videos = $scope.sData.allVideos
-
                 $scope.doFilter(false)
 
             })
@@ -86,6 +84,25 @@ angular.module('kmlApp', [])
             if(doApply) { $scope.$apply() }
 
             $('html, body').animate({ scrollTop: $('.gallery.container').offset().top - 230 }, 'slow')
+        }
+
+        $scope.getClass = function(idx) {
+            var classes = [
+                ['col-md-6', 'col-sm-6', 'col-xs-12', 'video'],
+                ['col-md-4', 'col-sm-4', 'col-xs-12', 'video'],
+                ['col-md-4', 'col-sm-4', 'col-xs-12', 'video'],
+                ['col-md-4', 'col-sm-4', 'col-xs-12', 'video'],
+                ['col-md-6', 'col-sm-6', 'col-xs-12', 'video'],
+                ['col-md-3', 'col-sm-3', 'col-xs-6', 'video'],
+                ['col-md-3', 'col-sm-3', 'col-xs-6', 'video'],
+                ['col-md-3', 'col-sm-3', 'col-xs-6', 'video'],
+                ['col-md-3', 'col-sm-3', 'col-xs-6', 'video'],
+                ['col-md-4', 'col-sm-4', 'col-xs-12', 'video'],
+                ['col-md-4', 'col-sm-4', 'col-xs-12', 'video'],
+                ['col-md-4', 'col-sm-4', 'col-xs-12', 'video'],
+                ['col-md-6', 'col-sm-6', 'col-xs-12', 'video'],
+            ]
+            return classes[(idx + 1) % 13]
         }
 
     }])
