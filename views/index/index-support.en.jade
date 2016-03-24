@@ -1,62 +1,64 @@
 .container-fluid.toetus
     .container
         h2
-            span.darkened Toeta&nbsp;
-            | kogu me lugu
+            span.darkened Support&nbsp;
+            | Kogu Me Lugu
         .row
             .col-md-8.col-md-offset-2.col-xs-12.col-xs-offset-0
                 p.highlighted.center
-                    b Tänu Sinu toetusele saame salvestada rohkem lugusid, luua rohkem õppematerjale ja arendada platvormi paremate ja uuenduslikumate kasutusvõimaluste suunal. Toetad Kogu Me Lugu:
+                    b Thanks to your support we can record more stories, create more learning materials and develop the platform towards better and more innovative ways of use. You support Kogu Me Lugu by:
         .row
             .col-md-4.support.center
                 img.img-responsive(src='img/chatbubble.png')
-                p Saates meile oma pere loo ja täiendavaid materjale
+                p Sending us your family story and additional materials
             .col-md-4.support.center
                 img.img-responsive(src='img/heart.png')
-                p Soovitades meile loorääkijaid, keda intervjueerida
+                p Recommending storytellers to interview
             .col-md-4.support.center
                 img.img-responsive(src='img/spread.png')
-                p Levitades sõna Kogu Me Lugu kohta
+                p Spreading word about Kogu Me lugu
         .row
             .col-md-4.col-md-offset-2.support.center
                 img.img-responsive(src='img/people.png')
-                p Vanemate või vanavanematega aega veetes ja lugusid vestes
+                p Spending time storytelling with your parents or grandparents
             .col-md-4.support.center
                 img.img-responsive(src='img/toeta.png')
-                p Toetades Kogu Me Lugu tegevusi vabatahtliku töö või muude mitterahaliste vahenditega
+                p Supporting Kogu Me Lugu activities through volunteering or other means
 #toeta
 .container-fluid.toeta.toeta-top
     .container
         h2
-            span.darkened Sinu panus loeb,&nbsp;
-            | toeta algatust!
+            span.darkened Your donation counts,&nbsp;
+            | support the initiative!
         p.center.white
-            b Löö kaasa&nbsp;
+            b Participate in the &nbsp;
                 a(href='https://ev100.ee/et/kogu-me-lugu', target='_blank')
-                    span Kogu Me Lugu Eesti Vabariik 100 kingiprojektis&nbsp;
-                span või toeta meid rahaliselt!
+                    span Republic of Estonia 100th Anniversary gift project&nbsp;
+                span or donate!
         p.center.white
-            b Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda. Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
+            b Thanks to your financial support, more stories can be told and therefore the story of the Estonian community will be richer. Your financial gift will also support the administration and development of the Kogu Me Lugu online platform.
         p.center.white
-            b Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Unitas kontole. Ühekordse makse puhul kasuta allolevaid makselinke või ülekannet SA Unitas pangakontole. Püsikorralduse saab vormistada SA Unitas pangakontole. Konto andmed on nähtaval allpool.
-        p.center.white
-            b SA Unitas kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja, seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks. Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad. Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
+            b You can support Kogu Me Lugu through both single donations or standing order donations to the Unitas Foundation account. For single donations please use the payment links below or make the donation to the Unitas Foundation bank account. Account details are available below.
+
+
+
 
 .container-fluid.toeta.toeta-bottom
     .container
         a(href='https://ev100.ee/et/kogu-me-lugu', target='_blank')
             img.img-responsive.ev100(src='img/ev100.png')
-        p.text Toetada saab paari klikiga internetipanga vahendusel. Jäta meile oma nimi ja e-posti aadress, et teaksime, kellele tänusõnad estada ning vali sobiv toetussumma, kliki "TOETAN" ning Sind suunatakse Maksekeskuse lihtsasse ja turvalisse makseväravasse.
+        p.text Kogu Me Lugu takes hundreds of hours and euros a month to execute, maintain and develop. If you find importance and value in what we do, please consider supporting Kogu Me Lugu with a recurring donation of your choosing. Bank details are available below.
+        p.text You can make a single donation by making just a few clicks online. Send us your name and e-mail, so we can send you a thank you-note, select the appropriate amount below and click on it. You'll be redirected to the easy and secure payment gateway.
         form.supportsum(action='https://payment.maksekeskus.ee/pay/1/link.html')
             .form-group
                 .col-md-6
-                    input.form-control(type='text', placeholder='Sinu nimi')
+                    input.form-control(type='text', placeholder='Your name')
                 .col-md-6
-                    input.form-control(type='text', placeholder='Sinu e-posti aadress')
+                    input.form-control(type='text', placeholder='Your e-mail address')
             input(type='text', name='shopId', value='23d7bb0e-3372-4644-8440-eb7bec5562b1', hidden='')
             input(type='text', name='paymentId', value='Toetan Kogu Me Lugu', hidden='')
             ul
-                li.label Toetan:
+                li.label Donation:
                 li
                     input#sum10(type='radio', name='amount', value='10')
                     label(for='sum10')
@@ -94,16 +96,16 @@
                         input.customsum(type='number', onkeyup='setCustom();')
                         string €
             .buttonDiv
-                input.btn.btn-primary(type='submit', value='Toetan')
+                input.btn.btn-primary(type='submit', value='Donate')
 
             div.bankinfo
-                p Pangakonto andmed:
+                p Bank account details:
                 p
-                    b EE85 1010 2200 8178 2010&nbsp;
+                    b Account Number: EE85 1010 2200 8178 2010&nbsp;
                     span | BIC: EEUHEE2X
                 p
-                    b SEB PANK:&nbsp;
-                    span Tornimäe 2, 15010, Tallinn, Eesti
+                    b Bank: SEB Pank&nbsp;
+                    span Bank Address: Tornimäe 2, 15010, Tallinn, Estonia
                 p
                     b Selgitus:&nbsp;
                     span Toetan Kogu Me Lugu
