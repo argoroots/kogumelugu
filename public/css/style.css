@@ -63,7 +63,7 @@
     hr {
         display: block;
         width: 100%;
-        border-top: 1px solid #40bebc;
+        border-top: 1px solid #3b4566;
     }
     p {
         color: #555;
@@ -109,7 +109,7 @@
     .navbar-default .navbar-nav>li>a:focus,
     .subnav .navbar-nav>li>a:hover,
     .subnav .navbar-nav>li>a:focus {
-        color: #40bebc;
+        color: #3b4566;
         transition: .2s;
     }
     .btn {
@@ -156,7 +156,7 @@
     .subnav .subtitle {
         font-family: 'AmaticSCBold', sans-serif;
         font-size: 24px;
-        color: #40bebc;
+        color: #3b4566;
     }
     .subnav .title {
         font-size: 32px;
@@ -174,7 +174,7 @@
     }
     .subnav hr {
         padding-right: -60px;
-        border-top: 2px solid #40bebc;
+        border-top: 2px solid #3b4566;
     }
     #videoArea {
         margin-top: 20px;
@@ -206,8 +206,8 @@
     }
     .content #play-button:hover,
     .content #play-button:focus {
-        background: #40bebc;
-        border: 2px solid #40bebc;
+        background: #3b4566;
+        border: 2px solid #3b4566;
         color: #fff;
     }
     .content .videoWrapper iframe {
@@ -238,7 +238,7 @@
     }
     .content .infocolumn .title {
         font-weight: 600;
-        color: #40bebc;
+        color: #3b4566;
     }
     .content .infocolumn {
         margin-bottom: 60px;
@@ -249,12 +249,12 @@
     }
     .content .infocolumn a:hover,
     .content .infocolumn a:focus {
-        color: #40bebc;
+        color: #3b4566;
         transition: .2s;
         text-decoration: none;
     }
     h3.title {
-        color: #40bebc;
+        color: #3b4566;
     }
     .content .firstblock {
         background: #555;
@@ -293,7 +293,7 @@
         line-height: 1em;
     }
     .videoDescription p {
-        color: #40bebc;
+        color: #3b4566;
         font-weight: 600;
         font-size: 18px;
     }
@@ -312,7 +312,7 @@
     .btn-primary-outline:hover,
     .btn-primary-outline:focus {
         background: #fff;
-        color: #40bebc;
+        color: #3b4566;
         transition: .2s;
     }
     .titleImage {
@@ -401,7 +401,7 @@
         background: #fff;
     }
     .dropdowns .topic .select {
-        border-left: 12px solid #40bebc;
+        border-left: 12px solid #3b4566;
     }
     .dropdowns .area .select {
         border-left: 12px solid #f0594d;
@@ -445,7 +445,7 @@
     #videoGallery .video .btn-primary-outline:hover,
     #videoGallery .video .btn-primary-outline:focus {
         background: #fff;
-        color: #40bebc;
+        color: #3b4566;
         transition: .2s;
     }
     #videoGallery .video {
@@ -492,7 +492,7 @@
     }
     #videoGallery .video h4 {
         color: #fff;
-        font-size: 40px;
+        font-size: 32px;
         margin-bottom: 10px;
     }
     #videoGallery .video h4 span {
@@ -500,7 +500,7 @@
     }
     #videoGallery .video p {
         color: #fff;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 300;
     }
     a #videoGallery .video{
@@ -508,14 +508,14 @@
     }
     #videoGallery .video .wrapper:hover,
     #videoGallery .video .wrapper:focus {
-        background: rgba(64, 190, 188, .8);
+        background: rgba(59, 69, 102, .8);
         transition: .2s;
         cursor: pointer;
         text-decoration: none;
     }
     .related .video .wrapper:hover,
     .related .video .wrapper:focus {
-        background: rgba(64, 190, 188, .8);
+        background: rgba(59, 69, 102, .8);
         transition: .2s;
         cursor: pointer;
         text-decoration: none;
@@ -525,19 +525,19 @@
         padding: 100px 0;
     }
     #videoGallery .loadmore .btn-primary-outline {
-        border: 2px solid #40bebc;
+        border: 2px solid #3b4566;
         text-transform: uppercase;
         font-family: 'AmaticSCBold';
         font-size: 32px;
         letter-spacing: 1px;
-        color: #40bebc;
+        color: #3b4566;
         text-shadow: none;
         transition: .2s;
         padding: 8px 48px;
     }
     #videoGallery .loadmore .btn-primary-outline:hover,
     #videoGallery .loadmore .btn-primary-outline:focus {
-        background: #40bebc;
+        background: #3b4566;
         color: #fff;
         transition: .2s;
     }
@@ -559,7 +559,7 @@
         opacity: 1;
     }
     #videoGallery .tooltip-inner {
-        background: #40bebc;
+        background: #3b4566;
         border-radius: 0;
         text-align: left;
         text-transform: uppercase;
@@ -571,7 +571,7 @@
         bottom: 2px;
         left: 0!important;
         margin-left: 0;
-        border-top-color: #40bebc;
+        border-top-color: #3b4566;
     }
     #carousel .item img {
         min-width: 100%;
@@ -581,8 +581,8 @@
         height: 12px;
         border-radius: 2px;
         margin: 0 2px;
-        border: 1px solid #40bebc;
-        background: #40bebc;
+        border: 1px solid #3b4566;
+        background: #3b4566;
     }
     .carousel-indicators li.video {
         position: relative;
@@ -620,7 +620,7 @@
         font-size: 23px;
         padding: 7px 48px;
         width: 100%;
-        background: #40bebc;
+        background: #3b4566;
         border-radius: 2px;
     }
     .homesearch .btn-primary:hover,
@@ -628,7 +628,7 @@
         opacity: 0.7;
     }
     .cta {
-        background: #40bebc;
+        background: #3b4566;
         text-align: center;
         padding: 8px 0;
     }
@@ -638,7 +638,7 @@
         font-family: 'AmaticSCBold';
         font-size: 32px;
         padding: 8px 48px;
-        background: #fcd302;
+        background: #c7cbb6;
         border-radius: 7px;
         color: #333;
         transition: .2s;
@@ -648,8 +648,8 @@
     }
     .cta .btn:hover,
     .cta .btn:focus {
-        background: #333;
-        color: #fcd302;
+        background: #545f2d;
+        color: #c7cbb6;
         transition: .2s;
     }
     .cta .evlogo img {
@@ -684,7 +684,7 @@
         width: 0px;
         height: 0px;
         border-top: 50vw solid transparent;
-        border-bottom: 15vw solid #40bebc;
+        border-bottom: 15vw solid #3b4566;
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
     }
@@ -695,7 +695,7 @@
         width: 0px;
         height: 0px;
         border-top: 50vw solid transparent;
-        border-bottom: 15vw solid #40bebc;
+        border-bottom: 15vw solid #3b4566;
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
     }
@@ -773,12 +773,12 @@
         margin: 60px 0 30px;
     }
     p.highlighted {
-        color: #40bebc;
+        color: #3b4566;
         font-size: 18px;
         line-height: 21px;
     }
     #sinulugu-top {
-        background: #40bebc;
+        background: #3b4566;
         position: relative;
         padding: 0 15px;
     }
@@ -808,11 +808,11 @@
         border-right: 50vw solid transparent;
     }*/
     .formcontent {
-        background: #40bebc;
+        background: #3b4566;
     }
     .formcontent a{
         transition: .2s;
-        color: #fcd302;
+        color: #c7cbb6;
     }
     .formcontent a:hover,.formcontent a:focus{
         color: #333;
@@ -854,7 +854,7 @@
         font-family: 'AmaticSCBold';
         font-size: 32px;
         color: #333;
-        background: #fcd302;
+        background: #c7cbb6;
         text-shadow: none;
         transition: .2s;
         padding: 6px 48px;
@@ -862,8 +862,8 @@
     }
     .formcontent .btn-primary-outline:hover,
     .formcontent .btn-primary-outline:focus {
-        background: #333;
-        color: #fcd302;
+        background: #545f2d;
+        color: #c7cbb6;
 
     }
     .formcontent .button {
@@ -909,7 +909,7 @@
     }
     .quotecontainer .lefttitle {
         text-align: left;
-        background: #40bebc;
+        background: #3b4566;
         display: inline;
         color: #fff;
         padding: 10px 70px 10px 40px;
@@ -918,7 +918,7 @@
     .quotecontainer .righttitle {
         text-align: right;
         display: inline;
-        background: #333;
+        background: #545f2d;
         color: #fff;
         font-size: 36px;
         padding: 10px 70px 10px 35px;
@@ -935,7 +935,7 @@
         color: #fff;
     }
     .quotecontainer .author {
-        color: #40bebc;
+        color: #3b4566;
         font-size: 20px;
         line-height: 2em;
     }
@@ -965,7 +965,7 @@
     .teema table {
         height: 100%;
         width: 100%;
-        background: rgba(64, 190, 188, .9);
+        background: rgba(59, 69, 102, .9);
         color: #fff;
     }
     .teema.lg {
@@ -1009,7 +1009,7 @@
     }
     .teema .btn-primary-outline:hover ,
     .teema .btn-primary-outline:focus {
-        color: #40bebc;
+        color: #3b4566;
     }
     .teema .front {
         height: inherit;
@@ -1054,7 +1054,7 @@
     }
     .teema .back table a:hover,
     .teema .back table a:focus {
-        color: #fcd302;
+        color: #c7cbb6;
     }
     .teema.flip .front {
         width: 100%;
@@ -1073,7 +1073,7 @@
         position: relative;
     }
     .toetajad .header {
-        background: #40bebc;
+        background: #3b4566;
         padding: 30px 0 10px;
     }
     .toetajad .text {
@@ -1118,8 +1118,7 @@
     }
     .list table h3 {
         font-size: 2em;
-        ;
-        color: #40bebc;
+        color: #3b4566;
     }
     .list table td {
         font-size: 16px;
@@ -1139,13 +1138,13 @@
         width: 33.333%;
     }
     .list table.md b {
-        color: #40bebc;
+        color: #3b4566;
     }
     .unitas {
         padding: 30px 0;
     }
     .unitas a {
-        color: #40bebc;
+        color: #3b4566;
     }
     .unitas a:hover,
     .unitas a:focus {
@@ -1155,7 +1154,7 @@
     }
     .unitas h3 {
         margin-top: 0;
-        color: #40bebc;
+        color: #3b4566;
         text-align: left;
     }
     .toetus {
@@ -1169,14 +1168,14 @@
         margin: 20px 0;
     }
     .toetus h2 {
-        color: #40bebc;
+        color: #3b4566;
         margin: -20px 0 160px;
     }
     .toeta {
         padding: 50px 0;
     }
     .toeta-top {
-        background: #40bebc;
+        background: #3b4566;
         position: relative;
     }
     .toeta-top:after {
@@ -1185,7 +1184,7 @@
         width: 0px;
         height: 0px;
         margin-top: 50px;
-        border-top: 15vw solid #40bebc;
+        border-top: 15vw solid #3b4566;
         border-bottom: 50vw solid transparent;
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
@@ -1193,7 +1192,7 @@
         margin-bottom: -50vw;
     }
     .toeta a{
-        color: #fcd302;
+        color: #c7cbb6;
         transition: .2s;
     }
     .toeta a:hover,.toeta a:focus{
@@ -1202,7 +1201,7 @@
         transition: .2s;
     }
     .toeta-bottom {
-        background: #339a9c;
+        background: #1e2439;
         margin-top: -70px;
     }
     .thankyou-bottom{
@@ -1265,7 +1264,7 @@
     }
     .supportsum .customsum {
         font-size: 32px;
-        background: #fcd302;
+        background: #c7cbb6;
         border: none;
         border-radius: 6px;
         text-align: center;
@@ -1274,7 +1273,7 @@
     .supportsum .label {
         font-family: 'AmaticSCBold';
         font-size: 36px;
-        color: #fcd302;
+        color: #c7cbb6;
     }
     input[type="radio"] {
         display: none;
@@ -1317,7 +1316,7 @@
         font-size: 24px;
         letter-spacing: 1px;
         color: #333;
-        background: #fcd302;
+        background: #c7cbb6;
         text-shadow: none;
         transition: .2s;
         margin: 0 auto;
@@ -1326,8 +1325,8 @@
     }
     .toeta .btn-primary:hover,
     .toeta .btn-primary:hover{
-        background: #333;
-        color: #fcd302;
+        background: #545f2d;
+        color: #c7cbb6;
     }
     .toeta .btn-alternative:hover,
     .toeta .btn-alternative:focus {
@@ -1346,7 +1345,7 @@
         margin: 0 20px 10px;
     }
     .timetable a {
-        color: #40bebc;
+        color: #3b4566;
     }
     .support {
         padding: 20px 60px;
@@ -1383,7 +1382,7 @@
         display: block;
         padding: 8px 6px;
         margin: 5px 0;
-        border-left: 1px solid #40bebc;
+        border-left: 1px solid #3b4566;
     }
 
     .timeline ul li a {
@@ -1392,21 +1391,21 @@
     }
     .timeline ul li a:hover,
     .timeline ul li a:focus {
-        color: #40bebc;
+        color: #3b4566;
         transition: .2s;
         text-decoration: none;
     }
     .timeline ul li.showall {
         border-left: 0;
         display: inline-block;
-        border: 1px solid #40bebc;
+        border: 1px solid #3b4566;
         border-radius: 4px;
-        color: #40bebc;
+        color: #3b4566;
         transition: .2s;
     }
     .timeline ul li.showall:hover,
     .timeline ul li.showall:focus {
-        background: #40bebc;
+        background: #3b4566;
         color: #fff;
     }
     .keywords ul a li {
@@ -1417,25 +1416,25 @@
         border: 1px solid #fff;
     }
     .keywords ul a li.primary {
-        color: #40bebc;
+        color: #3b4566;
     }
     .keywords ul a:hover li.primary,
     .keywords ul a:focus li.primary {
-        background: #40bebc;
-        border: 1px solid #40bebc;
+        background: #3b4566;
+        border: 1px solid #3b4566;
         color: #fff;
         text-decoration: none;
     }
     .keywords ul a li.primary.showall {
         color: #fff;
-        background: #40bebc;
-        border: 1px solid #40bebc;
+        background: #3b4566;
+        border: 1px solid #3b4566;
     }
     .keywords ul a:hover li.primary.showall,
     .keywords ul a:focus li.primary.showall {
         background: #fff;
         border: 1px solid #fff;
-        color: #40bebc;
+        color: #3b4566;
     }
     .keywords ul a li.secondary {
         color: #bad656;
@@ -1459,25 +1458,25 @@
         color: #bad656;
     }
     .keywords ul a li.tertiary {
-        color: #fcd302;
+        color: #c7cbb6;
     }
     .keywords ul a li.tertiary:hover,
     .keywords ul a li.tertiary:focus {
-        background: #fcd302;
-        border: 1px solid #fcd302;
+        background: #c7cbb6;
+        border: 1px solid #c7cbb6;
         color: #fff;
         text-decoration: none;
     }
     .keywords ul a li.tertiary.showall {
         color: #fff;
-        background: #fcd302;
-        border: 1px solid #fcd302;
+        background: #c7cbb6;
+        border: 1px solid #c7cbb6;
     }
     .keywords ul a:hover li.tertiary.showall,
     .keywords ul a:focus li.tertiary.showall {
         background: #fff;
         border: 1px solid #fff;
-        color: #fcd302;
+        color: #c7cbb6;
     }
     .keywords ul a li.quatenary {
         color: #f0594d;
@@ -1533,7 +1532,7 @@
         opacity: 0.7;
     }
     .login-page h1.title {
-        color: #40bebc;
+        color: #3b4566;
         margin: 10% 0 5%;
     }
     .login-page h3 {
@@ -1567,6 +1566,7 @@
     .logosfooter img{
         display: inline-block;
         height: 120px;
+        width: 120px;
         margin-right: 20px;
         margin-bottom: 10px;
     }
@@ -1602,14 +1602,14 @@
         -webkit-transition: all 0.2s;
         -moz-transition: all 2s;
         transition: all 0.2s;
-        background: #fcd302;
+        background: #c7cbb6;
         margin:10px 0;
         padding: 2px 32px;
     }
     .footer .btn-submit:hover,
     .footer .btn-submit:focus{
-        background: #333;
-        color: #fcd302;
+        background: #545f2d;
+        color: #c7cbb6;
     }
     .mailfooter input.form-control{
         height: 100%;
@@ -1698,7 +1698,7 @@
             margin-bottom: 0;
         }
         #videoGallery .video p {
-            color: #40bebc;
+            color: #3b4566;
             font-weight: 600;
             font-size: 12px;
         }
@@ -1748,7 +1748,7 @@
         }
         .quotecontainer .lefttitle {
             text-align: right;
-            background: #40bebc;
+            background: #3b4566;
             display: inline-block;
             width: 50%;
             color: #fff;
@@ -1758,7 +1758,7 @@
         .quotecontainer .righttitle {
             text-align: left;
             display: inline-block;
-            background: #333;
+            background: #545f2d;
             color: #fff;
             width: 50%;
             font-size: 14px;
@@ -1924,7 +1924,7 @@
     }
     .topic .select-styled:after {
         top: 16px;
-        border-color: #40bebc transparent transparent transparent;
+        border-color: #3b4566 transparent transparent transparent;
     }
     .area .select-styled:after {
         top: 16px;
@@ -1949,7 +1949,7 @@
         overflow-y: scroll;
     }
     .topic .select-options li {
-        color: #40bebc;
+        color: #3b4566;
     }
     .area .select-options li {
         color: #f0594d;
@@ -1969,7 +1969,7 @@
     }
     .topic .select-options li:hover {
         color: #fff;
-        background: #40bebc;
+        background: #3b4566;
     }
     .area .select-options li:hover {
         color: #fff;
