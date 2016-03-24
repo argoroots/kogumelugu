@@ -27,6 +27,7 @@ APP_TIMEZONE        = process.env.TIMEZONE || 'Europe/Tallinn'
 APP_VIMEO_ID        = process.env.VIMEO_ID
 APP_VIMEO_SECRET    = process.env.VIMEO_SECRET
 APP_VIMEO_TOKEN     = process.env.VIMEO_TOKEN
+APP_LANGUAGES       = ['et', 'en']
 
 
 
@@ -73,7 +74,7 @@ app.use(function(req, res, next) {
     res.authenticate = function(e) {
         if(!res.locals.user) {
             res.cookie('redirect_url', res.locals.path, {signed:true, maxAge:1000*60*60})
-            res.redirect('/signin?e=' + e)
+            res.redirect('/' + res.locals.lang + '/signin?e=' + e)
             return false
         } else {
             return true
@@ -81,7 +82,11 @@ app.use(function(req, res, next) {
 
     }
 
-    res.locals.language = 'et'
+    if (APP_LANGUAGES.indexOf(req.path.split('/')[1]) === -1) {
+        return res.redirect('/' + APP_LANGUAGES[0])
+    } else {
+        res.locals.lang = req.path.split('/')[1]
+    }
 
     res.locals.path = req.path
     if(!req.signedCookies) next(null)
@@ -110,9 +115,9 @@ app.use(function(req, res, next) {
 
 
 // routes mapping
-app.use('/', require('./routes/index'))
-app.use('/video', require('./routes/video'))
-app.use('/signin', require('./routes/signin'))
+app.use('/:lang', require('./routes/index'))
+app.use('/:lang/video', require('./routes/video'))
+app.use('/:lang/signin', require('./routes/signin'))
 
 // logs to getsentry.com - error
 if(APP_SENTRY) {

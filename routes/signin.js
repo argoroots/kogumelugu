@@ -6,7 +6,7 @@ var entu   = require('../helpers/entu')
 
 // Show signin page
 router.get('/', function(req, res) {
-    res.render('signin/signin.' + res.locals.language + '.jade', {
+    res.render('signin/signin.' + res.locals.lang + '.jade', {
         error: req.query.e
     })
 })
@@ -38,7 +38,7 @@ router.get('/done', function(req, res, next) {
         }, function(error, profile) {
             if(error) return next(error)
 
-            var url = req.signedCookies.redirect_url || '/'
+            var url = req.signedCookies.redirect_url || '/' + res.locals.lang
 
             res.clearCookie('redirect_url')
             res.redirect(url)
@@ -70,7 +70,7 @@ router.get('/:provider', function(req, res, next) {
     res.clearCookie('auth_token')
 
     entu.getSigninUrl({
-        redirect_url: req.protocol + '://' + req.hostname + '/signin/done',
+        redirect_url: req.protocol + '://' + req.hostname + '/' + res.locals.lang + '/signin/done',
         provider: req.params.provider
     }, function(error, data) {
         if(error) return next(error)

@@ -5,12 +5,12 @@ block body
         -
             var locale = {
                 menu: [
-                    { link: '/video', text: 'Videoteek' },
-                    { link: '/#tutvustus', text: 'Tutvustus' },
-                    { link: '/#sinulugu', text: 'Saada lugu' },
-                    { link: '/#teemad', text: 'Teemad' },
-                    { link: '/#toetajad', text: 'Tegijad' },
-                    { link: '/#toeta', text: 'Toeta' },
+                    { link: 'video', text: 'Videoteek' },
+                    { link: '/' + lang + '#tutvustus', text: 'Tutvustus' },
+                    { link: '/' + lang + '#sinulugu', text: 'Saada lugu' },
+                    { link: '/' + lang + '#teemad', text: 'Teemad' },
+                    { link: '/' + lang + '#toetajad', text: 'Tegijad' },
+                    { link: '/' + lang + '#toeta', text: 'Toeta' },
                 ]
             }
 
@@ -28,8 +28,8 @@ block body
                             br
                             | Proovisid vaadata täispikka intervjuud, kuid selle jaoks pead olema sisselogitud.
                     h3 Vali sobiv sotsiaalmeediateenus, mida soovid sisselogimiseks kasutada
-                    a(href='/signin/facebook')
-                        img.img-responsive(src='img/facebookicon.svg')
-                    a(href='/signin/google')
-                        img.img-responsive(src='img/googleplusicon.svg')
+                    a(href='signin/facebook')
+                        img.img-responsive(src='/img/facebookicon.svg')
+                    a(href='signin/google')
+                        img.img-responsive(src='/img/googleplusicon.svg')
                     p Sisenedes portaali nõustud, et sinu andmeid kasutatakse portaali täiustamise huvides, kuid ei avalikustata kolmandatele osapooltele.

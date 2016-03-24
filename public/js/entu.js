@@ -42,7 +42,7 @@ angular.module('kmlApp', [])
         $scope.sData.generation = search.generation || null
         $scope.sData.query = search.query || null
 
-        $http.get('/video/json')
+        $http.get('video/json')
             .success(function(videos) {
                 var groupedVideos = []
                 var lastWasFive = false

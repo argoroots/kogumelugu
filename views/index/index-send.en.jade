@@ -35,7 +35,7 @@
                         textarea.form-control(placeholder='Failide kommentaarid või lisainfo')
                 p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
                 .form-group.button
-                    a.btn.btn-primary-outline(href='') Saada lugu
+                    a.btn.btn-primary-outline(href='/' + lang) Saada lugu
 
             .check
                 hr
@@ -50,15 +50,15 @@
                 p Loo kirjeldus
 
                 p
-                    a(href='')|Failid kõik paragraphidena
+                    a(href='/' + lang)|Failid kõik paragraphidena
 
                 p
                     b Kinnitades jõuab ülevalolev info meieni
 
-                a(href='').btn.btn-primary-outline
+                a(href='/' + lang).btn.btn-primary-outline
                     | Soovin muuta
 
-                a(href='').btn.btn-primary-outline
+                a(href='/' + lang).btn.btn-primary-outline
                     | Kinnitan ja saadan
 
             .confirmation

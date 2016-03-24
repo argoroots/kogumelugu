@@ -63,7 +63,7 @@ router.get('/', function(req, res, next) {
         ]
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
-        res.render('video/videolist.' + res.locals.language + '.jade', results)
+        res.render('video/videolist.' + res.locals.lang + '.jade', results)
     })
 })
 
@@ -223,7 +223,7 @@ router.get('/:id', function(req, res, next) {
             results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
             results.jumpTo = req.query.time
 
-            res.render('video/video.' + res.locals.language + '.jade', results)
+            res.render('video/video.' + res.locals.lang + '.jade', results)
         })
 
 

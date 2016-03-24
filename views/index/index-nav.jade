@@ -7,7 +7,7 @@ nav.navbar-default
                 span.icon-bar
                 span.icon-bar
             a.navbar-brand.visible-xs(href='#')
-                img(src='img/kogumelugu-turquoise.svg')
+                img(src='/img/kogumelugu-turquoise.svg')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
                 each m in locale.menu
@@ -15,15 +15,15 @@ nav.navbar-default
                         a(href=m.link)= m.text
             ul.navbar-nav
                 li.hidden-xs.hidden-sm.home.overlay-logo
-                    a(href='/')
-                        img(src='img/kogumelugu-navlogo.svg')
+                    a(href='/' + lang)
+                        img(src='/img/kogumelugu-navlogo.svg')
             ul.nav.navbar-nav.navbar-right
                 li
                     if !user
-                        a(href='/signin') Logi sisse
+                        a(href='signin')= locale.signin
                     else
-                        a(href='/signin/exit') Logi välja
+                        a(href='signin/exit')= locale.exit
                 li
-                    a(href='#') RUS
+                    a(href='/ru') RUS
                 li
-                    a(href='#') ENG
+                    a(href='/en') ENG

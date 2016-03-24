@@ -32,42 +32,42 @@
                         ul
                             each c in chapters
                                 li.timecode
-                                    a(href='/video/' + video.get('_id') + '?time=' + c.get('info'))
+                                    a(href='video/' + video.get('_id') + '?time=' + c.get('info'))
                                         b= c.get('name')
                                         |  #{ c.get('info') }
                 .keywords
                     ul
                         each category in video.get('curriculumSubjects', [])
-                            a(href='/video?subject=' + category.value)
+                            a(href='video?subject=' + category.value)
                                 li.primary= category.value
                         //- a(href='#')
                         //-     li.secondary Generatsioon
                         each storyteller in video.get('storyteller', [])
-                            a(href='/video?query=' + storyteller.value)
+                            a(href='video?query=' + storyteller.value)
                                 li.tertiary= storyteller.value
                         each region in video.get('region', [])
-                            a(href='/video?region=' + region.value)
+                            a(href='video?region=' + region.value)
                                 li.quatenary= region.value
                 .lastblock
                     ul.sharebuttons
                         a(href='https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, target='_blank')
                             li
-                                img.img-responsive(src='img/facebook.svg')
+                                img.img-responsive(src='/img/facebook.svg')
                         a(href='http://twitter.com/share?url=' + pageUrl, target='_blank')
                             li
-                                img.img-responsive(src='img/twitter.svg')
+                                img.img-responsive(src='/img/twitter.svg')
                         a(href='https://plus.google.com/share?url=' + pageUrl, target='_blank')
                             li
-                                img.img-responsive(src='img/googleplus.svg')
+                                img.img-responsive(src='/img/googleplus.svg')
                         a(href='mailto:?subject=' + video.get('_name') + '&body=' + pageUrl)
                             li
-                                img.img-responsive(src='img/email.svg')
+                                img.img-responsive(src='/img/email.svg')
             .col-md-4.col-sm-4.col-xs-12
                 .row.related
                     each r in related
                         if r.get('_id') !== video.get('_id')
-                            a(href='/video/' + r.get('_id') )
-                                .col-md-12.col-sm-12.col-xs-6.video(style="background:url('/video/picture?id=" + r.get('videoUrl.value') + "');background-position: center center; background-size:cover;")
+                            a(href='video/' + r.get('_id') )
+                                .col-md-12.col-sm-12.col-xs-6.video(style="background:url('video/picture?id=" + r.get('videoUrl.value') + "');background-position: center center; background-size:cover;")
                                     .overlay
                                     .wrapper
                                         h4

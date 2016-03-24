@@ -1,18 +1,18 @@
 extends ../layout.et.jade
 
 block javascript
-    script(type='text/javascript', src='js/video.js')
+    script(type='text/javascript', src='/js/video.js')
 
 block body
     -
         var locale = {
             menu: [
-                { link: '/', text: 'Avaleht' },
-                { link: '/#tutvustus', text: 'Tutvustus' },
-                { link: '/#sinulugu', text: 'Saada lugu' },
-                { link: '/#teemad', text: 'Teemad' },
-                { link: '/#toetajad', text: 'Tegijad' },
-                { link: '/#toeta', text: 'Toeta' },
+                { link: '/' + lang, text: 'Avaleht' },
+                { link: '/' + lang + '#tutvustus', text: 'Tutvustus' },
+                { link: '/' + lang + '#sinulugu', text: 'Saada lugu' },
+                { link: '/' + lang + '#teemad', text: 'Teemad' },
+                { link: '/' + lang + '#toetajad', text: 'Tegijad' },
+                { link: '/' + lang + '#toeta', text: 'Toeta' },
             ],
             signin: 'Logi sisse',
             exit: 'Logi välja',
