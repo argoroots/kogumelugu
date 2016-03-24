@@ -9,22 +9,11 @@ nav#galleryNav.navbar-default
                 img(src='img/kogumelugu-turquoise.svg')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
-                li
-                    a(href='/') Avaleht
-                li
-                    a(href='/#tutvustus') Tutvustus
-                li
-                    a(href='/#sinulugu') Saada lugu
-                li
-                    a(href='/#teemad') Teemad
-                //- li
-                //-     a(href='/#kaart') Kaart
-                li
-                    a(href='/#toetajad') Tegijad
-                li
-                    a(href='/#toeta') Toeta
+                each m in locale.menu
+                    li
+                        a(href=m.link)= m.text
                 li.visible-xs.visible-sm
-                    a(href='/') Avaleht
+                    a(href=locale.menu[0].link)= locale.menu[0].text
             ul.navbar-nav
                 li.hidden-xs.hidden-sm.overlay-logo
                     a(href='/')
@@ -32,9 +21,9 @@ nav#galleryNav.navbar-default
             ul.nav.navbar-nav.navbar-right
                 li
                     if !user
-                        a(href='/signin') Logi sisse
+                        a(href='/signin')= locale.signin
                     else
-                        a(href='/signin/exit') Logi välja
+                        a(href='/signin/exit')= locale.exit
                 li
                     a(href='#') ENG
                 li

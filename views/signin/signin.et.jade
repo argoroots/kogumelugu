@@ -1,7 +1,18 @@
-extends ../layout
+extends ../layout.et.jade
 
 block body
     .pagewrapper
+        -
+            var locale = {
+                menu: [
+                    { link: '/video', text: 'Videoteek' },
+                    { link: '/#tutvustus', text: 'Tutvustus' },
+                    { link: '/#sinulugu', text: 'Saada lugu' },
+                    { link: '/#teemad', text: 'Teemad' },
+                    { link: '/#toetajad', text: 'Tegijad' },
+                    { link: '/#toeta', text: 'Toeta' },
+                ]
+            }
 
         include signin-nav
 

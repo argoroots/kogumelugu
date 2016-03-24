@@ -22,22 +22,22 @@
         .row.dropdowns
             .col-md-3.col-sm-3.col-xs-4.topic
                 select.form-control(ng-model='sData.subject', ng-change='doFilter(true)', data-field='subject')
-                    option.placeholder(selected='') Vali teema
+                    option.placeholder(selected='')= locale.filterSubject
                     each s in subjects || []
                         option(value=s, ng-selected='sData.subject === "' + s + '"')= s
             .col-md-3.col-sm-3.col-xs-4.area
                 select.form-control(ng-model='sData.region', ng-change='doFilter(true)', data-field='region')
-                    option.placeholder(selected='') Vali piirkond
+                    option.placeholder(selected='')= locale.filterRegion
                     each r in regions || []
                         option(value=r, ng-selected='sData.region === "' + r + '"')= r
             .col-md-3.col-sm-3.col-xs-4.generation
                 select.form-control(ng-model='sData.generation', ng-change='doFilter(true)', data-field='generation')
-                    option.placeholder(selected='') Vali põlvkond
+                    option.placeholder(selected='')= locale.filterGeneration
                     each g in generations || []
                         option(value=g, ng-selected='sData.generation === "' + g + '"')= g
             .col-md-3.col-sm-3.col-xs-12.searchcolumn
                 .search
-                    input(ng-model='sData.query', ng-change='doFilter(false)', type='text', placeholder='OTSI')
+                    input(ng-model='sData.query', ng-change='doFilter(false)', type='text', placeholde= locale.filterQuery)
     #galleryPush(style='_:none')
 .gallery.container
     .row
@@ -49,7 +49,7 @@
                     span {{ v.name }}
                 p {{ v.info }}
                 a(href="/video/{{ v.id }}")
-                    .btn.btn-primary-outline Vaata lugu
+                    .btn.btn-primary-outline= locale.openVideo
 
         //-
         //- each vGroup in videos

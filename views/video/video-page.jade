@@ -9,20 +9,16 @@
                                 iframe#video(src='https://player.vimeo.com/video/' + video.get('videoUrl.value') + '#t=' + (jumpTo ? jumpTo : 0) + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
                             else
                                 iframe#video(src='https://www.youtube.com/embed/' + video.get('videoUrl.value') + '?autoplay=1&controls=0&showinfo=0&rel=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
-
-                            //- .playButtonArea
-                            //-     #play-button.btn.btn-primary-outline Vaata lugu
                     .videoDescription
                         h1.title= video.get('_name')
                         p.title= video.get('_info')
                     .row
                         .col-md-12
                             p.description
-                                //- | Intervjuu 2015, Vancouver, Kanada
                                 if video.get('_definition') === 'interview'
-                                    | Intervjueerija
+                                    | #{ locale.interviewer }
                                 else
-                                    | Autor
+                                    | #{ locale.author }
                                 br
                                 each author in video.get('author', [])
                                     b #{ author.value }
@@ -54,21 +50,20 @@
                                 li.quatenary= region.value
                 .lastblock
                     ul.sharebuttons
-                                a(href='https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, target='_blank')
-                                    li
-                                        img.img-responsive(src='img/facebook.svg')
-                                a(href='http://twitter.com/share?url=' + pageUrl, target='_blank')
-                                    li
-                                        img.img-responsive(src='img/twitter.svg')
-                                a(href='https://plus.google.com/share?url=' + pageUrl, target='_blank')
-                                    li
-                                        img.img-responsive(src='img/googleplus.svg')
-                                a(href='mailto:?subject=' + video.get('_name') + '&body=' + pageUrl)
-                                    li
-                                        img.img-responsive(src='img/email.svg')
+                        a(href='https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, target='_blank')
+                            li
+                                img.img-responsive(src='img/facebook.svg')
+                        a(href='http://twitter.com/share?url=' + pageUrl, target='_blank')
+                            li
+                                img.img-responsive(src='img/twitter.svg')
+                        a(href='https://plus.google.com/share?url=' + pageUrl, target='_blank')
+                            li
+                                img.img-responsive(src='img/googleplus.svg')
+                        a(href='mailto:?subject=' + video.get('_name') + '&body=' + pageUrl)
+                            li
+                                img.img-responsive(src='img/email.svg')
             .col-md-4.col-sm-4.col-xs-12
                 .row.related
-                    //- Esimene võiks olla täpselt sama isiku teine intervjuu osa, kui on, aga kõik teised paneme, millel enim ühiseid märksõnu.
                     each r in related
                         if r.get('_id') !== video.get('_id')
                             a(href='/video/' + r.get('_id') )
@@ -78,4 +73,4 @@
                                         h4
                                             span= r.get('_name')
                                         p= r.get('_info')
-                                        .btn.btn-primary-outline Vaata lugu
+                                        .btn.btn-primary-outline= locale.openVideo

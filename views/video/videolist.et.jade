@@ -1,9 +1,28 @@
-extends ../layout
+extends ../layout.et.jade
 
 block javascript
     script(type='text/javascript', src='js/video.js')
 
 block body
+    -
+        var locale = {
+            menu: [
+                { link: '/', text: 'Avaleht' },
+                { link: '/#tutvustus', text: 'Tutvustus' },
+                { link: '/#sinulugu', text: 'Saada lugu' },
+                { link: '/#teemad', text: 'Teemad' },
+                { link: '/#toetajad', text: 'Tegijad' },
+                { link: '/#toeta', text: 'Toeta' },
+            ],
+            signin: 'Logi sisse',
+            exit: 'Logi välja',
+            filterSubject: 'Vali teema',
+            filterRegion: 'Vali piirkond',
+            filterGeneration: 'Vali põlvkond',
+            filterQuery: 'OTSI',
+            openVideo: 'Vaata lugu',
+        }
+
     #videoGallery(ng-controller='vidoeGallery')
         include video-gallery-nav
         include video-gallery

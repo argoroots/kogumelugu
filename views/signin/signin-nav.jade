@@ -10,20 +10,9 @@ nav.navbar-default
                 img(src='img/kogumelugu-black.svg')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
-                li
-                    a(href='/video') Videoteek
-                li
-                    a(href='/#tutvustus') Tutvustus
-                li
-                    a(href='/#sinulugu') Saada lugu
-                li
-                    a(href='/#teemad') Teemad
-                //- li
-                //-     a(href='/#kaart') Kaart
-                li
-                    a(href='/#toetajad') Tegijad
-                li
-                    a(href='/#toeta') Toeta
+                each m in locale.menu
+                    li
+                        a(href=m.link)= m.text
             ul.navbar-nav
                 li.hidden-sm.overlay-logo
                     a(href='/')

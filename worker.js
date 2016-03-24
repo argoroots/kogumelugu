@@ -81,6 +81,8 @@ app.use(function(req, res, next) {
 
     }
 
+    res.locals.language = 'et'
+
     res.locals.path = req.path
     if(!req.signedCookies) next(null)
     if(req.signedCookies.auth_id && req.signedCookies.auth_token) {

@@ -6,7 +6,7 @@ var entu   = require('../helpers/entu')
 
 // Show signin page
 router.get('/', function(req, res) {
-    res.render('signin/signin', {
+    res.render('signin/signin.' + res.locals.language + '.jade', {
         error: req.query.e
     })
 })

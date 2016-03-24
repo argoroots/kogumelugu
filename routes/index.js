@@ -52,7 +52,7 @@ router.get('/', function(req, res) {
 
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
-        res.render('index/index', results)
+        res.render('index/index.' + res.locals.language + '.jade', results)
     })
 })
 

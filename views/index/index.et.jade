@@ -1,48 +1,33 @@
-extends ../layout
+extends ../layout.et.jade
 
 block javascript
     script(type='text/javascript', src='js/filestyle.min.js')
-    script(type='text/javascript').
-        function moveScroller() {
-            var move = function() {
-                var st = $(window).scrollTop();
-                var ot = $("#carousel").height();
-                var s = $(".navbar-default");
-                if (st > ot) {
-                    s.addClass('navbar-fixed-top ');
-                    s.addClass('shrink');
-                } else {
-                    if (st <= ot) {
-                        s.removeClass('navbar-fixed-top ');
-                        s.removeClass('shrink');
-                    }
-                }
-            };
-            $(window).scroll(move);
-            move();
-        }
-
-        $(function() {
-            moveScroller();
-        });
-
-        function setCustom() {
-            var value = $('.customsum').val();
-            $('#customsum').val(value);
-        }
-
-        //- $('.teema').click(function() {
-        //-     $(this).addClass('flip');
-        //- });
+    script(type='text/javascript', src='js/index.js')
 
 block body
+    -
+        var locale = {
+            menu: [
+                { link: '/video', text: 'Videoteek' },
+                { link: '/#tutvustus', text: 'Tutvustus' },
+                { link: '/#sinulugu', text: 'Saada lugu' },
+                { link: '/#teemad', text: 'Teemad' },
+                { link: '/#toetajad', text: 'Tegijad' },
+                { link: '/#toeta', text: 'Toeta' },
+            ],
+            searchPlaceholder: 'Otsi nime või kohta',
+            searchSubmit: 'Leia lugu',
+            supportlink: 'Soovin toetada'
+        }
+
     include index-carousel
     include index-nav
     include index-search
     include index-supportlink
-    include index-intro
-    include index-send
-    include index-quote
-    include index-subjects
-    include index-supporters
-    include index-support
+
+    include index-intro.et.jade
+    include index-send.et.jade
+    include index-quote.et.jade
+    include index-subjects.et.jade
+    include index-supporters.et.jade
+    include index-support.et.jade

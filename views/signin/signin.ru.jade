@@ -1,7 +1,16 @@
-extends ../layout
+extends ../layout.ru.jade
 
 block body
     .pagewrapper
+        -
+            var menu = [
+                { link: '/video', text: 'Videoteek' },
+                { link: '/#tutvustus', text: 'Tutvustus' },
+                { link: '/#sinulugu', text: 'Saada lugu' },
+                { link: '/#teemad', text: 'Teemad' },
+                { link: '/#toetajad', text: 'Tegijad' },
+                { link: '/#toeta', text: 'Toeta' },
+            ]
 
         include signin-nav
 
