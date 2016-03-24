@@ -5,12 +5,12 @@ block body
         -
             var locale = {
                 menu: [
-                    { link: 'video', text: 'Videoteek' },
-                    { link: '/' + lang + '#tutvustus', text: 'Tutvustus' },
-                    { link: '/' + lang + '#sinulugu', text: 'Saada lugu' },
-                    { link: '/' + lang + '#teemad', text: 'Teemad' },
-                    { link: '/' + lang + '#toetajad', text: 'Tegijad' },
-                    { link: '/' + lang + '#toeta', text: 'Toeta' },
+                    { link: 'video', text: 'Videos' },
+                    { link: '/' + lang + '#tutvustus', text: 'Introduction' },
+                    { link: '/' + lang + '#sinulugu', text: 'Submit Story' },
+                    { link: '/' + lang + '#teemad', text: 'Topics' },
+                    { link: '/' + lang + '#toetajad', text: 'Team' },
+                    { link: '/' + lang + '#toeta', text: 'Support Us' },
                 ]
             }
 
@@ -19,12 +19,12 @@ block body
         .container-fluid.login-page
             .textcontent
                 .textcontainer.container
-                    h1.title Sisene keskkonda
+                    h1.title Enter
                     if error === 'interview'
                         .alert.alert-warning.alert-dismissible(role='alert')
                             button.close(type='button', data-dismiss='alert', aria-label='Close')
                                 span(aria-hidden='true') ×
-                            strong Tähelepanu!
+                            strong Attention!
                             br
                             | Proovisid vaadata täispikka intervjuud, kuid selle jaoks pead olema sisselogitud.
                     h3 Vali sobiv sotsiaalmeediateenus, mida soovid sisselogimiseks kasutada
