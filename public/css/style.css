@@ -1107,6 +1107,14 @@
         background: #f3f3f3;
         padding: 40px;
     }
+    #toetajad table a{
+        color: #595a4e;
+    }
+    #toetajad table a:hover,
+    #toetajad table a:focus{
+        text-decoration: none;
+        color: #595a4e;
+    }
     #bottom-table {
         margin-top: 20px;
         background: #f3f3f3;
@@ -1703,11 +1711,11 @@
         #videoGallery .video p {
             color: #3b4566;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 10px;
         }
         #videoGallery .video .btn-primary-outline {
             font-size: 12px;
-            padding: 4px 24px;
+            padding: 3px 24px;
             margin-top: 10px;
         }
         #videoGallery .subnav {

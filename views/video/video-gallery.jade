@@ -42,14 +42,15 @@
 .gallery.container
     .row
         a(ng-repeat-start='v in sData.videos' ng-href='video/{{ v.id }}')
-        div(ng-repeat-end style="background:url('video/picture?id={{ v.video }}');background-position: center center; background-size:cover;", ng-class='getClass($index)')
-            .overlay
-            .wrapper
-                h4
-                    span {{ v.name }}
-                p {{ v.info }}
-                a(href='video/{{ v.id }}')
-                    .btn.btn-primary-outline= locale.openVideo
+        a(href='video/{{ v.id }}')
+            div(ng-repeat-end style="background:url('video/picture?id={{ v.video }}');background-position: center center; background-size:cover;", ng-class='getClass($index)')
+                .overlay
+                .wrapper
+                    h4
+                        span {{ v.name }}
+                    p {{ v.info }}
+                    a(href='video/{{ v.id }}')
+                        .btn.btn-primary-outline= locale.openVideo
 
 .loadmore
 //-     a(href='#').hidden
