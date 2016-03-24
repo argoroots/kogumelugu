@@ -3,7 +3,7 @@
     .row.header
         .container
             .text.center
-                h2 Kogu Me Lugu Koostööpartneriteks on
+                h2 Kogu Me Lugu partners are
     .list
         .container
             .row
@@ -25,7 +25,7 @@
                     table.md
                         tr
                             td
-                                h3 Suurtoetajad
+                                h3 Financiers
                         each s in sponsors || []
                             tr
                                 td
@@ -37,10 +37,10 @@
                     table.md
                         tr
                             td
-                                h3 Tänusõnad kaastegutsejatele
+                                h3 Thanks to
                         tr
                             td
-                                b Meeskonnaliikmed:
+                                b Team members:
                                 each t in team || []
                                     | &nbsp;
                                     if t.get('info') && t.get('info').indexOf('http') > -1
@@ -48,10 +48,10 @@
                                     else
                                         a= t.get('name')
                                     | ,
-                                |  jt.
+                                |  ... and many others
                         tr
                             td
-                                b Toetajad ja hooandjad:
+                                b Supporters:
                                 each t in thanks || []
                                     | &nbsp;
                                     if t.get('info') && t.get('info').indexOf('http') > -1
@@ -59,13 +59,13 @@
                                     else
                                         a= t.get('name')
                                     | ,
-                                |  jt.
+                                |  ... and many others
                     table.md
                         tr
                             td
-                                h3 Produtsent
+                                h3 Producer
                             td
-                                h3 Kaasprodutsent
+                                h3 Co-producer
                         tr
                             td SA Unitas
                             td Meelis Niinepuu
@@ -75,9 +75,9 @@
                 a(href='http://unitas.ee', target='_blank')
                     img.img-responsive(src='/img/unitas+logo.jpg')
             .col-md-10
-                h3 Algataja
+                h3 Initiated by
                 p
-                    b Sihtasutus Unitas
-                p Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
+                    b The Unitas Foundation
+                p The Unitas Foundation, founded in 2008 in Tallinn, is one of the founding members of the European Platform of Memory and Conscience. Dedicated to the advancement of history education and human rights culture, the foundation aims to raise awareness of the inhumanity of totalitarian regimes and ideologies and to pursue the international condemnation of their crimes.
                 p
                     a(href='http://unitas.ee', target='_blank') www.unitas.ee
