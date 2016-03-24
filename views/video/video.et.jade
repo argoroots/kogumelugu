@@ -26,9 +26,12 @@ block body
         }
 
     #videoPage
-        include video-page-nav
+        nav.navbar-default
+            .container-fluid
+                include video-nav
         include video-page
 
     #videoGallery(ng-controller='vidoeGallery')
-        include video-gallery-nav
+        nav#galleryNav.navbar-default
+            include video-nav
         include video-gallery
