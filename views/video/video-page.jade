@@ -10,8 +10,8 @@
                             else
                                 iframe#video(src='https://www.youtube.com/embed/' + video.get('videoUrl.value') + '?autoplay=1&controls=0&showinfo=0&rel=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
                     .videoDescription
-                        h1.title= video.get('_name')
-                        p.title= video.get('_info')
+                        h1.title= video.get('storyteller.0.value', '')
+                        p.title= video.get('title-' + lang + '.value', '')
                     .row
                         .col-md-12
                             p.description
@@ -25,7 +25,7 @@
                                     br
 
 
-                            p.description= video.get('description-et.value')
+                            p.description= video.get('description-' + lang + '.value')
 
                 if chapters
                     .timeline
@@ -59,7 +59,7 @@
                         a(href='https://plus.google.com/share?url=' + pageUrl, target='_blank')
                             li
                                 img.img-responsive(src='/img/googleplus.svg')
-                        a(href='mailto:?subject=' + video.get('_name') + '&body=' + pageUrl)
+                        a(href='mailto:?subject=' + video.get('title-' + lang + '.value', '') + '&body=' + pageUrl)
                             li
                                 img.img-responsive(src='/img/email.svg')
             .col-md-4.col-sm-4.col-xs-12
@@ -71,6 +71,6 @@
                                     .overlay
                                     .wrapper
                                         h4
-                                            span= r.get('_name')
-                                        p= r.get('_info')
+                                            span= r.get('storyteller.0.value', '')
+                                        p= r.get('title-' + lang + '.value', '')
                                         .btn.btn-primary-outline= locale.openVideo
