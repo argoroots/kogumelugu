@@ -50,8 +50,6 @@ router.get('/', function(req, res) {
         delete results.partners1
         delete results.partners2
 
-        console.log(results.partners.length);
-
         results.pageUrl = req.protocol + '://' + req.get('host') + req.originalUrl
 
         res.render('index/index', results)

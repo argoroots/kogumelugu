@@ -42,7 +42,7 @@
                             td
                                 b Meeskonnaliikmed:
                                 each t in team || []
-                                    &nbsp;
+                                    | &nbsp;
                                     if t.get('info') && t.get('info').indexOf('http') > -1
                                         a(href=t.get('info'))= t.get('name')
                                     else
@@ -53,7 +53,7 @@
                             td
                                 b Toetajad ja hooandjad:
                                 each t in thanks || []
-                                    &nbsp;
+                                    | &nbsp;
                                     if t.get('info') && t.get('info').indexOf('http') > -1
                                         a(href=t.get('info'))= t.get('name')
                                     else
