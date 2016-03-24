@@ -11,77 +11,28 @@
                     .tablediv
                         table.lg
                             tr
-                                td Avatud Vabariik
-                                td Baltic Heritage Network
-                                td Black Ribbon Day Foundation
-                            tr
-                                td Education Development Centre
-                                td Edward von Lõngus
-                                td Eesti Diasporaa Akadeemia
-                            tr
-                                td Eesti Kirjandusmuuseum
-                                td Eesti Mälu Instituut
-                                td Eesti Rahva Muuseum
-                            tr
-                                td Eesti Rahvusringhääling
-                                td Eesti Vabariik 100
-                                td EUROCLIO
-                            tr
-                                td Eva Sepping
-                                td Georg Eckert Institute
-                                td Hooandja
-                            tr
-                                td Inimõiguste Instituut
-                                td Kaasaegse Kunsti Eesti Keskus
-                                td Kilomeeter Skulptuuri
-                            tr
-                                td Kino Artis
-                                td Eesti Kunstimuuseum
-                                td MTÜ Tulipisar
-                            tr
-                                td Murtud Rukkilille Ühing
-                                td Naiskodukaitse
-                                td Rahvusarhiiv
-                            tr
-                                td Reklaamiagentuur MUST
-                                td Stanfordi Ülikooli Raamatukogu
-                                td Tallinna Ülikool
-                            tr
-                                td Tartu Ülikool
-                                td Ajapaik
-                                td VEMU/Eesti Õppetöö Keskus
-                            tr
-                                td Williams College
-                                td Anna Hints
-                                td ENTU
-                            tr
-                                td Okupatsioonide Muuseum
-                                td Euroopa Parlamendi Saadiku Tunne Kelami Büroo
-                                td Konrad Adenaueri Sihtasutus
+                                td
+                                    each p in partners || []
+                                        .col-md-4
+                                            if p.get('info') && p.get('info').indexOf('http') > -1
+                                                a(href=p.get('info'))= p.get('name')
+                                            else
+                                                a= p.get('name')
+
+
             #bottom-table.row
                 .col-md-4
                     table.md
                         tr
                             td
                                 h3 Suurtoetajad
-                        tr
-                            td Euroopa Noored Programm
-                        tr
-                            td Eesti Abistamiskomitee USA-s
-                        tr
-                            td Haridus- ja Teadusministeerium
-                        tr
-                            td Kaitseministeerium
-                        tr
-                            td Kultuuriministeerium
-                        tr
-                            td Kistler-Ritso Sihtasutus
-                        tr
-                            td Siseministeerium
-                        tr
-                            td Eesti Rahvuskomitee Ühendriikides
-                        tr
-                            td Altamira AS
+                        each s in sponsors || []
+                            tr
+                                td
+                                    if s.get('info') && s.get('info').indexOf('http') > -1
+                                        a(href=s.get('info'))= s.get('name')
+                                    else
+                                        a= s.get('name')
                 .col-md-8
                     table.md
                         tr
@@ -90,11 +41,25 @@
                         tr
                             td
                                 b Meeskonnaliikmed:
-                                | Uve Poom, Kadri Sikk, Maarja Merivoo-Parro, Ants Tammik, Tõnis Tuuga, Madis Tüür, Andri Allas, Helis Hirve, Marion Koppel, Sander Maran, Jüri Muttika, Marta Pulk, Maria Reinup, Rein Kotov, Merilin Mihkeles, Anne-Mai Saar, Alice Pia Kattago, Hanna Jemmer, Michaela Snopkova, Tunne Kelam, Kaja Villem, Anna Hints, Enrico Barone, Carlos Lesmes, Ilmar Raag, Hardi Volmer, Indrek Treufeldt, Lois Banta, James Tusty, Maureen Castle Tusty, Mare Oja, Ilona-Evelyn Rannala, Anne Sverdlik, Elisa Aavik, Dirgis Kaarlõp, Mari-Liis Nõlvak, Kaur Kirikall, Joosep Soorsk, Mihkel Putrinš, Argo Roots, Sandra Vokk, jt.
+                                each t in team || []
+                                    &nbsp;
+                                    if t.get('info') && t.get('info').indexOf('http') > -1
+                                        a(href=t.get('info'))= t.get('name')
+                                    else
+                                        a= t.get('name')
+                                    | ,
+                                |  jt.
                         tr
                             td
                                 b Toetajad ja hooandjad:
-                                | Ave Proos, Henri Laupmaa, Karin Rand, Maarja Karmin, Kertu Peet, Kulno Kesküla, Jaak Vackermann, Gustav Liblik, Ave Tampere, Kati Orav, Mariann Rikka, Toivo Jullinen, Evelin Haav, Rait Rattik, Mare Rosen, Marek Limberg, Mart Kuldkepp, Karin Luuse, Piret Tarto, Enn Tarto, Nele Vokk, Ivar Vokk, Ave Kaing-Kaabel, Kadri Kalvo, Külli Meier, Anne Rohtla, Piia Reismann, Triin Toomesaar, Indrek Rikka, Taimar Peterkop, Hille-Juta Laupmaa, Sven Illing, Kaur Kittus, Allan-Hermann Pool, Laura Ojala, Kristi Põldsam, Ander Ild, Juss Heinsalu, Anneli Rein, Kadri Ruusna, Ly Neeme, Sander Jürisson, Hanna Vrager, Kristi Klaasmägi, Taavi Einaste, Paul Miller.
+                                each t in thanks || []
+                                    &nbsp;
+                                    if t.get('info') && t.get('info').indexOf('http') > -1
+                                        a(href=t.get('info'))= t.get('name')
+                                    else
+                                        a= t.get('name')
+                                    | ,
+                                |  jt.
                     table.md
                         tr
                             td
