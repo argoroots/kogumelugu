@@ -71,19 +71,19 @@ angular.module('kmlApp', [])
 
                 $scope.sData.videos = $scope.sData.allVideos
 
-                $scope.doFilter(true)
+                $scope.doFilter(false)
 
             })
             .error(function(error) {
                 console.log(error)
             })
 
-        $scope.doFilter = function(noApply) {
+        $scope.doFilter = function(doApply) {
             var query = [$scope.sData.subject, $scope.sData.region, $scope.sData.generation, $scope.sData.query].join(' ').trim().toLowerCase()
 
             $scope.sData.videos = $filter('multiple')($scope.sData.allVideos, query)
 
-            if(!noApply) { $scope.$apply() }
+            if(doApply) { $scope.$apply() }
 
             $('html, body').animate({ scrollTop: $('.gallery.container').offset().top - 230 }, 'slow')
         }

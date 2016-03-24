@@ -48,7 +48,7 @@ $('select').each(function () {
 
         var scope = angular.element($this).scope();
         scope.sData[$this.data('field')] = $(this).text()
-        scope.doFilter();
+        scope.doFilter(true);
     });
 
     $(document).click(function () {
