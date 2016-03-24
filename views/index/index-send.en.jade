@@ -2,52 +2,53 @@
 .formcontent
     #sinulugu-top.container-fluid
         .container
-            h2 Saada oma lugu
+            h2 Submit your story
     #sinulugu-bottom.container-fluid
         .container
-            p Kui Sul on materjale, mida soovid jagada või arhiveerida, või kontakte, keda intervjuuks soovitada, täida vorm ja saada meile!
+            p If you have material you would like to share or archive, or contacts to suggest for interviewing, please fill out the form below.
 
-            p Soovitame lisada saadetud loo, kontakti või materjali kohta nii palju ja nii täpset infot kui võimalik, et meil oleks hõlpsam sellele kasutust leida.
+            p We recommend that you add as much and as accurate information about the submitted story, contact person or material, as possible, so that it will be easier for us to find proper use for it.
 
-            p Kõik vormi kaudu saadetud lood, materjalid ja kontaktid talletatakse esmalt Kogu Me Lugu andmebaasis, millele on ligipääs vaid Kogu Me Lugu andmebaasi haldajatel. Materjalid analüüsitakse nende sisu ning kirjeldava info põhjal ja sobivusel liidetakse õppeplatvormiga, võimaldades materjalidele ka avalikku ligipääsu ning kasutust õppetöös.
+            p All stories, materials and contacts submitted through the form are initially saved in the Kogu Me Lugu database, accessible only to the Kogu Me Lugu platform administrators. The material is analyzed on the basis of its content and descriptive information, and if suitable, integrated with the platform, providing public access to the material as well as use in educational activities.
 
-            p Saadetud lugudele lisatud loorääkijad on aluseks videointervjuude läbiviimisele. Huvipakkuva loo puhul võetakse vormis märgitud kontaktisikuga ühendust ning uuritakse loorääkija intervjueerimise võimalusi. Sobivusel lepitakse kokku intervjuu.
+            p The stories which include storyteller information will be used for interviews selection. If the story meets the Kogu Me Lugu requirements, the contact person indicated in the form will be contacted to discuss the possibility of interviewing the storyteller. If suitable, an interview is arranged.
 
-            p Vormi kaudu saadetud arhiivikõlblikud materjalid talletatakse Okupatsioonide Muuseumi või mõnes teises Kogu Me Lugu võrgustikku kuuluvas kohases arhiivis . Läbiviidud videointervjuud talletatakse Eesti Rahvusarhiivi Filmiarhiivis.
+            p Materials suitable for archiving sent via the form are stored in the Museum of Occupations archive or other suitable archive within the Kogu Me Lugu network. Video interviews are stored in the Film Archives of the Estonian National Archives.
 
             form
                 .row
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Loo või mälestise pealkiri')
+                        textarea.form-control(type='text', placeholder='Story or material title')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Sinu kontakttelefon')
+                        textarea.form-control(type='text', placeholder='Your contact number')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Sinu nimi')
+                        textarea.form-control(type='text', placeholder='Your name')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Sinu e-posti aadress')
+                        textarea.form-control(type='text', placeholder='Your e-mail address')
                     .form-group.col-md-12.col-sm-6.col-xs-12
-                        textarea.form-control(placeholder='Loo rääkija või asja omaja nimi ja sünniaeg')
+                        textarea.form-control(placeholder='Storyteller or material owner name and date of birth')
                     .form-group.col-md-12.col-sm-6.col-xs-12
-                        textarea.form-control(placeholder='Loo või asja lühikirjeldus')
+                        textarea.form-control(placeholder='Short summary of story or material')
                     .form-group.col-md-12.col-sm-12.col-xs-12
-                        input.form-control.fileupload.filestyle(type='file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
+                        input.form-control.fileupload.filestyle(type='file', data-input='false', data-buttonname='btn-default', data-buttontext='Upload video or document')
                     .form-group.col-md-12.col-sm-12.col-xs-12
-                        textarea.form-control(placeholder='Failide kommentaarid või lisainfo')
-                p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
+                        textarea.form-control(placeholder='Comments and additional information')
+                p.description * By submitting this form I authorize the Unitas Foundation to use the submitted material within the Kogu Me Lugu initiative for educational purposes in the form of text, photo or video.
+
                 .form-group.button
-                    a.btn.btn-primary-outline(href='/' + lang) Saada lugu
+                    a.btn.btn-primary-outline(href='/' + lang) Submit story
 
             .check
                 hr
-                p Sinu nimi
-                p Kontakttelefon ja e-post
+                p Your name
+                p Your phone and e-mail
 
                 p
                     b Loo pealkiri
 
-                p Loo rääkija või asja nimi ja sünniaeg
+                p Storyteller or material owner name and date of birth
 
-                p Loo kirjeldus
+                p Short summary
 
                 p
                     a(href='/' + lang)|Failid kõik paragraphidena
