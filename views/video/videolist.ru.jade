@@ -1,4 +1,4 @@
-extends ../layout.et.jade
+extends ../layout.ru.jade
 
 block javascript
     script(type='text/javascript', src='js/video.js')
@@ -24,5 +24,6 @@ block body
         }
 
     #videoGallery(ng-controller='vidoeGallery')
-        include video-gallery-nav
+        nav#galleryNav.navbar-default
+            include video-nav
         include video-gallery
