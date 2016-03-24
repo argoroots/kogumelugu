@@ -23,7 +23,13 @@
                 a(href='signin')= locale.signin
             else
                 a(href='signin/exit')= locale.exit
-        li
-            a(href='/en') ENG
-        li
-            a(href='/ru') RUS
+
+        if lang !== 'et'
+            li
+                a(href='/et') EST
+        if lang !== 'en'
+            li
+                a(href='/en') ENG
+        if lang !== 'ru'
+            li
+                a(href='/ru') RUS

@@ -23,7 +23,13 @@ nav.navbar-default
                         a(href='signin')= locale.signin
                     else
                         a(href='signin/exit')= locale.exit
-                li
-                    a(href='/ru') RUS
-                li
-                    a(href='/en') ENG
+
+                if lang !== 'et'
+                    li
+                        a(href='/et') EST
+                if lang !== 'en'
+                    li
+                        a(href='/en') ENG
+                if lang !== 'ru'
+                    li
+                        a(href='/ru') RUS
