@@ -1110,11 +1110,11 @@
         background: #f3f3f3;
         padding: 40px;
     }
-    #toetajad a{
+    .toetajad a{
         color: #595a4e;
     }
-    #toetajad a:hover,
-    #toetajad a:focus{
+    .toetajad a:hover,
+    .toetajad a:focus{
         text-decoration: none;
         color: #595a4e;
     }
