@@ -293,7 +293,7 @@
         line-height: 1em;
     }
     .videoDescription p {
-        color: #242b45;
+        color: #f1f2e1;
         font-weight: 600;
         font-size: 18px;
     }
@@ -790,6 +790,7 @@
     }
     #sinulugu-bottom {
         position: relative;
+        padding-bottom: 100px;
     }
     #sinulugu-bottom p {
         text-align: center;
