@@ -15,6 +15,7 @@
   "scripts": {
     "start": "node ./master.js"
   },
+  "main": "master.js",
   "engines": {
     "node": "4.x"
   },
