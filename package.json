@@ -13,11 +13,11 @@
     "url": "https://github.com/argoroots/kogumelugu/issues"
   },
   "scripts": {
-    "start": "node ./master.js"
+    "start": "node ./worker.js"
   },
-  "main": "master.js",
+  "main": "worker.js",
   "engines": {
-    "node": "4.x"
+    "node": "6.x"
   },
   "dependencies": {
     "async": "1.x",

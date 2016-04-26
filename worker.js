@@ -126,7 +126,7 @@ if(APP_SENTRY) {
 }
 
 // show error
-app.use(function(err, req, res) {
+app.use(function(err, req, res, next) {
     res.send({
         error: err.message,
         version: APP_VERSION,

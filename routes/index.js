@@ -5,7 +5,7 @@ var entu   = require('../helpers/entu')
 
 
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
     async.parallel({
         partners1: function(callback) {
             entu.getEntities({
