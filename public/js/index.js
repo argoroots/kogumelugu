@@ -18,7 +18,7 @@ function moveScroller() {
 }
 
 $(function() {
-    moveScroller();
+    // moveScroller();
 });
 
 function setCustom() {

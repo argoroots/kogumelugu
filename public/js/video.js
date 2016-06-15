@@ -22,7 +22,7 @@ function moveScroller() {
     move();
 }
 $(function() {
-    moveScroller();
+    // moveScroller();
 });
 
 $(document).ready(function() {
