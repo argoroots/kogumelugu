@@ -4,17 +4,14 @@
         //- <li class="video" data-target="#carousel" data-slide-to="1"><img src="img/play.svg" class="img-responsive"></li>
         li(data-target='#carousel', data-slide-to='1')
         li(data-target='#carousel', data-slide-to='2')
-        li(data-target='#carousel', data-slide-to='3')
+        //- li(data-target='#carousel', data-slide-to='3')
     .carousel-inner(role='listbox')
         .item.active
-            img(src='/img/kml-lugu1.jpg', alt='...')
-            .carousel-caption igaühel meist on oma lugu
+            img(src='/img/vonlngusteosed/EdwardvonL6ngus_torupillimees.jpg', alt='...')
+            .carousel-caption= locale.carouselMessage[0]
         .item
-            img(src='/img/kml-lugu2.jpg', alt='...')
-            //- .carousel-caption oma roll teiste lugudes
+            img(src='/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Velise2.jpg', alt='...')
+            .carousel-caption= locale.carouselMessage[1]
         .item
-            img(src='/img/kml-lugu3.jpg', alt='...')
-            //- .carousel-caption kõik me pärime oma kultuuri
-        .item
-            img(src='/img/kml-lugu4.jpg', alt='...')
-            //- .carousel-caption eesti lugu, kogu me lugu
+            img(src='/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Lehte.jpg', alt='...')
+            .carousel-caption= locale.carouselMessage[2]
