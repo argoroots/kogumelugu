@@ -2,9 +2,26 @@
   "private": true,
   "name": "kogumelugu",
   "version": "0.1.0",
-  "description": "Authentication service for Entu.ee",
+  "description": "kogumelugu.ee",
   "homepage": "https://github.com/argoroots/kogumelugu",
-  "author": "Argo Roots <argo@roots.ee>",
+  "author": {
+    "email": "argo@roots.ee",
+    "name": "Argo Roots"
+  },
+  "contributors": [
+    {
+      "email": "argo@roots.ee",
+      "name": "Argo Roots"
+    },
+    {
+      "email": "kaur.kirikall@gloch.eu",
+      "name": "Kaur Kirikall"
+    },
+    {
+      "email": "mihkel.putrinsh@gmail.com",
+      "name": "michelek"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/argoroots/kogumelugu.git"
@@ -13,7 +30,7 @@
     "url": "https://github.com/argoroots/kogumelugu/issues"
   },
   "scripts": {
-    "start": "node ./worker.js"
+    "start": "node ./master.js"
   },
   "main": "worker.js",
   "engines": {
