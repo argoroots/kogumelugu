@@ -427,7 +427,7 @@
         font-size: 18px;
     }
     #galleryPush {
-        height: 250px;
+        height: 6em;
     }
     #videoGallery .slider {
         position: absolute;

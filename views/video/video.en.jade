@@ -23,6 +23,7 @@ block body
             openVideo: 'Watch a Story',
             interviewer: 'Interviewer',
             author: 'Author',
+            notReady: 'Loading videos',
         }
 
     #videoPage
@@ -32,6 +33,6 @@ block body
         include video-page
 
     #videoGallery(ng-controller='vidoeGallery')
-        nav#galleryNav.navbar-default
-            include video-nav
+        //- nav#galleryNav.navbar-default
+        //-     include video-nav
         include video-gallery
