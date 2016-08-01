@@ -1,10 +1,10 @@
 #sinulugu
-.formcontent
+.formcontent(ng-controller='index')
     #sinulugu-top.container-fluid
         .container
             h2 Submit your story
     #sinulugu-bottom.container-fluid
-        .container
+        .container(ng-if='!send.sent')
             p If you have material you would like to share or archive, or contacts to suggest for interviewing, please fill out the form below.
 
             p We recommend that you add as much and as accurate information about the submitted story, contact person or material, as possible, so that it will be easier for us to find proper use for it.
@@ -18,21 +18,21 @@
             form
                 .row
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Story or material title')
+                        textarea.form-control(type='text', ng-model='send.interview.title', placeholder='Story or material title')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Your contact number')
+                        textarea.form-control(type='text', ng-model='send.person.phone', placeholder='Your contact number')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Your name')
+                        textarea.form-control(type='text', ng-model='send.person.forename', placeholder='Your name')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Your e-mail address')
+                        textarea.form-control(type='text', ng-model='send.person.email', placeholder='Your e-mail address')
                     .form-group.col-md-12.col-sm-6.col-xs-12
-                        textarea.form-control(placeholder='Storyteller or material owner name and date of birth')
+                        textarea.form-control(type='text', ng-model='send.storyteller.name', placeholder='Storyteller or material owner name and date of birth')
                     .form-group.col-md-12.col-sm-6.col-xs-12
-                        textarea.form-control(placeholder='Short summary of story or material')
+                        textarea.form-control(type='text', ng-model='send.interview.description', placeholder='Short summary of story or material')
                     .form-group.col-md-12.col-sm-12.col-xs-12
                         input.form-control.fileupload.filestyle(type='file', data-input='false', data-buttonname='btn-default', data-buttontext='Upload video or document')
                     .form-group.col-md-12.col-sm-12.col-xs-12
-                        textarea.form-control(placeholder='Comments and additional information')
+                        textarea.form-control(type='text', ng-model='send.interview.file_description', placeholder='Comments and additional information')
                 p.description * By submitting this form I authorize the Unitas Foundation to use the submitted material within the Kogu Me Lugu initiative for educational purposes in the form of text, photo or video.
 
                 .form-group.button
@@ -61,8 +61,9 @@
             //-
             //-     a(href='/' + lang).btn.btn-primary-outline
             //-         | Confirm and send
-            //-
-            //- .confirmation
-            //-     hr
-            //-     p
-            //-         b Thank you for your contribution to the story collecting. It is much appreciated. You have also been added to the list of our newsletter recipients and we'll keep you up to date with our activities.
+
+        .container(ng-if='send.sent')
+            .confirmation
+                hr
+                p
+                    b Thank you for your contribution to the story collecting. It is much appreciated. You have also been added to the list of our newsletter recipients and we'll keep you up to date with our activities.

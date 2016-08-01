@@ -1,10 +1,10 @@
 #sinulugu
-.formcontent
+.formcontent(ng-controller='index')
     #sinulugu-top.container-fluid
         .container
             h2 Saada oma lugu
     #sinulugu-bottom.container-fluid
-        .container
+        .container(ng-if='!send.sent')
             p Kui Sul on materjale, mida soovid jagada või arhiveerida, või kontakte, keda intervjuuks soovitada, täida vorm ja saada meile!
 
             p Soovitame lisada saadetud loo, kontakti või materjali kohta nii palju ja nii täpset infot kui võimalik, et meil oleks hõlpsam sellele kasutust leida.
@@ -18,24 +18,24 @@
             form
                 .row
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Loo või mälestise pealkiri')
+                        textarea.form-control(type='text', ng-model='send.interview.title', placeholder='Loo või mälestise pealkiri')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Sinu kontakttelefon')
+                        textarea.form-control(type='text', ng-model='send.person.phone', placeholder='Sinu kontakttelefon')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Sinu nimi')
+                        textarea.form-control(type='text', ng-model='send.person.forename', placeholder='Sinu nimi')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', placeholder='Sinu e-posti aadress')
+                        textarea.form-control(type='text', ng-model='send.person.email', placeholder='Sinu e-posti aadress')
                     .form-group.col-md-12.col-sm-6.col-xs-12
-                        textarea.form-control(placeholder='Loo rääkija või asja omaja nimi ja sünniaeg')
+                        textarea.form-control(type='text', ng-model='send.storyteller.name', placeholder='Loo rääkija või asja omaja nimi ja sünniaeg')
                     .form-group.col-md-12.col-sm-6.col-xs-12
-                        textarea.form-control(placeholder='Loo või asja lühikirjeldus')
+                        textarea.form-control(type='text', ng-model='send.interview.description', placeholder='Loo või asja lühikirjeldus')
                     .form-group.col-md-12.col-sm-12.col-xs-12
-                        input.form-control.fileupload.filestyle(type='file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
+                        input.form-control.fileupload.filestyle(type='file', ng-model='send.interview.file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
                     .form-group.col-md-12.col-sm-12.col-xs-12
-                        textarea.form-control(placeholder='Failide kommentaarid või lisainfo')
+                        textarea.form-control(type='text', ng-model='send.interview.file_description', placeholder='Failide kommentaarid või lisainfo')
                 p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
                 .form-group.button
-                    a.btn.btn-primary-outline Saada lugu
+                    a#send.btn.btn-primary-outline(ng-click='doFileUpload()', ng-disabled='send.sending') Saada lugu
 
             //- .check
             //-     hr
@@ -60,8 +60,9 @@
             //-
             //-     a(href='/' + lang).btn.btn-primary-outline
             //-         | Kinnitan ja saadan
-            //-
-            //- .confirmation
-            //-     hr
-            //-     p
-            //-         b Täname, et oled pannud panuse meie lugude täiendamisele. Oskame seda hinnata. Oled nüüdsest ka meie uudiskirja saajate listis ja hoiame teid oma toimetamistega kursis.
+
+        .container(ng-if='send.sent')
+            .confirmation
+                hr
+                p
+                    b Täname, et oled pannud panuse meie lugude täiendamisele. Oskame seda hinnata. Oled nüüdsest ka meie uudiskirja saajate listis ja hoiame teid oma toimetamistega kursis.
