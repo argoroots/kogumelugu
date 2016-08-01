@@ -16,15 +16,15 @@
             p Vormi kaudu saadetud arhiivikõlblikud materjalid talletatakse Okupatsioonide Muuseumi või mõnes teises Kogu Me Lugu võrgustikku kuuluvas kohases arhiivis . Läbiviidud videointervjuud talletatakse Eesti Rahvusarhiivi Filmiarhiivis.
 
             form
-                .row
+                .row(ng-if='!send.sending')
                     .form-group.col-md-6.col-sm-6.col-xs-12
                         textarea.form-control(type='text', ng-model='send.interview.title', placeholder='Loo või mälestise pealkiri')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', ng-model='send.person.phone', placeholder='Sinu kontakttelefon')
+                        textarea.form-control(type='text', ng-model='send.author.phone', placeholder='Sinu kontakttelefon')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', ng-model='send.person.forename', placeholder='Sinu nimi')
+                        textarea.form-control(type='text', ng-model='send.author.forename', placeholder='Sinu nimi')
                     .form-group.col-md-6.col-sm-6.col-xs-12
-                        textarea.form-control(type='text', ng-model='send.person.email', placeholder='Sinu e-posti aadress')
+                        textarea.form-control(type='text', ng-model='send.author.email', placeholder='Sinu e-posti aadress')
                     .form-group.col-md-12.col-sm-6.col-xs-12
                         textarea.form-control(type='text', ng-model='send.storyteller.name', placeholder='Loo rääkija või asja omaja nimi ja sünniaeg')
                     .form-group.col-md-12.col-sm-6.col-xs-12
@@ -33,7 +33,7 @@
                         input.form-control.fileupload.filestyle(type='file', ng-model='send.interview.file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
                     .form-group.col-md-12.col-sm-12.col-xs-12
                         textarea.form-control(type='text', ng-model='send.interview.file_description', placeholder='Failide kommentaarid või lisainfo')
-                p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
+                p.description(ng-if='!send.sending') * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
                 .form-group.button
                     a#send.btn.btn-primary-outline(ng-click='doFileUpload()', ng-disabled='send.sending') Saada lugu
 

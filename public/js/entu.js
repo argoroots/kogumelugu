@@ -69,7 +69,7 @@ angular.module('kmlApp', [])
 
     .controller('index', ['$scope', '$http', function($scope, $http) {
         $scope.send = {
-            person: {},
+            author: {},
             storyteller: {},
             interview: {},
         }
@@ -77,24 +77,24 @@ angular.module('kmlApp', [])
         $scope.doFileUpload = function(e) {
             $scope.send.file = $("input[ng-model='send.interview.file']").get(0).files[0]
 
-            if (!$scope.send.person.email && !$scope.send.person.forename && !$scope.send.person.phone && !$scope.send.storyteller.name && !$scope.send.interview.title && !$scope.send.interview.description && !$scope.send.interview.file_description && !$scope.send.file) { return }
+            if (!$scope.send.author.email && !$scope.send.author.forename && !$scope.send.author.phone && !$scope.send.storyteller.name && !$scope.send.interview.title && !$scope.send.interview.description && !$scope.send.interview.file_description && !$scope.send.file) { return }
 
             $scope.send.sending = true
             async.series([
                 function(callback) {
-                    if (!$scope.send.person.email && !$scope.send.person.forename && !$scope.send.person.phone) { return callback(null) }
+                    if (!$scope.send.author.email && !$scope.send.author.forename && !$scope.send.author.phone) { return callback(null) }
                     $http({
                             method: 'POST',
                             url: API_URL + 'entity-' + API_FOLDER,
                             data: getSignedData(API_USER, API_KEY, {
                                 'definition': 'person',
-                                'person-email': $scope.send.person.email,
-                                'person-forename': $scope.send.person.forename,
-                                'person-phone': $scope.send.person.phone,
+                                'person-email': $scope.send.author.email,
+                                'person-forename': $scope.send.author.forename,
+                                'person-phone': $scope.send.author.phone,
                             })
                         })
                         .success(function(data) {
-                            $scope.send.person.id = data.result.id
+                            $scope.send.author.id = data.result.id
                             callback(null)
                         })
                         .error(function(data) {
@@ -120,14 +120,14 @@ angular.module('kmlApp', [])
                         })
                 },
                 function(callback) {
-                    if (!$scope.send.interview.title && !$scope.send.person.id && !$scope.send.storyteller.id && !$scope.send.interview.description && !$scope.send.interview.file_description && !$scope.send.file) { return callback(null) }
+                    if (!$scope.send.interview.title && !$scope.send.author.id && !$scope.send.storyteller.id && !$scope.send.interview.description && !$scope.send.interview.file_description && !$scope.send.file) { return callback(null) }
                     $http({
                             method: 'POST',
                             url: API_URL + 'entity-' + API_FOLDER,
                             data: getSignedData(API_USER, API_KEY, {
                                 'definition': 'interview',
                                 'interview-title-et': $scope.send.interview.title,
-                                'interview-person': $scope.send.person.id,
+                                'interview-author': $scope.send.author.id,
                                 'interview-storyteller': $scope.send.storyteller.id,
                                 'interview-description-et': $scope.send.interview.description,
                                 'interview-fileDescription-et': $scope.send.interview.file_description,
@@ -143,48 +143,105 @@ angular.module('kmlApp', [])
                 },
                 function(callback) {
                     if (!$scope.send.file && ! $scope.send.interview.id) { return callback(null) }
+                    $http({
+                            method: 'POST',
+                            url: API_URL + 'file/s3',
+                            data: getSignedData(API_USER, API_KEY, {
+                                entity: $scope.send.interview.id,
+                                property: 'interview-file',
+                                filename: $scope.send.file.name,
+                                filesize: $scope.send.file.size,
+                                filetype: $scope.send.file.type
+                            })
+                        })
+                        .success(function(data) {
+                            if(data.result) {
+                                var xhr = new XMLHttpRequest()
+                                var form = new FormData()
 
-                    var xhr   = new XMLHttpRequest()
-                    var form  = new FormData()
+                                for(var i in data.result.s3.data) {
+                                    form.append(i, data.result.s3.data[i])
+                                }
+                                form.append('file', $scope.send.file)
 
-                    var form_data = getSignedData(API_USER, API_KEY, {
-                        entity: $scope.send.interview.id,
-                        property: 'interview-file',
-                        filename: $scope.send.file.name
-                    })
+                                xhr.upload.addEventListener('progress', function (ev) {
+                                    if(!ev.lengthComputable) return
+                                    $scope.send.progress = (ev.loaded * 100 / ev.total - 0.1).toFixed(1)
+                                    $scope.$apply()
+                                    $('#send').html($scope.send.progress + '%')
+                                }, false)
 
-                    for(var i in form_data) {
-                        form.append(i, form_data[i])
-                    }
-                    form.append('file', $scope.send.file)
+                                xhr.onreadystatechange = function(ev) {
+                                    if(xhr.readyState != 4) return
+                                    if(xhr.status != 201) {
+                                        cl(xhr)
+                                        $('#send').html('ERROR!')
+                                    }
+                                    callback(null)
+                                }
 
-                    xhr.upload.addEventListener('progress', function (ev) {
-                        if(!ev.lengthComputable) return
-                        $scope.send.progress = (ev.loaded * 100 / ev.total - 0.1).toFixed(1)
-                        $scope.$apply()
-                        $('#send').html($scope.send.progress)
-                    }, false)
-
-                    xhr.onreadystatechange = function(ev) {
-                        if(xhr.readyState != 4) return
-                        if(xhr.status == 200) {
-                            $scope.send.sending = false
-                            $scope.send.sent = true
-                            $scope.$apply()
-                        } else {
-                            cl(xhr)
-                            $scope.send.sending = false
-                            $scope.$apply()
-                            $('#send').html('ERROR!')
-                        }
-                    }
-
-                    xhr.open('POST', API_URL + 'file', true)
-                    xhr.send(form)
+                                xhr.open('POST', data.result.s3.url, true)
+                                xhr.send(form)
+                            } else {
+                                callback(data)
+                            }
+                        })
+                        .error(function(data) {
+                            callback(data.error)
+                        })
+                },
+                function(callback) {
+                    if (!$scope.send.interview.id) { return callback(null) }
+                    $http({
+                            method : 'POST',
+                            url    : API_URL + 'entity-' + $scope.send.interview.id + '/rights',
+                            data   : getSignedData(API_USER, API_KEY, {
+                                'entity': API_USER
+                            })
+                        })
+                        .success(function(data) {
+                            callback(null)
+                        })
+                        .error(function(data) {
+                            callback(data.error)
+                        })
+                },
+                function(callback) {
+                    if (!$scope.send.author.id) { return callback(null) }
+                    $http({
+                            method : 'POST',
+                            url    : API_URL + 'entity-' + $scope.send.author.id + '/rights',
+                            data   : getSignedData(API_USER, API_KEY, {
+                                'entity': API_USER
+                            })
+                        })
+                        .success(function(data) {
+                            callback(null)
+                        })
+                        .error(function(data) {
+                            callback(data.error)
+                        })
+                },
+                function(callback) {
+                    if (!$scope.send.storyteller.id) { return callback(null) }
+                    $http({
+                            method : 'POST',
+                            url    : API_URL + 'entity-' + $scope.send.storyteller.id + '/rights',
+                            data   : getSignedData(API_USER, API_KEY, {
+                                'entity': API_USER
+                            })
+                        })
+                        .success(function(data) {
+                            callback(null)
+                        })
+                        .error(function(data) {
+                            callback(data.error)
+                        })
                 },
             ], function(err) {
                 if(err) {
                     $scope.sending = false
+                    $('#send').html('ERROR!')
                     cl(err)
                     return
                 }
