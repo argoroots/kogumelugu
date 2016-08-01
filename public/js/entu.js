@@ -142,7 +142,7 @@ angular.module('kmlApp', [])
                         })
                 },
                 function(callback) {
-                    if (!$scope.send.file && ! $scope.send.interview.id) { return callback(null) }
+                    if (!$scope.send.file || ! $scope.send.interview.id) { return callback(null) }
                     $http({
                             method: 'POST',
                             url: API_URL + 'file/s3',
@@ -155,36 +155,8 @@ angular.module('kmlApp', [])
                             })
                         })
                         .success(function(data) {
-                            if(data.result) {
-                                var xhr = new XMLHttpRequest()
-                                var form = new FormData()
-
-                                for(var i in data.result.s3.data) {
-                                    form.append(i, data.result.s3.data[i])
-                                }
-                                form.append('file', $scope.send.file)
-
-                                xhr.upload.addEventListener('progress', function (ev) {
-                                    if(!ev.lengthComputable) return
-                                    $scope.send.progress = (ev.loaded * 100 / ev.total - 0.1).toFixed(1)
-                                    $scope.$apply()
-                                    $('#sending').html($scope.send.progress)
-                                }, false)
-
-                                xhr.onreadystatechange = function(ev) {
-                                    if(xhr.readyState != 4) return
-                                    if(xhr.status != 201) {
-                                        cl(xhr)
-                                        $('#sending').html('ERROR!')
-                                    }
-                                    callback(null)
-                                }
-
-                                xhr.open('POST', data.result.s3.url, true)
-                                xhr.send(form)
-                            } else {
-                                callback(data)
-                            }
+                            $scope.send.s3 = data.result.s3
+                            callback(null)
                         })
                         .error(function(data) {
                             callback(data.error)
@@ -241,15 +213,47 @@ angular.module('kmlApp', [])
             ], function(err) {
                 if(err) {
                     $scope.sending = false
-                    $('#sending').html('ERROR!')
+                    $('#sending').html('ERROR')
                     cl(err)
                     return
                 }
-                $scope.send.sending = false
-                $scope.send.sent = true
+
+                if($scope.send.s3) {
+                    var xhr = new XMLHttpRequest()
+                    var form = new FormData()
+
+                    for(var i in $scope.send.s3.data) {
+                        form.append(i, $scope.send.s3.data[i])
+                    }
+                    form.append('file', $scope.send.file)
+
+                    xhr.upload.addEventListener('progress', function (ev) {
+                        if(!ev.lengthComputable) return
+                        $scope.send.progress = (ev.loaded * 100 / ev.total - 0.1).toFixed(1)
+                        $scope.$apply()
+                        $('#sending').html($scope.send.progress)
+                    }, false)
+
+                    xhr.onreadystatechange = function(ev) {
+                        if(xhr.readyState != 4) return
+                        if(xhr.status == 201) {
+                            $scope.send.sending = false
+                            $scope.send.sent = true
+                        } else {
+                            cl(xhr)
+                            $('#sending').html('ERROR')
+                        }
+                        callback(null)
+                    }
+
+                    xhr.open('POST', $scope.send.s3.url, true)
+                    xhr.send(form)
+                } else {
+                    $scope.send.sending = false
+                    $scope.send.sent = true
+                }
             })
         }
-
     }])
 
 
@@ -310,5 +314,4 @@ angular.module('kmlApp', [])
             ]
             return classes[(idx + 1) % 13]
         }
-
     }])
