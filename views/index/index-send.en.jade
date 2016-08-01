@@ -4,7 +4,7 @@
         .container
             h2 Submit your story
     #sinulugu-bottom.container-fluid
-        .container(ng-if='!send.sent')
+        .container(ng-if='!send.sending && !send.sent')
             p If you have material you would like to share or archive, or contacts to suggest for interviewing, please fill out the form below.
 
             p We recommend that you add as much and as accurate information about the submitted story, contact person or material, as possible, so that it will be easier for us to find proper use for it.
@@ -16,7 +16,7 @@
             p Materials suitable for archiving sent via the form are stored in the Museum of Occupations archive or other suitable archive within the Kogu Me Lugu network. Video interviews are stored in the Film Archives of the Estonian National Archives.
 
             form
-                .row(ng-if='!send.sending')
+                .row
                     .form-group.col-md-6.col-sm-6.col-xs-12
                         textarea.form-control(type='text', ng-model='send.interview.title', placeholder='Story or material title')
                     .form-group.col-md-6.col-sm-6.col-xs-12
@@ -33,10 +33,9 @@
                         input.form-control.fileupload.filestyle(type='file', data-input='false', data-buttonname='btn-default', data-buttontext='Upload video or document')
                     .form-group.col-md-12.col-sm-12.col-xs-12
                         textarea.form-control(type='text', ng-model='send.interview.file_description', placeholder='Comments and additional information')
-                p.description(ng-if='!send.sending') * By submitting this form I authorize the Unitas Foundation to use the submitted material within the Kogu Me Lugu initiative for educational purposes in the form of text, photo or video.
-
+                p.description * By submitting this form I authorize the Unitas Foundation to use the submitted material within the Kogu Me Lugu initiative for educational purposes in the form of text, photo or video.
                 .form-group.button
-                    a.btn.btn-primary-outline Submit story
+                    a.btn.btn-primary-outline(ng-click='doFileUpload()', ng-disabled='send.sending') Submit story
 
             //- .check
             //-     hr
@@ -61,6 +60,14 @@
             //-
             //-     a(href='/' + lang).btn.btn-primary-outline
             //-         | Confirm and send
+
+        .container(ng-if='send.sending')
+            .confirmation
+                hr
+                p
+                    | Please wait. Uploading file (
+                    span#sending 0.0
+                    | %)
 
         .container(ng-if='send.sent')
             .confirmation

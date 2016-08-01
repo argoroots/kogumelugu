@@ -4,7 +4,7 @@
         .container
             h2 Saada oma lugu
     #sinulugu-bottom.container-fluid
-        .container(ng-if='!send.sent')
+        .container(ng-if='!send.sending && !send.sent')
             p Kui Sul on materjale, mida soovid jagada või arhiveerida, või kontakte, keda intervjuuks soovitada, täida vorm ja saada meile!
 
             p Soovitame lisada saadetud loo, kontakti või materjali kohta nii palju ja nii täpset infot kui võimalik, et meil oleks hõlpsam sellele kasutust leida.
@@ -16,7 +16,7 @@
             p Vormi kaudu saadetud arhiivikõlblikud materjalid talletatakse Okupatsioonide Muuseumi või mõnes teises Kogu Me Lugu võrgustikku kuuluvas kohases arhiivis . Läbiviidud videointervjuud talletatakse Eesti Rahvusarhiivi Filmiarhiivis.
 
             form
-                .row(ng-if='!send.sending')
+                .row
                     .form-group.col-md-6.col-sm-6.col-xs-12
                         textarea.form-control(type='text', ng-model='send.interview.title', placeholder='Loo või mälestise pealkiri')
                     .form-group.col-md-6.col-sm-6.col-xs-12
@@ -33,7 +33,7 @@
                         input.form-control.fileupload.filestyle(type='file', ng-model='send.interview.file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
                     .form-group.col-md-12.col-sm-12.col-xs-12
                         textarea.form-control(type='text', ng-model='send.interview.file_description', placeholder='Failide kommentaarid või lisainfo')
-                p.description(ng-if='!send.sending') * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
+                p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
                 .form-group.button
                     a#send.btn.btn-primary-outline(ng-click='doFileUpload()', ng-disabled='send.sending') Saada lugu
 
@@ -60,6 +60,14 @@
             //-
             //-     a(href='/' + lang).btn.btn-primary-outline
             //-         | Kinnitan ja saadan
+
+        .container(ng-if='send.sending')
+            .confirmation
+                hr
+                p
+                    | Palun oota. Laadin faili (
+                    span#sending 0.0
+                    | %)
 
         .container(ng-if='send.sent')
             .confirmation

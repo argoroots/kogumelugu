@@ -168,14 +168,14 @@ angular.module('kmlApp', [])
                                     if(!ev.lengthComputable) return
                                     $scope.send.progress = (ev.loaded * 100 / ev.total - 0.1).toFixed(1)
                                     $scope.$apply()
-                                    $('#send').html($scope.send.progress + '%')
+                                    $('#sending').html($scope.send.progress)
                                 }, false)
 
                                 xhr.onreadystatechange = function(ev) {
                                     if(xhr.readyState != 4) return
                                     if(xhr.status != 201) {
                                         cl(xhr)
-                                        $('#send').html('ERROR!')
+                                        $('#sending').html('ERROR!')
                                     }
                                     callback(null)
                                 }
@@ -241,7 +241,7 @@ angular.module('kmlApp', [])
             ], function(err) {
                 if(err) {
                     $scope.sending = false
-                    $('#send').html('ERROR!')
+                    $('#sending').html('ERROR!')
                     cl(err)
                     return
                 }
