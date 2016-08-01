@@ -243,7 +243,6 @@ angular.module('kmlApp', [])
                             cl(xhr)
                             $('#sending').html('ERROR')
                         }
-                        callback(null)
                     }
 
                     xhr.open('POST', $scope.send.s3.url, true)
