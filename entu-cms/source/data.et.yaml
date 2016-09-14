@@ -3,27 +3,32 @@ page:
   aliases:
     - /
 nav:
-- link: video
-  text: Videoteek
-- link: "/#tutvustus"
-  text: Tutvustus
-- link: "/#sinulugu"
-  text: Saada lugu
-- link: "/#teemad"
-  text: Teemad
-- link: "/#toetajad"
-  text: Tegijad
-- link: "/#toeta"
-  text: Toeta
+  - link: video
+    text: Videoteek
+  - link: "/#tutvustus"
+    text: Tutvustus
+  - link: "/#sinulugu"
+    text: Saada lugu
+  - link: "/#teemad"
+    text: Teemad
+  - link: "/#toetajad"
+    text: Tegijad
+  - link: "/#toeta"
+    text: Toeta
 txt:
-- signin: Logi sisse
-- exit: Logi välja
-- searchPlaceholder: Otsi nime või kohta
-- searchSubmit: Leia lugu
-- supportlink: Soovin toetada
-- topicTree: Kogu Me Lugu Teemapuu
-- carouselMessage:
-  - Igaühel meist on oma lugu
-  - Oma roll teiste lugudes
-  - Eesti lugu, kogu me lugu
-  - Kõik me pärime oma kultuuri
+  signin: Logi sisse
+  exit: Logi välja
+  searchPlaceholder: Otsi nime või kohta
+  searchSubmit: Leia lugu
+  supportlink: Soovin toetada
+  topicTree: Kogu Me Lugu Teemapuu
+  carouselMessage:
+    - Igaühel meist on oma lugu
+    - Oma roll teiste lugudes
+    - Eesti lugu, kogu me lugu
+    - Kõik me pärime oma kultuuri
+  footer:
+    unitas: "Sihtasutus Unitas"
+    email: "info@unitasfoundation.org"
+    phone: "(+372) 6645 039"
+    address: "Roseni 7, 10111, TALLINN"

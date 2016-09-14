@@ -14,9 +14,10 @@
 //-       pre= JSON.stringify(val, null, 4)
 pre= D['nav'] === undefined ? 'undefined' : 'defined'
 pre= Array.isArray(D.nav) === true ? 'array' : 'not an array'
-pre= JSON.stringify(D['nav'], null, 4)
+pre= JSON.stringify(D.txt.footer, null, 4)
 //- pre= D['nav'][0]
-//- - var navitems = D['nav']
+- var navitems = ['foo','bar']
+pre= navitems.length
 //- each navitem in navitems
 //-   pre= JSON.stringify(navitem, null, 4)
 
