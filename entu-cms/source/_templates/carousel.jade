@@ -1,17 +1,17 @@
 #carousel.carousel.slide(data-ride='carousel')
-    ol.carousel-indicators
-        li.active(data-target='#carousel', data-slide-to='0')
-        //- <li class="video" data-target="#carousel" data-slide-to="1"><img src="img/play.svg" class="img-responsive"></li>
-        li(data-target='#carousel', data-slide-to='1')
-        li(data-target='#carousel', data-slide-to='2')
-        //- li(data-target='#carousel', data-slide-to='3')
-    .carousel-inner(role='listbox')
-        .item.active
-            img(src='/img/vonlngusteosed/EdwardvonL6ngus_torupillimees.jpg', alt='...')
-            .carousel-caption= F.nav.carouselMessage[0]
-        .item
-            img(src='/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Velise2.jpg', alt='...')
-            .carousel-caption= F.nav.carouselMessage[1]
-        .item
-            img(src='/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Lehte.jpg', alt='...')
-            .carousel-caption= F.nav.carouselMessage[2]
+  ol.carousel-indicators
+    li.active(data-target='#carousel', data-slide-to='0')
+    //- <li class="video" data-target="#carousel" data-slide-to="1"><img src="img/play.svg" class="img-responsive"></li>
+    li(data-target='#carousel', data-slide-to='1')
+    li(data-target='#carousel', data-slide-to='2')
+    //- li(data-target='#carousel', data-slide-to='3')
+  .carousel-inner(role='listbox')
+    .item.active
+      img(src=D.carousel[0].img, alt=D.carousel[0].message)
+      .carousel-caption= D.carousel[0].message
+    .item
+      img(src=D.carousel[1].img, alt=D.carousel[1].message)
+      .carousel-caption= D.carousel[1].message
+    .item
+      img(src=D.carousel[2].img, alt=D.carousel[2].message)
+      .carousel-caption= D.carousel[2].message

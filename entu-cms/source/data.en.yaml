@@ -1,4 +1,7 @@
 ---
+
+
+
 nav:
   - link: video
     text: Videos
@@ -12,6 +15,13 @@ nav:
     text: Team
   - link: "/#toeta"
     text: Support us
+carousel:
+  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Lehte.jpg
+    message: Igaühel meist on oma lugu
+  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Velise2.jpg
+    message: Oma roll teiste lugudes
+  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_torupillimees.jpg
+    message: Eesti lugu, kogu me lugu
 txt:
   nav:
     signin: Sign in
@@ -20,11 +30,6 @@ txt:
   searchSubmit: Leia lugu
   supportlink: Soovin toetada
   topicTree: Kogu Me Lugu Teemapuu
-  carouselMessage:
-    - Igaühel meist on oma lugu
-    - Oma roll teiste lugudes
-    - Eesti lugu, kogu me lugu
-    - Kõik me pärime oma kultuuri
   footer:
     unitas: "Unitas Foundation"
     email: "info@unitasfoundation.org"
