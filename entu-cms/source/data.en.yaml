@@ -1,24 +1,21 @@
 ---
-page:
-  aliases:
-    - /
 nav:
   - link: video
-    text: Videoteek
+    text: Videos
   - link: "/#tutvustus"
-    text: Tutvustus
+    text: Introduction
   - link: "/#sinulugu"
-    text: Saada lugu
+    text: Submit story
   - link: "/#teemad"
-    text: Teemad
+    text: Topics
   - link: "/#toetajad"
-    text: Tegijad
+    text: Team
   - link: "/#toeta"
-    text: Toeta
+    text: Support us
 txt:
   nav:
-    signin: Logi sisse
-    exit: Logi välja
+    signin: Sign in
+    exit: Sign out
   searchPlaceholder: Otsi nime või kohta
   searchSubmit: Leia lugu
   supportlink: Soovin toetada
@@ -29,10 +26,10 @@ txt:
     - Eesti lugu, kogu me lugu
     - Kõik me pärime oma kultuuri
   footer:
-    unitas: "Sihtasutus Unitas"
+    unitas: "Unitas Foundation"
     email: "info@unitasfoundation.org"
     phone: "(+372) 6645 039"
     address: "Roseni 7, 10111, TALLINN"
-    orderNewsletter: "Telli Kogu Me Lugu uudiskiri"
-    subscribe: "Liitu"
-    emailPlaceholder: "Sinu e-posti aadress"
+    orderNewsletter: "Subscribe to Kogu Me Lugu newsletter"
+    subscribe: "Join"
+    emailPlaceholder: "Your e-mail address"
