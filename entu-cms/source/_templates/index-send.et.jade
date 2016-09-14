@@ -1,0 +1,76 @@
+#sinulugu
+.formcontent(ng-controller='index')
+    #sinulugu-top.container-fluid
+        .container
+            h2 Saada oma lugu
+    #sinulugu-bottom.container-fluid
+        .container(ng-if='!send.sending && !send.sent')
+            p Kui Sul on materjale, mida soovid jagada või arhiveerida, või kontakte, keda intervjuuks soovitada, täida vorm ja saada meile!
+
+            p Soovitame lisada saadetud loo, kontakti või materjali kohta nii palju ja nii täpset infot kui võimalik, et meil oleks hõlpsam sellele kasutust leida.
+
+            p Kõik vormi kaudu saadetud lood, materjalid ja kontaktid talletatakse esmalt Kogu Me Lugu andmebaasis, millele on ligipääs vaid Kogu Me Lugu andmebaasi haldajatel. Materjalid analüüsitakse nende sisu ning kirjeldava info põhjal ja sobivusel liidetakse õppeplatvormiga, võimaldades materjalidele ka avalikku ligipääsu ning kasutust õppetöös.
+
+            p Saadetud lugudele lisatud loorääkijad on aluseks videointervjuude läbiviimisele. Huvipakkuva loo puhul võetakse vormis märgitud kontaktisikuga ühendust ning uuritakse loorääkija intervjueerimise võimalusi. Sobivusel lepitakse kokku intervjuu.
+
+            p Vormi kaudu saadetud arhiivikõlblikud materjalid talletatakse Okupatsioonide Muuseumi või mõnes teises Kogu Me Lugu võrgustikku kuuluvas kohases arhiivis . Läbiviidud videointervjuud talletatakse Eesti Rahvusarhiivi Filmiarhiivis.
+
+            form
+                .row
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.interview.title', placeholder='Loo või mälestise pealkiri')
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.author.phone', placeholder='Sinu kontakttelefon')
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.author.forename', placeholder='Sinu nimi')
+                    .form-group.col-md-6.col-sm-6.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.author.email', placeholder='Sinu e-posti aadress')
+                    .form-group.col-md-12.col-sm-6.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.storyteller.name', placeholder='Loo rääkija või asja omaja nimi ja sünniaeg')
+                    .form-group.col-md-12.col-sm-6.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.interview.description', placeholder='Loo või asja lühikirjeldus')
+                    .form-group.col-md-12.col-sm-12.col-xs-12
+                        input.form-control.fileupload.filestyle(type='file', ng-model='send.interview.file', data-input='false', data-buttonname='btn-default', data-buttontext='Lisa videofail või dokument')
+                    .form-group.col-md-12.col-sm-12.col-xs-12
+                        textarea.form-control(type='text', ng-model='send.interview.file_description', placeholder='Failide kommentaarid või lisainfo')
+                p.description * Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul.
+                .form-group.button
+                    a.btn.btn-primary-outline(ng-click='doFileUpload()', ng-disabled='send.sending') Saada lugu
+
+            //- .check
+            //-     hr
+            //-     p Sinu nimi
+            //-     p Kontakttelefon ja e-post
+            //-
+            //-     p
+            //-         b Loo pealkiri
+            //-
+            //-     p Loo rääkija või asja nimi ja sünniaeg
+            //-
+            //-     p Loo kirjeldus
+            //-
+            //-     p
+            //-         a(href='/' + lang)|Failid kõik paragraphidena
+            //-
+            //-     p
+            //-         b Kinnitades jõuab ülevalolev info meieni
+            //-
+            //-     a(href='/' + lang).btn.btn-primary-outline
+            //-         | Soovin muuta
+            //-
+            //-     a(href='/' + lang).btn.btn-primary-outline
+            //-         | Kinnitan ja saadan
+
+        .container(ng-if='send.sending')
+            .confirmation
+                hr
+                p
+                    | Palun oota. Laadin faili (
+                    span#sending 0.0
+                    | %)
+
+        .container(ng-if='send.sent')
+            .confirmation
+                hr
+                p
+                    b Täname, et oled pannud panuse meie lugude täiendamisele. Oskame seda hinnata. Oled nüüdsest ka meie uudiskirja saajate listis ja hoiame teid oma toimetamistega kursis.

@@ -1,0 +1,42 @@
+nav.navbar-default
+    .container-fluid.home-nav
+        .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#kml-navbar-collapse', aria-expanded='false')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand.visible-xs(href='#')
+                img(src='/assets/img/kogumelugu-turquoise.svg')
+        //- #kml-navbar-collapse.collapse.navbar-collapse
+        //-     ul.nav.navbar-nav
+        //-         li
+        //-             a(href='foo')= (typeof page.originalPath === 'string' ? 'string' : 'not string')
+        //-         each m in D.nav
+        //-             li
+        //-                 a(href=m.link)= m.text
+        //-     ul.navbar-nav
+        //-         li.hidden-xs.hidden-sm.home.overlay-logo
+        //-             a(href='/' + lang)
+        //-                 img(src='/assets/img/kogumelugu-navlogo.svg')
+        //-     ul.nav.navbar-nav.navbar-right
+        //-         li
+        //-             if !user
+        //-                 a(href='signin')= D.nav.signin
+        //-             else
+        //-                 a(href='signin/exit')= D.nav.exit
+        //- 
+        //-         if page.language !== 'et'
+        //-             li
+        //-                 a(href='/et' + page.path) EST
+        //-         if page.language !== 'en'
+        //-             li
+        //-                 a(href='/en' + page.path) ENG
+        //-         if page.language !== 'ru'
+        //-             li
+        //-                 a(href='/ru' + page.path) RUS
+
+p DATA
+pre= page.originalPath
+pre= page.originalPath
+pre= JSON.stringify(page, null, 4)

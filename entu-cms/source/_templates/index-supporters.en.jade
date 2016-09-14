@@ -1,0 +1,83 @@
+#toetajad
+.container-fluid.toetajad
+    .row.header
+        .container
+            .text.center
+                h2 Kogu Me Lugu partners are
+    .list
+        .container
+            .row
+                .col-md-12
+                    .tablediv
+                        table.lg
+                            tr
+                                td
+                                    each p in partners || []
+                                        .col-md-4
+                                            if p.get('info') && p.get('info').indexOf('http') > -1
+                                                a(href=p.get('info'))= p.get('name')
+                                            else
+                                                a= p.get('name')
+
+
+            #bottom-table.row
+                .col-md-4
+                    table.md
+                        tr
+                            td
+                                h3 Financiers
+                        each s in sponsors || []
+                            tr
+                                td
+                                    if s.get('info') && s.get('info').indexOf('http') > -1
+                                        a(href=s.get('info'))= s.get('name')
+                                    else
+                                        a= s.get('name')
+                .col-md-8
+                    table.md
+                        tr
+                            td
+                                h3 Thanks to
+                        tr
+                            td
+                                b Team members:
+                                each t in team || []
+                                    | &nbsp;
+                                    if t.get('info') && t.get('info').indexOf('http') > -1
+                                        a(href=t.get('info'))= t.get('name')
+                                    else
+                                        a= t.get('name')
+                                    | ,
+                                |  ... and many others
+                        tr
+                            td
+                                b Supporters:
+                                each t in thanks || []
+                                    | &nbsp;
+                                    if t.get('info') && t.get('info').indexOf('http') > -1
+                                        a(href=t.get('info'))= t.get('name')
+                                    else
+                                        a= t.get('name')
+                                    | ,
+                                |  ... and many others
+                    table.md
+                        tr
+                            td
+                                h3 Producer
+                            td
+                                h3 Co-producer
+                        tr
+                            td SA Unitas
+                            td Meelis Niinepuu
+    .container
+        .row.unitas
+            .col-md-2
+                a(href='http://unitas.ee', target='_blank')
+                    img.img-responsive(src='/img/unitas+logo.jpg')
+            .col-md-10
+                h3 Initiated by
+                p
+                    b The Unitas Foundation
+                p The Unitas Foundation, founded in 2008 in Tallinn, is one of the founding members of the European Platform of Memory and Conscience. Dedicated to the advancement of history education and human rights culture, the foundation aims to raise awareness of the inhumanity of totalitarian regimes and ideologies and to pursue the international condemnation of their crimes.
+                p
+                    a(href='http://unitas.ee', target='_blank') www.unitas.ee
