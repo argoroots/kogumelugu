@@ -28,7 +28,13 @@ txt:
     exit: Sign out
   searchPlaceholder: Otsi nime või kohta
   searchSubmit: Leia lugu
-  supportlink: Soovin toetada
+  supportlink: Donate now
+  intro:
+    text:
+      - Igaühel meist on oma lugu ja oma roll teiste lugudes. Kõik me oleme kellegi lapsed ja mingi piirkonna elanikud, kõik me pärime oma kultuuri, kodukoha ja perekonna pärandi. Eesti lugu, kogu me lugu, moodustub erinevate Eesti inimeste lugudest.
+      - Need lood ei edasta minevikust täielikku pilti, vaid annavad seda edasi läbi rääkija objektiivi, mis võib olla vägagi erinev meie enda omast. Neid lugusid kuulates kogeme maailma teistsugusel, vahest harjumatul viisil. Pealtnäha olemegi erinevad, kordumatud. See, mis aga peitub igas inimeses sügaval sisimas, on meil ühine.
+    footer: Kogu Me Lugu on algatus koguda, uurida ja jagada Eesti perede lugusid. Algatuse raames kogutakse, talletatakse ja levitatakse Nõukogude ja Saksa okupatsioonide ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende tegevuse tulemusena Eestisse sattunud inimeste ning nende järeltulijate mälestusi ja elulugusid.
+    highlight: Iga lugu on omapärane, samas osa suuremast loost. Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
   topicTree: Kogu Me Lugu Teemapuu
   footer:
     unitas: "Unitas Foundation"

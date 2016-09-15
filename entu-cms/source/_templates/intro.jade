@@ -1,0 +1,26 @@
+.container-fluid.containsimage
+  img.img-responsive.full-width(src='/assets/img/pilt3-slider-compressor.jpg')
+
+#tutvustus
+.container-fluid.skewed
+  .textcontent
+    .skew
+      .textcontainer.container
+        each txt in D.txt.intro.text
+          p= txt
+        hr
+        p= D.txt.intro.footer
+  
+  #tutvustus-bottom.container
+    .row
+      .col-md-6.col-md-offset-3
+        p.highlighted.center
+          b= D.txt.intro.highlight
+
+.container-fluid.containsimage.envelopeimage
+
+.triangles
+  img(src='/assets/img/blue-triangle-overlay.svg')
+  //- .left-triangle
+  //- .right-triangle
+  //- img.img-responsive.full-width(src='/img/pilt2-compressor.jpg')

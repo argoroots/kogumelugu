@@ -461,7 +461,7 @@ h3.title {
     position: relative;
     display: table;
     text-align: center;
-    *text-shadow: 1px 1px 5px #333, -1px -1px 5px #333;
+    /*text-shadow: 1px 1px 5px #333, -1px -1px 5px #333;*/
     border: 1px solid #3a3a3c;
 }
 #videoGallery .video .overlay,
@@ -506,7 +506,7 @@ h3.title {
     margin-bottom: 10px;
 }
 #videoGallery .video h4 span {
-    *border-bottom: 1px solid #f1f2e1;
+    /*border-bottom: 1px solid #f1f2e1;*/
 }
 #videoGallery .video p {
     color: #f1f2e1;
@@ -622,7 +622,7 @@ a #videoGallery .video{
     width: 100%;
     padding: 13px 15px;
     font-size: 16;
-    font-weight: border: 0;
+    border: 0;
     border-radius: 2px;
 }
 .homesearch .btn-primary {
