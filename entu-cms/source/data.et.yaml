@@ -31,6 +31,7 @@ txt:
     searchSubmit: Leia lugu
     signin: Logi sisse
     exit: Logi välja
+    filterQuery: filterQuery
 
   supportlink: Soovin toetada
 
