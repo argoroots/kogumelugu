@@ -1,83 +1,77 @@
 #toetajad
 .container-fluid.toetajad
-    .row.header
-        .container
-            .text.center
-                h2 Kogu Me Lugu Koostööpartneriteks on
-    .list
-        .container
-            .row
-                .col-md-12
-                    .tablediv
-                        table.lg
-                            tr
-                                td
-                                    each p in partners || []
-                                        .col-md-4
-                                            if p.get('info') && p.get('info').indexOf('http') > -1
-                                                a(href=p.get('info'))= p.get('name')
-                                            else
-                                                a= p.get('name')
-
-
-            #bottom-table.row
-                .col-md-4
-                    table.md
-                        tr
-                            td
-                                h3 Suurtoetajad
-                        each s in sponsors || []
-                            tr
-                                td
-                                    if s.get('info') && s.get('info').indexOf('http') > -1
-                                        a(href=s.get('info'))= s.get('name')
-                                    else
-                                        a= s.get('name')
-                .col-md-8
-                    table.md
-                        tr
-                            td
-                                h3 Tänusõnad kaastegutsejatele
-                        tr
-                            td
-                                b Meeskonnaliikmed:
-                                each t in team || []
-                                    | &nbsp;
-                                    if t.get('info') && t.get('info').indexOf('http') > -1
-                                        a(href=t.get('info'))= t.get('name')
-                                    else
-                                        a= t.get('name')
-                                    | ,
-                                |  jt.
-                        tr
-                            td
-                                b Toetajad ja hooandjad:
-                                each t in thanks || []
-                                    | &nbsp;
-                                    if t.get('info') && t.get('info').indexOf('http') > -1
-                                        a(href=t.get('info'))= t.get('name')
-                                    else
-                                        a= t.get('name')
-                                    | ,
-                                |  jt.
-                    table.md
-                        tr
-                            td
-                                h3 Produtsent
-                            td
-                                h3 Kaasprodutsent
-                        tr
-                            td SA Unitas
-                            td Meelis Niinepuu
+  .row.header
     .container
-        .row.unitas
-            .col-md-2
-                a(href='http://unitas.ee', target='_blank')
-                    img.img-responsive(src='/img/unitas+logo.jpg')
-            .col-md-10
-                h3 Algataja
-                p
-                    b Sihtasutus Unitas
-                p Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
-                p
-                    a(href='http://unitas.ee', target='_blank') www.unitas.ee
+      .text.center
+        h2= D.txt.supporters.ourPartners
+  .list
+    .container
+      .row
+        .col-md-12
+          .tablediv
+            table.lg
+              tr
+                td
+                  each p in F.supporters.partners || []
+                    .col-md-4
+                      if p.href && p.href.indexOf('http') > -1
+                        a(href=p.href)= p.name
+                      else
+                        a= p.name
+
+
+      #bottom-table.row
+        .col-md-4
+          table.md
+            tr
+              td
+                h3= D.txt.supporters.sponsors
+            each s in F.supporters.sponsors || []
+              tr
+                td
+                  if s.href && s.href.indexOf('http') > -1
+                    a(href=s.href)= s.name
+                  else
+                    a= s.name
+        .col-md-8
+          table.md
+            tr
+              td
+                h3= D.txt.supporters.thanksTitle
+            tr
+              td
+                b= D.txt.supporters.team
+                each t in F.supporters.team || []
+                  | &nbsp;
+                  a= t
+                  | ,
+                |  jt.
+            tr
+              td
+                b= D.txt.supporters.thanks
+                each t in F.supporters.thanks || []
+                  | &nbsp;
+                  a= t
+                  | ,
+                |  jt.
+          table.md
+            tr
+              td
+                h3= D.txt.supporters.producer
+              td
+                h3= D.txt.supporters.coproducer
+            tr
+              td= F.supporters.producer.name
+              td= F.supporters.coproducer.name
+  .container
+    .row.unitas
+      .col-md-2
+        a(href='http://unitas.ee', target='_blank')
+          img.img-responsive(src='/assets/img/unitas+logo.jpg')
+      .col-md-10
+        h3= D.txt.supporters.initiatedBy.title
+        p
+          b= D.txt.supporters.initiatedBy.unitas
+        p= D.txt.supporters.initiatedBy.description
+        p
+          a(href='http://unitas.ee', target='_blank') www.unitas.ee

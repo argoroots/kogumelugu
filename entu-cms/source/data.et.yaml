@@ -2,6 +2,9 @@
 page:
   aliases:
     - /
+  data:
+    supporters: ../datafiles/supporters.yaml
+
 nav:
   - link: video
     text: Videoteek
@@ -59,7 +62,21 @@ txt:
     description: "* Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul."
     thankYou: Täname, et oled pannud panuse meie lugude täiendamisele. Oskame seda hinnata. Oled nüüdsest ka meie uudiskirja saajate listis ja hoiame teid oma toimetamistega kursis.
 
+  supporters:
+    ourPartners: Kogu Me Lugu Koostööpartneriteks on
+    sponsors: Suurtoetajad
+    thanksTitle: Tänusõnad kaastegutsejatele
+    team: Meeskonnaliikmed
+    thanks: Toetajad ja hooandjad
+    producer: Produtsent
+    coproducer: Kaasprodutsent
+    initiatedBy:
+      title: Algataja
+      unitas: Sihtasutus Unitas
+      description: Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
+
   topicTree: Kogu Me Lugu Teemapuu
+
   footer:
     unitas: "Sihtasutus Unitas"
     email: "info@unitasfoundation.org"
