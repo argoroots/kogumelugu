@@ -1,0 +1,12 @@
+.gallery.container
+
+  //- each video in F.gallery
+  //-   pre= video
+  .row
+    a(ng-repeat='v in F.gallery' ng-href='video/#{{ v.video_id }}')
+      div(style="background:url('https://img.youtube.com/vi/'{{ v.video_id }}'/0.jpg');background-position: center center; background-size:cover;", ng-class='getClass($index)')
+        .overlay
+        .wrapper
+          h4
+            span {{ v.name }}
+          p {{ v.info }}

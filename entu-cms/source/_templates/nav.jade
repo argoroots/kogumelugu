@@ -14,7 +14,7 @@ nav#galleryNav.navbar-default.navbar-default.navbar-fixed-top.shrink
     ul.nav.navbar-nav
       each m in D.nav
         li
-          a(href=m.link)= m.text
+          a(href='/' + page.language + '/' + m.link)= m.text
       li.visible-xs.visible-sm
         a(href=D.nav[0].link)= D.nav[0].text
       li
@@ -37,3 +37,5 @@ nav#galleryNav.navbar-default.navbar-default.navbar-fixed-top.shrink
       //- if page.language !== 'ru'
       //-   li
       //-     a(href='/ru' + path.substr(3)) RUS
+
+#galleryPush(style='background:#3a3a3c; background-size: cover; padding:0px; _:none')

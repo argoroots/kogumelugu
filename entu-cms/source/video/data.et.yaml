@@ -1,13 +1,11 @@
 ---
 page:
-  aliases:
-    - /
   data:
-    supporters: ../datafiles/supporters.yaml
+    gallery: ../datafiles/videos.yaml
 
 nav:
-  - link: video
-    text: Videoteek
+  - link: ""
+    text: Avaleht
   - link: "#tutvustus"
     text: Tutvustus
   - link: "#sinulugu"
@@ -18,13 +16,7 @@ nav:
     text: Tegijad
   - link: "#toeta"
     text: Toeta
-carousel:
-  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Lehte.jpg
-    message: Igaühel meist on oma lugu
-  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Velise2.jpg
-    message: Oma roll teiste lugudes
-  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_torupillimees.jpg
-    message: Eesti lugu, kogu me lugu
+
 txt:
   nav:
     searchPlaceholder: Otsi nime või kohta

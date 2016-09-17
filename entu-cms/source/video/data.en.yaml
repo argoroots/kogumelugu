@@ -1,39 +1,30 @@
 ---
 page:
-  aliases:
-    - /
   data:
-    supporters: ../datafiles/supporters.yaml
+    gallery: ../datafiles/videos.yaml
 
 nav:
-  - link: video
-    text: Videoteek
-  - link: "#tutvustus"
-    text: Tutvustus
-  - link: "#sinulugu"
-    text: Saada lugu
-  - link: "#teemad"
-    text: Teemad
-  - link: "#toetajad"
-    text: Tegijad
-  - link: "#toeta"
-    text: Toeta
-carousel:
-  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Lehte.jpg
-    message: Igaühel meist on oma lugu
-  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_kogumelugu_Velise2.jpg
-    message: Oma roll teiste lugudes
-  - img: /assets/img/vonlngusteosed/EdwardvonL6ngus_torupillimees.jpg
-    message: Eesti lugu, kogu me lugu
+  - link: ""
+    text: Home
+  - link: "/#tutvustus"
+    text: Introduction
+  - link: "/#sinulugu"
+    text: Submit story
+  - link: "/#teemad"
+    text: Topics
+  - link: "/#toetajad"
+    text: Team
+  - link: "/#toeta"
+    text: Support us
+
 txt:
   nav:
     searchPlaceholder: Otsi nime või kohta
     searchSubmit: Leia lugu
-    signin: Logi sisse
-    exit: Logi välja
-    filterQuery: filterQuery
+    signin: Sign in
+    exit: Sign out
 
-  supportlink: Soovin toetada
+  supportlink: Donate now
 
   intro:
     text:
@@ -63,26 +54,13 @@ txt:
     description: "* Vormi esitamisega luban Sihtasutusel Unitas kasutada esitatud materjali Kogu Me Lugu algatuse raames hariduslikel eesmärkidel nii teksti, pildi kui video kujul."
     thankYou: Täname, et oled pannud panuse meie lugude täiendamisele. Oskame seda hinnata. Oled nüüdsest ka meie uudiskirja saajate listis ja hoiame teid oma toimetamistega kursis.
 
-  supporters:
-    ourPartners: Kogu Me Lugu Koostööpartneriteks on
-    sponsors: Suurtoetajad
-    thanksTitle: Tänusõnad kaastegutsejatele
-    team: Meeskonnaliikmed
-    thanks: Toetajad ja hooandjad
-    producer: Produtsent
-    coproducer: Kaasprodutsent
-    initiatedBy:
-      title: Algataja
-      unitas: Sihtasutus Unitas
-      description: Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
-
   topicTree: Kogu Me Lugu Teemapuu
 
   footer:
-    unitas: "Sihtasutus Unitas"
+    unitas: "Unitas Foundation"
     email: "info@unitasfoundation.org"
     phone: "(+372) 6645 039"
     address: "Roseni 7, 10111, TALLINN"
-    orderNewsletter: "Telli Kogu Me Lugu uudiskiri"
-    subscribe: "Liitu"
-    emailPlaceholder: "Sinu e-posti aadress"
+    orderNewsletter: "Subscribe to Kogu Me Lugu newsletter"
+    subscribe: "Join"
+    emailPlaceholder: "Your e-mail address"
