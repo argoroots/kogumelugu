@@ -148,9 +148,9 @@ router.get('/:id', function(req, res, next) {
     }, function(err, video) {
         if (err) return next(err)
 
-        if (!res.locals.user && video.get('_definition') === 'interview') {
-            return res.authenticate('interview')
-        }
+        // if (!res.locals.user && video.get('_definition') === 'interview') {
+        //     return res.authenticate('interview')
+        // }
 
         var storytellers = video.get('storyteller', [])
         var query = []
@@ -234,3 +234,6 @@ router.get('/:id', function(req, res, next) {
 
 
 module.exports = router
+
+
+// scp routes/video.js virt39690@sn9.zone.eu:./domeenid/www.kogumelugu.ee/kogumelugu/routes
