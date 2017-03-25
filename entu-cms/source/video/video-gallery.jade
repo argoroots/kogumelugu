@@ -1,12 +1,12 @@
-.gallery.container
 
-  //- each video in F.gallery
-  //-   pre= video
-  .row
-    a(ng-repeat='v in F.gallery' ng-href='video/#{{ v.video_id }}')
-      div(style="background:url('https://img.youtube.com/vi/'{{ v.video_id }}'/0.jpg');background-position: center center; background-size:cover;", ng-class='getClass($index)')
-        .overlay
-        .wrapper
-          h4
-            span {{ v.name }}
-          p {{ v.info }}
+.gallery.container
+    .row
+        a(ng-repeat='v in sData.videos' ng-href='video/{{ v.id }}')
+            //- div(style="background:url('https://placehold.it/579x318/?text=kml');background-position: center center; background-size:cover;", ng-class='getClass($index)')
+            div(style="background:url('{{ v.video_still }}');background-position: center center; background-size:cover;", ng-class='getClass($index)')
+                .overlay
+                .wrapper
+                    h4
+                        span {{ v.name }}
+                    p {{ v.info }}
+                    //- p {{= (parseInt(v.video), 10).toString() === v.video) ? "vimeo" : "youtube" }}
