@@ -24,6 +24,7 @@ mkdir ${BUILD_DIR}
 rm -rf ${BUILD_DIR}/assets
 mkdir -p ${BUILD_DIR}/assets
 cp -r ./assets/* ${BUILD_DIR}/assets
+cp ./_redirects ${BUILD_DIR}/_redirects
 
 npm install entu-cms
 
