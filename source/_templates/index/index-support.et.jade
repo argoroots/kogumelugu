@@ -1,0 +1,109 @@
+.container-fluid.toetus
+    .container
+        h2
+            span.darkened Toeta&nbsp;
+            | kogu me lugu
+        .row
+            .col-md-8.col-md-offset-2.col-xs-12.col-xs-offset-0
+                p.highlighted.center
+                    b Tänu Sinu toetusele saame salvestada rohkem lugusid, luua rohkem õppematerjale ja arendada platvormi paremate ja uuenduslikumate kasutusvõimaluste suunal. Toetad Kogu Me Lugu:
+        .row
+            .col-md-4.support.center
+                img.img-responsive(src='/assets/img/chatbubble.png')
+                p Saates meile oma pere loo ja täiendavaid materjale
+            .col-md-4.support.center
+                img.img-responsive(src='/assets/img/heart.png')
+                p Soovitades meile loorääkijaid, keda intervjueerida
+            .col-md-4.support.center
+                img.img-responsive(src='/assets/img/spread.png')
+                p Levitades sõna Kogu Me Lugu kohta
+        .row
+            .col-md-4.col-md-offset-2.support.center
+                img.img-responsive(src='/assets/img/people.png')
+                p Vanemate või vanavanematega aega veetes ja lugusid vestes
+            .col-md-4.support.center
+                img.img-responsive(src='/assets/img/toeta.png')
+                p Toetades Kogu Me Lugu tegevusi vabatahtliku töö või muude mitterahaliste vahenditega
+#toeta
+.container-fluid.toeta.toeta-top
+    .container
+        h2
+            span.darkened Sinu panus loeb,&nbsp;
+            | toeta algatust!
+        p.center.white
+            b Löö kaasa&nbsp;
+                a(href='https://ev100.ee/et/kogu-me-lugu', target='_blank')
+                    span Kogu Me Lugu Eesti Vabariik 100 kingiprojektis&nbsp;
+                span või toeta meid rahaliselt!
+        p.center.white
+            b Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda. Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
+        p.center.white
+            b Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Unitas kontole. Ühekordse makse puhul kasuta allolevaid makselinke või ülekannet SA Unitas pangakontole. Püsikorralduse saab vormistada SA Unitas pangakontole. Konto andmed on nähtaval allpool.
+        p.center.white
+            b SA Unitas kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja, seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks. Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad. Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
+
+.container-fluid.toeta.toeta-bottom
+    .container
+        a(href='https://ev100.ee/et/kogu-me-lugu', target='_blank')
+            img.img-responsive.ev100(src='/assets/img/ev100.png')
+        p.text Toetada saab paari klikiga internetipanga vahendusel. Jäta meile oma nimi ja e-posti aadress, et teaksime, kellele tänusõnad estada ning vali sobiv toetussumma, kliki "TOETAN" ning Sind suunatakse Maksekeskuse lihtsasse ja turvalisse makseväravasse.
+        form.supportsum(action='https://payment.maksekeskus.ee/pay/1/link.html')
+            .form-group
+                .col-md-6
+                    input.form-control(type='text', placeholder='Sinu nimi')
+                .col-md-6
+                    input.form-control(type='text', placeholder='Sinu e-posti aadress')
+            input(type='text', name='shopId', value='23d7bb0e-3372-4644-8440-eb7bec5562b1', hidden='')
+            input(type='text', name='paymentId', value='Toetan Kogu Me Lugu', hidden='')
+            ul
+                li.label Toetan:
+                li
+                    input#sum10(type='radio', name='amount', value='10')
+                    label(for='sum10')
+                        span
+                        | 10€
+                li
+                    input#sum20(type='radio', name='amount', value='20')
+                    label(for='sum20')
+                        span
+                        | 20€
+                li
+                    input#sum50(type='radio', name='amount', value='50')
+                    label(for='sum50')
+                        span
+                        | 50€
+                li
+                    input#sum100(type='radio', name='amount', value='100')
+                    label(for='sum100')
+                        span
+                        | 100€
+                li
+                    input#sum500(type='radio', name='amount', value='500')
+                    label(for='sum500')
+                        span
+                        | 500€
+                li
+                    input#sum1000(type='radio', name='amount', value='1000')
+                    label(for='sum1000')
+                        span
+                        | 1000€
+                li
+                    input#customsum(type='radio', name='amount', value='')
+                    label(for='customsum')
+                        span
+                        input.customsum(type='number', onkeyup='setCustom();')
+                        string €
+            .buttonDiv
+                input.btn.btn-primary(type='submit', value='Toetan')
+
+            div.bankinfo
+                p Pangakonto andmed:
+                p
+                    b EE85 1010 2200 8178 2010&nbsp;
+                    span | BIC: EEUHEE2X
+                p
+                    b SEB PANK:&nbsp;
+                    span Tornimäe 2, 15010, Tallinn, Eesti
+                p
+                    b Selgitus:&nbsp;
+                    span Toetan Kogu Me Lugu

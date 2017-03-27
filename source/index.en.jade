@@ -1,0 +1,19 @@
+extends /layout.jade
+
+
+block javascript
+    script(type='text/javascript', src='/assets/js/filestyle.min.js')
+    script(type='text/javascript', src='/assets/js/index.js')
+
+
+block body
+    include /index/index-nav
+    include /index/index-carousel
+    include /index/index-search
+    include /index/index-supportlink
+    include /index/index-intro.en.jade
+    include /index/index-send.en.jade
+    //- include /index/index-quote.en.jade
+    //- include /index/index-subjects
+    include /index/index-supporters.jade
+    include /index/index-support.en.jade

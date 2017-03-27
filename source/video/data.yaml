@@ -1,0 +1,3 @@
+page:
+    data:
+        videos: ./data/videos.yaml

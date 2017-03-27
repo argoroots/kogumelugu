@@ -1,0 +1,12 @@
+#galleryPush(style='background:#3a3a3c; background-size: cover; padding:0px; _:none')
+
+.gallery.container
+    .row
+        each v, idx in F.videos
+            a(href= page.language + '/video/' + v.properties.path.values[0].value)
+                .video-thumb(style="background:url('" + v.displaypicture + "');background-position: center center; background-size:cover;", data-idx=idx)
+                    .overlay
+                    .wrapper
+                        h4
+                            span= v.displayname
+                        p= v.displayinfo

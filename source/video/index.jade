@@ -1,0 +1,12 @@
+extends /layout.jade
+
+
+block javascript
+    script(type='text/javascript', src='/assets/js/video.js')
+
+
+block body
+    #videoGallery(ng-controller='vidoeGallery')
+        nav#galleryNav.navbar-default.navbar-default.navbar-fixed-top.shrink
+            include /video/video-nav
+        include /video/video-gallery
