@@ -1,3 +1,4 @@
 page:
+    disabled: true
     data:
         video: video.yaml

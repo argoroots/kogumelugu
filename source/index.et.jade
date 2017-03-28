@@ -3,7 +3,11 @@ extends /layout.jade
 
 block javascript
     script(type='text/javascript', src='/assets/js/filestyle.min.js')
-    script(type='text/javascript', src='/assets/js/index.js')
+    script(type='text/javascript').
+        function setCustom() {
+            var value = $('.customsum').val();
+            $('#customsum').val(value);
+        }
 
 
 block body
