@@ -50,7 +50,10 @@ for (var i = 0; i < videos.length; i++) {
 
         v.request({ path: '/videos/' + videoId + '/pictures' }, (error, body, status_code, headers) => {
             if (error) {
-                videoUrl = 'https://placehold.it/579x318/?text=Kogu Me Lugu!'
+                console.log(error.message)
+                if (headers['x-ratelimit-reset']) {
+                    console.log('Next reset ' + headers['x-ratelimit-reset'])
+                }
             } else {
                 let urlList = op.get(body, ['data', 0, 'sizes'], [])
                 let url = op.get(urlList, [urlList.length - 1, 'link'])
