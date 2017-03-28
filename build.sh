@@ -36,7 +36,7 @@ echo
 echo --------- FETCH
 export E_DEF=
 # export E_DEF=(story,interview)
-export PARENT_EID=2577
+export PARENT_EID=1150
 export ITEM_DIR=${SOURCE_DIR}/video/_video
 export ITEM_YAML=video.yaml
 export OUT_DIR=${TMP_SOURCE_DIR}/video
