@@ -7,7 +7,7 @@
             - var img = v.properties.videoUrl.values ? '/thumbnails/' + v.properties.videoUrl.values[0].value + '.jpg' : ''
 
             a(href=path)
-                .video-thumb(style="background:url('" + img + "');background-position: center center; background-size:cover;", data-idx=idx)
+                .video-thumb.hidden(style="background:url('" + img + "');background-position: center center; background-size:cover;", data-idx=idx)
                     .overlay
                     .wrapper
                         h4

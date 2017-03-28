@@ -43,6 +43,7 @@ $(function() {
             'col-md-6 col-sm-6 col-xs-12 video',
         ]
         $(this).addClass(classes[($(this).data('idx') + 1) % 13])
+        $(this).removeClass('hidden')
     })
 
     // Count class elements
