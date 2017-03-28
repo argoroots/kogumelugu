@@ -7,8 +7,6 @@ export TMP_SOURCE_DIR=./tmp_source
 export BUILD_DIR=./build
 
 export ENTU_URL=https://kogumelugu.entu.ee
-export ENTU_USER=1174
-export ENTU_KEY=bLePreStfUlAYLoRESPIGhtITATchUrPE
 
 
 # before_script:
