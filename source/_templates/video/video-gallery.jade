@@ -3,7 +3,7 @@
 .gallery.container
     .row
         each v, idx in F.videos
-            - var path = v.properties.path.values ? page.language + '/video/' + v.properties.path.values[0].value : ''
+            - var path = v.properties.path.values ? '/' + page.language + '/video/' + v.properties.path.values[0].value : ''
             - var img = v.properties.videoUrl.values ? '/thumbnails/' + v.properties.videoUrl.values[0].value + '.jpg' : ''
 
             a(href=path)
