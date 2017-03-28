@@ -89,6 +89,16 @@ export LIST_YAML=${TMP_SOURCE_DIR}/data/coproducers.yaml
 ./node_modules/entu-cms/helpers/entu2yaml.js
 
 
+export E_DEF=
+# export E_DEF=institution
+export PARENT_EID=3326
+export ITEM_DIR=
+export ITEM_YAML=
+export OUT_DIR=${TMP_SOURCE_DIR}/
+export LIST_YAML=${TMP_SOURCE_DIR}/data/producers.yaml
+./node_modules/entu-cms/helpers/entu2yaml.js
+
+
 echo
 echo --------- PICTURES
 export TMP_SOURCE_DIR=./tmp_source

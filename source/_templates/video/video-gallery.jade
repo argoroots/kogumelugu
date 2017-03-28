@@ -3,10 +3,11 @@
 .gallery.container
     .row
         each v, idx in F.videos
-            a(href= page.language + '/video/' + v.properties.path.values[0].value)
-                .video-thumb(style="background:url('/thumbnails/" + v.properties.videoUrl.values[0].value + ".jpg');background-position: center center; background-size:cover;", data-idx=idx)
-                    .overlay
-                    .wrapper
-                        h4
-                            span= v.displayname
-                        p= v.displayinfo
+            if v.properties.path.values && v.properties.videoUrl.values
+                a(href= page.language + '/video/' + v.properties.path.values[0].value)
+                    .video-thumb(style="background:url('/thumbnails/" + v.properties.videoUrl.values[0].value + ".jpg');background-position: center center; background-size:cover;", data-idx=idx)
+                        .overlay
+                        .wrapper
+                            h4
+                                span= v.displayname
+                            p= v.displayinfo
