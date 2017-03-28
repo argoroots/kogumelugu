@@ -21,32 +21,30 @@ function moveScroller() {
     $(window).scroll(move);
     move();
 }
+
+
 $(function() {
     // moveScroller();
 
-        $('.video-thumb').each(function () {
-            var classes = [
-                'col-md-6 col-sm-6 col-xs-12 video',
-                'col-md-4 col-sm-4 col-xs-12 video',
-                'col-md-4 col-sm-4 col-xs-12 video',
-                'col-md-4 col-sm-4 col-xs-12 video',
-                'col-md-6 col-sm-6 col-xs-12 video',
-                'col-md-3 col-sm-3 col-xs-6 video',
-                'col-md-3 col-sm-3 col-xs-6 video',
-                'col-md-3 col-sm-3 col-xs-6 video',
-                'col-md-3 col-sm-3 col-xs-6 video',
-                'col-md-4 col-sm-4 col-xs-12 video',
-                'col-md-4 col-sm-4 col-xs-12 video',
-                'col-md-4 col-sm-4 col-xs-12 video',
-                'col-md-6 col-sm-6 col-xs-12 video',
-            ]
-            $(this).addClass(classes[($(this).data('idx') + 1) % 13])
-        })
+    $('.video-thumb').each(function () {
+        var classes = [
+            'col-md-6 col-sm-6 col-xs-12 video',
+            'col-md-4 col-sm-4 col-xs-12 video',
+            'col-md-4 col-sm-4 col-xs-12 video',
+            'col-md-4 col-sm-4 col-xs-12 video',
+            'col-md-6 col-sm-6 col-xs-12 video',
+            'col-md-3 col-sm-3 col-xs-6 video',
+            'col-md-3 col-sm-3 col-xs-6 video',
+            'col-md-3 col-sm-3 col-xs-6 video',
+            'col-md-3 col-sm-3 col-xs-6 video',
+            'col-md-4 col-sm-4 col-xs-12 video',
+            'col-md-4 col-sm-4 col-xs-12 video',
+            'col-md-4 col-sm-4 col-xs-12 video',
+            'col-md-6 col-sm-6 col-xs-12 video',
+        ]
+        $(this).addClass(classes[($(this).data('idx') + 1) % 13])
+    })
 
-
-});
-
-$(document).ready(function() {
     // Count class elements
     var primary = "primary";
     var secondary = "secondary";
@@ -95,6 +93,7 @@ $(document).ready(function() {
         hideExcessive(time, timecode)
     }
 });
+
 
 (function($) {
   window.fnames = new Array();

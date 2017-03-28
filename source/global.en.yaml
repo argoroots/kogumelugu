@@ -1,24 +1,21 @@
 menu:
     -
-        link: /et
-        text: Home
-    -
-        link: /et/video
+        link: /en/video
         text: Videos
     -
-        link: /et#tutvustus
+        link: /en#tutvustus
         text: Introduction
     -
-        link: /et#sinulugu
+        link: /en#sinulugu
         text: Submit Story
     -
-        link: /et#teemad
+        link: /en#teemad
         text: Topics
     -
-        link: /et#toetajad
+        link: /en#toetajad
         text: Team
     -
-        link: /et#toeta
+        link: /en#toeta
         text: Support Us
 
 contact: |

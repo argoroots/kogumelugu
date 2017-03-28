@@ -1,8 +1,5 @@
 menu:
     -
-        link: /et
-        text: Avaleht
-    -
         link: /et/video
         text: Videoteek
     -

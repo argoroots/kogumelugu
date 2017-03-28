@@ -4,7 +4,7 @@
     .row
         each v, idx in F.videos
             a(href= page.language + '/video/' + v.properties.path.values[0].value)
-                .video-thumb(style="background:url('" + v.displaypicture + "');background-position: center center; background-size:cover;", data-idx=idx)
+                .video-thumb(style="background-position: center center; background-size:cover;", data-idx=idx, data-video=v.properties.videoUrl.values[0].value)
                     .overlay
                     .wrapper
                         h4
