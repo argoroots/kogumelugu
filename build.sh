@@ -5,6 +5,7 @@
 export SOURCE_DIR=./source
 export TMP_SOURCE_DIR=./tmp_source
 export BUILD_DIR=./build
+export THUMBS_DIR=${BUILD_DIR}/thumbnails
 
 export ENTU_URL=https://kogumelugu.entu.ee
 
@@ -22,9 +23,12 @@ mkdir ${BUILD_DIR}
 rm -rf ${BUILD_DIR}/assets
 mkdir -p ${BUILD_DIR}/assets
 cp -r ./assets/* ${BUILD_DIR}/assets
+
 cp ./_redirects ${BUILD_DIR}/_redirects
 
-npm install entu-cms
+mkdir -p ${THUMBS_DIR}
+
+npm install entu-cms vimeo
 
 
 # script:
@@ -83,6 +87,15 @@ export ITEM_YAML=
 export OUT_DIR=${TMP_SOURCE_DIR}/
 export LIST_YAML=${TMP_SOURCE_DIR}/data/coproducers.yaml
 ./node_modules/entu-cms/helpers/entu2yaml.js
+
+
+echo
+echo --------- PICTURES
+export TMP_SOURCE_DIR=./tmp_source
+export VIDEOS_YAML=${TMP_SOURCE_DIR}/data/videos.yaml
+export PICTURES_DIR=${THUMBS_DIR}
+node ./pictures.js
+
 
 echo
 echo --------- BUILD
