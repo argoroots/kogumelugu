@@ -8,9 +8,9 @@ menu:
     -
         link: '#sinulugu'
         text: Submit Story
-    -
-        link: '#teemad'
-        text: Topics
+    # -
+    #     link: '#teemad'
+    #     text: Topics
     -
         link: '#toetajad'
         text: Team

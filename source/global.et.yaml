@@ -8,9 +8,9 @@ menu:
     -
         link: '#sinulugu'
         text: Saada lugu
-    -
-        link: '#teemad'
-        text: Teemad
+    # -
+    #     link: '#teemad'
+    #     text: Teemad
     -
         link: '#toetajad'
         text: Tegijad
