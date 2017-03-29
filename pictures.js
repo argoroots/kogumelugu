@@ -50,7 +50,7 @@ for (var i = 0; i < videos.length; i++) {
 
         v.request({ path: '/videos/' + videoId + '/pictures' }, (error, body, status_code, headers) => {
             if (headers['x-ratelimit-remaining'] || headers['x-ratelimit-limit']) {
-                console.log('Limit remaining' + headers['x-ratelimit-remaining'] + ' / ' + headers['x-ratelimit-limit'])
+                console.log('Limit remaining ' + headers['x-ratelimit-remaining'] + ' / ' + headers['x-ratelimit-limit'])
             }
             if (headers['x-ratelimit-reset']) {
                 console.log('Next reset ' + headers['x-ratelimit-reset'])
