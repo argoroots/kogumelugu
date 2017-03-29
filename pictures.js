@@ -49,11 +49,14 @@ for (var i = 0; i < videos.length; i++) {
         var v = new vimeo(APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN)
 
         v.request({ path: '/videos/' + videoId + '/pictures' }, (error, body, status_code, headers) => {
+            if (headers['x-ratelimit-remaining'] || headers['x-ratelimit-limit']) {
+                console.log('Limit remaining' + headers['x-ratelimit-remaining'] + ' / ' + headers['x-ratelimit-limit'])
+            }
+            if (headers['x-ratelimit-reset']) {
+                console.log('Next reset ' + headers['x-ratelimit-reset'])
+            }
             if (error) {
                 console.log(error.message)
-                if (headers['x-ratelimit-reset']) {
-                    console.log('Next reset ' + headers['x-ratelimit-reset'])
-                }
             } else {
                 let urlList = op.get(body, ['data', 0, 'sizes'], [])
                 let url = op.get(urlList, [urlList.length - 1, 'link'])
