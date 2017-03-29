@@ -8,10 +8,10 @@
                     .firstblock
                         if F.video.properties.videoUrl && F.video.properties.videoUrl.values
                             .videoWrapper
-                                if parseInt(F.video.properties.videoUrl.values[0].value.value, 10).toString() === F.video.properties.videoUrl.values[0].value.value
-                                    iframe#video(src='https://player.vimeo.com/video/' + F.video.properties.videoUrl.values[0].value.value + '#t=' + (jumpTo ? jumpTo : 0) + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                                if parseInt(F.video.properties.videoUrl.values[0].value, 10).toString() === F.video.properties.videoUrl.values[0].value
+                                    iframe#video(src='https://player.vimeo.com/video/' + F.video.properties.videoUrl.values[0].value + '#t=' + (jumpTo ? jumpTo : 0) + '?autopause=1&autoplay=1&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
                                 else
-                                    iframe#video(src='https://www.youtube.com/embed/' + F.video.properties.videoUrl.values[0].value.value + '?autoplay=1&controls=0&showinfo=0&rel=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+                                    iframe#video(src='https://www.youtube.com/embed/' + F.video.properties.videoUrl.values[0].value + '?autoplay=1&controls=0&showinfo=0&rel=0', frameborder='0', webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
                         .videoDescription
                             h1.title= F.video.properties.storyteller.values[0].value
                             if F.video.properties['title-' + page.language] && F.video.properties['title-' + page.language].values
@@ -29,8 +29,8 @@
                                             b= author.value
                                             br
 
-                                if F.video.properties['description-' + page.language] && F.video.properties['description-' + page.language].values
-                                    p.description= F.video.properties['description-' + page.language].values[0].value
+                                    if F.video.properties['description-' + page.language] && F.video.properties['description-' + page.language].values
+                                        p.description= F.video.properties['description-' + page.language].values[0].value
 
                     //- if chapters
                     //-     .timeline
@@ -70,15 +70,15 @@
                             a(href='mailto:?subject=' + ((F.video.properties['title-' + page.language] && F.video.properties['title-' + page.language].values) ? F.video.properties['title-' + page.language].values[0].value : '') + '&body=' + pageUrl)
                                 li
                                     img.img-responsive(src='/assets/img/email.svg')
-                .col-md-4.col-sm-4.col-xs-12
-                    .row.related
-                        //- each r in related
-                        //-     if r.get('_id') !== F.video.properties._id.values[0].value
-                        //-         a(href='video/' + r.get('_id') )
-                        //-             .col-md-12.col-sm-12.col-xs-6.video(style="background:url('video/picture?id=" + r.get('videoUrl.value + "');background-position: center center; background-size:cover;")
-                        //-                 .overlay
-                        //-                 .wrapper
-                        //-                     h4
-                        //-                         span= r.get('storyteller.0.value
-                        //-                     p= r.get('title-' + lang + '.value
-                        //-                     .btn.btn-primary-outline= locale.openVideo
+                //- .col-md-4.col-sm-4.col-xs-12
+                //-     .row.related
+                //-         each r in related
+                //-             if r.get('_id') !== F.video.properties._id.values[0].value
+                //-                 a(href='video/' + r.get('_id') )
+                //-                     .col-md-12.col-sm-12.col-xs-6.video(style="background:url('video/picture?id=" + r.get('videoUrl.value + "');background-position: center center; background-size:cover;")
+                //-                         .overlay
+                //-                         .wrapper
+                //-                             h4
+                //-                                 span= r.get('storyteller.0.value
+                //-                             p= r.get('title-' + lang + '.value
+                //-                             .btn.btn-primary-outline= locale.openVideo
