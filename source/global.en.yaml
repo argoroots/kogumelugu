@@ -3,19 +3,19 @@ menu:
         link: /en/video
         text: Videos
     -
-        link: /en#tutvustus
+        link: '#tutvustus'
         text: Introduction
     -
-        link: /en#sinulugu
+        link: '#sinulugu'
         text: Submit Story
     -
-        link: /en#teemad
+        link: '#teemad'
         text: Topics
     -
-        link: /en#toetajad
+        link: '#toetajad'
         text: Team
     -
-        link: /en#toeta
+        link: '#toeta'
         text: Support Us
 
 contact: |
