@@ -58,16 +58,16 @@
                                         li.quatenary= region.value
                     .lastblock
                         ul.sharebuttons
-                            a(href='https://www.facebook.com/sharer/sharer.php?u=' + pageUrl, target='_blank')
+                            a(href='https://www.facebook.com/sharer/sharer.php?u=https://www.kogumelugu.ee' + page.originalPath, target='_blank')
                                 li
                                     img.img-responsive(src='/assets/img/facebook.svg')
-                            a(href='http://twitter.com/share?url=' + pageUrl, target='_blank')
+                            a(href='http://twitter.com/share?url=https://www.kogumelugu.ee' + page.originalPath, target='_blank')
                                 li
                                     img.img-responsive(src='/assets/img/twitter.svg')
-                            a(href='https://plus.google.com/share?url=' + pageUrl, target='_blank')
+                            a(href='https://plus.google.com/share?url=https://www.kogumelugu.ee' + page.originalPath, target='_blank')
                                 li
                                     img.img-responsive(src='/assets/img/googleplus.svg')
-                            a(href='mailto:?subject=' + ((F.video.properties['title-' + page.language] && F.video.properties['title-' + page.language].values) ? F.video.properties['title-' + page.language].values[0].value : '') + '&body=' + pageUrl)
+                            a(href='mailto:?subject=' + ((F.video.properties['title-' + page.language] && F.video.properties['title-' + page.language].values) ? F.video.properties['title-' + page.language].values[0].value : '') + '&body=https://www.kogumelugu.ee' + page.originalPath)
                                 li
                                     img.img-responsive(src='/assets/img/email.svg')
                 //- .col-md-4.col-sm-4.col-xs-12
