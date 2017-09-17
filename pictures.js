@@ -10,6 +10,7 @@ const APP_VIMEO_ID = process.env.VIMEO_ID
 const APP_VIMEO_SECRET = process.env.VIMEO_SECRET
 const APP_VIMEO_TOKEN = process.env.VIMEO_TOKEN
 
+console.log({APP_VIMEO_ID, APP_VIMEO_SECRET, APP_VIMEO_TOKEN})
 
 const VIDEOS_YAML = process.env.VIDEOS_YAML
     ? ( path.isAbsolute(process.env.VIDEOS_YAML)
