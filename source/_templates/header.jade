@@ -1,0 +1,43 @@
+//- Declaration (header.pug)
+mixin header(activeLink)
+	header.header
+		.u-container
+			a.logo(href="/")
+				img(src="/assets/images/logo.png", alt="Kogu Me Lugu!")
+			button.btn.menu--toggle(type="button")
+			nav.main-menu
+				ul
+					if activeLink == "/videos"
+						li.u-active
+							a(href="/videos") Videoteek
+					else
+						li
+							a(href="/videos") Videoteek
+
+					if activeLink == "/tags"
+						li.u-active
+							a(href="/tags") Teemad
+					else
+						li
+							a(href="/tags") Teemad
+
+					if activeLink == "/materials"
+						li.u-active
+							a(href="/materials") Õppematerjalid
+					else
+						li
+							a(href="/materials") Õppematerjalid
+
+					li
+						a(href="/#tutvustus") Tutvustus
+
+					li
+						a(href="/#tegijad") Tegijad
+
+					li
+						a(href="/#toeta") Toeta
+
+			nav.lang-menu
+				a(href="#") EST
+				a(href="#") ENG
+				a(href="#") RUS

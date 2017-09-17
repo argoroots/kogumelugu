@@ -1,0 +1,54 @@
+.u-content {
+	.accordion {
+		border-bottom: 2px solid #F7F7F7;
+		&--item {
+			&.u-open {
+				> a {
+					font-weight: 700;
+					&:after {
+						transform: rotate(180deg);
+					}
+				}
+				.accordion--content {
+					display: block;
+				}
+			}
+			> a {
+				position: relative;
+				display: block;
+				padding: 17px 0 13px;
+				font-size: 18px;
+				line-height: 30px;
+				text-decoration: none;
+				border-top: 2px solid #F7F7F7;
+				&:after {
+					content: "\f107";
+					display: block;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					margin-top: -15px;
+					font-size: 20px;
+					line-height: 30px;
+					color: #3FBEBC;
+					font-family: $fa;
+					font-weight: 400;
+					transition: all .2s;
+				}
+			}
+		}
+		&--content {
+			display: none;
+			font-size: 14px;
+			line-height: 20px;
+			padding: 0 0 20px;
+		}
+		@media (max-width: 1023px) {
+			&--item {
+				> a {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

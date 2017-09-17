@@ -1,0 +1,42 @@
+.btn {
+	position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: transparent;
+  transition: all .2s;
+  touch-action: manipulation;
+  &--primary,
+  &--secondary {
+  	padding: 15px 20px;
+  	font-family: $oswald;
+  	font-size: 20px;
+  	color: $white;
+  	text-transform: uppercase;
+  	background: linear-gradient(to bottom, rgba(63,190,188,1) 0%,rgba(29,158,156,1) 100%);
+  	border-radius: 6px;
+  }
+  &--secondary {
+    background: linear-gradient(to bottom, #4A5477 0%,#242B45 100%);
+  }
+  &--default {
+  	padding: 9px 19px;
+  	border: 1px solid $black;
+  	font-size: 12px;
+  	line-height: 20px;
+  	color: $black;
+  	font-weight: 600;
+  	text-transform: uppercase;
+  	border-radius: 3px;
+  	&:hover {
+  		color: $white;
+  		background: $black;
+  	}
+  }
+}

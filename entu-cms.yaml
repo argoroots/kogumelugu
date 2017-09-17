@@ -2,7 +2,7 @@ locales:
     - et
     - en
 
-source: ./tmp_source
+source: ./source
 build: ./build
 assets: ./assets
 
@@ -12,7 +12,7 @@ protectedFromCleanup:
     - index.html
 
 jade:
-    basedir: ./tmp_source/_templates
+    basedir: ./source/_templates
     pretty: false
 markdown:
     html: true

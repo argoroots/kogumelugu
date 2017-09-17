@@ -1,0 +1,206 @@
+[
+	{
+		"id": 2218,
+		"name": "Mari Teedla",
+		"info": "",
+		"video": "183267205",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1945"
+		],
+		"regions": [
+			{
+				"place": "Tallinn",
+				"lat": 59.244776,
+				"lng": 25.6706793
+			},
+			{
+				"place": "Cluster",
+				"lat": 63.3370537,
+				"lng": 39.2049223
+			},
+			{
+				"place": "Cluster",
+				"lat": 63.3370537,
+				"lng": 39.2029223
+			},
+			{
+				"place": "Cluster",
+				"lat": 63.3170537,
+				"lng": 39.2049223
+			},
+			{
+				"place": "Cluster",
+				"lat": 63.3270537,
+				"lng": 39.2049223
+			},
+			{
+				"place": "Cluster",
+				"lat": 63.3070537,
+				"lng": 39.2049223
+			},
+			{
+				"place": "Cluster",
+				"lat": 63.3670537,
+				"lng": 39.2049223
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 1176,
+		"name": "Armas Sootaru",
+		"info": "Omakaitselane Teise maailmasõja sõjakeerises",
+		"video": "168922800",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1929"
+		],
+		"regions": [
+			{
+				"place": "Siber",
+				"lat": -58.705148,
+				"lng": 26.021329
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 2224,
+		"name": "Kaja Weeks",
+		"info": "Lühike klipp - 4min",
+		"video": "183447171",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1952"
+		],
+		"regions": [
+			{
+				"place": "Narva",
+				"lat": 59.113617,
+				"lng": 24.175626
+			},
+			{
+				"place": "Haapsalu",
+				"lat": 77.144789,
+				"lng": 103.795979
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 2219,
+		"name": "Peter Teedla",
+		"info": "",
+		"video": "183267133",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1946"
+		],
+		"regions": [
+			{
+				"place": "Pärnu",
+				"lat": 62.191348,
+				"lng": 90.108633
+			},
+			{
+				"place": "Tallinn",
+				"lat": 64.493093,
+				"lng": 106.712637
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 1587,
+		"name": "Arnet Keskmäe",
+		"info": "Soomepoisi mälestused",
+		"video": "53EPWT3OzAo",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1924"
+		],
+		"regions": [
+			{
+					"place": "Narva",
+					"lat": 64.456127,
+    			"lng": 107.827829
+			},
+			{
+					"place": "Tallinn",
+					"lat": 62.527412,
+    			"lng": 93.397016
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 2220,
+		"name": "Tiina Ets",
+		"info": "",
+		"video": "183267077",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1953"
+		],
+		"regions": [
+			{
+				"place": "Paide",
+				"lat": 66.377059,
+    		"lng": 155.096234
+			},
+			{
+				"place": "Viljandi",
+				"lat": 32.852279,
+    		"lng": -105.623788
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 2222,
+		"name": "Priit Vesilind",
+		"info": "Lühike klipp - 7min",
+		"video": "183447174",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1943"
+		],
+		"regions": [
+			{
+				"place": "Türi",
+				"lat": 32.556450,
+    		"lng": -104.129648
+			},
+			{
+				"place": "Kuressaare",
+				"lat": -37.151204,
+    		"lng": 147.061757
+			}
+		],
+		"subjects": []
+	},
+	{
+		"id": 2225,
+		"name": "Imbi Truumees",
+		"info": "",
+		"video": "182705532",
+		"image": "/assets/images/data/mappopupimg.png",
+		"generations": [
+			"1932"
+		],
+		"regions": [
+			{
+				"place": "Tartu",
+				"lat": -37.221224,
+    		"lng": 148.555898
+			},
+			{
+				"place": "Valga",
+				"lat": -37.500656,
+    		"lng": 147.852773
+			}
+		],
+		"subjects": []
+	}
+]

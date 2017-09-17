@@ -1,42 +1,29 @@
-.footer
-    .container
-        .row
-            .col-md-4.logosfooter
-                a(href='http://mnemosyne.ee' target='_blank')
-                    img.img-responsive.unitaslogo(src='/assets/img/must_logo.png')
+mixin footer
+	footer.footer
+		.u-container.footer--content
+			a.emi-logo(href="http://mnemosyne.ee/")
+				img(src="/assets/images/emi-white.png", alt="Eesti Mälu Instituut")
+			.footer--data
+				h3 Eesti Mälu Instituut
+				ul
+					li
+						i.fa.fa-envelope
+						a(href="http://mnemosyne.ee") mnemosyne.ee
+					li
+						i.fa.fa-phone
+						| +372 664 5039
+					li
+						i.fa.fa-phone
+						| +372 648 4962
+					li
+						i.fa.fa-map-marker
+						| Suur-Ameerika 12-39, 10119 Tallinn
 
-            .col-md-3
-                +markdown(G.contact)
-            .col-md-1.socialfooter
-                ul
-                    a(href='http://mnemosyne.ee', target='_blank')
-                        li
-                            img(src='/assets/img/webicon.svg')
-                    a(href='https://www.facebook.com/KoguMeLugu/', target='_blank')
-                        li
-                            img(src='/assets/img/facebooksocialicon.svg')
-                    a(href='https://twitter.com/UnitasFNDN', target='_blank')
-                        li
-                            img(src='/assets/img/twittersocialicon.svg')
-            .col-md-4.mailfooter
-                p
-                    b Telli Kogu Me Lugu uudiskiri
-
-                // Begin MailChimp Signup Form
-                form#mc-embedded-subscribe-form.validate(action='//unitasfoundation.us6.list-manage.com/subscribe/post?u=4fddc06b8b5a01ff32f8f7578&id=1c3ce8501a', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                    #mc_embed_signup_scroll
-                        .mc-field-group
-                        input#mce-FNAME.required(type='text', value='*', name='FNAME', style='display:none')
-                        .mc-field-group
-                        input#mce-LNAME.required(type='text', value='*', name='LNAME', style='display:none')
-                        .mc-field-group
-                        input#mce-EMAIL.required.email.form-control(type='email', value='', name='EMAIL', placeholder=G.email)
-                        #mce-responses.clear
-                        #mce-error-response.alert.alert-danger.response(style='display:none')
-                        #mce-success-response.alert.alert-success.response(style='display:none')
-
-                        div(style='position: absolute; left: -5000px;height:0;', aria-hidden='true')
-                            input(type='text', name='b_4fddc06b8b5a01ff32f8f7578_1c3ce8501a', tabindex='-1', value='')
-                        .clear
-                        input#mc-embedded-subscribe.btn.btn-submit(type='submit', value=G.subscribe, name='subscribe')
-                script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+			.footer--social
+				ul
+					li
+						a(href="")
+							i.fa.fa-facebook-square
+					li
+						a(href="")
+							i.fa.fa-instagram
