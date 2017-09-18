@@ -1,34 +1,34 @@
 locales:
-    - et
-    - en
+  - et
+  - en
 
 source: ./source
 build: ./build
 assets: ./assets
 
 protectedFromCleanup:
-    - .git
-    - assets
-    - index.html
+  - .git
+  - assets
+  - index.html
 
 jade:
-    basedir: ./source/_templates
-    pretty: false
+  basedir: ./source/_templates
+  pretty: false
 markdown:
-    html: true
-    breaks: true
+  html: true
+  breaks: true
 stylus:
-    pretty: false
+  pretty: false
 javascript:
-    pretty: false
+  pretty: false
 
 server:
-    port: 4000
-    assets: /assets/
+  port: 4000
+  assets: /assets/
 
 cleanup:
-    delete: true
+  delete: true
 
 dev:
-    aliases: true
-    paths:
+  aliases: true
+  paths:
