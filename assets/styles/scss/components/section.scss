@@ -1,49 +1,49 @@
 .section {
-	padding: 100px 0;
-	background: $white;
-	&--content {
-		position: relative;
-		z-index: 2;
-	}
-	&--title {
-		margin-bottom: 40px;
-		font-size: 60px;
-		line-height: 60px;
-		font-weight: 300;
-		text-transform: uppercase;
-		strong {
-			display: block;
-			font-weight: 700;
-		}
-	}
-	&--subtitle {
-		margin-bottom: 20px;
-		font-size: 30px;
-		line-height: 30px;
-		font-weight: 300;
-		text-transform: uppercase;
-	}
-	@media (max-width: 1023px) {
-		padding: 40px 0;
-		&--title {
-			font-size: 40px;
-			line-height: 40px;
-			margin-bottom: 20px;
-		}
-		&--subtitle {
-			font-size: 24px;
-			line-height: 30px;
-		}
-	}
-	@media (max-width: 480px) {
-		padding: 40px 0;
-		&--title {
-			font-size: 30px;
-			line-height: 30px;
-		}
-		&--subtitle {
-			font-size: 18px;
-			line-height: 25px;
-		}
-	}
+  padding: 100px 0;
+  background: $white;
+  &--content {
+    position: relative;
+    z-index: 2;
+  }
+  &--title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    strong {
+      display: block;
+      font-weight: 700;
+    }
+  }
+  &--subtitle {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  @media (max-width: 1023px) {
+    padding: 40px 0;
+    &--title {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+    &--subtitle {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 40px 0;
+    &--title {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    &--subtitle {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
 }

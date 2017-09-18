@@ -1,34 +1,34 @@
 menu:
-    -
-        link: /en/video
-        text: Videos
-    -
-        link: '#tutvustus'
-        text: Introduction
-    -
-        link: '#sinulugu'
-        text: Submit Story
-    # -
-    #     link: '#teemad'
-    #     text: Topics
-    -
-        link: '#toetajad'
-        text: Team
-    -
-        link: '#toeta'
-        text: Support Us
+  -
+    link: /en/video
+    text: Videos
+  -
+    link: '#tutvustus'
+    text: Introduction
+  -
+    link: '#sinulugu'
+    text: Submit Story
+  # -
+  #   link: '#teemad'
+  #   text: Topics
+  -
+    link: '#toetajad'
+    text: Team
+  -
+    link: '#toeta'
+    text: Support Us
 
 contact: |
-    **Eesti Mälu Instituut**
-    <info@mnemosyne.ee>
-    (+372) 6645 039
-    Suur-Ameerika 12, 10119 Tallinn
+  **Eesti Mälu Instituut**
+  <info@mnemosyne.ee>
+  (+372) 6645 039
+  Suur-Ameerika 12, 10119 Tallinn
 
 carouselMessage:
-    - Igaühel meist on oma lugu
-    - Oma roll teiste lugudes
-    - Eesti lugu, kogu me lugu
-    - Kõik me pärime oma kultuuri
+  - Igaühel meist on oma lugu
+  - Oma roll teiste lugudes
+  - Eesti lugu, kogu me lugu
+  - Kõik me pärime oma kultuuri
 
 author: Author
 email: Your e-mail address
@@ -55,9 +55,9 @@ thanksTo: Thanks to
 teamMembers: Team members
 supporters: Supporters
 unitasInfo: |
-    ###  Initiated by
-    **The Unitas Foundation**
+  ###  Initiated by
+  **The Unitas Foundation**
 
-    The Unitas Foundation, founded in 2008 in Tallinn, is one of the founding members of the European Platform of Memory and Conscience. Dedicated to the advancement of history education and human rights culture, the foundation aims to raise awareness of the inhumanity of totalitarian regimes and ideologies and to pursue the international condemnation of their crimes.
+  The Unitas Foundation, founded in 2008 in Tallinn, is one of the founding members of the European Platform of Memory and Conscience. Dedicated to the advancement of history education and human rights culture, the foundation aims to raise awareness of the inhumanity of totalitarian regimes and ideologies and to pursue the international condemnation of their crimes.
 
-    [unitas.ee](http://unitas.ee)
+  [unitas.ee](http://unitas.ee)

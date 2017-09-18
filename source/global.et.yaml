@@ -1,34 +1,34 @@
 menu:
-    -
-        link: /et/video
-        text: Videoteek
-    -
-        link: '#tutvustus'
-        text: Tutvustus
-    -
-        link: '#sinulugu'
-        text: Saada lugu
-    # -
-    #     link: '#teemad'
-    #     text: Teemad
-    -
-        link: '#toetajad'
-        text: Tegijad
-    -
-        link: '#toeta'
-        text: Toeta
+  -
+    link: /et/video
+    text: Videoteek
+  -
+    link: '#tutvustus'
+    text: Tutvustus
+  -
+    link: '#sinulugu'
+    text: Saada lugu
+  # -
+  #   link: '#teemad'
+  #   text: Teemad
+  -
+    link: '#toetajad'
+    text: Tegijad
+  -
+    link: '#toeta'
+    text: Toeta
 
 contact: |
-    **Eesti Mälu Instituut**
-    <info@mnemosyne.ee>
-    (+372) 6645 039
-    Suur-Ameerika 12, 10119 Tallinn
+  **Eesti Mälu Instituut**
+  <info@mnemosyne.ee>
+  (+372) 6645 039
+  Suur-Ameerika 12, 10119 Tallinn
 
 carouselMessage:
-    - Igaühel meist on oma lugu
-    - Oma roll teiste lugudes
-    - Eesti lugu, kogu me lugu
-    - Kõik me pärime oma kultuuri
+  - Igaühel meist on oma lugu
+  - Oma roll teiste lugudes
+  - Eesti lugu, kogu me lugu
+  - Kõik me pärime oma kultuuri
 
 author: Autor
 email: Sinu e-posti aadress
@@ -55,9 +55,9 @@ thanksTo: Tänusõnad kaastegutsejatele
 teamMembers: Meeskonnaliikmed
 supporters: Toetajad ja hooandjad
 unitasInfo: |
-    ### Algataja
-    **Sihtasutus Unitas**
+  ### Algataja
+  **Sihtasutus Unitas**
 
-    Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
+  Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
 
-    [unitas.ee](http://unitas.ee)
+  [unitas.ee](http://unitas.ee)

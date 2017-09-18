@@ -2,16 +2,16 @@ body,
 input,
 textarea,
 select {
-	font-family: $opensans;
-	font-size: $fz;
-	line-height: $lh;
-	color: $text-color;
-	margin: 0;
+  font-family: $opensans;
+  font-size: $fz;
+  line-height: $lh;
+  color: $text-color;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
-	transition: all .2s;
+  text-decoration: none;
+  transition: all .2s;
 }
 
 h1,
@@ -20,208 +20,208 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $oswald;
+  font-family: $oswald;
 }
 
 .u-container {
-	width: 1200px;
-	max-width: 100%;
-	margin: 0 auto;
-	padding: 0 20px;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .wrap {
-	display: flex;
-	flex-direction: column;
-	padding-top: 100px;
-	@media (max-width: 1023px) {
-		padding-top: 60px;
-	}
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  @media (max-width: 1023px) {
+    padding-top: 60px;
+  }
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	flex-shrink: 0;
-	padding: 35px;
-	width: 100%;
-	height: 100px;
-	background: $white;
-	box-shadow: 0 0 2px rgba(0,0,0,.2);
-	z-index: 9999;
-	.u-container {
-		display: flex;
-		align-items: center;
-	}
-	.logo {
-		display: flex;
-		justify-content: center;
-		width: 160px;
-		margin-right: 20px;
-		flex-shrink: 0;
-		height: 30px;
-		.header-fixed & {
-			img {
-				height: 80px;
-				margin: -25px 0 -25px 0;
-			}
-		}
-		img {
-			display: block;
-			max-width: 100%;
-			height: 153px;
-			margin: -15px 0 -93px 0;
-			transition: all .2s;
-		}
-	}
-	@media (max-width: 1023px) {
-		padding: 10px 0;
-		height: 60px;
-		.logo {
-			width: auto;
-			.header-fixed & {
-				img {
-					height: 80px;
-					margin: -5px 0 -93px;
-				}
-			}
-			img {
-				height: 80px;
-				margin: -5px 0 -93px;
-			}
-		}
-	}
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  flex-shrink: 0;
+  padding: 35px;
+  width: 100%;
+  height: 100px;
+  background: $white;
+  box-shadow: 0 0 2px rgba(0,0,0,.2);
+  z-index: 9999;
+  .u-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    height: 30px;
+    .header-fixed & {
+      img {
+        height: 80px;
+        margin: -25px 0 -25px 0;
+      }
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: 153px;
+      margin: -15px 0 -93px 0;
+      transition: all .2s;
+    }
+  }
+  @media (max-width: 1023px) {
+    padding: 10px 0;
+    height: 60px;
+    .logo {
+      width: auto;
+      .header-fixed & {
+        img {
+          height: 80px;
+          margin: -5px 0 -93px;
+        }
+      }
+      img {
+        height: 80px;
+        margin: -5px 0 -93px;
+      }
+    }
+  }
 }
 
 .main {
-	flex: 1;
-	&.has-sidebar {
-		display: flex;
-		align-items: flex-start;
-		@media (max-width: 1023px) {
-			display: block;
-		}
-	}
+  flex: 1;
+  &.has-sidebar {
+    display: flex;
+    align-items: flex-start;
+    @media (max-width: 1023px) {
+      display: block;
+    }
+  }
 }
 
 .content {
-	flex: 1;
-	margin: 40px 0;
-	.u-content {
-		font-size: 16px;
-		line-height: 30px;
-	}
+  flex: 1;
+  margin: 40px 0;
+  .u-content {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 
 .sidebar {
-	width: 260px;
-	flex-shrink: 0;
-	margin: 40px 0 20px 40px;
-	@media (max-width: 1023px) {
-		width: 100%;
-		margin: 40px 0;
-	}
-	h2 {
-		font-size: 20px;
-		line-height: 20px;
-		text-transform: uppercase;
-		margin-bottom: 20px;
-	}
+  width: 260px;
+  flex-shrink: 0;
+  margin: 40px 0 20px 40px;
+  @media (max-width: 1023px) {
+    width: 100%;
+    margin: 40px 0;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
 }
 
 .footer {
-	padding: 40px 0;
-	color: $white;
-	font-size: 14px;
-	line-height: 20px;
-	background: $black;
-	&--content {
-		display: flex;
-		align-items: center;
-	}
-	&--data {
-		h3 {
-			margin-bottom: 20px;
-			text-transform: uppercase;
-			font-size: 20px;
-			font-weight: 300;
-		}
-		ul {
-			li {
-				display: flex;
-				align-items: flex-start;
-				margin-top: 10px;
-				&:first-child {
-					margin-top: 0;
-				}
-				i {
-					display: block;
-					width: 16px;
-					margin-right: 4px;
-					line-height: 20px;
-					text-align: center;
-				}
-				a {
-					color: $white;
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
-	&--social {
-		margin-left: auto;
-		ul {
-			display: flex;
-			li {
-				display: block;
-				a {
-					display: block;
-					color: $white;
-					text-align: center;
-					&:hover {
-						i {
-							transform: scale(1.1);
-						}
-					}
-					i {
-						display: block;
-						width: 60px;
-						height: 60px;
-						font-size: 42px;
-						line-height: 60px;
-						transition: all .2s;
-					}
-				}
-			}
-		}
-	}
-	.emi-logo {
-		display: block;
-		width: 260px;
-		margin-right: 40px;
-		flex-shrink: 0;
-		img {
-			display: block;
-		}
-	}
-	@media (max-width: 768px) {
-		&--content {
-			flex-wrap: wrap;
-		}
-		&--data {
-			width: 100%;
-			margin-bottom: 20px;
-		}
-		&--social {
-			width: 100%;
-		}
-		.emi-logo {
-			width: 260px;
-			margin: 0 auto 20px;
-		}
-	}
+  padding: 40px 0;
+  color: $white;
+  font-size: 14px;
+  line-height: 20px;
+  background: $black;
+  &--content {
+    display: flex;
+    align-items: center;
+  }
+  &--data {
+    h3 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 10px;
+        &:first-child {
+          margin-top: 0;
+        }
+        i {
+          display: block;
+          width: 16px;
+          margin-right: 4px;
+          line-height: 20px;
+          text-align: center;
+        }
+        a {
+          color: $white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &--social {
+    margin-left: auto;
+    ul {
+      display: flex;
+      li {
+        display: block;
+        a {
+          display: block;
+          color: $white;
+          text-align: center;
+          &:hover {
+            i {
+              transform: scale(1.1);
+            }
+          }
+          i {
+            display: block;
+            width: 60px;
+            height: 60px;
+            font-size: 42px;
+            line-height: 60px;
+            transition: all .2s;
+          }
+        }
+      }
+    }
+  }
+  .emi-logo {
+    display: block;
+    width: 260px;
+    margin-right: 40px;
+    flex-shrink: 0;
+    img {
+      display: block;
+    }
+  }
+  @media (max-width: 768px) {
+    &--content {
+      flex-wrap: wrap;
+    }
+    &--data {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &--social {
+      width: 100%;
+    }
+    .emi-logo {
+      width: 260px;
+      margin: 0 auto 20px;
+    }
+  }
 }

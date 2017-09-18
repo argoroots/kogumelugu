@@ -1,16 +1,16 @@
 .article {
-	> h1 {
-		font-weight: 300;
-		font-size: 60px;
-		line-height: 60px;
-		margin: 80px 0 40px;
-	}
-	.u-content {
-		font-size: 16px;
-		line-height: 30px;
-	}
-	footer {
-		margin-top: 20px;
+  > h1 {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 60px;
+    margin: 80px 0 40px;
+  }
+  .u-content {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  footer {
+    margin-top: 20px;
     font-size: 14px;
     line-height: 20px;
     .details {
@@ -22,14 +22,14 @@
         padding: 0 20px 0 0;
         border-right: 2px solid #F7F7F7;
         b {
-        	font-weight: bold;
+          font-weight: bold;
         }
         a {
-        	text-decoration: underline;
-        	color: $text-color;
-        	&:hover {
-        		color: $green;
-        	}
+          text-decoration: underline;
+          color: $text-color;
+          &:hover {
+            color: $green;
+          }
         }
         &:last-child {
           margin: 0;
@@ -40,22 +40,22 @@
     }
   }
   @media (max-width: 1023px) {
-  	> h1 {
-  		font-size: 50px;
-  		line-height: 50px;
-  		word-break: break-word;
-  		margin-top: 40px;
-  	}
-  	.u-content {
-  		font-size: 14px;
-  		line-height: 20px;
-  	}
+    > h1 {
+      font-size: 50px;
+      line-height: 50px;
+      word-break: break-word;
+      margin-top: 40px;
+    }
+    .u-content {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   @media (max-width: 768px) {
-  	> h1 {
-  		font-size: 40px;
-  		line-height: 40px;
-  		margin-bottom: 20px;
-  	}
+    > h1 {
+      font-size: 40px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
   }
 }
