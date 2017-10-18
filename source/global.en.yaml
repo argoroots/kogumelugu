@@ -3,20 +3,20 @@ menu:
     link: /en/video
     text: Videos
   -
-    link: '#tutvustus'
+    link: '/en/tags'
+    text: Tags
+  -
+    link: '/en/materials'
+    text: Materials
+  -
+    link: '/en#tutvustus'
     text: Introduction
   -
-    link: '#sinulugu'
-    text: Submit Story
-  # -
-  #   link: '#teemad'
-  #   text: Topics
-  -
-    link: '#toetajad'
+    link: '/en#tegijad'
     text: Team
   -
-    link: '#toeta'
-    text: Support Us
+    link: '/en#toeta'
+    text: Support
 
 contact: |
   **Eesti Mälu Instituut**

@@ -14,8 +14,8 @@ source ./secure.sh
 # before_script:
 echo
 echo --------- PREFETCH
-rm -rf ${TMP_SOURCE_DIR}
-mkdir ${TMP_SOURCE_DIR}
+# rm -rf ${TMP_SOURCE_DIR}
+# mkdir ${TMP_SOURCE_DIR}
 cp -r ${SOURCE_DIR}/* ${TMP_SOURCE_DIR}
 
 rm -rf ${BUILD_DIR}

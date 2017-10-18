@@ -3,19 +3,19 @@ menu:
     link: /et/video
     text: Videoteek
   -
-    link: '#tutvustus'
+    link: '/et/tags'
+    text: Teemad
+  -
+    link: '/et/materials'
+    text: Õppematerjalid
+  -
+    link: '/et#tutvustus'
     text: Tutvustus
   -
-    link: '#sinulugu'
-    text: Saada lugu
-  # -
-  #   link: '#teemad'
-  #   text: Teemad
-  -
-    link: '#toetajad'
+    link: '/et#tegijad'
     text: Tegijad
   -
-    link: '#toeta'
+    link: '/et#toeta'
     text: Toeta
 
 contact: |

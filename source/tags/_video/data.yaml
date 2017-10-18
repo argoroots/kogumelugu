@@ -1,4 +1,4 @@
 page:
   data:
-    # videos: ./data/videos.yaml
+    # F.video
     video: video.yaml

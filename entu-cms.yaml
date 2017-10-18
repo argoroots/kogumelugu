@@ -2,7 +2,7 @@ locales:
   - et
   - en
 
-source: ./source
+source: ./tmp_source
 build: ./build
 assets: ./assets
 

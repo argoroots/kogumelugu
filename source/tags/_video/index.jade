@@ -1,0 +1,104 @@
+include /head
+include /header
+include /searchbox
+include /map
+include /footer
+include /scripts
+
++head('Heino Noor')
+
+.wrap
+
+  +header('videos.html')
+
+  +searchbox
+
+  main.main.has-sidebar.u-container
+    .content
+      article.article
+        .u-content
+          .video-wrapper
+            <iframe id="video" src="https://player.vimeo.com/video/178434256#t=0?autopause=1&amp;autoplay=0&amp;badge=0&amp;byline=0&amp;loop=0&amp;portrait=0&amp;title=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+          h1 Heino Noor
+          p Heino Noor annab ülevaate oma raskest eluteest, eelkõige vanemate hukkamisest ja kaheksast aastast Siberi vangilaagris.
+
+        footer
+          ul.details
+            li Intervjueeritav
+              b Heino Noor
+            li Intervjueerija
+              b Anna Hints
+            li
+              a(href="") Seotud tunnikava Etiam Parturient
+
+          div.tags
+            ul.tags--list
+              li
+                a(href="") Heino Noor
+              li
+                a.u-red(href="") Quam Cras
+              li
+                a.u-purple(href="") Euismod
+              li
+                a.u-green(href="") Ipsum Commodo
+              li
+                a.u-orange(href="") Parturient
+              li
+                a.u-blue(href="") Parturient
+            a(href="teemad.html") Näita kõiki (54)
+
+      mixin map(false)
+
+    aside.sidebar
+      section.videos--related
+        h2 Seotud videod
+        article.videos--item(style="background-image:url(images/data/ruth.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Ruth Sootaru (Pärntits)
+              p Täispikk intervjuu
+
+        article.videos--item(style="background-image:url(images/data/kalju.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Kalju Mätik
+              p Nõukogudeaegne vastupanuliikumine ja selle mahasurumise meetodid
+
+        article.videos--item(style="background-image:url(images/data/adam.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Adam Brown
+              p Eesti päritolu väärtustamine
+
+        article.videos--item(style="background-image:url(images/data/sander.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Sander Tuul
+              p Videolugu
+
+        article.videos--item(style="background-image:url(images/data/kaja.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Kaja Weeks
+
+        article.videos--item(style="background-image:url(images/data/sale.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Sale Katrin Marits
+              p Täispikk intervjuu
+
+        article.videos--item(style="background-image:url(images/data/viivianne.png)")
+          a(href="video-detail.html")
+            .text
+              h3
+                span Viivianne Vaike  Malmgren
+              p Usu roll küüditamise ja Siberi-aastate üleelamisel
+
+  +footer
++scripts
