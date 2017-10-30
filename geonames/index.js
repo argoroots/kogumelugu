@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const YAML = require('yamljs')
 
-const fetch = require('./fetch.js')
+const fetch = require('./geofetch.js')
 
 const rl = readline.createInterface({
   input: require('fs').createReadStream('places.txt'),
