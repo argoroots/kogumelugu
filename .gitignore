@@ -3,3 +3,4 @@ tmp_source
 build
 
 secure.sh
+geonames/data
