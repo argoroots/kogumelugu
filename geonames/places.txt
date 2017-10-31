@@ -1,3 +1,159 @@
+Prague
+France
+Princeton
+Pudisoo
+Puerto Rico
+Puhja
+Puka
+Puurmani
+Põltsamaa
+Põlva
+Põlvamaa
+Pärnu
+Pärnu-Jaagupi
+Pärnumaa
+Pööravere
+Pööravere Primary School
+Pühajärve
+Raasiku
+Rakke
+Rakvere
+Rannu
+Rapla
+Raplamaa
+Rauma
+Ruszów (Rauscha)
+Richmond
+Ridala
+Riga
+Riisipere
+Risti
+Risti Railway Station
+Sweden
+Rosenheim
+Rostock
+Rottweil
+Ruhr
+Romania
+Rõhu
+Rõngu
+Rügen
+Saaremaa
+Sacramento
+Sakhalin
+Germany
+Salme
+Salzburg
+Salt Lake City
+Zambia
+San Fransisco
+San Jose
+San Leandro
+Sangaste
+Sattendorf
+Sauga
+Swabia
+Schwanheide
+Schwarzenbek
+Schwerin
+Schwäbisch Hall
+Seabrook
+Seattle
+Seliste
+Setomaa
+Sevastopol
+Siberia
+Silesia
+Sillamäe
+Singapore
+Sinimäe
+Smolensk
+Sompa
+Finland
+Volgograd (Stalingrad)
+Stanford
+Stavropol Krai
+Stockholm
+Stuttgart
+Sudetenland
+Suomenlinna
+Great Britain
+Svaneholms
+Yekaterinburg (Sverdlovsk)
+Sõmerpalu
+Sõmeru
+Sõrve Peninsula
+Sääla
+Syria
+Sydney
+Syracuse
+Scotland
+Switzerland
+Danmark
+Taiwan
+Tallinn
+Tammese
+Tammiku
+Tampere
+Tamsalu
+Tapa
+Tartu
+University of Tartu
+Tartumaa
+Texas
+Thuringia
+Tomsk
+Tomsk Oblast
+Torgu
+Toronto
+Tsirguliina
+Chany
+Czech Republic (Czechoslovakia)
+Cherepanovo
+Tukums
+Turku
+Tõhela
+Tõhela Primary School
+Tõhela Dairy
+Tõnismäe Hospital
+Tõravere
+Tõstamaa
+Tähtvere
+Turkey
+Tynningö
+Tyresö
+Uddevalla
+Ufa
+Uffing
+Ukraine
+Ulm
+Uppsala
+Uržum
+USA
+Oust Ousa, Komi
+Utah
+Uue-Kariste
+New Zealand
+Vaasa
+Vabaduse boulevard
+Vabriku street
+Vainu
+Valga
+Valgamaa
+Belarus
+Vancouver
+Varbola
+Vasalemma
+Vastseliina
+Vastemõisa
+Velikiye Luki
+Velise
+Russia
+Ventspils
+Vietnam
+Vigala
+Vigala Parish
+Viimsi
 Vienna
 Viljandi
 Viljandimaa

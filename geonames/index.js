@@ -29,12 +29,13 @@ rl.on('close', () => {
         console.log('Place "' + place + '" processed')
         // console.log('PlaceData', YAML.stringify(placeData))
         let filename = path.join('data', place + '.yaml')
-        fs.writeFile(filename, YAML.stringify(placeData), (err) => {
-          if (err) throw err
-        })
+        csvWrite(placeData)
+        // fs.writeFile(filename, YAML.stringify(placeData), (err) => {
+        //   if (err) throw err
+        // })
         setTimeout(function () {
           callback()
-        }, 5000)
+        }, 20)
       })
     }
   }, (err) => {
@@ -47,11 +48,24 @@ rl.on('close', () => {
 })
 
 
-// rl.on('line', function (line) {
-//   rl.pause()
-//   console.log('Line from file:', line)
-//   fetch(line, () => {
-//     console.log('done with ' + line)
-//     rl.resume()
-//   })
-// })
+FIELDS = [ 'query', 'lng', 'lat', 'toponymName', 'geonameId', 'name-en',
+  'countryId', 'countryName-en', 'name-et', 'countryName-et', 'name-ru',
+  'countryName-ru' ]
+const CSVSTREAM = fs.createWriteStream('places.csv')
+CSVSTREAM.write(FIELDS.join(', ') + '\n')
+
+const csvWrite = function csvWrite(place) {
+  CSVSTREAM.write(
+    FIELDS
+      .map(function(field) {
+        let ret_val = place[field] ? place[field] : ''
+        try {
+          return '"' + ret_val.replace(/"/g, '""') + '"'
+        } catch (e) {
+          console.log({ place:place, field:field, ret_val:ret_val })
+          throw e
+        }
+      })
+      .join(', ') + '\n'
+  )
+}

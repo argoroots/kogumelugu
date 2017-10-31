@@ -10,6 +10,7 @@ module.exports = (cityname, callback) => {
     placeData = {
       query: cityname,
       setProperty: (key, val, callback) => {
+        val = String(val)
         if (placeData[key] === undefined) {
           placeData[key] = val
         } else if (placeData[key] !== val) {
@@ -36,12 +37,12 @@ module.exports = (cityname, callback) => {
           if (parsedData === undefined) {
             return callback()
           }
+          placeData.setProperty('geonameId', parsedData['geonameId'], callback)
+          placeData.setProperty('countryId', parsedData['countryId'], callback)
           placeData.setProperty('lng', parsedData['lng'], callback)
           placeData.setProperty('lat', parsedData['lat'], callback)
           placeData.setProperty('toponymName', parsedData['toponymName'], callback)
-          placeData.setProperty('geonameId', parsedData['geonameId'], callback)
           placeData.setProperty('name-' + language, parsedData['name'], callback)
-          placeData.setProperty('countryId', parsedData['countryId'], callback)
           placeData.setProperty('countryName-' + language, parsedData['countryName'], callback)
           callback()
         })
