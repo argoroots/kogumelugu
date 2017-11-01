@@ -9,13 +9,13 @@ block vars
 block content
     main.main
         .hero(style='background-image:url(/assets/images/' + videos[0].path + '.jpg)')
-            a.main-post(href=self.locale + '/' + videos[0].path)
+            a.main-post(href='/' + self.locale + '/' + videos[0].path)
                 .text
                     h2= videos[0]['title_' + self.locale]
                     p= videos[0]['description_' + self.locale]
             .posts-list
                 each v in videos.slice(1, 5)
-                    a(href=self.locale + '/' + v.path, style='background-image:url(/assets/images/' + v.path + '.jpg)')
+                    a(href='/' + self.locale + '/' + v.path, style='background-image:url(/assets/images/' + v.path + '.jpg)')
                         h3= v['title_' + self.locale]
                         p= v['description_' + self.locale]
 
