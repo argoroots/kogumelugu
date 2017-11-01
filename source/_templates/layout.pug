@@ -1,3 +1,7 @@
+-
+    const title = self.title ? self.title + ' · Kogu Me Lugu!' : 'Kogu Me Lugu!'
+
+
 doctype html
 html(lang=self.locale)
     head
@@ -5,7 +9,7 @@ html(lang=self.locale)
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='description', content='')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        title #{self.title} · Kogu Me Lugu!
+        title= title
 
         //- Disable tap highlight on IE
         meta(name='msapplication-tap-highlight', content='no')
