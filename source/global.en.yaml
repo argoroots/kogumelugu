@@ -1,7 +1,7 @@
 menu:
     -
         title: Videos
-        path: /en/video
+        path: /en/videos
     -
         title: Tags
         path: /en/tags
@@ -10,13 +10,13 @@ menu:
         path: /en/materials
     -
         title: Introduction
-        path: /en/#tutvustus
+        path: /en/#introduction
     -
         title: Team
-        path: /en/#tegijad
+        path: /en/#team
     -
         title: Support
-        path: /en/#toeta
+        path: /en/#support
 
 contact: |
     **Eesti Mälu Instituut**

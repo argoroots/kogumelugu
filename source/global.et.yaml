@@ -1,13 +1,13 @@
 menu:
     -
         title: Videoteek
-        path: /et/video
+        path: /et/videoteek
     -
         title: Teemad
-        path: /et/tags
+        path: /et/teemad
     -
         title: Õppematerjalid
-        path: /et/materials
+        path: /et/oppematerjalid
     -
         title: Tutvustus
         path: /et/#tutvustus
