@@ -7,15 +7,20 @@ blocks:
             ## Ajalooõpe
             ### Kasutusvõimalused
 
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
+            Morbi aliquet pellentesque nibh, in varius justo efficitur eu. Mauris volutpat neque non metus gravida pretium. Donec a mollis tellus, eget tempus purus.
         links:
             -
-                title: Metoodika.pdf
+                title: Integer pellentesque sapien.pdf
                 icon: fa-download
                 link:
-                info: (352KB, PDF)
+                info: (552KB, PDF)
             -
-                title: Teemad
+                title: Vivamus a quam nunc.pdf
+                icon: fa-download
+                link:
+                info: (152KB, PDF)
+            -
+                title: Nam aliquam
                 icon: fa-list
                 link:
                 info:
@@ -23,67 +28,72 @@ blocks:
             title: Tunnikavad
             items:
                 -
-                    title: Egestas Elit Malesuada
+                    title: Nullam malesuada
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                        Etiam nec elit at velit faucibus posuere eu eget orci. Phasellus nec diam in ante scelerisque mattis vitae at purus.
                     links:
                         -
-                            title: Metoodika.pdf
+                            title: Nunc accumsan suscipit.pdf
                             icon: fa-download
                             link:
                             info: (352KB, PDF)
                     videos:
                         -
-                            path: video/adam-brown
+                            path: video/interview/adam_brown
                             title: Adam Brown
                             text: |
-                                Eesti päritolu väärtustamine
+                                Donec a mollis tellus, eget tempus purus.
+                -
+                    title: Donec maximus erat tellus
+                    text: |
+                        Nulla convallis, ante sed gravida porttitor, erat ante consequat quam, in lobortis metus nulla at dolor. Quisque pharetra tristique vehicula.
+                    videos:
+                        -
+                            path: video/interview/heino_noor
+                            title: Heino Noor
+                            text: |
+                                Etiam facilisis, eros eu eleifend facilisis.
+                -
+                    title: Nam aliquam commodo orci eget pellentesque
+                    text: |
+                        Suspendisse non pulvinar sapien, ac congue lorem. Cras tempus lorem eget diam dictum, vitae consequat arcu tempor. In scelerisque et tortor malesuada vestibulum.
+                    links:
+                        -
+                            title: Maecenas tristique lectus.pdf
+                            icon: fa-download
+                            link:
+                            info: (22MB, PDF)
 
     -
         text: |
             ## Inimõiguste õpe
             ### Kasutusvõimalused
 
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
+            Suspendisse malesuada ultricies diam sit amet rhoncus. Sed porttitor eget urna et dictum. Pellentesque ut sagittis orci. Phasellus ex urna, aliquet non nisl id, [feugiat ultricies nibh]().
         links:
             -
-                title: Metoodika.pdf
+                title: Donec sit amet.pdf
                 icon: fa-download
                 link:
-                info: (352KB, PDF)
-            -
-                title: Teemad
-                icon: fa-list
-                link:
-                info:
+                info: (673KB, PDF)
         curriculum:
             title: Tunnikavad
             items:
                 -
-                    title: Egestas Elit Malesuada
+                    title: Quisque ante nulla
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                        Praesent auctor in orci vel congue. Curabitur feugiat porta dolor. Morbi eget eros ac nunc euismod ultrices in sollicitudin ligula. Etiam congue, mi eu euismod sagittis, augue risus viverra quam, non sollicitudin dolor justo eu quam. Pellentesque sed velit vitae mi convallis semper nec in nisi.
                     links:
                         -
-                            title: Metoodika.pdf
+                            title: Etiam id dignissim.pdf
                             icon: fa-download
                             link:
-                            info: (352KB, PDF)
-                    video:
-                        id: adam-brown
-                        title: Adam Brown
-                        text: Eesti päritolu väärtustamine
+                            info: (984KB, PDF)
                 -
-                    title: Egestas Elit Malesuada
+                    title: Phasellus eu risus dapibus
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                    links:
-                        -
-                            title: Metoodika.pdf
-                            icon: fa-download
-                            link:
-                            info: (352KB, PDF)
+                        Suspendisse fermentum vitae leo id interdum. Integer vehicula nulla arcu, at aliquet mi consequat quis. Etiam leo augue, euismod et sem nec, porttitor vulputate dolor. Aenean condimentum quis nisl laoreet bibendum.
                     video:
-                        id: adam-brown
-                        title: Adam Brown
-                        text: Eesti päritolu väärtustamine
+                        path: video/interview/kirsti_portnov
+                        title: Kirsti Portnov
+                        text: Curabitur eget justo tempus, dignissim quam.
