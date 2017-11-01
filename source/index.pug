@@ -1,26 +1,23 @@
 extends /layout
 
 
+block vars
+    -
+        const videos = self.file.videos.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort > b.sort ? 1 : -1).map((a) => a.value)
+
+
 block content
     main.main
-        .hero(style='background-image:url(/assets/images/data/main-post-img.jpg)')
-            a.main-post(href='video-detail.html')
+        .hero(style='background-image:url(/assets/images/' + videos[0].path + '.jpg)')
+            a.main-post(href=self.locale + '/' + videos[0].path)
                 .text
-                    h2 Tiiu Teesalu
-                    p Elu sõja-aastatel Saksamaa põgenikelaagrites
+                    h2= videos[0]['title_' + self.locale]
+                    p= videos[0]['description_' + self.locale]
             .posts-list
-                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_1.jpg)')
-                    h3 Tõnu Jürvetson
-                    p Konstantin Pätsi lähikondlaste põgenemistee läände
-                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_2.jpg)')
-                    h3 Kalju Mätik
-                    p Täispikk intervjuu
-                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_3.jpg)')
-                    h3 Linda Vaike Malmgren
-                    p Eesti juurte väärtustamine sugulaste põgenemislugude taustal
-                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_4.jpg)')
-                    h3 Mi Mi Po Hti
-                    p Videolugu
+                each v in videos.slice(1, 5)
+                    a(href=self.locale + '/' + v.path, style='background-image:url(/assets/images/' + v.path + '.jpg)')
+                        h3 v['title_' + self.locale]
+                        p v['description_' + self.locale]
 
         include /searchbox
 

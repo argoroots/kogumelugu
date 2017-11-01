@@ -1,13 +1,11 @@
-aliases:
-    - /
-# file:
+file:
 #     coProducers: ./data/coproducers.yaml
 #     partners: ./data/partners.yaml
 #     producers: ./data/producers.yaml
 #     sponsors: ./data/sponsors.yaml
 #     supporters: ./data/supporters.yaml
 #     team: ./data/team.yaml
-#     videos: ./data/videos.yaml
+    videos: ./video/data.yaml
 
 partners:
     -
