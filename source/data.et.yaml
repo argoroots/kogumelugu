@@ -8,3 +8,387 @@ file:
     supporters: ./data/supporters.yaml
     team: ./data/team.yaml
     videos: ./data/videos.yaml
+
+partners:
+    -
+        title: Ajapaik
+        url:
+    -
+        title: Black Ribbon Day Foundation
+        url:
+    -
+        title: Eesti Diasporaa Akadeemia
+        url:
+    -
+        title: Eesti Mälu Instituut
+        url:
+    -
+        title: Eesti Vabariik 100
+        url:
+    -
+        title: Georg Eckert Institute
+        url:
+    -
+        title: Kaasaegse Kunsti Eesti Keskus
+        url:
+    -
+        title: Konrad Adenaueri Sihtasutus
+        url:
+    -
+        title: Naiskodukaitse
+        url:
+    -
+        title: Reklaamiagentuur MUST
+        url:
+    -
+        title: Stanfordi Ülikooli Raamatukogu
+        url:
+    -
+        title: VEMU/Eesti Õppetöö Keskus
+        url:
+    -
+        title: Eva Sepping
+        url:
+    -
+        title: Avatud Vabariik
+        url:
+    -
+        title: EUROCLIO
+        url:
+    -
+        title: Eesti Kirjandusmuuseum
+        url:
+    -
+        title: Eesti Rahva Muuseum
+        url:
+    -
+        title: Entusiastid OÜ
+        url:
+    -
+        title: Hooandja
+        url:
+    -
+        title: Kilomeeter Skulptuuri
+        url:
+    -
+        title: MTÜ Tulipisar
+        url:
+    -
+        title: Okupatsioonide Muuseum
+        url:
+    -
+        title: Ruudu Rahumaru
+        url:
+    -
+        title: Tallinna Ülikool
+        url:
+    -
+        title: Anna Hints
+        url:
+    -
+        title: Gustav Liblik
+        url:
+    -
+        title: Baltic Heritage Network
+        url:
+    -
+        title: Education Development Centre
+        url:
+    -
+        title: Eesti Kunstimuuseum
+        url:
+    -
+        title: Eesti Rahvusringhääling
+        url:
+    -
+        title: Euroopa Parlamendi Saadiku Tunne Kelami Büroo
+        url:
+    -
+        title: Inimõiguste Instituut
+        url:
+    -
+        title: Kino Artis
+        url:
+    -
+        title: Murtud Rukkilille Ühing
+        url:
+    -
+        title: Rahvusarhiiv
+        url:
+    -
+        title: Saksamaa Liitvabariigi Suursaatkond
+        url:
+    -
+        title: Tartu Ülikool
+        url:
+    -
+        title: Edward von Lõngus
+        url:
+    -
+        title: Ian Concannon
+        url:
+
+sponsors:
+    -
+        title: Amalfi
+        picture:
+    -
+        title:
+        picture: ERKY.png
+    -
+        title:
+        picture: erasmus.png
+    -
+        title:
+        picture: erc.png
+    -
+        title:
+        picture: haridusmin.png
+    -
+        title:
+        picture: kaitsemin.png
+    -
+        title: Kistler-Ritso Sihtasutus
+        picture:
+    -
+        title:
+        picture: kultuurimin.png
+    -
+        title:
+        picture: sisemin.png
+
+team:
+    -
+        title: Alice Pia Kattago
+    -
+        title: Andreas Aap
+    -
+        title: Andri Allas
+    -
+        title: Anna Hints
+    -
+        title: Anne Sverdlik
+    -
+        title: Anne-Mai Saar
+    -
+        title: Anni Haandi
+    -
+        title: Ants Tammik
+    -
+        title: Argo Roots
+    -
+        title: Aule Sagen
+    -
+        title: Birgit Podelsky
+    -
+        title: Birgit Rae
+    -
+        title: Carlos Lesmes
+    -
+        title: Dirgis Kaarlõp
+    -
+        title: Elisa Avik
+    -
+        title: Elmar Gams
+    -
+        title: Enrico Barone
+    -
+        title: Gelly Metsaveer
+    -
+        title: Grete Rohi
+    -
+        title: Gustav Liblik
+    -
+        title: Halliki Voolma
+    -
+        title: Hanna Jemmer
+    -
+        title: Hardi Volmer
+    -
+        title: Helis Hirve
+    -
+        title: Ilja Shmidt
+    -
+        title: Ilmar Raag
+    -
+        title: Ilona-Evelyn Rannala
+    -
+        title: Indrek Treufeldt
+    -
+        title: Jaan Kalmus jr.
+    -
+        title: James Tusty
+    -
+        title: Jan-Erik Tihemets
+    -
+        title: Joosep Soorsk
+    -
+        title: Jüri Käosaar
+    -
+        title: Jüri Muttika
+    -
+        title: Kaari Aupaju
+    -
+        title: Kadri Sikk
+    -
+        title: Kaja Villem
+    -
+        title: Kaur Kirikall
+    -
+        title: Kertu Rohumägi
+    -
+        title: Liis Ilves
+    -
+        title: Lill Volmer
+    -
+        title: Lois Banta
+    -
+        title: Maarja Merivoo-Parro
+    -
+        title: Madis Tüür
+    -
+        title: Mai Sillamäe
+    -
+        title: Mare Oja
+    -
+        title: Mari Kõrver
+    -
+        title: Mari-Liis Nõlvak
+    -
+        title: Maria Reinup
+    -
+        title: Mariann Leppik
+    -
+        title: Marion Koppel
+    -
+        title: Marta Pulk
+    -
+        title: Maureen Castle Tusty
+    -
+        title: Merilin Mihkeles
+    -
+        title: Mia-Liina Lepik
+    -
+        title: Michaela Snopkova
+    -
+        title: Mihkel Nõmmik
+    -
+        title: Mihkel-Mikelis Putrinš
+    -
+        title: Monika Reppo
+    -
+        title: Reili Reintal
+    -
+        title: Rein Kotov
+    -
+        title: Sander Koit
+    -
+        title: Sander Maran
+    -
+        title: Sandra Vokk
+    -
+        title: Sergei Metlev
+    -
+        title: Silja-Riin Voolma
+    -
+        title: Silver Fokin
+    -
+        title: Tiiu-Triinu Tamm
+    -
+        title: Tunne Kelam
+    -
+        title: Tõnis Tuuga
+    -
+        title: Uve Poom
+
+supporters:
+    -
+        title: Allan-Hermann Pool
+    -
+        title: Ander Ild
+    -
+        title: Anne Rohtla
+    -
+        title: Anneli Rein
+    -
+        title: Ave Kaing-Kaabel
+    -
+        title: Ave Proos
+    -
+        title: Ave Tampere
+    -
+        title: Enn Tarto
+    -
+        title: Evelin Haav
+    -
+        title: Gustav Liblik
+    -
+        title: Hanna Vrager
+    -
+        title: Henri Laupmaa
+    -
+        title: Hille-Juta Laupmaa
+    -
+        title: Indrek Rikka
+    -
+        title: Ivar Vokk
+    -
+        title: Jaak Vackermann
+    -
+        title: Juss Heinsalu
+    -
+        title: Kadri Kalvo
+    -
+        title: Kadri Ruusna
+    -
+        title: Karin Luuse
+    -
+        title: Karin Rand
+    -
+        title: Kati Orav
+    -
+        title: Kaur Kittus
+    -
+        title: Kertu Peet
+    -
+        title: Kristi Klaasmägi
+    -
+        title: Kristi Põldsam
+    -
+        title: Kulno Kesküla
+    -
+        title: Külli Meier
+    -
+        title: Laura Ojala
+    -
+        title: Ly Neeme
+    -
+        title: Maarja Karmin
+    -
+        title: Mare Rosen
+    -
+        title: Marek Limberg
+    -
+        title: Mariann Rikka
+    -
+        title: Mart Kuldkepp
+    -
+        title: Nele Vokk
+    -
+        title: Piia Reismann
+    -
+        title: Piret Tarto
+    -
+        title: Rait Rattik
+    -
+        title: Sander Jürisson
+    -
+        title: Sven Illing
+    -
+        title: Taavi Einaste
+    -
+        title: Taimar Peterkop
+    -
+        title: Toivo Jullinen
+    -
+        title: Triin Toomesaar

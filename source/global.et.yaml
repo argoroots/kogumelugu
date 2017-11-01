@@ -9,13 +9,13 @@ menu:
         link: /et/materials
         text: Õppematerjalid
     -
-        link: /et#tutvustus
+        link: /et/#tutvustus
         text: Tutvustus
     -
-        link: /et#tegijad
+        link: /et/#tegijad
         text: Tegijad
     -
-        link: /et#toeta
+        link: /et/#toeta
         text: Toeta
 
 contact: |

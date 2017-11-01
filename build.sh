@@ -9,6 +9,10 @@ export BUILD_DIR=./build
 export ENTU_DB=
 export ENTU_KEY=
 
+export VIMEO_ID=
+export VIMEO_SECRET=
+export VIMEO_TOKEN=
+
 
 echo
 echo --------- PREFETCH

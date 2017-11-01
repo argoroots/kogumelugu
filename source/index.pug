@@ -69,121 +69,36 @@ block content
                 .partners
                     h2.section--title Koostööpartnerid
                     ul.partners--list
-                        li
-                            a(href='') Ajapaik
-                        li
-                            a(href='') Black Ribbon Day Foundation
-                        li
-                            a(href='') Eesti Diasporaa Akadeemia
-                        li
-                            a(href='') Eesti Mälu Instituut
-                        li
-                            a(href='') Eesti Vabariik 100
-                        li
-                            a(href='') Georg Eckert Institute
-                        li
-                            a(href='') Kaasaegse Kunsti Eesti Keskus
-                        li
-                            a(href='') Konrad Adenaueri Sihtasutus
-                        li
-                            a(href='') Naiskodukaitse
-                        li
-                            a(href='') Reklaamiagentuur MUST
-                        li
-                            a(href='') Stanfordi Ülikooli Raamatukogu
-                        li
-                            a(href='') VEMU/Eesti Õppetöö Keskus
-                        li
-                            a(href='') Eva Sepping
-                        li
-                            a(href='') Avatud Vabariik
-                        li
-                            a(href='') EUROCLIO
-                        li
-                            a(href='') Eesti Kirjandusmuuseum
-                        li
-                            a(href='') Eesti Rahva Muuseum
-                        li
-                            a(href='') Entusiastid OÜ
-                        li
-                            a(href='') Hooandja
-                        li
-                            a(href='') Kilomeeter Skulptuuri
-                        li
-                            a(href='') MTÜ Tulipisar
-                        li
-                            a(href='') Okupatsioonide Muuseum
-                        li
-                            a(href='') Ruudu Rahumaru
-                        li
-                            a(href='') Tallinna Ülikool
-                        li
-                            a(href='') Anna Hints
-                        li
-                            a(href='') Gustav Liblik
-                        li
-                            a(href='') Baltic Heritage Network
-                        li
-                            a(href='') Education Development Centre
-                        li
-                            a(href='') Eesti Kunstimuuseum
-                        li
-                            a(href='') Eesti Rahvusringhääling
-                        li
-                            a(href='') Euroopa Parlamendi Saadiku Tunne Kelami Büroo
-                        li
-                            a(href='') Inimõiguste Instituut
-                        li
-                            a(href='') Kino Artis
-                        li
-                            a(href='') Murtud Rukkilille Ühing
-                        li
-                            a(href='') Rahvusarhiiv
-                        li
-                            a(href='') Saksamaa Liitvabariigi Suursaatkond
-                        li
-                            a(href='') Tartu Ülikool
-                        li
-                            a(href='') Edward von Lõngus
-                        li
-                            a(href='') Ian Concannon
+                        each p in self.partners
+                            li
+                                a(href=p.url)= p.title
                 .supporters
                     h3.section--subtitle SUURTOETAJAD
                     ul.supporters--list
-                        li
-                            a(href='') Amalfi
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/ERKY.png', alt='')
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/erasmus.png', alt='')
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/erc.png', alt='')
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/haridusmin.png', alt='')
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/kaitsemin.png', alt='')
-                        li
-                            a(href='') Kistler-Ritso Sihtasutus
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/kultuurimin.png', alt='')
-                        li
-                            a(href='')
-                                img(src='/assets/images/data/sisemin.png', alt='')
+                        each s in self.sponsors
+                            li
+                                a(href=s.url)= s.title
+                                    if s.picture
+                                        img(src='/assets/images/sponsors/' + s.picture, alt=s.title)
                 .thanks
                     h3.section--subtitle TÄNUSÕNAD KAASTEGUTSEJATELE
                     .thanks--blocks
                         .thanks--block
                             h4 Meeskonnaliikmed
-                            p Alice Pia Kattago, Andreas Aap, Andri Allas, Anna Hints, Anne Sverdlik, Anne-Mai Saar, Anni Haandi, Ants Tammik, Argo Roots, Aule Sagen, Birgit Podelsky, Birgit Rae, Carlos Lesmes, Dirgis Kaarlõp, Elisa Avik, Elmar Gams, Enrico Barone, Gelly Metsaveer, Grete Rohi, Gustav Liblik, Halliki Voolma, Hanna Jemmer, Hardi Volmer, Helis Hirve, Ilja Shmidt, Ilmar Raag, Ilona-Evelyn Rannala, Indrek Treufeldt, Jaan Kalmus jr., James Tusty, Jan-Erik Tihemets, Joosep Soorsk, Jüri Käosaar, Jüri Muttika, Kaari Aupaju, Kadri Sikk, Kaja Villem, Kaur Kirikall, Kertu Rohumägi, Liis Ilves, Lill Volmer, Lois Banta, Maarja Merivoo-Parro, Madis Tüür, Mai Sillamäe, Mare Oja, Mari Kõrver, Mari-Liis Nõlvak, Maria Reinup, Mariann Leppik, Marion Koppel, Marta Pulk, Maureen Castle Tusty, Merilin Mihkeles, Mia-Liina Lepik, Michaela Snopkova, Mihkel Nõmmik, Mihkel-Mikelis Putrinš, Monika Reppo, Reili Reintal, Rein Kotov, Sander Koit, Sander Maran, Sandra Vokk, Sergei Metlev, Silja-Riin Voolma, Silver Fokin, Tiiu-Triinu Tamm, Tunne Kelam, Tõnis Tuuga, Uve Poom, jt.
+                            p
+                                each t in self.team
+                                    = t.title
+                                    | ,
+                                    |
+                                | jt.
                         .thanks--block
                             h4 Toetajad ja hooandjad
-                            p Allan-Hermann Pool, Ander Ild, Anne Rohtla, Anneli Rein, Ave Kaing-Kaabel, Ave Proos, Ave Tampere, Enn Tarto, Evelin Haav, Gustav Liblik, Hanna Vrager, Henri Laupmaa, Hille-Juta Laupmaa, Indrek Rikka, Ivar Vokk, Jaak Vackermann, Juss Heinsalu, Kadri Kalvo, Kadri Ruusna, Karin Luuse, Karin Rand, Kati Orav, Kaur Kittus, Kertu Peet, Kristi Klaasmägi, Kristi Põldsam, Kulno Kesküla, Külli Meier, Laura Ojala, Ly Neeme, Maarja Karmin, Mare Rosen, Marek Limberg, Mariann Rikka, Mart Kuldkepp, Nele Vokk, Piia Reismann, Piret Tarto, Rait Rattik, Sander Jürisson, Sven Illing, Taavi Einaste, Taimar Peterkop, Toivo Jullinen, Triin Toomesaar, jt.
+                            p
+                                each s in self.supporters
+                                    = s.title
+                                    | ,
+                                    |
+                                | jt.
 
                 .producers
                     .producer

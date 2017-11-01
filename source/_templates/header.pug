@@ -1,15 +1,15 @@
 header.header
     .u-container
-        a.logo(href='/' + self.language)
+        a.logo(href='/' + self.locale)
             img(src='/assets/images/logo.png', alt='Kogu Me Lugu!')
 
         button.btn.menu--toggle(type='button')
 
         nav.main-menu
             ul
-                li= '/' + self.language + '/' + self.path
+                li= '/' + self.locale + '/' + self.path
                 each n in self.menu
-                    li(class = n.link == '/' + self.language + '/' + self.path ? 'u-active' : '')
+                    li(class = n.link == '/' + self.locale + '/' + self.path ? 'u-active' : '')
                         a(href = n.link)= n.text
 
         nav.lang-menu
