@@ -1,38 +1,31 @@
-include /head
-include /header
-include /searchbox
-include /map
-include /footer
-include /scripts
+extends /layout
 
-mixin head('Avaleht')
 
-.wrap
-
-    mixin header('index.html')
+block content
     main.main
-        .hero(style="background-image:url(/assets/images/data/main-post-img.jpg)")
-            a.main-post(href="video-detail.html")
+        .hero(style='background-image:url(/assets/images/data/main-post-img.jpg)')
+            a.main-post(href='video-detail.html')
                 .text
                     h2 Tiiu Teesalu
                     p Elu sõja-aastatel Saksamaa põgenikelaagrites
             .posts-list
-                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_1.jpg)")
+                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_1.jpg)')
                     h3 Tõnu Jürvetson
                     p Konstantin Pätsi lähikondlaste põgenemistee läände
-                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_2.jpg)")
+                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_2.jpg)')
                     h3 Kalju Mätik
                     p Täispikk intervjuu
-                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_3.jpg)")
+                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_3.jpg)')
                     h3 Linda Vaike Malmgren
                     p Eesti juurte väärtustamine sugulaste põgenemislugude taustal
-                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_4.jpg)")
+                a(href='video-detail.html', style='background-image:url(/assets/images/data/posts-list-img_4.jpg)')
                     h3 Mi Mi Po Hti
                     p Videolugu
 
-        mixin searchbox
+        include /searchbox
 
-        mixin map(true)
+        include /map
+        +map(true)
 
         section.section.materials
             .section--content.u-container
@@ -41,11 +34,11 @@ mixin head('Avaleht')
                     .materials--item
                         h3.section--subtitle Ajalooõpe
                         p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                        a.btn.btn--default(href="materials.html") Loe lähemalt
+                        a.btn.btn--default(href='materials.html') Loe lähemalt
                     .materials--item
                         h3.section--subtitle Inimõiguste õpe
                         p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                        a.btn.btn--default(href="materials.html") Loe lähemalt
+                        a.btn.btn--default(href='materials.html') Loe lähemalt
 
         section#tutvustus.section.about
             .section--content.u-container
@@ -65,11 +58,11 @@ mixin head('Avaleht')
                 .newsletter--content
                     .u-content
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam suscipit nostrum obcaecati aliquam, et! Expedita quae, exercitationem ducimus mollitia error, perferendis eum delectus nesciunt debitis praesentium, id voluptas ipsam rem.
-                    form.newsletter-form(action="")
+                    form.newsletter-form(action='')
                         .input
-                            label(for="email") Sisesta oma e-maili aadress
-                            input(type="email", id="email")
-                        button.btn.btn--secondary(type="submit") Liitu uudiskirjaga
+                            label(for='email') Sisesta oma e-maili aadress
+                            input(type='email', id='email')
+                        button.btn.btn--secondary(type='submit') Liitu uudiskirjaga
 
         section#tegijad.section
             .section--content.u-container
@@ -77,111 +70,111 @@ mixin head('Avaleht')
                     h2.section--title Koostööpartnerid
                     ul.partners--list
                         li
-                            a(href="") Ajapaik
+                            a(href='') Ajapaik
                         li
-                            a(href="") Black Ribbon Day Foundation
+                            a(href='') Black Ribbon Day Foundation
                         li
-                            a(href="") Eesti Diasporaa Akadeemia
+                            a(href='') Eesti Diasporaa Akadeemia
                         li
-                            a(href="") Eesti Mälu Instituut
+                            a(href='') Eesti Mälu Instituut
                         li
-                            a(href="") Eesti Vabariik 100
+                            a(href='') Eesti Vabariik 100
                         li
-                            a(href="") Georg Eckert Institute
+                            a(href='') Georg Eckert Institute
                         li
-                            a(href="") Kaasaegse Kunsti Eesti Keskus
+                            a(href='') Kaasaegse Kunsti Eesti Keskus
                         li
-                            a(href="") Konrad Adenaueri Sihtasutus
+                            a(href='') Konrad Adenaueri Sihtasutus
                         li
-                            a(href="") Naiskodukaitse
+                            a(href='') Naiskodukaitse
                         li
-                            a(href="") Reklaamiagentuur MUST
+                            a(href='') Reklaamiagentuur MUST
                         li
-                            a(href="") Stanfordi Ülikooli Raamatukogu
+                            a(href='') Stanfordi Ülikooli Raamatukogu
                         li
-                            a(href="") VEMU/Eesti Õppetöö Keskus
+                            a(href='') VEMU/Eesti Õppetöö Keskus
                         li
-                            a(href="") Eva Sepping
+                            a(href='') Eva Sepping
                         li
-                            a(href="") Avatud Vabariik
+                            a(href='') Avatud Vabariik
                         li
-                            a(href="") EUROCLIO
+                            a(href='') EUROCLIO
                         li
-                            a(href="") Eesti Kirjandusmuuseum
+                            a(href='') Eesti Kirjandusmuuseum
                         li
-                            a(href="") Eesti Rahva Muuseum
+                            a(href='') Eesti Rahva Muuseum
                         li
-                            a(href="") Entusiastid OÜ
+                            a(href='') Entusiastid OÜ
                         li
-                            a(href="") Hooandja
+                            a(href='') Hooandja
                         li
-                            a(href="") Kilomeeter Skulptuuri
+                            a(href='') Kilomeeter Skulptuuri
                         li
-                            a(href="") MTÜ Tulipisar
+                            a(href='') MTÜ Tulipisar
                         li
-                            a(href="") Okupatsioonide Muuseum
+                            a(href='') Okupatsioonide Muuseum
                         li
-                            a(href="") Ruudu Rahumaru
+                            a(href='') Ruudu Rahumaru
                         li
-                            a(href="") Tallinna Ülikool
+                            a(href='') Tallinna Ülikool
                         li
-                            a(href="") Anna Hints
+                            a(href='') Anna Hints
                         li
-                            a(href="") Gustav Liblik
+                            a(href='') Gustav Liblik
                         li
-                            a(href="") Baltic Heritage Network
+                            a(href='') Baltic Heritage Network
                         li
-                            a(href="") Education Development Centre
+                            a(href='') Education Development Centre
                         li
-                            a(href="") Eesti Kunstimuuseum
+                            a(href='') Eesti Kunstimuuseum
                         li
-                            a(href="") Eesti Rahvusringhääling
+                            a(href='') Eesti Rahvusringhääling
                         li
-                            a(href="") Euroopa Parlamendi Saadiku Tunne Kelami Büroo
+                            a(href='') Euroopa Parlamendi Saadiku Tunne Kelami Büroo
                         li
-                            a(href="") Inimõiguste Instituut
+                            a(href='') Inimõiguste Instituut
                         li
-                            a(href="") Kino Artis
+                            a(href='') Kino Artis
                         li
-                            a(href="") Murtud Rukkilille Ühing
+                            a(href='') Murtud Rukkilille Ühing
                         li
-                            a(href="") Rahvusarhiiv
+                            a(href='') Rahvusarhiiv
                         li
-                            a(href="") Saksamaa Liitvabariigi Suursaatkond
+                            a(href='') Saksamaa Liitvabariigi Suursaatkond
                         li
-                            a(href="") Tartu Ülikool
+                            a(href='') Tartu Ülikool
                         li
-                            a(href="") Edward von Lõngus
+                            a(href='') Edward von Lõngus
                         li
-                            a(href="") Ian Concannon
+                            a(href='') Ian Concannon
                 .supporters
                     h3.section--subtitle SUURTOETAJAD
                     ul.supporters--list
                         li
-                            a(href="") Amalfi
+                            a(href='') Amalfi
                         li
-                            a(href="")
-                                img(src="/assets/images/data/ERKY.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/ERKY.png', alt='')
                         li
-                            a(href="")
-                                img(src="/assets/images/data/erasmus.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/erasmus.png', alt='')
                         li
-                            a(href="")
-                                img(src="/assets/images/data/erc.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/erc.png', alt='')
                         li
-                            a(href="")
-                                img(src="/assets/images/data/haridusmin.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/haridusmin.png', alt='')
                         li
-                            a(href="")
-                                img(src="/assets/images/data/kaitsemin.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/kaitsemin.png', alt='')
                         li
-                            a(href="") Kistler-Ritso Sihtasutus
+                            a(href='') Kistler-Ritso Sihtasutus
                         li
-                            a(href="")
-                                img(src="/assets/images/data/kultuurimin.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/kultuurimin.png', alt='')
                         li
-                            a(href="")
-                                img(src="/assets/images/data/sisemin.png", alt="")
+                            a(href='')
+                                img(src='/assets/images/data/sisemin.png', alt='')
                 .thanks
                     h3.section--subtitle TÄNUSÕNAD KAASTEGUTSEJATELE
                     .thanks--blocks
@@ -207,30 +200,27 @@ mixin head('Avaleht')
                         p Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda. Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
                         p Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Unitas kontole. Ühekordse makse puhul kasuta allolevaid makselinke või ülekannet SA Unitas pangakontole. Püsikorralduse saab vormistada SA Unitas pangakontole. Konto andmed on nähtaval allpool.
                         p SA Unitas kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja, seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks. Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad. Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
-                        form.donation-form(action="")
+                        form.donation-form(action='')
                             .input
-                                label(for="sum") Sisesta summa
-                                input(type="number", id="sum")
+                                label(for='sum') Sisesta summa
+                                input(type='number', id='sum')
                                 span €
-                            button.btn.btn--primary(type="submit") Toetan
+                            button.btn.btn--primary(type='submit') Toetan
                 aside.donate--side
                     .box
-                            img(src="/assets/images/data/EV100.png", alt="EV100", width="136")
+                            img(src='/assets/images/data/EV100.png', alt='EV100', width='136')
                             p Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
                             p
-                                a(href="") Loe lähemalt
+                                a(href='') Loe lähemalt
 
                     h3 Pangakonto andmed
                     ul
                         li
                             strong EE85 1010 2200 8178 2010
-                            || BIC: EEUHEE2X
+                            | BIC: EEUHEE2X
                         li
                             strong SEB PANK:
                             | Tornimäe 2, 15010, Tallinn, Eesti
                         li
                             strong Selgitus:
                             | Toetan Kogu Me Lugu
-
-    mixin footer
-mixin scripts

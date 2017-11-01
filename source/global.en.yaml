@@ -3,19 +3,19 @@ menu:
         link: /en/video
         text: Videos
     -
-        link: '/en/tags'
+        link: /en/tags
         text: Tags
     -
-        link: '/en/materials'
+        link: /en/materials
         text: Materials
     -
-        link: '/en#tutvustus'
+        link: /en#tutvustus
         text: Introduction
     -
-        link: '/en#tegijad'
+        link: /en#tegijad
         text: Team
     -
-        link: '/en#toeta'
+        link: /en#toeta
         text: Support
 
 contact: |
