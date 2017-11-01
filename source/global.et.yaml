@@ -1,22 +1,22 @@
 menu:
     -
-        link: /et/video
-        text: Videoteek
+        title: Videoteek
+        path: /et/video
     -
-        link: /et/tags
-        text: Teemad
+        title: Teemad
+        path: /et/tags
     -
-        link: /et/materials
-        text: Õppematerjalid
+        title: Õppematerjalid
+        path: /et/materials
     -
-        link: /et/#tutvustus
-        text: Tutvustus
+        title: Tutvustus
+        path: /et/#tutvustus
     -
-        link: /et/#tegijad
-        text: Tegijad
+        title: Tegijad
+        path: /et/#tegijad
     -
-        link: /et/#toeta
-        text: Toeta
+        title: Toeta
+        path: /et/#toeta
 
 contact: |
     **Eesti Mälu Instituut**

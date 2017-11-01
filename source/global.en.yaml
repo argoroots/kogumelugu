@@ -1,22 +1,22 @@
 menu:
     -
-        link: /en/video
-        text: Videos
+        title: Videos
+        path: /en/video
     -
-        link: /en/tags
-        text: Tags
+        title: Tags
+        path: /en/tags
     -
-        link: /en/materials
-        text: Materials
+        title: Materials
+        path: /en/materials
     -
-        link: /en/#tutvustus
-        text: Introduction
+        title: Introduction
+        path: /en/#tutvustus
     -
-        link: /en/#tegijad
-        text: Team
+        title: Team
+        path: /en/#tegijad
     -
-        link: /en/#toeta
-        text: Support
+        title: Support
+        path: /en/#toeta
 
 contact: |
     **Eesti Mälu Instituut**
