@@ -12,12 +12,12 @@ block content
             a.main-post(href='/' + self.locale + '/' + videos[0].path + '/')
                 .text
                     h2= videos[0]['title_' + self.locale]
-                    p= videos[0]['description_' + self.locale]
+                    p= videos[0]['subtitle_' + self.locale]
             .posts-list
                 each v in videos.slice(1, 5)
                     a(href='/' + self.locale + '/' + v.path + '/', style='background-image:url(/assets/images/' + v.path + '.jpg)')
                         h3= v['title_' + self.locale]
-                        p= v['description_' + self.locale]
+                        p= v['subtitle_' + self.locale]
 
         include /searchbox
 
@@ -31,11 +31,11 @@ block content
                     .materials--item
                         h3.section--subtitle Ajalooõpe
                         p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                        a.btn.btn--default(href='materials.html') Loe lähemalt
+                        a.btn.btn--default(href='/et/oppematerjalid') Loe lähemalt
                     .materials--item
                         h3.section--subtitle Inimõiguste õpe
                         p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                        a.btn.btn--default(href='materials.html') Loe lähemalt
+                        a.btn.btn--default(href='/et/oppematerjalid') Loe lähemalt
 
         section#tutvustus.section.about
             .section--content.u-container
