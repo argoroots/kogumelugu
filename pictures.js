@@ -1,5 +1,5 @@
+const _ = require('lodash')
 const fs = require('fs')
-const op = require('object-path')
 const path = require('path')
 const request = require('request')
 const vimeo    = require('vimeo').Vimeo
@@ -43,7 +43,7 @@ const videos = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
 
 
 for (var i = 0; i < videos.length; i++) {
-    const videoId = op.get(videos[i], 'properties.videoUrl.values.0.value')
+    const videoId = _.get(videos[i], 'properties.videoUrl.values.0.value')
     var videoUrl
 
     if (parseInt(videoId, 10).toString() === videoId) {
@@ -59,8 +59,8 @@ for (var i = 0; i < videos.length; i++) {
             if (error) {
                 console.log(error.message)
             } else {
-                let urlList = op.get(body, ['data', 0, 'sizes'], [])
-                let url = op.get(urlList, [urlList.length - 1, 'link'])
+                let urlList = _.get(body, ['data', 0, 'sizes'], [])
+                let url = _.get(urlList, [urlList.length - 1, 'link'])
                 if (url) {
                     download(url, path.join(PICTURES_DIR, videoId + '.jpg'), () => {})
                 }

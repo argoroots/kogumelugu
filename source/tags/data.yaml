@@ -1,3 +1,2 @@
-path: video
 file:
-    videos: ./data/videos.yaml
+    videos: ./tags/_video/data.yaml

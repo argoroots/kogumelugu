@@ -13,20 +13,16 @@ export ENTU_KEY=
 echo
 echo --------- PREFETCH
 rm -rf ${BUILD_DIR}
-
 mkdir -p ${BUILD_DIR}/assets
-mkdir -p ${BUILD_DIR}/uudised
-mkdir -p ${BUILD_DIR}/majad
-
 cp -r ./assets/* ${BUILD_DIR}/assets
 
-# rm -r node_modules
-# npm install -q entu-ssg
+rm -r node_modules
+npm install -q entu-ssg
 
 
 echo
 echo --------- FETCH
-export ENTU_TYPE=video
+export ENTU_TYPE=interview
 # export ENTU_PARENT=743
 ./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/video/_video/data.yaml
 
