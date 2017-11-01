@@ -16,8 +16,8 @@ block content
             .posts-list
                 each v in videos.slice(1, 5)
                     a(href=self.locale + '/' + v.path, style='background-image:url(/assets/images/' + v.path + '.jpg)')
-                        h3 v['title_' + self.locale]
-                        p v['description_' + self.locale]
+                        h3= v['title_' + self.locale]
+                        p= v['description_' + self.locale]
 
         include /searchbox
 
