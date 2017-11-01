@@ -32,7 +32,21 @@ const download = (uri, filename, callback) => {
         console.log('content-type:', res.headers['content-type'])
         console.log('content-length:', res.headers['content-length'])
 
-        request(uri).pipe(fs.createWriteStream(filename)).on('close', callback)
+        request({
+            url: uri,
+            method: 'GET',
+            encoding: 'binary'
+        }, (error, response, body) => {
+            if (error) {
+                console.error(error)
+                callback(null)
+            } else if (response.statusCode !== 200) {
+                console.error(body)
+                callback(null)
+            } else {
+                fs.outputFile(filename, body, 'binary', callback)
+            }
+        })
     })
 }
 
