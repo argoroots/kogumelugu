@@ -7,7 +7,7 @@ block content
     main.main.u-container
         .videos
             each v in self.file.videos
-                article.videos--item(style='background-image:urlurl(/assets/images/' + v.path + '.jpg)')
+                article.videos--item(style='background-image:url(/assets/images/' + v.path + '.jpg)')
                     a(href='/' + self.locale + '/' + v.path + '/')
                         .text
                             h2
