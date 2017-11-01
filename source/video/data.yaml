@@ -1,4 +1,3 @@
-page:
-  data:
+path: video
+file:
     videos: ./data/videos.yaml
-  path: video

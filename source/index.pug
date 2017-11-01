@@ -1,0 +1,236 @@
+include /head
+include /header
+include /searchbox
+include /map
+include /footer
+include /scripts
+
+mixin head('Avaleht')
+
+.wrap
+
+    mixin header('index.html')
+    main.main
+        .hero(style="background-image:url(/assets/images/data/main-post-img.jpg)")
+            a.main-post(href="video-detail.html")
+                .text
+                    h2 Tiiu Teesalu
+                    p Elu sõja-aastatel Saksamaa põgenikelaagrites
+            .posts-list
+                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_1.jpg)")
+                    h3 Tõnu Jürvetson
+                    p Konstantin Pätsi lähikondlaste põgenemistee läände
+                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_2.jpg)")
+                    h3 Kalju Mätik
+                    p Täispikk intervjuu
+                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_3.jpg)")
+                    h3 Linda Vaike Malmgren
+                    p Eesti juurte väärtustamine sugulaste põgenemislugude taustal
+                a(href="video-detail.html", style="background-image:url(/assets/images/data/posts-list-img_4.jpg)")
+                    h3 Mi Mi Po Hti
+                    p Videolugu
+
+        mixin searchbox
+
+        mixin map(true)
+
+        section.section.materials
+            .section--content.u-container
+                h2.section--title Õppematerjalid
+                .materials--list
+                    .materials--item
+                        h3.section--subtitle Ajalooõpe
+                        p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
+                        a.btn.btn--default(href="materials.html") Loe lähemalt
+                    .materials--item
+                        h3.section--subtitle Inimõiguste õpe
+                        p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
+                        a.btn.btn--default(href="materials.html") Loe lähemalt
+
+        section#tutvustus.section.about
+            .section--content.u-container
+                h2.section--title ME KÕIK PÄRIME
+                    strong OMA KULTUURI
+                .u-content
+                    p Igaühel meist on oma lugu ja oma roll teiste lugudes. Kõik me oleme kellegi lapsed ja mingi piirkonna elanikud, kõik me pärime oma kultuuri, kodukoha ja perekonna pärandi. Eesti lugu, kogu me lugu, moodustub erinevate Eesti inimeste lugudest.
+                    p Need lood ei edasta minevikust täielikku pilti, vaid annavad seda edasi läbi rääkija objektiivi, mis võib olla vägagi erinev meie enda omast. Neid lugusid kuulates kogeme maailma teistsugusel, vahest harjumatul viisil. Pealtnäha olemegi erinevad, kordumatud. See, mis aga peitub igas inimeses sügaval sisimas, on meil ühine.
+                    p Kogu Me Lugu on algatus koguda, uurida ja jagada Eesti perede lugusid. Algatuse raames kogutakse, talletatakse ja levitatakse Nõukogude ja Saksa okupatsioonide ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende tegevuse tulemusena Eestisse sattunud inimeste ning nende järeltulijate mälestusi ja elulugusid.
+                    p Kogu Me Lugu projekti algataja oli 2008. aastal Tallinnas asutatud Sihtasutus Unitas, mis keskendus ajaloohariduse ja inimõiguste kultuuri arendamisele. Ta kuulus Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning tema eesmärk oli totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine. 2017. aastal ühines Sihtasutus Unitas Eesti Mälu Instituudiga.
+                    .intro
+                        p Iga lugu on omapärane, samas osa suuremast loost. Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
+
+        section.section.newsletter
+            .section--content.u-container
+                h2.section--title Liitu meie uudiskirjaga
+                .newsletter--content
+                    .u-content
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam suscipit nostrum obcaecati aliquam, et! Expedita quae, exercitationem ducimus mollitia error, perferendis eum delectus nesciunt debitis praesentium, id voluptas ipsam rem.
+                    form.newsletter-form(action="")
+                        .input
+                            label(for="email") Sisesta oma e-maili aadress
+                            input(type="email", id="email")
+                        button.btn.btn--secondary(type="submit") Liitu uudiskirjaga
+
+        section#tegijad.section
+            .section--content.u-container
+                .partners
+                    h2.section--title Koostööpartnerid
+                    ul.partners--list
+                        li
+                            a(href="") Ajapaik
+                        li
+                            a(href="") Black Ribbon Day Foundation
+                        li
+                            a(href="") Eesti Diasporaa Akadeemia
+                        li
+                            a(href="") Eesti Mälu Instituut
+                        li
+                            a(href="") Eesti Vabariik 100
+                        li
+                            a(href="") Georg Eckert Institute
+                        li
+                            a(href="") Kaasaegse Kunsti Eesti Keskus
+                        li
+                            a(href="") Konrad Adenaueri Sihtasutus
+                        li
+                            a(href="") Naiskodukaitse
+                        li
+                            a(href="") Reklaamiagentuur MUST
+                        li
+                            a(href="") Stanfordi Ülikooli Raamatukogu
+                        li
+                            a(href="") VEMU/Eesti Õppetöö Keskus
+                        li
+                            a(href="") Eva Sepping
+                        li
+                            a(href="") Avatud Vabariik
+                        li
+                            a(href="") EUROCLIO
+                        li
+                            a(href="") Eesti Kirjandusmuuseum
+                        li
+                            a(href="") Eesti Rahva Muuseum
+                        li
+                            a(href="") Entusiastid OÜ
+                        li
+                            a(href="") Hooandja
+                        li
+                            a(href="") Kilomeeter Skulptuuri
+                        li
+                            a(href="") MTÜ Tulipisar
+                        li
+                            a(href="") Okupatsioonide Muuseum
+                        li
+                            a(href="") Ruudu Rahumaru
+                        li
+                            a(href="") Tallinna Ülikool
+                        li
+                            a(href="") Anna Hints
+                        li
+                            a(href="") Gustav Liblik
+                        li
+                            a(href="") Baltic Heritage Network
+                        li
+                            a(href="") Education Development Centre
+                        li
+                            a(href="") Eesti Kunstimuuseum
+                        li
+                            a(href="") Eesti Rahvusringhääling
+                        li
+                            a(href="") Euroopa Parlamendi Saadiku Tunne Kelami Büroo
+                        li
+                            a(href="") Inimõiguste Instituut
+                        li
+                            a(href="") Kino Artis
+                        li
+                            a(href="") Murtud Rukkilille Ühing
+                        li
+                            a(href="") Rahvusarhiiv
+                        li
+                            a(href="") Saksamaa Liitvabariigi Suursaatkond
+                        li
+                            a(href="") Tartu Ülikool
+                        li
+                            a(href="") Edward von Lõngus
+                        li
+                            a(href="") Ian Concannon
+                .supporters
+                    h3.section--subtitle SUURTOETAJAD
+                    ul.supporters--list
+                        li
+                            a(href="") Amalfi
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/ERKY.png", alt="")
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/erasmus.png", alt="")
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/erc.png", alt="")
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/haridusmin.png", alt="")
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/kaitsemin.png", alt="")
+                        li
+                            a(href="") Kistler-Ritso Sihtasutus
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/kultuurimin.png", alt="")
+                        li
+                            a(href="")
+                                img(src="/assets/images/data/sisemin.png", alt="")
+                .thanks
+                    h3.section--subtitle TÄNUSÕNAD KAASTEGUTSEJATELE
+                    .thanks--blocks
+                        .thanks--block
+                            h4 Meeskonnaliikmed
+                            p Alice Pia Kattago, Andreas Aap, Andri Allas, Anna Hints, Anne Sverdlik, Anne-Mai Saar, Anni Haandi, Ants Tammik, Argo Roots, Aule Sagen, Birgit Podelsky, Birgit Rae, Carlos Lesmes, Dirgis Kaarlõp, Elisa Avik, Elmar Gams, Enrico Barone, Gelly Metsaveer, Grete Rohi, Gustav Liblik, Halliki Voolma, Hanna Jemmer, Hardi Volmer, Helis Hirve, Ilja Shmidt, Ilmar Raag, Ilona-Evelyn Rannala, Indrek Treufeldt, Jaan Kalmus jr., James Tusty, Jan-Erik Tihemets, Joosep Soorsk, Jüri Käosaar, Jüri Muttika, Kaari Aupaju, Kadri Sikk, Kaja Villem, Kaur Kirikall, Kertu Rohumägi, Liis Ilves, Lill Volmer, Lois Banta, Maarja Merivoo-Parro, Madis Tüür, Mai Sillamäe, Mare Oja, Mari Kõrver, Mari-Liis Nõlvak, Maria Reinup, Mariann Leppik, Marion Koppel, Marta Pulk, Maureen Castle Tusty, Merilin Mihkeles, Mia-Liina Lepik, Michaela Snopkova, Mihkel Nõmmik, Mihkel-Mikelis Putrinš, Monika Reppo, Reili Reintal, Rein Kotov, Sander Koit, Sander Maran, Sandra Vokk, Sergei Metlev, Silja-Riin Voolma, Silver Fokin, Tiiu-Triinu Tamm, Tunne Kelam, Tõnis Tuuga, Uve Poom, jt.
+                        .thanks--block
+                            h4 Toetajad ja hooandjad
+                            p Allan-Hermann Pool, Ander Ild, Anne Rohtla, Anneli Rein, Ave Kaing-Kaabel, Ave Proos, Ave Tampere, Enn Tarto, Evelin Haav, Gustav Liblik, Hanna Vrager, Henri Laupmaa, Hille-Juta Laupmaa, Indrek Rikka, Ivar Vokk, Jaak Vackermann, Juss Heinsalu, Kadri Kalvo, Kadri Ruusna, Karin Luuse, Karin Rand, Kati Orav, Kaur Kittus, Kertu Peet, Kristi Klaasmägi, Kristi Põldsam, Kulno Kesküla, Külli Meier, Laura Ojala, Ly Neeme, Maarja Karmin, Mare Rosen, Marek Limberg, Mariann Rikka, Mart Kuldkepp, Nele Vokk, Piia Reismann, Piret Tarto, Rait Rattik, Sander Jürisson, Sven Illing, Taavi Einaste, Taimar Peterkop, Toivo Jullinen, Triin Toomesaar, jt.
+
+                .producers
+                    .producer
+                        h4 Produtsent
+                        p SA Unitas
+                    .producer
+                        h4 Kaasprodutsent
+                        p Meelis Niinepuu
+        section#toeta.section.donate
+            .section--content.u-container
+                .donate--content
+                    h2.section--title Sinu panus loeb, <strong>toeta algatust!</strong>
+                    .u-content
+                        p Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda. Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
+                        p Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Unitas kontole. Ühekordse makse puhul kasuta allolevaid makselinke või ülekannet SA Unitas pangakontole. Püsikorralduse saab vormistada SA Unitas pangakontole. Konto andmed on nähtaval allpool.
+                        p SA Unitas kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja, seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks. Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad. Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
+                        form.donation-form(action="")
+                            .input
+                                label(for="sum") Sisesta summa
+                                input(type="number", id="sum")
+                                span €
+                            button.btn.btn--primary(type="submit") Toetan
+                aside.donate--side
+                    .box
+                            img(src="/assets/images/data/EV100.png", alt="EV100", width="136")
+                            p Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
+                            p
+                                a(href="") Loe lähemalt
+
+                    h3 Pangakonto andmed
+                    ul
+                        li
+                            strong EE85 1010 2200 8178 2010
+                            || BIC: EEUHEE2X
+                        li
+                            strong SEB PANK:
+                            | Tornimäe 2, 15010, Tallinn, Eesti
+                        li
+                            strong Selgitus:
+                            | Toetan Kogu Me Lugu
+
+    mixin footer
+mixin scripts

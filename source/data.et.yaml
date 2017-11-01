@@ -1,7 +1,6 @@
-page:
-  aliases:
+aliases:
     - /
-  data:
+file:
     coProducers: ./data/coproducers.yaml
     partners: ./data/partners.yaml
     producers: ./data/producers.yaml

@@ -2,43 +2,44 @@
 
 # set -o errexit -o nounset
 
+
 export SOURCE_DIR=./source
-export TMP_SOURCE_DIR=./tmp_source
 export BUILD_DIR=./build
-export THUMBS_DIR=${BUILD_DIR}/thumbnails
 
-export ENTU_URL=https://kogumelugu.entu.ee
+export ENTU_DB=
+export ENTU_KEY=
 
-source ./secure.sh
 
-# before_script:
 echo
 echo --------- PREFETCH
-# rm -rf ${TMP_SOURCE_DIR}
-# mkdir ${TMP_SOURCE_DIR}
-cp -r ${SOURCE_DIR}/* ${TMP_SOURCE_DIR}
-
 rm -rf ${BUILD_DIR}
-mkdir ${BUILD_DIR}
 
-rm -rf ${BUILD_DIR}/assets
 mkdir -p ${BUILD_DIR}/assets
+mkdir -p ${BUILD_DIR}/uudised
+mkdir -p ${BUILD_DIR}/majad
+
 cp -r ./assets/* ${BUILD_DIR}/assets
 
-cp ./_redirects ${BUILD_DIR}/_redirects
-
-mkdir -p ${THUMBS_DIR}
-
-
-# npm install entu-cms vimeo
+# rm -r node_modules
+# npm install -q entu-ssg
 
 
-source ./fetch.sh
-
-
-source ./pictures.sh
+echo
+echo --------- FETCH
+export ENTU_TYPE=video
+# export ENTU_PARENT=743
+./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/video/_video/data.yaml
 
 
 echo
 echo --------- BUILD
-./node_modules/entu-cms/build.js ./entu-cms.yaml
+./node_modules/entu-ssg/build.js ./entu-ssg.yaml
+
+
+echo
+echo --------- PICTURES
+export PICTURES_YAML=${SOURCE_DIR}/uudised/_uudis/data.yaml
+export PICTURES_DIR=${BUILD_DIR}
+node ./pictures.js
+echo
+echo --------- DONE

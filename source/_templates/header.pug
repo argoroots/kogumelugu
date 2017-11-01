@@ -1,0 +1,18 @@
+//- Declaration (header.pug)
+mixin header(activeLink)
+    header.header
+        .u-container
+            a.logo(href='/' + page.language)
+                img(src='/assets/images/logo.png', alt='Kogu Me Lugu!')
+            button.btn.menu--toggle(type='button')
+            nav.main-menu
+                ul
+                    li= '/' + page.language + '/' + page.path
+                    each n in G.menu
+                        li(class = n.link == '/' + page.language + '/' + page.path ? 'u-active' : '')
+                            a(href = n.link)= n.text
+
+            nav.lang-menu
+                a(href='/et/' + page.path) EST
+                a(href='/en/' + page.path) ENG
+                //- a(href='/ru/' + page.path) RUS

@@ -1,6 +1,3 @@
-node_modules
-tmp_source
 build
-
-secure.sh
 geonames/data
+node_modules
