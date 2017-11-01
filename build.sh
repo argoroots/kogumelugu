@@ -16,13 +16,14 @@ cp ./_redirects ${BUILD_DIR}/_redirects
 
 rm -r node_modules
 npm install -q entu-ssg
+npm install -q vimeo
 
 
 echo
 echo --------- FETCH
 export ENTU_TYPE=interview
 # export ENTU_PARENT=743
-./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/video/_video/data.yaml
+./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/video/data.yaml
 
 
 echo
@@ -32,8 +33,8 @@ echo --------- BUILD
 
 echo
 echo --------- PICTURES
-export PICTURES_YAML=${SOURCE_DIR}/uudised/_uudis/data.yaml
-export PICTURES_DIR=${BUILD_DIR}
+export PICTURES_YAML=${SOURCE_DIR}/video/data.yaml
+export PICTURES_DIR=${BUILD_DIR}/assets/images
 node ./pictures.js
 echo
 echo --------- DONE
