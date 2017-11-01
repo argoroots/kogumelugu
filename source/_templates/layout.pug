@@ -1,5 +1,12 @@
+block vars
+
+
 -
     const title = self.title ? self.title + ' · Kogu Me Lugu!' : 'Kogu Me Lugu!'
+
+
+mixin markdown(text)
+    | !{ self.toMarkdown(text) }
 
 
 doctype html
