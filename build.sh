@@ -21,7 +21,7 @@ npm install -q vimeo
 
 echo
 echo --------- FETCH
-export ENTU_QUERY="_type.string.regex=interview|story&props=path,videoUrl,title_et,title_en,title_ru,subtitle_et,subtitle_en,subtitle_ru"
+export ENTU_QUERY="_type.string.regex=interview|story&props=_mid,path,videoUrl,title_et,title_en,title_ru,subtitle_et,subtitle_en,subtitle_ru"
 ./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/video/data.yaml
 
 
