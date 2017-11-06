@@ -34,6 +34,6 @@ echo
 echo --------- PICTURES
 export PICTURES_YAML=${SOURCE_DIR}/video/data.yaml
 export PICTURES_DIR=${BUILD_DIR}/assets/images
-node ./pictures.js
+node ./fetch_pictures.js
 echo
 echo --------- DONE
