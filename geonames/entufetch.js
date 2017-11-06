@@ -25,9 +25,9 @@ const entuAuth = (key, callback) => {
     reqWrapper(options, callback)
 }
 
-const entuFetchRegions = (token, callback) => {
+const entuFetch = (token, definition, callback) => {
     let options = {
-        url: 'https://api.entu.ee/entity?_type.string=person'
+        url: 'https://api.entu.ee/entity?_type.string=' + definition
             //    + '&name.string.exists=true'
             //    + '&props=name'
              + '&limit=1000',
@@ -37,7 +37,7 @@ const entuFetchRegions = (token, callback) => {
 }
 
 
-module.exports = (key) => {
+module.exports = (key, definition, callback) => {
     async.waterfall([
         (callback) => {
             entuAuth(key, (error, response) => {
@@ -48,12 +48,16 @@ module.exports = (key) => {
             })
         },
         (token, callback) => {
-            entuFetchRegions(token, (error, response) => {
-                console.log(require('util').inspect(response, { depth: null }))
-                return callback(null, 'bye!')
+            entuFetch(token, definition, (error, response) => {
+                // console.log(require('util').inspect(response, { depth: null }))
+                return callback(null, response)
             })
         }
     ], function (err, result) {
-        console.log('finito', result)
+        if (err) {
+            return callback(err)
+        }
+        console.log('finished fetching ', definition)
+        callback(null, result)
     })
 }
