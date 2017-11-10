@@ -21,8 +21,20 @@ cp ./_redirects ${BUILD_DIR}/_redirects
 
 echo
 echo --------- FETCH
-export ENTU_QUERY="_type.string.regex=interview|story&props=_mid,photo,path,videoUrl,title_et,title_en,title_ru,subtitle_et,subtitle_en,subtitle_ru"
-./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/video/data.yaml
+export VIDEOS_YAML=_videos.yaml
+export ENTU_QUERY="_type.string.regex=interview|story&props=photo,path,videoUrl,title_et,title_en,title_ru,subtitle_et,subtitle_en,subtitle_ru"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${VIDEOS_YAML}
+export REGIONS_YAML=_regions.yaml
+export ENTU_QUERY="_type.string=region&props=lat,lng,name_et,name_en,name_ru"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${REGIONS_YAML}
+export TCREGIONS_YAML=_timecodedRegions.yaml
+export ENTU_QUERY="_type.string=timecodedregion&props=_parent,region,time"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${TCREGIONS_YAML}
+
+
+echo
+echo --------- MARKERS - join videos, regions and timecodedRegionsregions
+node ./join_regions.js
 
 
 echo
