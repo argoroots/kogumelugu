@@ -112,10 +112,10 @@ block content
                         p Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda. Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
                         p Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Unitas kontole. Ühekordse makse puhul kasuta allolevaid makselinke või ülekannet SA Unitas pangakontole. Püsikorralduse saab vormistada SA Unitas pangakontole. Konto andmed on nähtaval allpool.
                         p SA Unitas kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja, seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks. Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad. Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
-                        form.donation-form(action='')
+                        form.donation-form(action='https://payment.maksekeskus.ee/pay/1/link.html?shopId=23d7bb0e-3372-4644-8440-eb7bec5562b1&paymentId=Toetan+Kogu+Me+Lugu')
                             .input
                                 label(for='sum') Sisesta summa
-                                input(type='number', id='sum')
+                                input(type='number', id='amount', name='amount')
                                 span €
                             button.btn.btn--primary(type='submit') Toetan
                 aside.donate--side
