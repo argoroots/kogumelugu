@@ -70,8 +70,10 @@ async.eachLimit(videos, 15, (video, callback) => {
         return callback()
     }
     const videoPath = path.join(PICTURES_DIR, video.path + '.jpg')
+
     console.log(video.photo._id, videoPath)
-    download(video.photo._id, videoPath, callback)
+    fs.ensureDir(path.dirname(videoPath))
+    .then(() => download(video.photo._id, videoPath, callback))
 }, function(err){
     if( err ) {
       console.log('A file failed to process');
