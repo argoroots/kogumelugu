@@ -28,41 +28,41 @@ function initMap(data) {
     items = data;
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
-      for (var y = 0; y < item.regions.length; y++) {
-        var region  = item.regions[y],
-            ELlng   = region.lng
-            ELlat   = region.lat,
+      for (var y = 0; y < item.region.length; y++) {
+        var region  = item.region[y],
+            ELlng   = Number(region.lng)
+            ELlat   = Number(region.lat),
             marker  = new google.maps.Marker({
               position: {lat: ELlat, lng: ELlng},
               map: map,
-              icon: './assets/images/map/map-marker.svg'
+              icon: '/assets/images/map/map-marker.svg'
             });
 
         var el = $('<div/>', {
-          class: "map-popup"
+          class: 'map-popup'
         });
 
         var elLink = $('<a/>', {
-          href: "/video/" + item.id,
+            href: './' + item.path,
         }).appendTo(el);
 
         var elImg = $('<img />', {
-          src: item.image,
-          alt: item.name
+            src: '/assets/images/' + item.path + '.jpg',
+            alt: item.title_et + ' - ' + item.subtitle_et
         }).appendTo(elLink);
 
         var elTextWrap = $('<div/>', {
-          "class": "text"
+          class: 'text'
         }).appendTo(elLink);
 
         var elTitleWrap = $('<h3/>').appendTo(elTextWrap);
 
         var elTitle = $('<span/>', {
-          text: item.name
+            text: item.title_et
         }).appendTo(elTitleWrap);
 
         var elText = $('<p/>', {
-          text: item.info
+            text: item.subtitle_et
         }).appendTo(elTextWrap);
 
         const ib = new InfoBox(ibOptions);
@@ -81,11 +81,11 @@ function initMap(data) {
   }
   var markerCluster = new MarkerClusterer(map, markers, {
     imageExtension: 'svg',
-    imagePath: './assets/images/map/',
+    imagePath: '/assets/images/map/',
     maxZoom: 14,
     minimumClusterSize: 2,
     styles: [{
-      url: './assets/images/map/1.svg',
+      url: '/assets/images/map/1.svg',
       height: 60,
       width: 60,
       anchor: [0, 0],

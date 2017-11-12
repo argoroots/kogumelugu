@@ -35,6 +35,7 @@ export ENTU_QUERY="_type.string=timecodedregion&props=_parent,region,time&limit=
 echo
 echo --------- MARKERS - join videos, regions and timecodedRegionsregions
 export VIDEO_DATA_YAML=${SOURCE_DIR}/video/data.yaml
+export MAP_DATA_JSON=${BUILD_DIR}/assets/map.json
 node ./join_regions.js
 
 
