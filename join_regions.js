@@ -76,7 +76,7 @@ async.parallel({
             if (err) { return callback(err) }
             fs.writeFileSync(
                 VIDEO_DATA_YAML,
-                yaml.safeDump(all_data.videos, { indent: 4, lineWidth: 999999999, noRefs: true })
+                yaml.safeDump(Object.keys(all_data.videos).map((key) => all_data.videos[key]), { indent: 4, lineWidth: 999999999, noRefs: true })
             )
             console.log('ready')
         })
