@@ -61,3 +61,80 @@ unitasInfo: |
     The Unitas Foundation, founded in 2008 in Tallinn, is one of the founding members of the European Platform of Memory and Conscience. Dedicated to the advancement of history education and human rights culture, the foundation aims to raise awareness of the inhumanity of totalitarian regimes and ideologies and to pursue the international condemnation of their crimes.
 
     [unitas.ee](http://unitas.ee)
+
+texts:
+    EMI: Estonian Institute of Historical Memory
+    mapTitle:
+        left: Storys around the&nbsp;
+        right: world
+    education:
+        findOutMore: Find out more
+        materials: Education Materials
+        history: History Education
+        historyText: |
+            English posuere erat a ante venenatis dapibus posuere velit aliquet.
+            Cras mattis consectetur purus sit amet fermentum.
+        humanRights: Human Rights Education
+        humanRightsText: |
+            English posuere erat a ante venenatis dapibus posuere velit aliquet.
+            Cras mattis consectetur purus sit amet fermentum.
+    culture:
+        title1: We all inherit
+        title2: our culture
+        div1: |
+            Each of us has a story and a role in other stories.
+            We are all children of our parents and residents of where we live.
+            We all inherit our cultural, regional and family heritage.
+            The Estonian story, our entire story, is made of different stories of the Estonian people.
+        div2: |
+            These stories do not provide a complete picture of the past,
+            but represent it through the lens of the speaker, which can be very different from our own.
+            Listening to these stories we experience life in different, perhaps unfamiliar ways.
+            Indeed, as individuals we are different, unique.
+            However, what we share deep inside us is common to all.
+        div3: |
+            Kogu Me Lugu (translates into Collect Our Story, We're Collecting The Story,
+            also Our Entire Story) is an online oral history portal.
+            We collect, preserve and share the family stories of Estonians from around the world in video format.
+            We focus on the memories of people who were repressed by the Soviet or Nazi regimes,
+            people who escaped Estonia during the occupations of said regimes or arrived in Estonia as a result of the occupations.
+            The collected memories are used for developing educational materials,
+            research and raising public awareness in Estonia and elsewhere.
+            Kogu Me Lugu was launched on 14 June 2013.
+        div4: |
+            Each story is unique, yet part of a larger story.
+            Each story is the Estonian story and also the story of mankind.
+    mailingList:
+        join: Join our mailing list
+        div1: |
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
+            suscipit nostrum obcaecati aliquam, et! Expedita quae,
+            exercitationem ducimus mollitia error, perferendis eum delectus
+            nesciunt debitis praesentium, id voluptas ipsam rem.
+        yourEmail: Enter your e-mail address
+        joinButton: Join mailing list
+    partners: Partners
+    financiers: Financiers
+    thanks4allTheFishAndSofa: Thanks to all friends and supporters!
+    contribution:
+        title1: Your donation counts,
+        title2: support our online-portal!
+        div1: |
+            Thanks to your financial support, more stories can be told and therefore the story of the Estonian community will be richer.
+            Your financial gift will also support the administration and development of the Kogu Me Lugu online platform.
+        div2: |
+            You can support Kogu Me Lugu through both single donations or standing order donations
+            to the account of the Estonian Institute of Historical Memory (SA Eesti Mälu Instituut).
+            For single donations please use the payment links below or make the donation to the bank account of the Institute.
+            Account details are available below.
+
+
+
+
+        amount: Insert amount
+        submit: Support
+        participate: Participate in the Republic of Estonia 100th Anniversary gift project or donate!
+        findOutMore: Find out more
+        accountDetails: Account Number
+        descriptionLabel: "Description:"
+        description: Toetan Kogu Me Lugu

@@ -26,51 +26,50 @@ block content
 
         section.section.materials
             .section--content.u-container
-                h2.section--title Õppematerjalid
+                h2.section--title= self.texts.education.materials
                 .materials--list
                     .materials--item
-                        h3.section--subtitle Ajalooõpe
-                        p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                        a.btn.btn--default(href='/et/oppematerjalid') Loe lähemalt
+                        h3.section--subtitle= self.texts.education.history
+                        p= self.texts.education.historyText
+                        a.btn.btn--default(href=self.menu[2].path)= self.texts.education.findOutMore
                     .materials--item
-                        h3.section--subtitle Inimõiguste õpe
-                        p Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum.
-                        a.btn.btn--default(href='/et/oppematerjalid') Loe lähemalt
+                        h3.section--subtitle= self.texts.education.humanRights
+                        p= self.texts.education.humanRightsText
+                        a.btn.btn--default(href=self.menu[2].path)= self.texts.education.findOutMore
 
         section#tutvustus.section.about
             .section--content.u-container
-                h2.section--title ME KÕIK PÄRIME
-                    strong OMA KULTUURI
+                h2.section--title= self.texts.culture.title1
+                    strong= self.texts.culture.title2
                 .u-content
-                    p Igaühel meist on oma lugu ja oma roll teiste lugudes. Kõik me oleme kellegi lapsed ja mingi piirkonna elanikud, kõik me pärime oma kultuuri, kodukoha ja perekonna pärandi. Eesti lugu, kogu me lugu, moodustub erinevate Eesti inimeste lugudest.
-                    p Need lood ei edasta minevikust täielikku pilti, vaid annavad seda edasi läbi rääkija objektiivi, mis võib olla vägagi erinev meie enda omast. Neid lugusid kuulates kogeme maailma teistsugusel, vahest harjumatul viisil. Pealtnäha olemegi erinevad, kordumatud. See, mis aga peitub igas inimeses sügaval sisimas, on meil ühine.
-                    p Kogu Me Lugu on algatus koguda, uurida ja jagada Eesti perede lugusid. Algatuse raames kogutakse, talletatakse ja levitatakse Nõukogude ja Saksa okupatsioonide ajal Eestis elanud, nimetatud võimude eest Eestist põgenenud või nende tegevuse tulemusena Eestisse sattunud inimeste ning nende järeltulijate mälestusi ja elulugusid.
-                    p Kogu Me Lugu projekti algataja oli 2008. aastal Tallinnas asutatud Sihtasutus Unitas, mis keskendus ajaloohariduse ja inimõiguste kultuuri arendamisele. Ta kuulus Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning tema eesmärk oli totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine. 2017. aastal ühines Sihtasutus Unitas Eesti Mälu Instituudiga.
+                    p= self.texts.culture.div1
+                    p= self.texts.culture.div2
+                    p= self.texts.culture.div3
                     .intro
-                        p Iga lugu on omapärane, samas osa suuremast loost. Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
+                        p= self.texts.culture.div4
 
         section.section.newsletter
             .section--content.u-container
-                h2.section--title Liitu meie uudiskirjaga
+                h2.section--title= self.texts.mailingList.join
                 .newsletter--content
                     .u-content
-                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam suscipit nostrum obcaecati aliquam, et! Expedita quae, exercitationem ducimus mollitia error, perferendis eum delectus nesciunt debitis praesentium, id voluptas ipsam rem.
+                        p= self.texts.mailingList.div1
                     form.newsletter-form(action='')
                         .input
-                            label(for='email') Sisesta oma e-maili aadress
+                            label(for='email')= self.texts.mailingList.yourEmail
                             input(type='email', id='email')
-                        button.btn.btn--secondary(type='submit') Liitu uudiskirjaga
+                        button.btn.btn--secondary(type='submit')= self.texts.mailingList.joinButton
 
         section#tegijad.section
             .section--content.u-container
                 .partners
-                    h2.section--title Koostööpartnerid
+                    h2.section--title= self.texts.partners
                     ul.partners--list
                         each p in self.partners
                             li
                                 a(href=p.url)= p.title
                 .supporters
-                    h3.section--subtitle SUURTOETAJAD
+                    h3.section--subtitle self.texts.financiers
                     ul.supporters--list
                         each s in self.sponsors
                             li
@@ -78,61 +77,43 @@ block content
                                     if s.picture
                                         img(src='/assets/images/sponsors/' + s.picture, alt=s.title)
                 .thanks
-                    h3.section--subtitle TÄNUSÕNAD KAASTEGUTSEJATELE
-                    .thanks--blocks
-                        .thanks--block
-                            h4 Meeskonnaliikmed
-                            p
-                                each t in self.team
-                                    = t.title
-                                    | ,
-                                    |
-                                | jt.
-                        .thanks--block
-                            h4 Toetajad ja hooandjad
-                            p
-                                each s in self.supporters
-                                    = s.title
-                                    | ,
-                                    |
-                                | jt.
+                    h3.section--subtitle= self.texts.thanks4allTheFishAndSofa
 
-                .producers
-                    .producer
-                        h4 Produtsent
-                        p SA Unitas
-                    .producer
-                        h4 Kaasprodutsent
-                        p Meelis Niinepuu
         section#toeta.section.donate
             .section--content.u-container
                 .donate--content
-                    h2.section--title Sinu panus loeb, <strong>toeta algatust!</strong>
+                    h2.section--title= self.texts.contribution.title1
+                        strong= self.texts.contribution.title2
                     .u-content
-                        p Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda. Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
-                        p Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Unitas kontole. Ühekordse makse puhul kasuta allolevaid makselinke või ülekannet SA Unitas pangakontole. Püsikorralduse saab vormistada SA Unitas pangakontole. Konto andmed on nähtaval allpool.
-                        p SA Unitas kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja, seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks. Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad. Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
+                        p= self.texts.contribution.div1
+                        p= self.texts.contribution.div2
+                        if self.texts.contribution.div3
+                            p= self.texts.contribution.div3
+
                         form.donation-form(action='https://payment.maksekeskus.ee/pay/1/link.html?shopId=23d7bb0e-3372-4644-8440-eb7bec5562b1&paymentId=Toetan+Kogu+Me+Lugu')
                             .input
-                                label(for='sum') Sisesta summa
+                                label(for='sum')= self.texts.contribution.amount
                                 input(type='number', id='amount', name='amount')
                                 span €
-                            button.btn.btn--primary(type='submit') Toetan
+                            button.btn.btn--primary(type='submit')= self.texts.contribution.submit
                 aside.donate--side
                     .box
                             img(src='/assets/images/data/EV100.png', alt='EV100', width='136')
-                            p Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
+                            p= self.texts.contribution.participate
                             p
-                                a(href='') Loe lähemalt
+                                a(href='https://ev100.ee/et/kogu-me-lugu')= self.texts.contribution.findOutMore
 
                     h3 Pangakonto andmed
                     ul
                         li
-                            strong EE85 1010 2200 8178 2010
-                            | BIC: EEUHEE2X
+                            strong IBAN:
+                            | EE422200221039992298
                         li
-                            strong SEB PANK:
-                            | Tornimäe 2, 15010, Tallinn, Eesti
+                            strong BIC:
+                            | HABAEE2X
                         li
-                            strong Selgitus:
-                            | Toetan Kogu Me Lugu
+                            strong Swedbank:
+                            | Liivalaia 8, 15040 Tallinn, Estonia
+                        li
+                            strong= self.texts.contribution.descriptionLabel
+                            |= self.texts.contribution.description

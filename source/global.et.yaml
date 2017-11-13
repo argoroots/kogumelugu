@@ -61,3 +61,80 @@ unitasInfo: |
     Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
 
     [unitas.ee](http://unitas.ee)
+
+texts:
+    EMI: Eesti Mälu Instituut
+    mapTitle:
+        left: Lood ümber&nbsp;
+        right: maailma
+    education:
+        findOutMore: Loe lähemalt
+        materials: Õppematerjalid
+        history: Ajaloo õppematerjalid
+        historyText: |
+            Eesti keelne re erat a ante venenatis dapibus posuere velit aliquet.
+            Cras mattis consectetur purus sit amet fermentum.
+        humanRights: Inimõiguste õppematerjalid
+        humanRightsText: |
+            Eesti keelne re erat a ante venenatis dapibus posuere velit aliquet.
+            Cras mattis consectetur purus sit amet fermentum.
+    culture:
+        title1: Me kõik pärime
+        title2: oma kultuuri
+        div1: |
+            Each of us has a story and a role in other stories.
+            We are all children of our parents and residents of where we live.
+            We all inherit our cultural, regional and family heritage.
+            The Estonian story, our entire story, is made of different stories of the Estonian people.
+        div2: |
+            These stories do not provide a complete picture of the past,
+            but represent it through the lens of the speaker, which can be very different from our own.
+            Listening to these stories we experience life in different, perhaps unfamiliar ways.
+            Indeed, as individuals we are different, unique.
+            However, what we share deep inside us is common to all.
+        div3: |
+            Kogu Me Lugu on suulise ajaloo portaal.
+            Kogume, uurime ja jagame videoformaadis eesti inimeste lugusid üle maailma,
+            mis räägivad Eesti mäletatava ajastu minevikukogemustest, andes aimu ka olevikust.
+            Selleks kogume, uurime ja jagame Nõukogude või Saksa okupatsiooni ajal Eestis elanud,
+            nimetatud võimude eest Eestist põgenenud või nende tegevuse tulemusena Eestisse sattunud inimeste mälestusi (otsetunnistajad ja nende lähedased).
+            Kogutud mälestusi kasutatakse õppematerjalide arendamisel, uurimistöös ning avalikkuses mälestuspäevadel,
+            näitustel ja muuseumides nii Eestis kui mujal maailmas.
+            Kogu Me Lugu sai alguse 14. juunil 2013. aastal.
+        div4: |
+            Iga lugu on omapärane, samas osa suuremast loost.
+            Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
+    mailingList:
+        join: Liitu meie uudiskirjaga
+        div1: |
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
+            suscipit nostrum obcaecati aliquam, et! Expedita quae,
+            exercitationem ducimus mollitia error, perferendis eum delectus
+            nesciunt debitis praesentium, id voluptas ipsam rem.
+        yourEmail: Sisesta oma e-posti aadress
+        joinButton: Liitu uudiskirjaga
+    partners: Koostööpartnerid
+    financiers: Suurtoetajad
+    thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!
+    contribution:
+        title1: Sinu panus loeb,
+        title2: toeta portaali!
+        div1: |
+            Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda.
+            Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
+        div2: |
+            Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituut kontole.
+            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituut pangakontole.
+            Konto andmed on nähtaval allpool.
+        div3: |
+            SA Eesti Mälu Instituut kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja,
+            seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks.
+            Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad.
+            Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
+        amount: Sisesta summa
+        submit: Toetan
+        participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
+        findOutMore: Loe lähemalt
+        accountDetails: Pangakonto andmed
+        descriptionLabel: "Selgitus:"
+        description: Toetan Kogu Me Lugu

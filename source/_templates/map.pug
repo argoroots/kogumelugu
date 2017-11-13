@@ -1,5 +1,6 @@
 mixin map(title)
     .map-container
         if title
-            h2 Lood ümber <strong>Maailma</strong>
+            h2= self.texts.mapTitle.left
+                strong= self.texts.mapTitle.right
         #map
