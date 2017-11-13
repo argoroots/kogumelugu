@@ -69,7 +69,7 @@ block content
                             li
                                 a(href=p.url)= p.title
                 .supporters
-                    h3.section--subtitle self.texts.financiers
+                    h3.section--subtitle= self.texts.financiers
                     ul.supporters--list
                         each s in self.sponsors
                             li
@@ -107,13 +107,13 @@ block content
                     ul
                         li
                             strong IBAN:
-                            | EE422200221039992298
+                            span &nbsp;EE422200221039992298
                         li
                             strong BIC:
-                            | HABAEE2X
+                            span &nbsp;HABAEE2X
                         li
                             strong Swedbank:
-                            | Liivalaia 8, 15040 Tallinn, Estonia
+                            span &nbsp;Liivalaia 8, 15040 Tallinn, Estonia
                         li
                             strong= self.texts.contribution.descriptionLabel
-                            |= self.texts.contribution.description
+                            span!= '&nbsp;' + self.texts.contribution.description

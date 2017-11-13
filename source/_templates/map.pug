@@ -1,6 +1,6 @@
 mixin map(title)
     .map-container
         if title
-            h2= self.texts.mapTitle.left
+            h2!= self.texts.mapTitle.left + '&nbsp;'
                 strong= self.texts.mapTitle.right
         #map
