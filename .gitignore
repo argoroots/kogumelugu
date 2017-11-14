@@ -4,3 +4,4 @@ node_modules
 package-lock.json
 secure.sh
 source/video/data.yaml
+assets/images/video
