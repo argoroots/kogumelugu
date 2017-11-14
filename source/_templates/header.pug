@@ -12,6 +12,9 @@ header.header
                         a(href=n.path)= n.title
 
         nav.lang-menu
-            a(href='/et/' + self.path) ET
-            a(href='/en/' + self.path) EN
-            //- a(href='/ru/' + self.path) RU
+            if self.locale !== 'et'
+                a(href='/et/' + self.path) ET
+            if self.locale !== 'en'
+                a(href='/en/' + self.path) EN
+            if self.locale !== 'ru'
+                //- a(href='/ru/' + self.path) RU
