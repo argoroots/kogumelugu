@@ -58,11 +58,11 @@ function initMap(data) {
         var elTitleWrap = $('<h3/>').appendTo(elTextWrap);
 
         var elTitle = $('<span/>', {
-            text: item.title_et
+            text: item['title_' + USERLANG]
         }).appendTo(elTitleWrap);
 
         var elText = $('<p/>', {
-            text: item.subtitle_et
+            text: item['subtitle_' + USERLANG]
         }).appendTo(elTextWrap);
 
         const ib = new InfoBox(ibOptions);
