@@ -138,3 +138,6 @@ texts:
         accountDetails: Pangakonto andmed
         descriptionLabel: "Selgitus:"
         description: Toetan Kogu Me Lugu
+    searchbox:
+        placeholder: Otsi…
+        findButton: Leia lugu

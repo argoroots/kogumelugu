@@ -2,5 +2,5 @@
     .u-container
         form(action='video-list.html')
             i.fa.fa-search
-            input(type='search', placeholder='Otsi…')
-            button.btn.btn--primary(type='submit') Leia lugu
+            input(type='search', placeholder=self.texts.searchbox.placeholder)
+            button.btn.btn--primary(type='submit')= self.texts.searchbox.findButton

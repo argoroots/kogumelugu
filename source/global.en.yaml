@@ -138,3 +138,6 @@ texts:
         accountDetails: Account Number
         descriptionLabel: "Description:"
         description: Toetan Kogu Me Lugu
+    searchbox:
+        placeholder: Search…
+        findButton: Find Story
