@@ -23,27 +23,27 @@ npm install -q vimeo
 echo
 echo --------- FETCH
 export TAGS_YAML=${SOURCE_DIR}/tags/tags.yaml
-export ENTU_QUERY="_type.string=tag&props=name_en,name_et,name_ru&limit=10000"
+export ENTU_QUERY="_type.string=tag&props=name_en,name_et,name_ru&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${TAGS_YAML}
 
-export TCTAGS_YAML=${TMP_DIR}/timecodedTags.yaml
-export ENTU_QUERY="_type.string=timecodedtag&limit=10000"
-./node_modules/entu-ssg/helpers/entu2yaml.js ${TCTAGS_YAML}
-
 export REGIONS_YAML=${SOURCE_DIR}/tags/regions.yaml
-export ENTU_QUERY="_type.string=region&props=lat,lng,name_en,name_et,name_ru&limit=10000"
+export ENTU_QUERY="_type.string=region&props=lat,lng,name_en,name_et,name_ru&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${REGIONS_YAML}
 
-export TCREGIONS_YAML=${TMP_DIR}/timecodedRegions.yaml
-export ENTU_QUERY="_type.string=timecodedregion&props=_parent,region,time&limit=10000"
-./node_modules/entu-ssg/helpers/entu2yaml.js ${TCREGIONS_YAML}
-
 export PERSONS_YAML=${SOURCE_DIR}/tags/persons.yaml
-export ENTU_QUERY="_type.string=person&props=forename,surname&limit=10000"
+export ENTU_QUERY="_type.string=person&props=forename,surname&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${PERSONS_YAML}
 
+export TCTAGS_YAML=${TMP_DIR}/timecodedTags.yaml
+export ENTU_QUERY="_type.string=timecodedtag&limit=999"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${TCTAGS_YAML}
+
+export TCREGIONS_YAML=${TMP_DIR}/timecodedRegions.yaml
+export ENTU_QUERY="_type.string=timecodedregion&props=_parent,region,time&limit=999"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${TCREGIONS_YAML}
+
 export VIDEOS_YAML=${TMP_DIR}/videos.yaml
-export ENTU_QUERY="_type.string.regex=interview|story&props=author,category,description_en,description_et,description_ru,interview,language,path,photo,project,storyteller,subject,subtitle_en,subtitle_et,subtitle_ru,title_en,title_et,title_ru,videoUrl&limit=10000"
+export ENTU_QUERY="_type.string.regex=interview|story&props=author,category,description_en,description_et,description_ru,interview,language,path,photo,project,storyteller,subject,subtitle_en,subtitle_et,subtitle_ru,title_en,title_et,title_ru,videoUrl&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${VIDEOS_YAML}
 
 

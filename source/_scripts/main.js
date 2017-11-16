@@ -128,7 +128,7 @@ function scrollToDiv() {
     }, 200)
 }
 
-$(document).ready(function() {
+$(function() {
     moveBG()
     initMap()
 
