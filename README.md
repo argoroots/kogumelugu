@@ -1,5 +1,3 @@
-# Kogu Me Lugu!
-
 # [Kogu Me Lugu!](https://www.kogumelugu.ee)
 
 - Data is hosted by [Entu](https://www.entu.ee)
