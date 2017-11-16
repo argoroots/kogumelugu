@@ -9,6 +9,7 @@ REGIONS_YAML = process.env.REGIONS_YAML
 TCREGIONS_YAML = process.env.TCREGIONS_YAML
 VIDEO_DATA_YAML = process.env.VIDEO_DATA_YAML
 PERSONS_YAML = process.env.PERSONS_YAML
+TAGS_YAML = process.env.TAGS_YAML
 
 const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
@@ -23,6 +24,7 @@ const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
     })
 const tcregions_arr = yaml.safeLoad(fs.readFileSync(TCREGIONS_YAML, 'utf8'))
 const persons_arr = yaml.safeLoad(fs.readFileSync(PERSONS_YAML, 'utf8'))
+const tags_arr = yaml.safeLoad(fs.readFileSync(TAGS_YAML, 'utf8'))
 
 
 arr2obj = (arr, callback) => {
@@ -50,6 +52,9 @@ async.parallel({
     },
     persons: (callback) => {
         arr2obj(persons_arr, callback)
+    },
+    tags: (callback) => {
+        arr2obj(tags_arr, callback)
     }
 }, (err, all_data) => {
     if (err) { throw err }
@@ -80,6 +85,18 @@ async.parallel({
             video.author = video.author
             if (all_data.persons[video.author]) {
                 video.author = all_data.persons[video.author]
+            }
+        }
+
+        // Tags / Märksõnad
+        if (video.tag !== undefined) {
+            video.tag = video.tag
+            .map((_id) => {
+                return all_data.tags[_id]
+            })
+            .filter((r) => r !== undefined)
+            if (video.tag.length === 0) {
+                delete(video.tag)
             }
         }
 
