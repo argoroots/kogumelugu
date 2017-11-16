@@ -37,6 +37,10 @@ export TCREGIONS_YAML=${TMP_DIR}/timecodedRegions.yaml
 export ENTU_QUERY="_type.string=timecodedregion&props=_parent,region,time&limit=10000"
 ./node_modules/entu-ssg/helpers/entu2yaml.js ${TCREGIONS_YAML}
 
+export PERSONS_YAML=${TMP_DIR}/persons.yaml
+export ENTU_QUERY="_type.string=person&limit=10000"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${PERSONS_YAML}
+
 
 echo
 echo --------- MARKERS - join videos, regions and timecodedRegionsregions

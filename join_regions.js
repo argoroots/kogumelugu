@@ -8,6 +8,7 @@ VIDEOS_YAML = process.env.VIDEOS_YAML
 REGIONS_YAML = process.env.REGIONS_YAML
 TCREGIONS_YAML = process.env.TCREGIONS_YAML
 VIDEO_DATA_YAML = process.env.VIDEO_DATA_YAML
+PERSONS_YAML = process.env.PERSONS_YAML
 
 const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
@@ -21,6 +22,7 @@ const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
         return true
     })
 const tcregions_arr = yaml.safeLoad(fs.readFileSync(TCREGIONS_YAML, 'utf8'))
+const persons_arr = yaml.safeLoad(fs.readFileSync(PERSONS_YAML, 'utf8'))
 
 
 arr2obj = (arr, callback) => {
@@ -45,27 +47,44 @@ async.parallel({
     },
     videos: (callback) => {
         arr2obj(videos_arr, callback)
+    },
+    persons: (callback) => {
+        arr2obj(persons_arr, callback)
     }
 }, (err, all_data) => {
     if (err) { throw err }
 
     async.each(all_data.videos, (video, callback) => {
-        if (video.region === undefined) {
-            async.setImmediate(() => callback(null))
-            return
-        }
-        video.region = video.region
+        // Regions
+        if (video.region !== undefined) {
+            video.region = video.region
             .map((_id) => {
-                // if (all_data.regions[_id] === undefined) {
-                //     return undefined
-                // }
                 return all_data.regions[_id]
             })
             .filter((r) => r !== undefined)
-        if (video.region.length === 0) {
-            delete(video.region)
+            if (video.region.length === 0) {
+                delete(video.region)
+            }
         }
-        return callback(null)
+
+        // Storytellers
+        if (video.storyteller !== undefined) {
+            video.storyteller = video.storyteller
+            if (all_data.persons[video.storyteller]) {
+                video.storyteller = all_data.persons[video.storyteller]
+            }
+        }
+
+        // Authors
+        if (video.author !== undefined) {
+            video.author = video.author
+            if (all_data.persons[video.author]) {
+                video.author = all_data.persons[video.author]
+            }
+        }
+
+        async.setImmediate(() => callback(null))
+        return
     }, (err) => {
         if (err) { return callback(err) }
         async.each(all_data.tcregions, (tcregion, callback) => {
