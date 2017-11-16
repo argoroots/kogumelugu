@@ -67,7 +67,7 @@ function initMap() {
             text: $(this).data('subtitle')
         }).appendTo(elTextWrap)
 
-        const ib = new InfoBox(ibOptions)
+        var ib = new InfoBox(ibOptions)
         ib.setContent(el.get(0))
 
         if (!hideMapLabels) {
