@@ -5,3 +5,4 @@ package-lock.json
 secure.sh
 source/video/data.yaml
 assets/images/video
+tmp
