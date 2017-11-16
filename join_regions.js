@@ -8,7 +8,6 @@ VIDEOS_YAML = process.env.VIDEOS_YAML
 REGIONS_YAML = process.env.REGIONS_YAML
 TCREGIONS_YAML = process.env.TCREGIONS_YAML
 VIDEO_DATA_YAML = process.env.VIDEO_DATA_YAML
-MAP_DATA_JSON = process.env.MAP_DATA_JSON
 
 const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
@@ -98,19 +97,6 @@ async.parallel({
             fs.writeFileSync(
                 VIDEO_DATA_YAML,
                 yaml.safeDump(videos_out, { indent: 4, lineWidth: 999999999, noRefs: true })
-            )
-            // Expected data structure
-            // [
-            //   {
-            //     "regions" : [
-            //       {
-            //         "place" : "Tallinn",
-            //         "lat" : 59.244776000000002,
-            //         "lng" : 25.6706793
-            //       },
-            fs.writeFileSync(
-                MAP_DATA_JSON,
-                JSON.stringify(videos_out.filter((v) => 'region' in v))
             )
             console.log('ready')
         })
