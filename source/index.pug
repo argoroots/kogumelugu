@@ -6,6 +6,11 @@ block vars
         const videos = self.file.videos.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort > b.sort ? 1 : -1).map((a) => a.value)
 
 
+block script
+    script.
+        var hideMapLabels = false
+
+
 block content
     #map-items.hidden
         each v in self.file.videos

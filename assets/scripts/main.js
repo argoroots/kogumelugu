@@ -70,11 +70,13 @@ function initMap() {
         const ib = new InfoBox(ibOptions)
         ib.setContent(el.get(0))
 
-        google.maps.event.addListener(marker, 'click', function () {
-            closeInfoboxes()
-            ib.open(map,this)
-            map.setCenter(this.getPosition())
-        })
+        if (!hideMapLabels) {
+            google.maps.event.addListener(marker, 'click', function () {
+                closeInfoboxes()
+                ib.open(map, this)
+                map.setCenter(this.getPosition())
+            })
+        }
 
         markers.push(marker)
         infoboxes.push(ib)
