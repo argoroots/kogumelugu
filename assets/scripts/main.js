@@ -1,5 +1,4 @@
-function initMap(data) {
-  var items;
+function initMap() {
   var ibOptions = {
     disableAutoPan: false,
     maxWidth: 0,
@@ -24,14 +23,10 @@ function initMap(data) {
     center: {lat: 53.1744575, lng: 50.2548807}
   });
 
-  if (data.length > 0) {
-    items = data;
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
-      for (var y = 0; y < item.region.length; y++) {
-        var region  = item.region[y],
-            ELlng   = Number(region.lng)
-            ELlat   = Number(region.lat),
+  if ($('#map-items > .map-item').length > 0) {
+    $('#map-items > .map-item').each(function () {
+        var ELlng   = Number($(this).data('lng'))
+            ELlat   = Number($(this).data('lat')),
             marker  = new google.maps.Marker({
               position: {lat: ELlat, lng: ELlng},
               map: map,
@@ -43,12 +38,12 @@ function initMap(data) {
         });
 
         var elLink = $('<a/>', {
-            href: './' + item.path,
+            href: './' + $(this).data('path'),
         }).appendTo(el);
 
         var elImg = $('<img />', {
-            src: '/assets/images/' + item.path + '.jpg',
-            alt: item.title_et + ' - ' + item.subtitle_et
+            src: '/assets/images/' + $(this).data('path') + '.jpg',
+            alt: $(this).data('title') + ' - ' + $(this).data('subtitle')
         }).appendTo(elLink);
 
         var elTextWrap = $('<div/>', {
@@ -58,11 +53,11 @@ function initMap(data) {
         var elTitleWrap = $('<h3/>').appendTo(elTextWrap);
 
         var elTitle = $('<span/>', {
-            text: item['title_' + USERLANG]
+            text: $(this).data('title')
         }).appendTo(elTitleWrap);
 
         var elText = $('<p/>', {
-            text: item['subtitle_' + USERLANG]
+            text: $(this).data('subtitle')
         }).appendTo(elTextWrap);
 
         const ib = new InfoBox(ibOptions);
@@ -76,8 +71,7 @@ function initMap(data) {
 
         markers.push(marker);
         infoboxes.push(ib);
-      }
-    }
+    })
   }
   var markerCluster = new MarkerClusterer(map, markers, {
     imageExtension: 'svg',
@@ -129,8 +123,7 @@ $(document).ready(function() {
   moveBG();
 
   if($('#map').length) {
-    var xhr = $.getJSON('/assets/map.json');
-    xhr.done(initMap);
+    initMap()
   }
 
   $('.accordion--item > a').click(function(e) {
