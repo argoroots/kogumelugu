@@ -6,4 +6,3 @@ secure.sh
 source/video/data.yaml
 assets/images/video
 tmp
-/_*.yaml
