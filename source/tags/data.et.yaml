@@ -1,4 +1,4 @@
 path: teemad
 title: Teemad
 file:
-    videos: ./videos/_video/data.yaml
+    tags: ./tags/tags.yaml

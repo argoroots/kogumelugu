@@ -1,8 +1,11 @@
-build
-geonames/data
-node_modules
-package-lock.json
 secure.sh
-source/video/data.yaml
-assets/images/video
+package-lock.json
+
 tmp
+build
+node_modules
+
+geonames/data
+assets/images/video
+source/video/data.yaml
+source/tags/tags.yaml

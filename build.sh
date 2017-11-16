@@ -22,6 +22,9 @@ npm install -q vimeo
 
 echo
 echo --------- FETCH
+export ENTU_QUERY="_type.string.regex=tag&props=name_et,name_en,name_ru&limit=10000"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${SOURCE_DIR}/tags/tags.yaml
+
 export VIDEOS_YAML=${TMP_DIR}/videos.yaml
 export ENTU_QUERY="_type.string.regex=interview|story&limit=10000"
 ./node_modules/entu-ssg/helpers/entu2yaml.js ${VIDEOS_YAML}
