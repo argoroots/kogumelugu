@@ -2,3 +2,5 @@ path: tags
 title: Tags
 file:
     tags: ./tags/tags.yaml
+    regions: ./tags/regions.yaml
+    persons: ./tags/persons.yaml

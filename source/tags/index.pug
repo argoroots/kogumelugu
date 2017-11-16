@@ -21,8 +21,29 @@ block vars
         }).map(a => {
             if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
         })
-
         tags.sort((a, b) => {
+            if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
+            if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
+            return 0
+        })
+
+        var regions = self.file.regions.filter(a => {
+            return !!a['name_' + self.locale]
+        }).map(a => {
+            if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
+        })
+        regions.sort((a, b) => {
+            if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
+            if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
+            return 0
+        })
+
+        var persons = self.file.persons.filter(a => {
+            return (a.forename || a.surname)
+        }).map(a => {
+            if (a.forename || a.surname) { return { _id: a._id, title: [a.forename, a.surname].join(' ') } }
+        })
+        persons.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
@@ -36,96 +57,33 @@ block content
         article.article
             h1 Teemad
             .tabs
-                a.tabs--link.u-active(href='#teemad') Kõik teemad
-                a.tabs--link(href='#ajalugu') Ajalugu
-                a.tabs--link(href='#inimoigused') Inimõigused
+                a.tabs--link.u-active(href='#teemad') Teemad
+                a.tabs--link(href='#regioonid') Regioonid
+                a.tabs--link(href='#isikud') Isikud
+
                 #teemad.tabs--item.u-open
                     .tags
-                        h2 Kõik teemad
+                        h2 Teemad
                         ul.tags--list
                             each t in tags
                                 if t.title
                                     li
                                         a(class=getColor(), href='/et/videoteek/#' + t._id)= t.title
 
+                #regioonid.tabs--item
+                    .tags
+                        h2 Regioonid
+                        ul.tags--list
+                            each r in regions
+                                if r.title
+                                    li
+                                        a(class=getColor(), href='/et/videoteek/#' + r._id)= r.title
 
-                #ajalugu.tabs--item
+                #isikud.tabs--item
                     .tags
-                        h2 Ajalugu
+                        h2 Isikud
                         ul.tags--list
-                            li
-                                a.u-red(href='') Quam Cras
-                            li
-                                a.u-red(href='') Lorem Ipsum
-                            li
-                                a.u-red(href='') Parturient
-                            li
-                                a.u-red(href='') Ipsum Commodo
-                        h2 Intervjueeritava nimi
-                        ul.tags--list
-                            li
-                                a(href='') Heino Noor
-                            li
-                                a(href='') Heino Mets
-                            li
-                                a(href='') Jüri Mätas
-                        h2 Mainitud piirkonnad
-                        ul.tags--list
-                            li
-                                a.u-green(href='') Quam Cras
-                            li
-                                a.u-green(href='') Lorem Ipsum
-                            li
-                                a.u-green(href='') Parturient
-                            li
-                                a.u-green(href='') Ipsum Commodo
-                        h2 Mainitud isikud
-                        ul.tags--list
-                            li
-                                a.u-orange(href='') Quam Cras
-                            li
-                                a.u-orange(href='') Lorem Ipsum
-                            li
-                                a.u-orange(href='') Parturient
-                            li
-                                a.u-orange(href='') Ipsum Commodo
-                #inimoigused.tabs--item
-                    .tags
-                        h2 Inimõigused
-                        ul.tags--list
-                            li
-                                a.u-purple(href='') Quam Cras
-                            li
-                                a.u-purple(href='') Lorem Ipsum
-                            li
-                                a.u-purple(href='') Parturient
-                            li
-                                a.u-purple(href='') Ipsum Commodo
-                        h2 Intervjueeritava nimi
-                        ul.tags--list
-                            li
-                                a(href='') Heino Noor
-                            li
-                                a(href='') Heino Mets
-                            li
-                                a(href='') Jüri Mätas
-                        h2 Mainitud piirkonnad
-                        ul.tags--list
-                            li
-                                a.u-green(href='') Quam Cras
-                            li
-                                a.u-green(href='') Lorem Ipsum
-                            li
-                                a.u-green(href='') Parturient
-                            li
-                                a.u-green(href='') Ipsum Commodo
-                        h2 Mainitud isikud
-                        ul.tags--list
-                            li
-                                a.u-orange(href='') Quam Cras
-                            li
-                                a.u-orange(href='') Lorem Ipsum
-                            li
-                                a.u-orange(href='') Parturient
-                            li
-                                a.u-orange(href='') Ipsum Commodo
+                            each i in persons
+                                if i.title
+                                    li
+                                        a(class=getColor(), href='/et/videoteek/#' + i._id)= i.title

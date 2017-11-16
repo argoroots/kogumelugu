@@ -1,6 +1,19 @@
 extends /layout
 
 
+block vars
+    -
+        const getList = (t) => {
+            if (!t) {
+                return []
+            } else if (Array.isArray(t)) {
+                return t
+            } else {
+                return [t]
+            }
+        }
+
+
 block script
     script.
         if (window.location.hash.substr(1)) {
@@ -21,15 +34,12 @@ block content
                             h2
                                 span= v['title_' + self.locale]
                             p= v['subtitle_' + self.locale]
-                    if v.tag
-                        -
-                            const tags = (t) => {
-                                if (Array.isArray(t)) {
-                                    return t
-                                } else {
-                                    return [v.tag]
-                                }
-                            }
 
-                        each t in tags(v.tag)
-                            .filter-item.hidden(data-id=t._id)
+                    each t in getList(v.tag)
+                        .filter-item.hidden(data-id=t._id)
+                    each r in getList(v.regions)
+                        .filter-item.hidden(data-id=r._id)
+                    each a in getList(v.author)
+                        .filter-item.hidden(data-id=a._id)
+                    each s in getList(v.storyteller)
+                        .filter-item.hidden(data-id=s._id)

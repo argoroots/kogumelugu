@@ -2,3 +2,5 @@ path: teemad
 title: Teemad
 file:
     tags: ./tags/tags.yaml
+    regions: ./tags/regions.yaml
+    persons: ./tags/persons.yaml
