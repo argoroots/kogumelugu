@@ -1,6 +1,14 @@
 extends /layout
 
 
+block script
+    script.
+        if (window.location.hash.substr(1)) {
+            $('article.videos--item').hide()
+            $('.filter-item[data-id="' + window.location.hash.substr(1) + '"]').parent().show()
+        }
+
+
 block content
     include /searchbox
 
@@ -13,3 +21,15 @@ block content
                             h2
                                 span= v['title_' + self.locale]
                             p= v['subtitle_' + self.locale]
+                    if v.tag
+                        -
+                            const tags = (t) => {
+                                if (Array.isArray(t)) {
+                                    return t
+                                } else {
+                                    return [v.tag]
+                                }
+                            }
+
+                        each t in tags(v.tag)
+                            .filter-item.hidden(data-id=t._id)
