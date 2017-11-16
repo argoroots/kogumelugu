@@ -47,8 +47,12 @@ export ENTU_QUERY="_type.string.regex=interview|story&props=author,category,desc
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${VIDEOS_YAML}
 
 export CATEGORIES_YAML=${TMP_DIR}/categories.yaml
-export ENTU_QUERY="_type.string=category&props=color,description,name&limit=10000"
+export ENTU_QUERY="_type.string=category&props=color,description,name&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${CATEGORIES_YAML}
+
+export LANGUAGES_YAML=${TMP_DIR}/categories.yaml
+export ENTU_QUERY="_type.string=language&props=name&limit=999"
+node ./node_modules/entu-ssg/helpers/entu2yaml.js ${LANGUAGES_YAML}
 
 
 echo
