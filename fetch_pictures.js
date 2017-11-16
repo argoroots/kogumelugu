@@ -76,8 +76,10 @@ async.eachLimit(videos, 15, (video, callback) => {
     .then(() => download(video.photo._id, videoPath, callback))
 }, function(err){
     if( err ) {
-      console.log('A file failed to process');
+        console.log('A file failed to process')
+        return
     } else {
-      console.log('All files have been processed successfully');
+        console.log('All files have been processed successfully')
+        return
     }
 })
