@@ -5,7 +5,10 @@ tmp
 build
 node_modules
 
-geonames/data
 assets/images/video
-source/video/data.yaml
+geonames/data
+
+source/tags/persons.yaml
+source/tags/regions.yaml
 source/tags/tags.yaml
+source/video/data.yaml
