@@ -46,9 +46,6 @@ html(lang=self.locale)
             //- })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             //- ga('create', 'UA-XXXXX-X', 'auto');
             //- ga('send', 'pageview');
-        script.
-            const USERLANG = '#{self.locale}';
-
     body
         .wrap
             include /header
@@ -61,6 +58,6 @@ html(lang=self.locale)
         script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB7vZpUo1jQNJFEpHtlFwO7c79wDJa1Omc')
         script(src='https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js')
         script(src='https://cdn.rawgit.com/googlemaps/v3-utility-library/master/infobox/src/infobox.js')
-        script(src='/assets/scripts/main.js')
 
         block script
+        script(src='/assets/scripts/main.js')
