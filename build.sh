@@ -46,6 +46,10 @@ export VIDEOS_YAML=${TMP_DIR}/videos.yaml
 export ENTU_QUERY="_type.string.regex=interview|story&props=author,category,description_en,description_et,description_ru,interview,language,path,photo,project,storyteller,subject,subtitle_en,subtitle_et,subtitle_ru,title_en,title_et,title_ru,videoUrl&limit=10000"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${VIDEOS_YAML}
 
+export CATEGORIES_YAML=${TMP_DIR}/categories.yaml
+export ENTU_QUERY="_type.string=category&props=color,description,name&limit=10000"
+node ./node_modules/entu-ssg/helpers/entu2yaml.js ${CATEGORIES_YAML}
+
 
 echo
 echo --------- JOIN

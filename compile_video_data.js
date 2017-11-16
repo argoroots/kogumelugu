@@ -11,6 +11,7 @@ VIDEO_DATA_YAML = process.env.VIDEO_DATA_YAML
 PERSONS_YAML = process.env.PERSONS_YAML
 TAGS_YAML = process.env.TAGS_YAML
 TCTAGS_YAML = process.env.TCTAGS_YAML
+CATEGORIES_YAML = process.env.CATEGORIES_YAML
 
 const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
@@ -27,6 +28,7 @@ const tcregions_arr = yaml.safeLoad(fs.readFileSync(TCREGIONS_YAML, 'utf8'))
 const persons_arr = yaml.safeLoad(fs.readFileSync(PERSONS_YAML, 'utf8'))
 const tags_arr = yaml.safeLoad(fs.readFileSync(TAGS_YAML, 'utf8'))
 const tctags_arr = yaml.safeLoad(fs.readFileSync(TCTAGS_YAML, 'utf8'))
+const categories_arr = yaml.safeLoad(fs.readFileSync(CATEGORIES_YAML, 'utf8'))
 
 
 arr2obj = (arr, callback) => {
@@ -90,6 +92,9 @@ async.parallel({
     },
     tctags: (callback) => {
         arr2obj(tctags_arr, callback)
+    },
+    categories: (callback) => {
+        arr2obj(categories_arr, callback)
     }
 }, (err, all_data) => {
     if (err) { throw err }
@@ -132,6 +137,14 @@ async.parallel({
             .filter((r) => r !== undefined)
             if (video.tag.length === 0) {
                 delete(video.tag)
+            }
+        }
+
+        // Categories
+        if (video.category !== undefined) {
+            video.category = video.category
+            if (all_data.categories[video.category]) {
+                video.category = all_data.categories[video.category]
             }
         }
 
