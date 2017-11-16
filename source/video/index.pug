@@ -22,21 +22,21 @@ block content
                         iframe(id='video', src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0?autopause=1&amp;autoplay=0&amp;badge=0&amp;byline=0&amp;loop=0&amp;portrait=0&amp;title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
                     h1= self['title_' + self.locale]
                     p
-                        strong= self['subtitle_' + self.locale]
+                        b= self['subtitle_' + self.locale]
                     p= self['description_' + self.locale]
 
                 footer
                     ul.details
                         li Intervjueeritav
                             = ' '
-                            strong Heino Noor
+                            b Heino Noor
                         li Intervjueerija
                             = ' '
-                            strong Anna Hints
+                            b Anna Hints
                         li
                             a(href='') Seotud tunnikava
                                 = ' '
-                                strong Etiam Parturient
+                                b Etiam Parturient
 
                     div.tags
                         ul.tags--list
