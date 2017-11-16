@@ -5,157 +5,141 @@ block content
     include /searchbox
 
     main.main.u-container
-        .videos
-            article.videos--item(style='background-image:url(assets/images/data/heino.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Heino Noor
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/ruth.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Ruth Sootaru (Pärntits)
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/kalju.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Kalju Mätik
-                        p Nõukogudeaegne vastupanuliikumine ja selle mahasurumise meetodid
-
-            article.videos--item(style='background-image:url(images/data/adam.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Adam Brown
-                        p Eesti päritolu väärtustamine
-
-            article.videos--item(style='background-image:url(images/data/sander.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Sander Tuul
-                        p Videolugu
-
-            article.videos--item(style='background-image:url(images/data/kaja.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Kaja Weeks
-
-            article.videos--item(style='background-image:url(images/data/sale.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Sale Katrin Marits
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/viivianne.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Viivianne Vaike  Malmgren
-                        p Usu roll küüditamise ja Siberi-aastate üleelamisel
-
-            article.videos--item(style='background-image:url(images/data/regina.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Regina Trubnikova
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/lisa.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Lisa Trei
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/siim.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Siim Sööt
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/heino.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Heino Noor
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/ruth.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Ruth Sootaru (Pärntits)
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/kalju.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Kalju Mätik
-                        p Nõukogudeaegne vastupanuliikumine ja selle mahasurumise meetodid
-
-            article.videos--item(style='background-image:url(images/data/adam.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Adam Brown
-                        p Eesti päritolu väärtustamine
-
-            article.videos--item(style='background-image:url(images/data/sander.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Sander Tuul
-                        p Videolugu
-
-            article.videos--item(style='background-image:url(images/data/kaja.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Kaja Weeks
-
-            article.videos--item(style='background-image:url(images/data/sale.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Sale Katrin Marits
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/viivianne.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Viivianne Vaike  Malmgren
-                        p Usu roll küüditamise ja Siberi-aastate üleelamisel
-
-            article.videos--item(style='background-image:url(images/data/regina.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Regina Trubnikova
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/lisa.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Lisa Trei
-                        p Täispikk intervjuu
-
-            article.videos--item(style='background-image:url(images/data/siim.png)')
-                a(href='video-detail.html')
-                    .text
-                        h2
-                            span Siim Sööt
-                        p Täispikk intervjuu
-        .loading
-            p Laadin videosid
+        article.article
+            h1 Teemad
+            .tabs
+                a.tabs--link.u-active(href='#teemad') Kõik teemad
+                a.tabs--link(href='#ajalugu') Ajalugu
+                a.tabs--link(href='#inimoigused') Inimõigused
+                #teemad.tabs--item.u-open
+                    .tags
+                        h2 Kõik teemad
+                        ul.tags--list
+                            li
+                                a(href='') Heino Noor
+                            li
+                                a.u-red(href='') Quam Cras
+                            li
+                                a.u-purple(href='') Euismod
+                            li
+                                a.u-green(href='') Ipsum Commodo
+                            li
+                                a.u-orange(href='') Parturient
+                            li
+                                a.u-blue(href='') Parturient
+                            li
+                                a(href='') Heino Noor
+                            li
+                                a.u-red(href='') Quam Cras
+                            li
+                                a.u-purple(href='') Euismod
+                            li
+                                a.u-green(href='') Ipsum Commodo
+                            li
+                                a.u-orange(href='') Parturient
+                            li
+                                a.u-blue(href='') Parturient
+                            li
+                                a(href='') Heino Noor
+                            li
+                                a.u-red(href='') Quam Cras
+                            li
+                                a.u-purple(href='') Euismod
+                            li
+                                a.u-green(href='') Ipsum Commodo
+                            li
+                                a.u-orange(href='') Parturient
+                            li
+                                a.u-blue(href='') Parturient
+                            li
+                                a(href='') Heino Noor
+                            li
+                                a.u-red(href='') Quam Cras
+                            li
+                                a.u-purple(href='') Euismod
+                            li
+                                a.u-green(href='') Ipsum Commodo
+                            li
+                                a.u-orange(href='') Parturient
+                            li
+                                a.u-blue(href='') Parturient
+                #ajalugu.tabs--item
+                    .tags
+                        h2 Ajalugu
+                        ul.tags--list
+                            li
+                                a.u-red(href='') Quam Cras
+                            li
+                                a.u-red(href='') Lorem Ipsum
+                            li
+                                a.u-red(href='') Parturient
+                            li
+                                a.u-red(href='') Ipsum Commodo
+                        h2 Intervjueeritava nimi
+                        ul.tags--list
+                            li
+                                a(href='') Heino Noor
+                            li
+                                a(href='') Heino Mets
+                            li
+                                a(href='') Jüri Mätas
+                        h2 Mainitud piirkonnad
+                        ul.tags--list
+                            li
+                                a.u-green(href='') Quam Cras
+                            li
+                                a.u-green(href='') Lorem Ipsum
+                            li
+                                a.u-green(href='') Parturient
+                            li
+                                a.u-green(href='') Ipsum Commodo
+                        h2 Mainitud isikud
+                        ul.tags--list
+                            li
+                                a.u-orange(href='') Quam Cras
+                            li
+                                a.u-orange(href='') Lorem Ipsum
+                            li
+                                a.u-orange(href='') Parturient
+                            li
+                                a.u-orange(href='') Ipsum Commodo
+                #inimoigused.tabs--item
+                    .tags
+                        h2 Inimõigused
+                        ul.tags--list
+                            li
+                                a.u-purple(href='') Quam Cras
+                            li
+                                a.u-purple(href='') Lorem Ipsum
+                            li
+                                a.u-purple(href='') Parturient
+                            li
+                                a.u-purple(href='') Ipsum Commodo
+                        h2 Intervjueeritava nimi
+                        ul.tags--list
+                            li
+                                a(href='') Heino Noor
+                            li
+                                a(href='') Heino Mets
+                            li
+                                a(href='') Jüri Mätas
+                        h2 Mainitud piirkonnad
+                        ul.tags--list
+                            li
+                                a.u-green(href='') Quam Cras
+                            li
+                                a.u-green(href='') Lorem Ipsum
+                            li
+                                a.u-green(href='') Parturient
+                            li
+                                a.u-green(href='') Ipsum Commodo
+                        h2 Mainitud isikud
+                        ul.tags--list
+                            li
+                                a.u-orange(href='') Quam Cras
+                            li
+                                a.u-orange(href='') Lorem Ipsum
+                            li
+                                a.u-orange(href='') Parturient
+                            li
+                                a.u-orange(href='') Ipsum Commodo
