@@ -45,11 +45,15 @@ export TAGS_YAML=${TMP_DIR}/tags.yaml
 export ENTU_QUERY="_type.string=tag&limit=10000"
 ./node_modules/entu-ssg/helpers/entu2yaml.js ${TAGS_YAML}
 
+export TCTAGS_YAML=${TMP_DIR}/timecodedTags.yaml
+export ENTU_QUERY="_type.string=timecodedtag&limit=10000"
+./node_modules/entu-ssg/helpers/entu2yaml.js ${TCTAGS_YAML}
+
 
 echo
 echo --------- MARKERS - join videos, regions and timecodedRegionsregions
 export VIDEO_DATA_YAML=${SOURCE_DIR}/video/data.yaml
-node ./join_regions.js
+node ./compile_video_data.js
 
 
 echo

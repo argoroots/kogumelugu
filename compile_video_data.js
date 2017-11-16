@@ -10,6 +10,7 @@ TCREGIONS_YAML = process.env.TCREGIONS_YAML
 VIDEO_DATA_YAML = process.env.VIDEO_DATA_YAML
 PERSONS_YAML = process.env.PERSONS_YAML
 TAGS_YAML = process.env.TAGS_YAML
+TCTAGS_YAML = process.env.TCTAGS_YAML
 
 const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
@@ -25,6 +26,7 @@ const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
 const tcregions_arr = yaml.safeLoad(fs.readFileSync(TCREGIONS_YAML, 'utf8'))
 const persons_arr = yaml.safeLoad(fs.readFileSync(PERSONS_YAML, 'utf8'))
 const tags_arr = yaml.safeLoad(fs.readFileSync(TAGS_YAML, 'utf8'))
+const tctags_arr = yaml.safeLoad(fs.readFileSync(TCTAGS_YAML, 'utf8'))
 
 
 arr2obj = (arr, callback) => {
@@ -35,6 +37,36 @@ arr2obj = (arr, callback) => {
     }, (err) => {
         if (err) { return callback(err) }
         callback(null, obj)
+    })
+}
+
+attach2parent = (childs, all_data_videos, all_data_of_type, type_name, callback) => {
+    async.each(childs, (child, callback) => {
+        if (child._parent === undefined) {
+            async.setImmediate(() => callback(null))
+            return
+        }
+        if (child[type_name] === undefined) {
+            async.setImmediate(() => callback(null))
+            return
+        }
+        if (all_data_of_type[child[type_name]] === undefined) {
+            async.setImmediate(() => callback(null))
+            return
+        }
+        let video = all_data_videos[child._parent]
+        let new_field = all_data_of_type[child[type_name]]
+        if (child.time !== undefined) {
+            new_field.time = child.time
+        }
+        if (video[type_name] === undefined) {
+            video[type_name] = []
+        }
+        video[type_name].push(new_field)
+        return callback(null)
+    }, (err) => {
+        if (err) { return callback(err) }
+        return callback(null)
     })
 }
 
@@ -55,6 +87,9 @@ async.parallel({
     },
     tags: (callback) => {
         arr2obj(tags_arr, callback)
+    },
+    tctags: (callback) => {
+        arr2obj(tctags_arr, callback)
     }
 }, (err, all_data) => {
     if (err) { throw err }
@@ -104,30 +139,11 @@ async.parallel({
         return
     }, (err) => {
         if (err) { return callback(err) }
-        async.each(all_data.tcregions, (tcregion, callback) => {
-            if (tcregion._parent === undefined) {
-                async.setImmediate(() => callback(null))
-                return
-            }
-            if (tcregion.region === undefined) {
-                async.setImmediate(() => callback(null))
-                return
-            }
-            if (all_data.regions[tcregion.region] === undefined) {
-                async.setImmediate(() => callback(null))
-                return
-            }
-            let video = all_data.videos[tcregion._parent]
-            let region = all_data.regions[tcregion.region]
-            if (tcregion.time !== undefined) {
-                region.time = tcregion.time
-            }
-            if (video.region === undefined) {
-                video.region = []
-            }
-            video.region.push(region)
-            return callback(null)
-        }, (err) => {
+
+        async.series([
+            (callback) => attach2parent(all_data.tcregions, all_data.videos, all_data.regions, 'region', callback),
+            (callback) => attach2parent(all_data.tctags, all_data.videos, all_data.tags, 'tag', callback)
+        ], (err) => {
             if (err) { return callback(err) }
             let videos_out = Object.keys(all_data.videos).map((key) => all_data.videos[key])
             fs.writeFileSync(
@@ -136,5 +152,38 @@ async.parallel({
             )
             console.log('ready')
         })
+
+        // async.each(all_data.tcregions, (tcregion, callback) => {
+        //     if (tcregion._parent === undefined) {
+        //         async.setImmediate(() => callback(null))
+        //         return
+        //     }
+        //     if (tcregion.region === undefined) {
+        //         async.setImmediate(() => callback(null))
+        //         return
+        //     }
+        //     if (all_data.regions[tcregion.region] === undefined) {
+        //         async.setImmediate(() => callback(null))
+        //         return
+        //     }
+        //     let video = all_data.videos[tcregion._parent]
+        //     let region = all_data.regions[tcregion.region]
+        //     if (tcregion.time !== undefined) {
+        //         region.time = tcregion.time
+        //     }
+        //     if (video.region === undefined) {
+        //         video.region = []
+        //     }
+        //     video.region.push(region)
+        //     return callback(null)
+        // }, (err) => {
+        //     if (err) { return callback(err) }
+        //     let videos_out = Object.keys(all_data.videos).map((key) => all_data.videos[key])
+        //     fs.writeFileSync(
+        //         VIDEO_DATA_YAML,
+        //         yaml.safeDump(videos_out, { indent: 4, lineWidth: 999999999, noRefs: true })
+        //     )
+        //     console.log('ready')
+        // })
     })
 })
