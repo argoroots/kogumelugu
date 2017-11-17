@@ -122,10 +122,13 @@ function moveBG() {
 }
 
 function scrollToDiv() {
-    var div = window.location.hash
-    $('html, body').animate({
-            scrollTop: $(div).offset().top - $('.header').outerHeight()
-    }, 200)
+    var div = $(window.location.hash)
+
+    if (div.length > 0) {
+        $('html, body').animate({
+            scrollTop: div.offset().top - $('.header').outerHeight()
+        }, 200)
+    }
 }
 
 $(function() {
