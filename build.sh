@@ -23,7 +23,7 @@ npm install -q vimeo
 echo
 echo --------- FETCH
 export TAGS_YAML=${SOURCE_DIR}/tags/tags.yaml
-export ENTU_QUERY="_type.string=tag&props=name_en,name_et,name_ru&limit=999"
+export ENTU_QUERY="_type.string=tag&props=name_en,name_et,name_ru,_parent&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${TAGS_YAML}
 
 export REGIONS_YAML=${SOURCE_DIR}/tags/regions.yaml
@@ -58,6 +58,7 @@ node ./node_modules/entu-ssg/helpers/entu2yaml.js ${LANGUAGES_YAML}
 echo
 echo --------- JOIN
 export VIDEO_DATA_YAML=${SOURCE_DIR}/video/data.yaml
+export TAG_DATA_YAML=${SOURCE_DIR}/tags/tags.yaml
 node ./compile_video_data.js
 
 
