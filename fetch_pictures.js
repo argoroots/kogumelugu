@@ -53,7 +53,7 @@ const download = (id, filename, callback) => {
             res.pipe(
                 fs.createWriteStream(filename)
             )
-            callback()
+            callback(null)
         })
     })
 

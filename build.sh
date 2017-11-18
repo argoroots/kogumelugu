@@ -22,15 +22,16 @@ npm install -q vimeo
 
 echo
 echo --------- FETCH
-export TAGS_YAML=${SOURCE_DIR}/tags/tags.yaml
+
+export TAGS_YAML=${TMP_DIR}/tags.yaml
 export ENTU_QUERY="_type.string=tag&props=name_en,name_et,name_ru,_parent&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${TAGS_YAML}
 
-export REGIONS_YAML=${SOURCE_DIR}/tags/regions.yaml
-export ENTU_QUERY="_type.string=region&props=lat,lng,name_en,name_et,name_ru&limit=999"
+export REGIONS_YAML=${TMP_DIR}/regions.yaml
+export ENTU_QUERY="_type.string=region&props=lat,lng,name_en,name_et,name_ru,_parent&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${REGIONS_YAML}
 
-export PERSONS_YAML=${SOURCE_DIR}/tags/persons.yaml
+export PERSONS_YAML=${TMP_DIR}/persons.yaml
 export ENTU_QUERY="_type.string=person&props=forename,surname&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${PERSONS_YAML}
 
@@ -50,15 +51,18 @@ export CATEGORIES_YAML=${TMP_DIR}/categories.yaml
 export ENTU_QUERY="_type.string=category&props=color,description,name&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${CATEGORIES_YAML}
 
-export LANGUAGES_YAML=${TMP_DIR}/categories.yaml
+export LANGUAGES_YAML=${TMP_DIR}/languages.yaml
 export ENTU_QUERY="_type.string=language&props=name&limit=999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${LANGUAGES_YAML}
 
 
 echo
-echo --------- JOIN
+echo --------- COMPILE DATA
+
 export VIDEO_DATA_YAML=${SOURCE_DIR}/video/data.yaml
 export TAG_DATA_YAML=${SOURCE_DIR}/tags/tags.yaml
+export REGION_DATA_YAML=${SOURCE_DIR}/tags/regions.yaml
+export HIERARCHY_DATA_YAML=${SOURCE_DIR}/tags/h.yaml
 node ./compile_video_data.js
 
 
