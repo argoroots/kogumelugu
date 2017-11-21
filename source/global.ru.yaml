@@ -1,22 +1,22 @@
 menu:
     -
-        title: Videos
-        path: /en/videos
+        title: Видео
+        path: /ru/videos
     -
-        title: Topics
-        path: /en/topics
+        title: Темы
+        path: /ru/topics
     -
-        title: Materials
-        path: /en/materials
+        title: Учебные материалы
+        path: /ru/materials
     -
-        title: Introduction
-        path: /en/#introduction
+        title: Введение
+        path: /ru/#introduction
     -
-        title: Team
-        path: /en/#team
+        title: Спонсоры
+        path: /ru/#team
     -
-        title: Support
-        path: /en/#support
+        title: Поддержи нас
+        path: /ru/#support
 
 carouselMessage:
     - Igaühel meist on oma lugu
@@ -58,7 +58,7 @@ unitasInfo: |
 
 texts:
     contact:
-        title: Эстонский институт исторической памяти
+        title: Эстонский институт исторической памяти (SA Eesti Mälu Instituut)
     EMI: Estonian Institute of Historical Memory
     mapTitle:
         left: Storys around the
