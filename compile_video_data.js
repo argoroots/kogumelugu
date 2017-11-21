@@ -79,7 +79,7 @@ arr2obj = (arr, is_hierarchical, callback) => {
                 id_tree[item._parent]._childs.push(id_tree[item._id])
                 async.setImmediate(() => callback(null))
             }, function (err) {
-                console.log('2 HHHHH')
+                // console.log('2 HHHHH')
                 if (err) { return callback(err) }
 
                 Object.keys(obj).forEach((key) => {
@@ -88,10 +88,10 @@ arr2obj = (arr, is_hierarchical, callback) => {
 
                 // Add anchestors
                 propagateAnchestors = (parent_id) => {
-                    console.log('parent: ', obj[parent_id], id_tree[parent_id])
+                    // console.log('parent: ', obj[parent_id], id_tree[parent_id])
                     id_tree[parent_id]._childs.forEach((child) => {
                         let child_id = child._id
-                        console.log('child: ', child_id, obj[child_id])
+                        // console.log('child: ', child_id, obj[child_id])
                         obj[parent_id]._anchestors.forEach((anch_id) => {
                             obj[child_id]._anchestors.push(anch_id)
                         })
@@ -147,39 +147,39 @@ let videos_out = []
 
 async.parallel({
     regions: (callback) => {
-        console.log('arr2obj regions')
+        // console.log('arr2obj regions')
         arr2obj(regions_arr, true, callback)
     },
     tcregions: (callback) => {
-        console.log('arr2obj tcregions')
+        // console.log('arr2obj tcregions')
         arr2obj(tcregions_arr, false, callback)
     },
     videos: (callback) => {
-        console.log('arr2obj videos')
+        // console.log('arr2obj videos')
         arr2obj(videos_arr, false, callback)
     },
     persons: (callback) => {
-        console.log('arr2obj persons')
+        // console.log('arr2obj persons')
         arr2obj(persons_arr, false, callback)
     },
     tags: (callback) => {
-        console.log('arr2obj tags')
+        // console.log('arr2obj tags')
         arr2obj(tags_arr, true, callback)
     },
     tctags: (callback) => {
-        console.log('arr2obj tctags')
+        // console.log('arr2obj tctags')
         arr2obj(tctags_arr, false, callback)
     },
     categories: (callback) => {
-        console.log('arr2obj categories')
+        // console.log('arr2obj categories')
         arr2obj(categories_arr, false, callback)
     },
     languages: (callback) => {
-        console.log('arr2obj languages')
+        // console.log('arr2obj languages')
         arr2obj(languages_arr, false, callback)
     }
 }, (err, all_data) => {
-    console.log('arr2obj callback')
+    // console.log('arr2obj callback')
     if (err) { throw err }
     // console.log('all_data.tags.tree', all_data.tags.tree)
     async.each(all_data.videos.flat, (video, callback) => {

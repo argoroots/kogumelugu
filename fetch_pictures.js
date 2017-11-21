@@ -71,7 +71,7 @@ async.eachLimit(videos, 15, (video, callback) => {
     }
     const videoPath = path.join(PICTURES_DIR, video.path + '.jpg')
 
-    console.log(video.photo._id, videoPath)
+    // console.log(video.photo._id, videoPath)
     fs.ensureDir(path.dirname(videoPath))
     .then(() => download(video.photo._id, videoPath, callback))
 }, function(err){
