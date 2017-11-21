@@ -12,11 +12,11 @@ partners:
         title: Black Ribbon Day Foundation
         url: http://www.blackribbonday.org/
     -
-        title: Eesti Vabariik 100
-        url: https://www.ev100.ee/en
+        title: Сто лет Эстонской Республике
+        url: https://www.ev100.ee/ru
     -
         title: Georg Eckert Institute
-        url: http://www.gei.de/en/the-institute.html
+        url:  http://www.gei.de/en/the-institute.html
     -
         title: Naiskodukaitse
         url: http://www.naiskodukaitse.ee/Introduction_1218
@@ -33,11 +33,11 @@ partners:
         title: EUROCLIO
         url: https://euroclio.eu/
     -
-        title: Estonian Literary Museum
+        title: Эстонский литературный музей
         url: http://www.kirmus.ee/est/info/in-english/
     -
-        title: Estonian National Museum
-        url: http://www.erm.ee/en
+        title: Эстонский Национальный Музей
+        url: http://www.erm.ee/ru
     -
         title: Entusiastid OÜ
         url: https://www.entu.ee/
@@ -45,42 +45,42 @@ partners:
         title: MTÜ Tulipisar
         url: http://tulipisar.ee/
     -
-        title: Museum of Occupations
+        title: Музей оккупаций
         url: http://www.okupatsioon.ee/index.php/et/
     -
         title: Ruudu Rahumaru
         url: http://rahumaru.tumblr.com/
     -
-        title: Tallinn University
+        title: Таллиннский университет
         url: https://www.tlu.ee/en
     -
         title: Baltic Heritage Network
-        url: https://www.balther.net/
+        url: https://www.balther.net/ru/
     -
-        title: Education Development Centre
-        url: http://www.iac.edu.lv/home-en-US/
+        title: Центр развития образования
+        url: http://www.iac.edu.lv/par-mums-ru/misija-ru/
     -
-        title: Art Museum of Estonia
-        url: https://kunstimuuseum.ekm.ee/en/
+        title: Художественный музей Эстонии
+        url: https://kunstimuuseum.ekm.ee/ru/
     -
         title: Eesti Rahvusringhääling
-        url: http://news.err.ee/
+        url: http://rus.err.ee/
     -
-        title: Estonian Institute of Human Rights
-        url: http://www.humanrightsestonia.ee/en/
+        title: Эстонский институт прав человека
+        url: http://www.humanrightsestonia.ee/ru/институт/
     -
-        title: Cinema Artis
-        url: http://www.kino.ee/eng/
+        title: Кинотеатр Artis
+        url: http://www.kino.ee/rus/
     -
         title: Rahvusarhiiv
         url: http://www.ra.ee/en/
     -
-        title: University of Tartu
-        url: https://www.ut.ee/en
+        title: Тартуский университет
+        url: https://www.ut.ee/ru
     -
         title: Edward von Lõngus
         url: https://www.facebook.com/EdwardvonL6ngus/
-
+    -
 sponsors:
     -
         title: Amalfi
@@ -99,22 +99,22 @@ sponsors:
         picture: erc.png
         url: http://www.estoreliefusa.org/news_eng.html
     -
-        title: Ministry of Education and Research
-        picture: haridusmin.png
-        url: https://www.hm.ee/en
+          title: Министерство образования и науки
+          picture: haridusmin.png
+          url: https://www.hm.ee/ru
     -
-        title: Ministry of Defence
-        picture: kaitsemin.png
-        url: http://www.kmin.ee/en
+          title: Министерство образования
+          picture: kaitsemin.png
+          url: http://www.kmin.ee/en
     -
-        title: Kistler-Ritso Sihtasutus
-        picture:
-        url:
+          title: Kistler-Ritso Sihtasutus
+          picture:
+          url:
     -
-        title: Ministry of Culture
-        picture: kultuurimin.png
-        url: http://www.kul.ee/en
+          title: Министерство культуры
+          picture: kultuurimin.png
+          url: http://www.kul.ee/ru
     -
-        title: Ministry of the Interior
+        title: Министерство внутренних дел
         picture: sisemin.png
-        url: https://www.siseministeerium.ee/en
+        url: https://www.siseministeerium.ee/ru
