@@ -1,0 +1,89 @@
+path: materials
+title: Materials
+
+blocks:
+    -
+        text: |
+            ## Ajalooõpe
+            ### Kasutusvõimalused
+
+            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
+        links:
+            -
+                title: Metoodika.pdf
+                icon: fa-download
+                link:
+                info: (352KB, PDF)
+            -
+                title: Teemad
+                icon: fa-list
+                link:
+                info:
+        curriculum:
+            title: Tunnikavad
+            items:
+                -
+                    title: Egestas Elit Malesuada
+                    text: |
+                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    links:
+                        -
+                            title: Metoodika.pdf
+                            icon: fa-download
+                            link:
+                            info: (352KB, PDF)
+                    videos:
+                        -
+                            path: video/adam-brown
+                            title: Adam Brown
+                            text: |
+                                Eesti päritolu väärtustamine
+
+    -
+        text: |
+            ## Inimõiguste õpe
+            ### Kasutusvõimalused
+
+            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
+        links:
+            -
+                title: Metoodika.pdf
+                icon: fa-download
+                link:
+                info: (352KB, PDF)
+            -
+                title: Teemad
+                icon: fa-list
+                link:
+                info:
+        curriculum:
+            title: Tunnikavad
+            items:
+                -
+                    title: Egestas Elit Malesuada
+                    text: |
+                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    links:
+                        -
+                            title: Metoodika.pdf
+                            icon: fa-download
+                            link:
+                            info: (352KB, PDF)
+                    video:
+                        id: adam-brown
+                        title: Adam Brown
+                        text: Eesti päritolu väärtustamine
+                -
+                    title: Egestas Elit Malesuada
+                    text: |
+                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    links:
+                        -
+                            title: Metoodika.pdf
+                            icon: fa-download
+                            link:
+                            info: (352KB, PDF)
+                    video:
+                        id: adam-brown
+                        title: Adam Brown
+                        text: Eesti päritolu väärtustamine
