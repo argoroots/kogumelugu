@@ -3,8 +3,8 @@ menu:
         title: Videos
         path: /en/videos
     -
-        title: Tags
-        path: /en/tags
+        title: Topics
+        path: /en/topics
     -
         title: Materials
         path: /en/materials
@@ -18,54 +18,12 @@ menu:
         title: Support
         path: /en/#support
 
-contact: |
-    **Eesti Mälu Instituut**
-    <info@mnemosyne.ee>
-    (+372) 6645 039
-    Suur-Ameerika 12, 10119 Tallinn
-
-carouselMessage:
-    - Igaühel meist on oma lugu
-    - Oma roll teiste lugudes
-    - Eesti lugu, kogu me lugu
-    - Kõik me pärime oma kultuuri
-
-author: Author
-email: Your e-mail address
-exit: Log Out
-filterGeneration: Select Generation
-filterQuery: SEARCH
-filterRegion: Select Region
-filterSubject: Pick a Subject
-interviewer: Interviewer
-notReady: Loading videos
-openVideo: Watch a Story
-searchPlaceholder: Search for name or place
-searchSubmit: Find story
-signin: Log In
-subscribe: Subscribe
-supportlink: Donate now
-topicTree: Kogu Me Lugu Topic Tree
-
-partners: Kogu Me Lugu partners are
-sponsors: Financiers
-producer: Producer
-coProducer: Co-producer
-thanksTo: Thanks to
-teamMembers: Team members
-supporters: Supporters
-unitasInfo: |
-    ###    Initiated by
-    **The Unitas Foundation**
-
-    The Unitas Foundation, founded in 2008 in Tallinn, is one of the founding members of the European Platform of Memory and Conscience. Dedicated to the advancement of history education and human rights culture, the foundation aims to raise awareness of the inhumanity of totalitarian regimes and ideologies and to pursue the international condemnation of their crimes.
-
-    [unitas.ee](http://unitas.ee)
 
 texts:
-    EMI: Estonian Institute of Historical Memory
+    contact:
+        title: Estonian Institute of Historical Memory
     mapTitle:
-        left: Storys around the
+        left: Stories around the
         right: world
     education:
         findOutMore: Find out more

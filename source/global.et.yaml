@@ -18,52 +18,10 @@ menu:
         title: Toeta
         path: /et/#toeta
 
-contact: |
-    **Eesti Mälu Instituut**
-    <info@mnemosyne.ee>
-    (+372) 6645 039
-    Suur-Ameerika 12, 10119 Tallinn
-
-carouselMessage:
-    - Igaühel meist on oma lugu
-    - Oma roll teiste lugudes
-    - Eesti lugu, kogu me lugu
-    - Kõik me pärime oma kultuuri
-
-author: Autor
-email: Sinu e-posti aadress
-exit: Logi välja
-filterGeneration: Vali põlvkond
-filterQuery: OTSI
-filterRegion: Vali piirkond
-filterSubject: Vali teema
-interviewer: Intervjueerija
-notReady: Laen videosid
-openVideo: Vaata lugu
-searchPlaceholder: Otsi nime või kohta
-searchSubmit: Leia lugu
-signin: Logi sisse
-subscribe: Liitu
-supportlink: Soovin toetada
-topicTree: Kogu Me Lugu Teemapuu
-
-partners: Kogu Me Lugu Koostööpartneriteks on
-sponsors: Suurtoetajad
-producer: Produtsent
-coProducer: Kaasprodutsent
-thanksTo: Tänusõnad kaastegutsejatele
-teamMembers: Meeskonnaliikmed
-supporters: Toetajad ja hooandjad
-unitasInfo: |
-    ### Algataja
-    **Sihtasutus Unitas**
-
-    Sihtasutus Unitas on 2008. aastal Tallinnas asutatud ajaloohariduse ning inimõiguste kultuuri arendamisele keskenduv sihtasutus, mis kuulub Euroopa Mälu ja Süüme Koostöökogu asutajaliikmete hulka ning mille eesmärk on totalitaarsete režiimide ja ideoloogiate inimvaenulikkuse teadvustamine ja nende kuritegude rahvusvahelise hukkamõistmise taotlemine.
-
-    [unitas.ee](http://unitas.ee)
 
 texts:
-    EMI: Eesti Mälu Instituut
+    contact:
+        title: SA Eesti Mälu Instituut
     mapTitle:
         left: Lood ümber
         right: maailma
@@ -72,11 +30,11 @@ texts:
         materials: Õppematerjalid
         history: Ajaloo õppematerjalid
         historyText: |
-            Eesti keelne re erat a ante venenatis dapibus posuere velit aliquet.
+            Eestikeelne re erat a ante venenatis dapibus posuere velit aliquet.
             Cras mattis consectetur purus sit amet fermentum.
         humanRights: Inimõiguste õppematerjalid
         humanRightsText: |
-            Eesti keelne re erat a ante venenatis dapibus posuere velit aliquet.
+            Eestikeelne re erat a ante venenatis dapibus posuere velit aliquet.
             Cras mattis consectetur purus sit amet fermentum.
     culture:
         title1: Me kõik pärime
