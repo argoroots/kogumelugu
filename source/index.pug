@@ -86,7 +86,7 @@ block content
                             li
                                 a(href=s.url)
                                     if s.picture
-                                        img(src='/assets/images/sponsors/' + s.picture, alt=s.title)
+                                        img(src='/assets/images/sponsors/' + s.picture, alt=s.title, width='150px')
                                     else
                                         span= s.title
                 .thanks
@@ -113,7 +113,7 @@ block content
                     .box
                             img(src='/assets/images/data/EV100.png', alt='EV100', width='136')
                             p= self.texts.contribution.participate
-                    h3 self.text.contribution.accountDetails
+                    h3= self.text.contribution.accountDetails
                     ul
                         li
                             strong IBAN:
