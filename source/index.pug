@@ -65,7 +65,7 @@ block content
                 .newsletter--content
                     .u-content
                         p= self.texts.mailingList.div1
-                    form.newsletter-form(action='')
+                    form.newsletter-form(action='mailto:info@kogumelugu.ee')
                         .input
                             label(for='email')= self.texts.mailingList.yourEmail
                             input(type='email', id='email')
@@ -84,9 +84,11 @@ block content
                     ul.supporters--list
                         each s in self.sponsors
                             li
-                                a(href=s.url)= s.title
+                                a(href=s.url)
                                     if s.picture
                                         img(src='/assets/images/sponsors/' + s.picture, alt=s.title)
+                                    else
+                                        span= s.title
                 .thanks
                     h3.section--subtitle= self.texts.thanks4allTheFishAndSofa
 
@@ -111,10 +113,7 @@ block content
                     .box
                             img(src='/assets/images/data/EV100.png', alt='EV100', width='136')
                             p= self.texts.contribution.participate
-                            p
-                                a(href='https://ev100.ee/et/kogu-me-lugu')= self.texts.contribution.findOutMore
-
-                    h3 Pangakonto andmed
+                    h3 self.text.contribution.accountDetails
                     ul
                         li
                             strong IBAN:
