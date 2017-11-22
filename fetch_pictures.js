@@ -38,8 +38,9 @@ const download = (id, filename, callback) => {
             'bearer': ENTU_KEY
         }
     }, (error, res, body) => {
-        if (error) { console.error(error) }
-        if (res.statusCode !== 200) { console.error(body) }
+        if (error) { throw error }
+        if (!res) { throw 'No res' }
+        if (res.statusCode !== 200) { throw body }
 
         let token = _.get(body, [ENTU_DB, 'token'], '')
 
@@ -53,6 +54,8 @@ const download = (id, filename, callback) => {
             res.pipe(
                 fs.createWriteStream(filename)
             )
+        })
+        r.on('end',  function (res) {
             callback(null)
         })
     })
@@ -62,7 +65,7 @@ const download = (id, filename, callback) => {
 
 const videos = yaml.safeLoad(fs.readFileSync(PICTURES_YAML, 'utf8'))
 
-async.eachLimit(videos, 15, (video, callback) => {
+async.eachLimit(videos, 5, (video, callback) => {
     if (video.path === undefined) {
         return callback()
     }
@@ -71,7 +74,10 @@ async.eachLimit(videos, 15, (video, callback) => {
     }
     const videoPath = path.join(PICTURES_DIR, video.path + '.jpg')
 
-    // console.log(video.photo._id, videoPath)
+    if (video.photo._id === undefined) {
+        console.log(require('util').inspect(video, { depth: null }));
+    }
+    console.log(video.photo._id, videoPath)
     fs.ensureDir(path.dirname(videoPath))
     .then(() => download(video.photo._id, videoPath, callback))
 }, function(err){
