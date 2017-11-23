@@ -7,6 +7,7 @@ const async = require('async')
 VIDEO_DATA_YAML = process.env.VIDEO_DATA_YAML
 TAG_DATA_YAML = process.env.TAG_DATA_YAML
 REGION_DATA_YAML = process.env.REGION_DATA_YAML
+PERSON_DATA_YAML = process.env.PERSON_DATA_YAML
 HIERARCHY_DATA_YAML = process.env.HIERARCHY_DATA_YAML
 
 VIDEOS_YAML = process.env.VIDEOS_YAML
@@ -143,7 +144,7 @@ attach2parent = (childs, all_data_videos, all_data_of_type, type_name, callback)
     })
 }
 
-let videos_out = []
+// let videos_out = []
 
 async.parallel({
     regions: (callback) => {
@@ -256,6 +257,8 @@ async.parallel({
                 .map((key) => all_data.tags.flat[key])
             let regions_out = Object.keys(all_data.regions.flat)
                 .map((key) => all_data.regions.flat[key])
+            let persons_out = Object.keys(all_data.persons.flat)
+                .map((key) => all_data.persons.flat[key])
 
             fs.writeFileSync(
                 VIDEO_DATA_YAML,
@@ -270,10 +273,15 @@ async.parallel({
                 yaml.safeDump(regions_out, { indent: 4, lineWidth: 999999999, noRefs: true })
             )
             fs.writeFileSync(
+                PERSON_DATA_YAML,
+                yaml.safeDump(persons_out, { indent: 4, lineWidth: 999999999, noRefs: true })
+            )
+            fs.writeFileSync(
                 HIERARCHY_DATA_YAML,
                 yaml.safeDump({
                     'regions': all_data.regions.tree,
                     'tags': all_data.tags.tree,
+                    // 'persons': all_data.persons.tree,
                 }, { indent: 4, lineWidth: 999999999, noRefs: true })
             )
             console.log('ready')
