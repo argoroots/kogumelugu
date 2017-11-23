@@ -100,3 +100,19 @@ texts:
         placeholder: Otsi…
         findButton: Leia lugu
     logolink: http://mnemosyne.ee/
+
+    topics:
+        title: Teemad
+        subtitles:
+            history:
+                label: Ajalugu
+                anchor: ajalugu
+            humanRights:
+                label: Inimõigused
+                anchor: inimõigused
+            regions:
+                label: Regioonid
+                anchor: regioonid
+            persons:
+                label: Isikud
+                anchor: isikud

@@ -100,3 +100,19 @@ texts:
         placeholder: Поиск…
         findButton: Найти историю
     logolink: http://mnemosyne.ee/en/
+
+    topics:
+        title: Teemad
+        subtitles:
+            history:
+                label: История
+                anchor: история
+            humanRights:
+                label: Права человека
+                anchor: правачеловека
+            regions:
+                label: Регионы
+                anchor: регионы
+            persons:
+                label: Персоны
+                anchor: персоны

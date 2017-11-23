@@ -55,11 +55,12 @@ block content
 
     main.main.u-container
         article.article
-            h1 Teemad
+            h1= self.texts.topics.title
             .tabs
-                a.tabs--link.u-active(href='#teemad') Teemad
-                a.tabs--link(href='#regioonid') Regioonid
-                a.tabs--link(href='#isikud') Isikud
+                a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.history.anchor)= self.texts.topics.subtitles.history.label
+                a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.humanRights.anchor)= self.texts.topics.subtitles.humanRights.label
+                a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
+                a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
                 #teemad.tabs--item.u-open
                     .tags
