@@ -37,11 +37,11 @@ node ./node_modules/entu-ssg/helpers/entu2yaml.js ${PERSONS_YAML}
 
 export TCTAGS_YAML=${TMP_DIR}/timecodedTags.yaml
 export ENTU_QUERY="_type.string=timecodedtag&limit=999"
-./node_modules/entu-ssg/helpers/entu2yaml.js ${TCTAGS_YAML}
+node ./node_modules/entu-ssg/helpers/entu2yaml.js ${TCTAGS_YAML}
 
 export TCREGIONS_YAML=${TMP_DIR}/timecodedRegions.yaml
 export ENTU_QUERY="_type.string=timecodedregion&props=_parent,region,time&limit=999"
-./node_modules/entu-ssg/helpers/entu2yaml.js ${TCREGIONS_YAML}
+node ./node_modules/entu-ssg/helpers/entu2yaml.js ${TCREGIONS_YAML}
 
 export VIDEOS_YAML=${TMP_DIR}/videos.yaml
 export ENTU_QUERY="_type.string.regex=interview|story&props=author,category,description_en,description_et,description_ru,interview,language,path,photo,project,storyteller,subtitle_en,subtitle_et,subtitle_ru,title_en,title_et,title_ru,videoUrl&limit=999"
@@ -62,6 +62,7 @@ echo --------- COMPILE DATA
 export VIDEO_DATA_YAML=${SOURCE_DIR}/video/data.yaml
 export TAG_DATA_YAML=${SOURCE_DIR}/tags/tags.yaml
 export REGION_DATA_YAML=${SOURCE_DIR}/tags/regions.yaml
+export PERSON_DATA_YAML=${SOURCE_DIR}/tags/persons.yaml
 export HIERARCHY_DATA_YAML=${SOURCE_DIR}/tags/h.yaml
 node ./compile_video_data.js
 

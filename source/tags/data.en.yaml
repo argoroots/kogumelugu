@@ -1,4 +1,4 @@
-path: tags
+path: topics
 title: Tags
 file:
     tags: ./tags/tags.yaml
