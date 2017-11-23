@@ -263,10 +263,21 @@ async.parallel({
                     })) { return true }
                 return false
             }
+            const isTagInVideo = (tag_key, videos) => {
+                if (videos.some(
+                    (video) => {
+                        if ((video.tag ? true : false) &&
+                            (video.tag.some((tag) => tag._id === tag_key))
+                        ) { return true }
+                        return false
+                    })) { return true }
+                return false
+            }
             if (err) { return callback(err) }
             let videos_out = Object.keys(all_data.videos.flat)
                 .map((key) => all_data.videos.flat[key])
             let tags_out = Object.keys(all_data.tags.flat)
+                .filter((key) => isTagInVideo(key, videos_out))
                 .map((key) => all_data.tags.flat[key])
             let regions_out = Object.keys(all_data.regions.flat)
                 .map((key) => all_data.regions.flat[key])
