@@ -251,9 +251,19 @@ async.parallel({
             (callback) => attach2parent(all_data.tags.flat, all_data.tags.flat, all_data.tags.flat, 'tag', callback)
         ], (err) => {
             const isPersonInVideo = (person_key, videos) => {
-                return videos.some( (video) =>
-                    (video.author ? true : false) &&
-                    (video.author._id === person_key) )
+                let retval = false
+                if (videos.some(
+                    (video) => {
+                        if ((video.author ? true : false) &&
+                            (video.author._id === person_key)
+                        ) { return true }
+                        if ((video.storyteller ? true : false) &&
+                            (video.storyteller._id === person_key)
+                        ) { return true }
+                    })) {
+                    return true
+                }
+                return false
             }
             if (err) { return callback(err) }
             let videos_out = Object.keys(all_data.videos.flat)
