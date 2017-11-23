@@ -64,7 +64,7 @@ block content
 
                 #history.tabs--item.u-open
                     .tags
-                        h2 Teemad
+                        h2= self.texts.topics.subtitles.history.label
                         ul.tags--list
                             each t in tags
                                 if t.title
@@ -73,7 +73,7 @@ block content
 
                 #humanRights.tabs--item
                     .tags
-                        h2 Teemad
+                        h2= self.texts.topics.subtitles.humanRights.label
                         ul.tags--list
                             each t in tags
                                 if t.title
@@ -82,7 +82,7 @@ block content
 
                 #regions.tabs--item
                     .tags
-                        h2 Regioonid
+                        h2= self.texts.topics.subtitles.regions.label
                         ul.tags--list
                             each r in regions
                                 if r.title
@@ -91,7 +91,7 @@ block content
 
                 #persons.tabs--item
                     .tags
-                        h2 Isikud
+                        h2 = self.texts.topics.subtitles.persons.label
                         ul.tags--list
                             each i in persons
                                 if i.title
