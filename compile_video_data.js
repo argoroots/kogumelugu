@@ -38,7 +38,7 @@ const categories_arr = yaml.safeLoad(fs.readFileSync(CATEGORIES_YAML, 'utf8'))
 const languages_arr = yaml.safeLoad(fs.readFileSync(LANGUAGES_YAML, 'utf8'))
 
 
-arr2obj = (arr, is_hierarchical, callback) => {
+const arr2obj = (arr, is_hierarchical, callback) => {
     let obj = {}
 
     async.each(arr, (item, callback) => {
@@ -114,7 +114,7 @@ arr2obj = (arr, is_hierarchical, callback) => {
     })
 }
 
-attach2parent = (childs, all_data_videos, all_data_of_type, type_name, callback) => {
+const attach2parent = (childs, all_data_videos, all_data_of_type, type_name, callback) => {
     async.each(childs, (child, callback) => {
         if (child._parent === undefined) {
             async.setImmediate(() => callback(null))
@@ -250,6 +250,11 @@ async.parallel({
             (callback) => attach2parent(all_data.tctags.flat, all_data.videos.flat, all_data.tags.flat, 'tag', callback),
             (callback) => attach2parent(all_data.tags.flat, all_data.tags.flat, all_data.tags.flat, 'tag', callback)
         ], (err) => {
+            const isPersonInVideo = (person_key, videos) => {
+                return videos.some( (video) =>
+                    (video.author ? true : false) &&
+                    (video.author._id === person_key) )
+            }
             if (err) { return callback(err) }
             let videos_out = Object.keys(all_data.videos.flat)
                 .map((key) => all_data.videos.flat[key])
@@ -258,6 +263,7 @@ async.parallel({
             let regions_out = Object.keys(all_data.regions.flat)
                 .map((key) => all_data.regions.flat[key])
             let persons_out = Object.keys(all_data.persons.flat)
+                .filter((key) => isPersonInVideo(key, videos_out))
                 .map((key) => all_data.persons.flat[key])
 
             fs.writeFileSync(
