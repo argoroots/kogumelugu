@@ -62,7 +62,7 @@ block content
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
-                #teemad.tabs--item.u-open
+                #history.tabs--item.u-open
                     .tags
                         h2 Teemad
                         ul.tags--list
@@ -71,7 +71,16 @@ block content
                                     li
                                         a(class=getColor(), href='/et/videoteek/#' + t._id)= t.title
 
-                #regioonid.tabs--item
+                #humanRights.tabs--item
+                    .tags
+                        h2 Teemad
+                        ul.tags--list
+                            each t in tags
+                                if t.title
+                                    li
+                                        a(class=getColor(), href='/et/videoteek/#' + t._id)= t.title
+
+                #regions.tabs--item
                     .tags
                         h2 Regioonid
                         ul.tags--list
@@ -80,7 +89,7 @@ block content
                                     li
                                         a(class=getColor(), href='/et/videoteek/#' + r._id)= r.title
 
-                #isikud.tabs--item
+                #persons.tabs--item
                     .tags
                         h2 Isikud
                         ul.tags--list

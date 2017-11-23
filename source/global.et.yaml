@@ -4,10 +4,10 @@ menu:
         path: /et/videoteek
     -
         title: Teemad
-        path: /et/teemad
+        path: /et/topics
     -
         title: Õppematerjalid
-        path: /et/oppematerjalid
+        path: /et/materials
     -
         title: Tutvustus
         path: /et/#tutvustus
