@@ -84,11 +84,6 @@ texts:
             Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituut kontole.
             Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituut pangakontole.
             Konto andmed on nähtaval allpool.
-        div3: |
-            SA Eesti Mälu Instituut kuulub Vabariigi Valitsuse tulumaksusoodustusega ühenduste nimekirja,
-            seega on eraisikute poolt tehtud annetuste pealt võimalik tagasi saada tulumaks.
-            Juriidilistele isikutele on sihtasutusele tehtavad annetused samuti maksuvabad.
-            Mõlemale kehtivad maksuvabade annetuste osas tulumaksuseadusega seatud piirangud.
         amount: Sisesta summa
         submit: Toetan
         participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
