@@ -100,13 +100,13 @@ texts:
         subtitles:
             history:
                 label: История
-                anchor: история
+                anchor: history
             humanRights:
                 label: Права человека
-                anchor: правачеловека
+                anchor: humanrights
             regions:
                 label: Регионы
-                anchor: регионы
+                anchor: regions
             persons:
                 label: Персоны
-                anchor: персоны
+                anchor: persons

@@ -101,13 +101,13 @@ texts:
         subtitles:
             history:
                 label: Ajalugu
-                anchor: ajalugu
+                anchor: history
             humanRights:
                 label: Inimõigused
-                anchor: inimõigused
+                anchor: humanrights
             regions:
                 label: Regioonid
-                anchor: regioonid
+                anchor: regions
             persons:
                 label: Isikud
-                anchor: isikud
+                anchor: persons
