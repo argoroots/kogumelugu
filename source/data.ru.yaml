@@ -91,20 +91,20 @@ sponsors:
         picture: ERKY.png
         url: http://www.estosite.org/
     -
-        title: Erasmus+
-        picture: erasmus.png
-        url:
+        title: SANA
+        picture: SANA_Archimedes.png
+        url: http://noored.ee/ru/
     -
         title: Estonian Relief Committee
         picture: erc.png
         url: http://www.estoreliefusa.org/news_eng.html
     -
           title: Министерство образования и науки
-          picture: haridusmin.png
+          picture: HTM_eng.png
           url: https://www.hm.ee/ru
     -
-          title: Министерство образования
-          picture: kaitsemin.png
+          title: Министерство обороны
+          picture: Kaitsemin_eng.png
           url: http://www.kmin.ee/en
     -
           title: Kistler-Ritso Sihtasutus
@@ -112,9 +112,9 @@ sponsors:
           url:
     -
           title: Министерство культуры
-          picture: kultuurimin.png
+          picture: Kultuurimin_eng.png
           url: http://www.kul.ee/ru
     -
         title: Министерство внутренних дел
-        picture: sisemin.png
+        picture: Sisemin_rus.png
         url: https://www.siseministeerium.ee/ru
