@@ -69,7 +69,7 @@ block content
                             each t in tags
                                 if t.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + t._id)= t.title
+                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
 
                 #humanRights.tabs--item
                     .tags
@@ -78,7 +78,7 @@ block content
                             each t in tags
                                 if t.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + t._id)= t.title
+                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
 
                 #regions.tabs--item
                     .tags
@@ -87,7 +87,7 @@ block content
                             each r in regions
                                 if r.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + r._id)= r.title
+                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + r._id)= r.title
 
                 #persons.tabs--item
                     .tags
@@ -96,4 +96,4 @@ block content
                             each i in persons
                                 if i.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + i._id)= i.title
+                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + i._id)= i.title
