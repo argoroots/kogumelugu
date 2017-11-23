@@ -83,12 +83,6 @@ texts:
             Поддержать Kogu Me Lugu можно сделав единовременный перевод,
             а также через постоянное поручение на счет Эстонского института исторической памяти (SA Eesti Mälu Instituut).
             Для единовременного перевода, пожалуйста, воспользуйся формой внизу или сделай перевод на счет института.
-
-
-
-
-
-
         amount: Сумма
         submit: Поддержать
         participate: Учавствуй в создании подарка на столетие Эстонской Республики или поддержи нас материально!
@@ -100,3 +94,19 @@ texts:
         placeholder: Поиск…
         findButton: Найти историю
     logolink: http://mnemosyne.ee/en/
+
+    topics:
+        title: Teemad
+        subtitles:
+            history:
+                label: История
+                anchor: история
+            humanRights:
+                label: Права человека
+                anchor: правачеловека
+            regions:
+                label: Регионы
+                anchor: регионы
+            persons:
+                label: Персоны
+                anchor: персоны
