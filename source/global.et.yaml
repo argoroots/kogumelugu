@@ -1,7 +1,7 @@
 menu:
     -
         title: Videoteek
-        path: /et/videoteek
+        path: /et/videos
     -
         title: Teemad
         path: /et/topics
