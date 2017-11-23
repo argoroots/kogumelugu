@@ -51,7 +51,7 @@ block vars
 
 
 block content
-    include /searchbox
+    //- include /searchbox
 
     main.main.u-container
         article.article
@@ -91,7 +91,7 @@ block content
 
                 #persons.tabs--item
                     .tags
-                        h2 = self.texts.topics.subtitles.persons.label
+                        h2= self.texts.topics.subtitles.persons.label
                         ul.tags--list
                             each i in persons
                                 if i.title
