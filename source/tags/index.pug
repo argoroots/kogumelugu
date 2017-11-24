@@ -61,7 +61,7 @@ block content
             h1= self.texts.topics.title
             .tabs
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.history.anchor)= self.texts.topics.subtitles.history.label
-                a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.humanRights.anchor)= self.texts.topics.subtitles.humanRights.label
+                //- a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.humanRights.anchor)= self.texts.topics.subtitles.humanRights.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
@@ -74,14 +74,14 @@ block content
                                     li
                                         a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
 
-                #humanRights.tabs--item
-                    .tags
-                        h2= self.texts.topics.subtitles.humanRights.label
-                        ul.tags--list
-                            each t in tags
-                                if t.title
-                                    li
-                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
+                //- #humanRights.tabs--item
+                //-     .tags
+                //-         h2= self.texts.topics.subtitles.humanRights.label
+                //-         ul.tags--list
+                //-             each t in tags
+                //-                 if t.title
+                //-                     li
+                //-                         a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
 
                 #regions.tabs--item
                     .tags
