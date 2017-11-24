@@ -255,10 +255,16 @@ async.parallel({
                     (video) => {
                         if ((video.author ? true : false) &&
                             (video.author._id === person_key)
-                        ) { return true }
+                        ) {
+                            all_data.persons.flat[person_key].type = 'author'
+                            return true
+                        }
                         if ((video.storyteller ? true : false) &&
                             (video.storyteller._id === person_key)
-                        ) { return true }
+                        ) {
+                            all_data.persons.flat[person_key].type = 'storyteller'
+                            return true
+                        }
                         return false
                     })) { return true }
                 return false

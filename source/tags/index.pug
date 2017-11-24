@@ -3,7 +3,7 @@ extends /layout
 
 block vars
     -
-        const getColor = () => {
+        const getColor = (type = undefined) => {
             const colors = [
                 '',
                 'u-red',
@@ -12,6 +12,9 @@ block vars
                 'u-orange',
                 'u-blue',
             ]
+
+            if (type === 'storyteller') return colors[0]
+            if (type === 'author') return colors[4]
 
             return colors[Math.floor(Math.random() * colors.length)]
         }
@@ -41,7 +44,7 @@ block vars
         var persons = self.file.persons.filter(a => {
             return (a.forename || a.surname)
         }).map(a => {
-            if (a.forename || a.surname) { return { _id: a._id, title: [a.forename, a.surname].join(' ') } }
+            if (a.forename || a.surname) { return { _id: a._id, title: [a.forename, a.surname].join(' '), type: a.type } }
         })
         persons.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -96,4 +99,4 @@ block content
                             each i in persons
                                 if i.title
                                     li
-                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + i._id)= i.title
+                                        a(class=getColor(i.type), href='/' + self.locale + '/videos/#' + i._id)= i.title
