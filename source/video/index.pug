@@ -12,7 +12,11 @@ block content
     #map-items.hidden
         if self.region
             each r in self.region
-                .map-item(data-lat=r.lat, data-lng=r.lng, data-path='/' + self.locale + '/' + self.path, data-img='/assets/images/' + self.path + '.jpg', data-title=self['title_' + self.locale], data-subtitle=self['subtitle_' + self.locale])
+                .map-item(data-lat=r.lat, data-lng=r.lng,
+                          data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                          data-img='/assets/images/' + self.path + '.jpg',
+                          data-title=self['title_' + self.locale],
+                          data-subtitle=self['subtitle_' + self.locale])
 
     main.main.has-sidebar.u-container
         .content
