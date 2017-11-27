@@ -2,7 +2,6 @@ const _ = require('lodash')
 const fs = require('fs-extra')
 const path = require('path')
 const request = require('request')
-const vimeo = require('vimeo').Vimeo
 const yaml = require('js-yaml')
 const async = require('async')
 
