@@ -59,6 +59,19 @@ block vars
         })
 
 
+block script
+    script.
+        $(function () {
+            $('.tabs--link').click(function () {
+                var id = $(this).attr('href')
+                $('.tabs--link').not(this).removeClass('u-active')
+                $('.tabs--item').not(id).removeClass('u-open')
+                $(this).addClass('u-active')
+                $(id).addClass('u-open')
+            })
+        })
+
+
 block content
     //- include /searchbox
 

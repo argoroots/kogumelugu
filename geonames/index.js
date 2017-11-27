@@ -57,7 +57,7 @@ CSVSTREAM.write(FIELDS.join(', ') + '\n')
 const csvWrite = function csvWrite(place) {
     CSVSTREAM.write(
         FIELDS
-            .map(function(field) {
+            .map(function (field) {
                 let ret_val = place[field] ? place[field] : ''
                 try {
                     return '"' + ret_val.replace(/"/g, '""') + '"'
