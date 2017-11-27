@@ -17,7 +17,6 @@ cp ./_redirects ${BUILD_DIR}/_redirects
 
 rm -r node_modules
 npm install -q entu-ssg
-npm install -q vimeo
 
 
 echo
