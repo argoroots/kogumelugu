@@ -1,5 +1,5 @@
 $(function () {
-    var initMap function () {
+    var initMap = function () {
         if($('#map').length === 0) {
             return
         }
