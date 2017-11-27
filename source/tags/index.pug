@@ -25,6 +25,8 @@ block vars
             if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
         })
         tags.sort((a, b) => {
+            if (!a.title) { return -1 }
+            if (!b.title) { return 1 }
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
@@ -36,6 +38,8 @@ block vars
             if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
         })
         regions.sort((a, b) => {
+            if (!a.title) { return -1 }
+            if (!b.title) { return 1 }
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
@@ -47,6 +51,8 @@ block vars
             if (a.forename || a.surname) { return { _id: a._id, title: [a.forename, a.surname].join(' '), type: a.type } }
         })
         persons.sort((a, b) => {
+            if (!a.title) { return -1 }
+            if (!b.title) { return 1 }
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
