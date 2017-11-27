@@ -5,6 +5,20 @@ block script
     script.
         var hideMapLabels = true
 
+        $(function() {
+            search = location.search.substr(1).split('&')
+            var searchObj = {};
+            for (i = 0; i < search.length; i++) {
+                thing = search[i].split('=')
+                searchObj[thing[0]] = thing[1]
+            }
+
+            if (searchObj.t) {
+                var src = $('iframe#video').attr('src').replace('t=0&', 't=' + searchObj.t + '&')
+                $('iframe#video').attr('src', src)
+            }
+        })
+
 
 block content
     include /searchbox
@@ -23,7 +37,7 @@ block content
             article.article
                 .u-content
                     .video-wrapper
-                        iframe(id='video', src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0?autopause=1&amp;autoplay=0&amp;badge=0&amp;byline=0&amp;loop=0&amp;portrait=0&amp;title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+                        iframe#video(id='video', src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0&autopause=1&autoplay=0&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
                     h1= self['title_' + self.locale]
                     p
                         b= self['subtitle_' + self.locale]
