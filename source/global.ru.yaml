@@ -1,13 +1,13 @@
 menu:
     -
         title: Видео
-        path: /ru/video
+        path: /ru/video/
     -
         title: Темы
-        path: /ru/temy
+        path: /ru/temy/
     -
         title: Учебные материалы
-        path: /ru/uchebnye-materialy
+        path: /ru/uchebnye-materialy/
     -
         title: Введение
         path: /ru/#introduction
