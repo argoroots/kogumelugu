@@ -13,8 +13,8 @@ block vars
                 'u-blue',
             ]
 
-            if (type === 'storyteller') return colors[0]
-            if (type === 'author') return colors[4]
+            if (type === 'storyteller') { return colors[0] }
+            if (type === 'author') { return colors[4] }
 
             return colors[Math.floor(Math.random() * colors.length)]
         }
@@ -22,11 +22,9 @@ block vars
         var tags = self.file.tags.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
-            if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
+            return { _id: a._id, title: a['name_' + self.locale] }
         })
         tags.sort((a, b) => {
-            if (!a.title) { return -1 }
-            if (!b.title) { return 1 }
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
@@ -35,11 +33,9 @@ block vars
         var regions = self.file.regions.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
-            if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
+            return { _id: a._id, title: a['name_' + self.locale] }
         })
         regions.sort((a, b) => {
-            if (!a.title) { return -1 }
-            if (!b.title) { return 1 }
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
@@ -48,11 +44,9 @@ block vars
         var persons = self.file.persons.filter(a => {
             return (a.forename || a.surname)
         }).map(a => {
-            if (a.forename || a.surname) { return { _id: a._id, title: [a.forename, a.surname].join(' '), type: a.type } }
+            return { _id: a._id, title: [a.forename, a.surname].join(' '), type: a.type }
         })
         persons.sort((a, b) => {
-            if (!a.title) { return -1 }
-            if (!b.title) { return 1 }
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
             if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
             return 0
