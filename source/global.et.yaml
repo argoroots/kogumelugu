@@ -10,13 +10,13 @@ menu:
         path: /et/oppematerjalid/
     -
         title: Tutvustus
-        path: /et/#tutvustus
+        path: /et/#indroduction
     -
         title: Tegijad
-        path: /et/#tegijad
+        path: /et/#team
     -
         title: Toeta
-        path: /et/#toeta
+        path: /et/#support
 
 
 texts:
@@ -82,8 +82,10 @@ texts:
             Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
         div2: |
             Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituut kontole.
-            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituut pangakontole.
+            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituudi pangakontole.
             Konto andmed on nähtaval allpool.
+        div3: |
+            Teie annetust arveldatakse eurodes.
         amount: Sisesta summa
         submit: Toetan
         participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
