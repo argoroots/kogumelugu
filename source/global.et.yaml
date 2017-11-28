@@ -1,13 +1,13 @@
 menu:
     -
         title: Videoteek
-        path: /et/videoteek
+        path: /et/videos
     -
         title: Teemad
-        path: /et/teemad
+        path: /et/topics
     -
         title: Õppematerjalid
-        path: /et/oppematerjalid
+        path: /et/materials
     -
         title: Tutvustus
         path: /et/#indroduction
@@ -103,13 +103,13 @@ texts:
         subtitles:
             history:
                 label: Ajalugu
-                anchor: ajalugu
+                anchor: history
             humanRights:
                 label: Inimõigused
-                anchor: inimõigused
+                anchor: humanrights
             regions:
                 label: Regioonid
-                anchor: regioonid
+                anchor: regions
             persons:
                 label: Isikud
-                anchor: isikud
+                anchor: persons

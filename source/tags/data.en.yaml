@@ -1,5 +1,5 @@
 path: topics
-title: Tags
+title: Topics
 file:
     tags: ./tags/tags.yaml
     regions: ./tags/regions.yaml

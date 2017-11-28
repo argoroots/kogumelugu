@@ -5,6 +5,20 @@ block script
     script.
         var hideMapLabels = true
 
+        $(function () {
+            search = location.search.substr(1).split('&')
+            var searchObj = {};
+            for (i = 0; i < search.length; i++) {
+                thing = search[i].split('=')
+                searchObj[thing[0]] = thing[1]
+            }
+
+            if (searchObj.t) {
+                var src = $('iframe#video').attr('src').replace('t=0&', 't=' + searchObj.t + '&')
+                $('iframe#video').attr('src', src)
+            }
+        })
+
 
 block content
     include /searchbox
@@ -12,14 +26,18 @@ block content
     #map-items.hidden
         if self.region
             each r in self.region
-                .map-item(data-lat=r.lat, data-lng=r.lng, data-path='/' + self.locale + '/' + self.path, data-img='/assets/images/' + self.path + '.jpg', data-title=self['title_' + self.locale], data-subtitle=self['subtitle_' + self.locale])
+                .map-item(data-lat=r.lat, data-lng=r.lng,
+                          data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                          data-img='/assets/images/' + self.path + '.jpg',
+                          data-title=self['title_' + self.locale],
+                          data-subtitle=self['subtitle_' + self.locale])
 
     main.main.has-sidebar.u-container
         .content
             article.article
                 .u-content
                     .video-wrapper
-                        iframe(id='video', src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0?autopause=1&amp;autoplay=0&amp;badge=0&amp;byline=0&amp;loop=0&amp;portrait=0&amp;title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+                        iframe#video(src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0&autopause=1&autoplay=0&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
                     h1= self['title_' + self.locale]
                     p
                         b= self['subtitle_' + self.locale]

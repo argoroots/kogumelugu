@@ -3,7 +3,7 @@ extends /layout
 
 block vars
     -
-        const getColor = () => {
+        const getColor = (type = undefined) => {
             const colors = [
                 '',
                 'u-red',
@@ -13,13 +13,16 @@ block vars
                 'u-blue',
             ]
 
+            if (type === 'storyteller') { return colors[0] }
+            if (type === 'author') { return colors[4] }
+
             return colors[Math.floor(Math.random() * colors.length)]
         }
 
         var tags = self.file.tags.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
-            if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
+            return { _id: a._id, title: a['name_' + self.locale] }
         })
         tags.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -30,7 +33,7 @@ block vars
         var regions = self.file.regions.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
-            if (a['name_' + self.locale]) { return { _id: a._id, title: a['name_' + self.locale] } }
+            return { _id: a._id, title: a['name_' + self.locale] }
         })
         regions.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -41,7 +44,7 @@ block vars
         var persons = self.file.persons.filter(a => {
             return (a.forename || a.surname)
         }).map(a => {
-            if (a.forename || a.surname) { return { _id: a._id, title: [a.forename, a.surname].join(' ') } }
+            return { _id: a._id, title: [a.forename, a.surname].join(' '), type: a.type }
         })
         persons.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -50,41 +53,63 @@ block vars
         })
 
 
+block script
+    script.
+        $(function () {
+            $('.tabs--link').click(function () {
+                var id = $(this).attr('href')
+                $('.tabs--link').not(this).removeClass('u-active')
+                $('.tabs--item').not(id).removeClass('u-open')
+                $(this).addClass('u-active')
+                $(id).addClass('u-open')
+            })
+        })
+
+
 block content
-    include /searchbox
+    //- include /searchbox
 
     main.main.u-container
         article.article
             h1= self.texts.topics.title
             .tabs
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.history.anchor)= self.texts.topics.subtitles.history.label
-                a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.humanRights.anchor)= self.texts.topics.subtitles.humanRights.label
+                //- a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.humanRights.anchor)= self.texts.topics.subtitles.humanRights.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
-                #teemad.tabs--item.u-open
+                #history.tabs--item.u-open
                     .tags
-                        h2 Teemad
+                        h2= self.texts.topics.subtitles.history.label
                         ul.tags--list
                             each t in tags
                                 if t.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + t._id)= t.title
+                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
 
-                #regioonid.tabs--item
+                //- #humanRights.tabs--item
+                //-     .tags
+                //-         h2= self.texts.topics.subtitles.humanRights.label
+                //-         ul.tags--list
+                //-             each t in tags
+                //-                 if t.title
+                //-                     li
+                //-                         a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
+
+                #regions.tabs--item
                     .tags
-                        h2 Regioonid
+                        h2= self.texts.topics.subtitles.regions.label
                         ul.tags--list
                             each r in regions
                                 if r.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + r._id)= r.title
+                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + r._id)= r.title
 
-                #isikud.tabs--item
+                #persons.tabs--item
                     .tags
-                        h2 Isikud
+                        h2= self.texts.topics.subtitles.persons.label
                         ul.tags--list
                             each i in persons
                                 if i.title
                                     li
-                                        a(class=getColor(), href='/et/videoteek/#' + i._id)= i.title
+                                        a(class=getColor(i.type), href='/' + self.locale + '/videos/#' + i._id)= i.title

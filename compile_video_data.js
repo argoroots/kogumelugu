@@ -251,16 +251,52 @@ async.parallel({
             (callback) => attach2parent(all_data.tags.flat, all_data.tags.flat, all_data.tags.flat, 'tag', callback)
         ], (err) => {
             const isPersonInVideo = (person_key, videos) => {
-                return videos.some( (video) =>
-                    (video.author ? true : false) &&
-                    (video.author._id === person_key) )
+                if (videos.some(
+                    (video) => {
+                        if ((video.author ? true : false) &&
+                            (video.author._id === person_key)
+                        ) {
+                            all_data.persons.flat[person_key].type = 'author'
+                            return true
+                        }
+                        if ((video.storyteller ? true : false) &&
+                            (video.storyteller._id === person_key)
+                        ) {
+                            all_data.persons.flat[person_key].type = 'storyteller'
+                            return true
+                        }
+                        return false
+                    })) { return true }
+                return false
+            }
+            const isTagInVideo = (tag_key, videos) => {
+                if (videos.some(
+                    (video) => {
+                        if ((video.tag ? true : false) &&
+                            (video.tag.some((tag) => tag._id === tag_key))
+                        ) { return true }
+                        return false
+                    })) { return true }
+                return false
+            }
+            const isRegionInVideo = (region_key, videos) => {
+                if (videos.some(
+                    (video) => {
+                        if ((video.region ? true : false) &&
+                            (video.region.some((region) => region._id === region_key))
+                        ) { return true }
+                        return false
+                    })) { return true }
+                return false
             }
             if (err) { return callback(err) }
             let videos_out = Object.keys(all_data.videos.flat)
                 .map((key) => all_data.videos.flat[key])
             let tags_out = Object.keys(all_data.tags.flat)
+                .filter((key) => isTagInVideo(key, videos_out))
                 .map((key) => all_data.tags.flat[key])
             let regions_out = Object.keys(all_data.regions.flat)
+                .filter((key) => isRegionInVideo(key, videos_out))
                 .map((key) => all_data.regions.flat[key])
             let persons_out = Object.keys(all_data.persons.flat)
                 .filter((key) => isPersonInVideo(key, videos_out))

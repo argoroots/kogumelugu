@@ -80,7 +80,7 @@ partners:
     -
         title: Edward von Lõngus
         url: https://www.facebook.com/EdwardvonL6ngus/
-    -
+
 sponsors:
     -
         title: Amalfi
@@ -99,21 +99,21 @@ sponsors:
         picture: erc.png
         url: http://www.estoreliefusa.org/news_eng.html
     -
-          title: Министерство образования и науки
-          picture: HTM_eng.png
-          url: https://www.hm.ee/ru
+        title: Министерство образования и науки
+        picture: HTM_eng.png
+        url: https://www.hm.ee/ru
     -
-          title: Министерство обороны
-          picture: Kaitsemin_eng.png
-          url: http://www.kmin.ee/en
+        title: Министерство обороны
+        picture: Kaitsemin_eng.png
+        url: http://www.kmin.ee/en
     -
-          title: Kistler-Ritso Sihtasutus
-          picture:
-          url:
+        title: Kistler-Ritso Sihtasutus
+        picture:
+        url:
     -
-          title: Министерство культуры
-          picture: Kultuurimin_eng.png
-          url: http://www.kul.ee/ru
+        title: Министерство культуры
+        picture: Kultuurimin_eng.png
+        url: http://www.kul.ee/ru
     -
         title: Министерство внутренних дел
         picture: Sisemin_rus.png

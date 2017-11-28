@@ -2,7 +2,6 @@ const _ = require('lodash')
 const fs = require('fs-extra')
 const path = require('path')
 const request = require('request')
-const vimeo = require('vimeo').Vimeo
 const yaml = require('js-yaml')
 const async = require('async')
 
@@ -80,7 +79,7 @@ async.eachLimit(videos, 5, (video, callback) => {
     console.log(video.photo._id, videoPath)
     fs.ensureDir(path.dirname(videoPath))
     .then(() => download(video.photo._id, videoPath, callback))
-}, function(err){
+}, function (err){
     if( err ) {
         console.log('A file failed to process')
         return
