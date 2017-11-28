@@ -1,4 +1,4 @@
-path: videos
+path: video
 title: Videos
 file:
     videos: ./video/data.yaml

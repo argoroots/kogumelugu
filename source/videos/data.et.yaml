@@ -1,4 +1,4 @@
-path: videos
+path: videoteek
 title: Videoteek
 file:
     videos: ./video/data.yaml

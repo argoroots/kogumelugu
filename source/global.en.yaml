@@ -1,13 +1,13 @@
 menu:
     -
         title: Videos
-        path: /en/videos
+        path: /en/videos/
     -
         title: Topics
-        path: /en/topics
+        path: /en/topics/
     -
         title: Materials
-        path: /en/materials
+        path: /en/materials/
     -
         title: Introduction
         path: /en/#introduction

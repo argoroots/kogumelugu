@@ -1,4 +1,4 @@
-path: topics
+path: temy
 title: Topics
 file:
     tags: ./tags/tags.yaml
