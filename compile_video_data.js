@@ -244,6 +244,10 @@ async.waterfall([
         })
     },
     (all_data, callback) => { // do more manipulation on all_data
+        fs.writeFileSync(
+            HIERARCHY_DATA_YAML + '2.yaml',
+            yaml.safeDump(all_data.videos, { indent: 4, lineWidth: 999999999, noRefs: true })
+        )
         callback(null, all_data)
     }
 ], (err, all_data) => {
