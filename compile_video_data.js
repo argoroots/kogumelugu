@@ -156,10 +156,10 @@ const arr2objAll = (callback) => {
         }
     }, (err, all_data) => {
         if (err) { callback(err) }
-        fs.writeFileSync(
-            HIERARCHY_DATA_YAML + '1.yaml',
-            yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
-        )
+        // fs.writeFileSync(
+        //     HIERARCHY_DATA_YAML + '1.yaml',
+        //     yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
+        // )
         callback(null, all_data)
     })
 }
@@ -167,6 +167,70 @@ const arr2objAll = (callback) => {
 async.waterfall([
     (callback) => arr2objAll(callback),
     (all_data, callback) => {
+        // console.log(require('util').inspect(Object.keys(all_data), { depth: null }));
+        const initialize = (all_data, callback) => {
+            async.parallel([
+                (callback) => {
+                    console.log('in1')
+                    async.forEachOf(all_data.videos.flat, (video, key, callback) => {
+                        video._persons = []
+                        video._regions = []
+                        video._tags = []
+                        if (video.storyteller && !Array.isArray(video.storyteller)) {
+                            video.storyteller = [video.storyteller]
+                        }
+                        if (video.author && !Array.isArray(video.author)) {
+                            video.author = [video.author]
+                        }
+                        callback(null)
+                    }, (err) => {
+                        if (err) { return callback(err) }
+                        console.log('out1')
+                        callback(null)
+                    })
+                },
+                (callback) => {
+                    console.log('in2')
+                    async.forEachOf(all_data.tags.flat, (tag, key, callback) => {
+                        tag._videos = []
+                        callback(null)
+                    }, (err) => {
+                        if (err) { return callback(err) }
+                        console.log('out2')
+                        callback(null)
+                    })
+                },
+                (callback) => {
+                    console.log('in3')
+                    async.forEachOf(all_data.regions.flat, (region, key, callback) => {
+                        region._videos = []
+                        callback(null)
+                    }, (err) => {
+                        if (err) { return callback(err) }
+                        console.log('out3')
+                        callback(null)
+                    })
+                },
+                (callback) => {
+                    console.log('in4')
+                    async.forEachOf(all_data.persons.flat, (person, key, callback) => {
+                        person._videos = []
+                        callback(null)
+                    }, (err) => {
+                        if (err) { return callback(err) }
+                        console.log('out4')
+                        callback(null)
+                    })
+                }
+            ], (err) => {
+                if (err) { return callback(err) }
+                // fs.writeFileSync(
+                //     HIERARCHY_DATA_YAML + '3.yaml',
+                //     yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
+                // )
+                callback(null)
+            })
+        }
         const attach2parent = (childs, parents, all_data_of_type, type_name, callback) => {
             async.each(childs, (child, callback) => {
                 if (child._parent === undefined) {
@@ -217,7 +281,47 @@ async.waterfall([
                 return callback(null)
             })
         }
+        const personsAndVideos = (videos, persons, callback) => {
+            async.each(videos, (video, callback) => {
+                if (video.storyteller) {
+                    video.storyteller.forEach((_id) => {
+                        video._persons.push({
+                            _id: _id,
+                            forename: persons[_id].forename || '-',
+                            surname: persons[_id].surname || '-'
+                        })
+                        persons[_id]._videos.push({
+                            _id: video._id,
+                            title_et: video.title_et || '-',
+                            title_en: video.title_en || '-',
+                            title_ru: video.title_ru || '-'
+                        })
+                    })
+                }
+                if (video.author) {
+                    video.author.forEach((_id) => {
+                        video._persons.push({
+                            _id: _id,
+                            forename: persons[_id].forename || '-',
+                            surname: persons[_id].surname || '-'
+                        })
+                        persons[_id]._videos.push({
+                            _id: video._id,
+                            title_et: video.title_et || '-',
+                            title_en: video.title_en || '-',
+                            title_ru: video.title_ru || '-'
+                        })
+                    })
+                }
+                callback(null)
+            }, (err) => {
+                if (err) { return callback(err) }
+                return callback(null)
+            })
+
+        }
         async.series({
+            zero: (callback) => initialize(all_data, callback),
             one: (callback) => attach2parent(
                 all_data.tcregions.flat, // childs
                 all_data.videos.flat,    // parents
@@ -233,6 +337,10 @@ async.waterfall([
                 all_data.tags.flat,      // parents
                 all_data.tags.flat,      // all_data_of_type
                 'tag', callback),        // type_name
+            four: (callback) => personsAndVideos(
+                all_data.videos.flat,
+                all_data.persons.flat,
+                callback),
             htags: (callback) => enrichTree(
                 all_data.tags.flat,      // flat
                 all_data.tags.tree,      // tree
@@ -244,33 +352,14 @@ async.waterfall([
         })
     },
     (all_data, callback) => { // do more manipulation on all_data
-        fs.writeFileSync(
-            HIERARCHY_DATA_YAML + '2.yaml',
-            yaml.safeDump(all_data.videos, { indent: 4, lineWidth: 999999999, noRefs: true })
-        )
+        // fs.writeFileSync(
+        //     HIERARCHY_DATA_YAML + '2.yaml',
+        //     yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
+        // )
         callback(null, all_data)
     }
 ], (err, all_data) => {
     if (err) { throw err }
-    const isPersonInVideo = (person_key, videos) => {
-        if (videos.some(
-            (video) => {
-                if ((video.author ? true : false) &&
-                    (video.author._id === person_key)
-                ) {
-                    all_data.persons.flat[person_key].type = 'author'
-                    return true
-                }
-                if ((video.storyteller ? true : false) &&
-                    (video.storyteller._id === person_key)
-                ) {
-                    all_data.persons.flat[person_key].type = 'storyteller'
-                    return true
-                }
-                return false
-            })) { return true }
-        return false
-    }
     const isTagInVideo = (tag_key, videos) => {
         if (videos.some(
             (video) => {
@@ -301,7 +390,7 @@ async.waterfall([
         .filter((key) => isRegionInVideo(key, videos_out))
         .map((key) => all_data.regions.flat[key])
     let persons_out = Object.keys(all_data.persons.flat)
-        .filter((key) => isPersonInVideo(key, videos_out))
+        .filter((key) => all_data.persons.flat[key]._videos.length > 1)
         .map((key) => all_data.persons.flat[key])
 
     fs.writeFileSync(

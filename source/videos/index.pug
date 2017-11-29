@@ -37,6 +37,12 @@ block content
 
                     each t in getList(v.tag)
                         .filter-item.hidden(data-id=t._id)
+                    each t in getList(v._persons)
+                        .filter-item.hidden(data-id=t._id)
+                    each t in getList(v._tags)
+                        .filter-item.hidden(data-id=t._id)
+                    each t in getList(v._regions)
+                        .filter-item.hidden(data-id=t._id)
                     each r in getList(v.regions)
                         .filter-item.hidden(data-id=r._id)
                     each a in getList(v.author)
