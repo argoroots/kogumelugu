@@ -35,6 +35,8 @@ block vars
             return 0
         })
 
+        var videos_url = self.menu[0].path
+
         var regions = self.file.regions.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
@@ -81,8 +83,6 @@ block content
                 each t in htags
                     a.tabs--link.u-active(href='#'+t['name_' + self.locale])= t['name_' + self.locale]
 
-                //- a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.history.anchor)= self.texts.topics.subtitles.history.label
-                //- a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.humanRights.anchor)= self.texts.topics.subtitles.humanRights.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
@@ -90,43 +90,27 @@ block content
                     .tabs--item.u-open(id=ht['name_' + self.locale])
                         .tags
                             h2= ht['name_' + self.locale]
+
                             if ht._childs.length > 0
                                 ul.tags--list
                                     each ht2 in ht._childs
                                         if ht2['name_' + self.locale]
                                             li
-                                                a(class=getColor(0), href='/' + self.locale + '/videos/#' + ht2._id)= ht2['name_' + self.locale]
+                                                a(class=getColor(0), href=videos_url + '#' + ht2._id)= ht2['name_' + self.locale]
+
                                                 if ht2._childs.length > 0
                                                     ul.tags--list
                                                         each ht3 in ht2._childs
                                                             if ht3['name_' + self.locale]
                                                                 li
-                                                                    a(class=getColor(1), href='/' + self.locale + '/videos/#' + ht3._id)= ht3['name_' + self.locale]
+                                                                    a(class=getColor(1), href=videos_url + '#' + ht3._id)= ht3['name_' + self.locale]
+
                                                                     if ht3._childs.length > 0
                                                                         ul.tags--list
                                                                             each ht4 in ht3._childs
                                                                                 if ht4['name_' + self.locale]
                                                                                     li
-                                                                                        a(class=getColor(2), href='/' + self.locale + '/videos/#' + ht4._id)= ht4['name_' + self.locale]
-
-
-                //- #history.tabs--item.u-open
-                //-     .tags
-                //-         h2= self.texts.topics.subtitles.history.label
-                //-         ul.tags--list
-                //-             each t in tags
-                //-                 if t.title
-                //-                     li
-                //-                         a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
-
-                //- #humanRights.tabs--item
-                //-     .tags
-                //-         h2= self.texts.topics.subtitles.humanRights.label
-                //-         ul.tags--list
-                //-             each t in tags
-                //-                 if t.title
-                //-                     li
-                //-                         a(class=getColor(), href='/' + self.locale + '/videos/#' + t._id)= t.title
+                                                                                        a(class=getColor(2), href=videos_url + '#' + ht4._id)= ht4['name_' + self.locale]
 
                 #regions.tabs--item
                     .tags
@@ -135,7 +119,7 @@ block content
                             each r in regions
                                 if r.title
                                     li
-                                        a(class=getColor(), href='/' + self.locale + '/videos/#' + r._id)= r.title
+                                        a(class=getColor(), href=videos_url + '#' + r._id)= r.title
 
                 #persons.tabs--item
                     .tags
@@ -144,4 +128,4 @@ block content
                             each i in persons
                                 if i.title
                                     li
-                                        a(class=getColor(i.type), href='/' + self.locale + '/videos/#' + i._id)= i.title
+                                        a(class=getColor(i.type), href=videos_url + '#' + i._id)= i.title
