@@ -171,7 +171,6 @@ async.waterfall([
         const initialize = (all_data, callback) => {
             async.parallel([
                 (callback) => {
-                    console.log('in1')
                     async.forEachOf(all_data.videos.flat, (video, key, callback) => {
                         video._persons = []
                         video._regions = []
@@ -185,40 +184,33 @@ async.waterfall([
                         callback(null)
                     }, (err) => {
                         if (err) { return callback(err) }
-                        console.log('out1')
                         callback(null)
                     })
                 },
                 (callback) => {
-                    console.log('in2')
                     async.forEachOf(all_data.tags.flat, (tag, key, callback) => {
                         tag._videos = []
                         callback(null)
                     }, (err) => {
                         if (err) { return callback(err) }
-                        console.log('out2')
                         callback(null)
                     })
                 },
                 (callback) => {
-                    console.log('in3')
                     async.forEachOf(all_data.regions.flat, (region, key, callback) => {
                         region._videos = []
                         callback(null)
                     }, (err) => {
                         if (err) { return callback(err) }
-                        console.log('out3')
                         callback(null)
                     })
                 },
                 (callback) => {
-                    console.log('in4')
                     async.forEachOf(all_data.persons.flat, (person, key, callback) => {
                         person._videos = []
                         callback(null)
                     }, (err) => {
                         if (err) { return callback(err) }
-                        console.log('out4')
                         callback(null)
                     })
                 }

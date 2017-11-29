@@ -45,12 +45,18 @@ block content
 
                 footer
                     ul.details
-                        li Intervjueeritav
-                            = ' '
-                            b Heino Noor
-                        li Intervjueerija
-                            = ' '
-                            b Anna Hints
+                        if self.storyteller
+                            li Storyteller
+                                = ' '
+                                each a in self.storyteller
+                                    b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+
+                        if self.author
+                            li Author
+                                = ' '
+                                each a in self.author
+                                    b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+
                         li
                             a(href='') Seotud tunnikava
                                 = ' '
