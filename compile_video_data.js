@@ -310,8 +310,59 @@ async.waterfall([
                 if (err) { return callback(err) }
                 return callback(null)
             })
-
         }
+        const tagsAndVideos = (videos, tags, callback) => {
+            async.each(videos, (video, callback) => {
+                if (video.tag) {
+                    video.tag.forEach((_tag) => {
+                        let _id = _tag._id
+                        console.log(require('util').inspect(_id, { depth: null }));
+                        video._tags.push({
+                            _id: _id,
+                            name_et: tags[_id].name_et || '-',
+                            name_en: tags[_id].name_en || '-',
+                            name_ru: tags[_id].name_ru || '-'
+                        })
+                        tags[_id]._videos.push({
+                            _id: video._id,
+                            title_et: video.title_et || '-',
+                            title_en: video.title_en || '-',
+                            title_ru: video.title_ru || '-'
+                        })
+                    })
+                }
+                callback(null)
+            }, (err) => {
+                if (err) { return callback(err) }
+                return callback(null)
+            })
+        }
+        const regionsAndVideos = (videos, regions, callback) => {
+            async.each(videos, (video, callback) => {
+                if (video.region) {
+                    video.region.forEach((_region) => {
+                        let _id = _region._id
+                        video._regions.push({
+                            _id: _id,
+                            name_et: regions[_id].name_et || '-',
+                            name_en: regions[_id].name_en || '-',
+                            name_ru: regions[_id].name_ru || '-'
+                        })
+                        regions[_id]._videos.push({
+                            _id: video._id,
+                            title_et: video.title_et || '-',
+                            title_en: video.title_en || '-',
+                            title_ru: video.title_ru || '-'
+                        })
+                    })
+                }
+                callback(null)
+            }, (err) => {
+                if (err) { return callback(err) }
+                return callback(null)
+            })
+        }
+
         async.series({
             zero: (callback) => initialize(all_data, callback),
             one: (callback) => attach2parent(
@@ -329,9 +380,17 @@ async.waterfall([
                 all_data.tags.flat,      // parents
                 all_data.tags.flat,      // all_data_of_type
                 'tag', callback),        // type_name
-            four: (callback) => personsAndVideos(
+            PnV: (callback) => personsAndVideos(
                 all_data.videos.flat,
                 all_data.persons.flat,
+                callback),
+            TnV: (callback) => tagsAndVideos(
+                all_data.videos.flat,
+                all_data.tags.flat,
+                callback),
+            RnV: (callback) => regionsAndVideos(
+                all_data.videos.flat,
+                all_data.regions.flat,
                 callback),
             htags: (callback) => enrichTree(
                 all_data.tags.flat,      // flat
@@ -376,10 +435,12 @@ async.waterfall([
     let videos_out = Object.keys(all_data.videos.flat)
         .map((key) => all_data.videos.flat[key])
     let tags_out = Object.keys(all_data.tags.flat)
+        // .filter((key) => all_data.tags.flat[key]._videos.length > 1)
         .filter((key) => isTagInVideo(key, videos_out))
         .map((key) => all_data.tags.flat[key])
     let regions_out = Object.keys(all_data.regions.flat)
-        .filter((key) => isRegionInVideo(key, videos_out))
+        .filter((key) => all_data.regions.flat[key]._videos.length > 1)
+        // .filter((key) => isRegionInVideo(key, videos_out))
         .map((key) => all_data.regions.flat[key])
     let persons_out = Object.keys(all_data.persons.flat)
         .filter((key) => all_data.persons.flat[key]._videos.length > 1)
