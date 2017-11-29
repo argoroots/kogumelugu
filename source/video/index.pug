@@ -1,6 +1,11 @@
 extends /layout
 
 
+block vars
+    -
+        var videos_url = self.menu[0].path
+
+
 block script
     script.
         var hideMapLabels = true
@@ -49,13 +54,15 @@ block content
                             li Storyteller
                                 = ' '
                                 each a in self.storyteller
-                                    b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+                                    a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
+                                        b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
                         if self.author
                             li Author
                                 = ' '
                                 each a in self.author
-                                    b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+                                    a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
+                                        b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
                         li
                             a(href='') Seotud tunnikava
