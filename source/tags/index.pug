@@ -64,7 +64,7 @@ block script
     script.
         $(function () {
             $('.tabs--link').click(function () {
-                var id = $(this).attr('href')
+                var id = $(this).attr('href') || window.location.hash || $('.tabs--link:first').attr('href')
                 $('.tabs--link').not(this).removeClass('u-active')
                 $('.tabs--item').not(id).removeClass('u-open')
                 $(this).addClass('u-active')
