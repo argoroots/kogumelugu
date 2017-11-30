@@ -290,6 +290,7 @@ async.waterfall([
                             forename: persons[_id].forename || '-',
                             surname: persons[_id].surname || '-'
                         })
+                        persons[_id].type = 'storyteller'
                         persons[_id]._videos.push({
                             _id: video._id,
                             title_et: video.title_et || '-',
@@ -305,6 +306,7 @@ async.waterfall([
                             forename: persons[_id].forename || '-',
                             surname: persons[_id].surname || '-'
                         })
+                        persons[_id].type = 'author'
                         persons[_id]._videos.push({
                             _id: video._id,
                             title_et: video.title_et || '-',

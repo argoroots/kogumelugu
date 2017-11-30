@@ -62890,6 +62890,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: storyteller
         5a1fd1f4882b520001307818:
             _id: 5a1fd1f4882b520001307818
             forename: Uve
@@ -62946,6 +62947,7 @@ persons:
                     title_et: Maire Joost
                     title_en: Maire Joost
                     title_ru: Maire Joost
+            type: author
         5a1fd1f4882b520001307824:
             _id: 5a1fd1f4882b520001307824
             forename: Sandra
@@ -63259,6 +63261,7 @@ persons:
                     title_et: Valve Luuka
                     title_en: Valve Luuka
                     title_ru: Valve Luuka
+            type: author
         5a1fd1f4882b520001307827:
             _id: 5a1fd1f4882b520001307827
             forename: Agentuur
@@ -63287,6 +63290,7 @@ persons:
                     title_et: Maire Joost
                     title_en: Maire Joost
                     title_ru: Maire Joost
+            type: author
         5a1fd1f4882b520001307837:
             _id: 5a1fd1f4882b520001307837
             forename: Maarja
@@ -63423,6 +63427,7 @@ persons:
                     title_et: Gunnar Ellam
                     title_en: Gunnar Ellam
                     title_ru: Гуннар Эллам
+            type: storyteller
         5a1fd1f4882b520001307878:
             _id: 5a1fd1f4882b520001307878
             forename: Ruth
@@ -63444,6 +63449,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: storyteller
         5a1fd1f4882b520001307879:
             _id: 5a1fd1f4882b520001307879
             forename: Maili
@@ -63460,6 +63466,7 @@ persons:
                     title_et: Maili Malvre
                     title_en: Maili Malvre
                     title_ru: Maili Malvre
+            type: storyteller
         5a1fd1f4882b52000130787a:
             _id: 5a1fd1f4882b52000130787a
             forename: Mai-Liis
@@ -63476,6 +63483,7 @@ persons:
                     title_et: Mai-Liis Bartling (Hallikmaa)
                     title_en: Mai-Liis Bartling (Hallikmaa)
                     title_ru: Mai-Liis Bartling (Hallikmaa)
+            type: storyteller
         5a1fd1f4882b52000130787b:
             _id: 5a1fd1f4882b52000130787b
             forename: Tõnu
@@ -63492,6 +63500,7 @@ persons:
                     title_et: Tõnu Jürvetson
                     title_en: Tõnu Jürvetson
                     title_ru: Tõnu Jürvetson
+            type: storyteller
         5a1fd1f4882b52000130787c:
             _id: 5a1fd1f4882b52000130787c
             forename: Tiiu
@@ -63508,6 +63517,7 @@ persons:
                     title_et: Tiiu Jürvetson
                     title_en: Tiiu Jürvetson
                     title_ru: Tiiu Jürvetson
+            type: storyteller
         5a1fd1f4882b52000130787d:
             _id: 5a1fd1f4882b52000130787d
             forename: Aavo
@@ -63524,6 +63534,7 @@ persons:
                     title_et: Aavo Reinfeldt
                     title_en: Aavo Reinfeldt
                     title_ru: Ааво Рейнфельдт
+            type: storyteller
         5a1fd1f4882b52000130787e:
             _id: 5a1fd1f4882b52000130787e
             forename: Adam
@@ -63540,6 +63551,7 @@ persons:
                     title_et: Adam Brown
                     title_en: Adam Brown
                     title_ru: Адам Браун
+            type: storyteller
         5a1fd1f4882b52000130787f:
             _id: 5a1fd1f4882b52000130787f
             forename: Ado
@@ -63556,6 +63568,7 @@ persons:
                     title_et: Ado Valge
                     title_en: Ado Valge
                     title_ru: Адо Валге
+            type: storyteller
         5a1fd1f4882b520001307880:
             _id: 5a1fd1f4882b520001307880
             forename: Ain
@@ -63572,6 +63585,7 @@ persons:
                     title_et: Ain Haas
                     title_en: Ain Haas
                     title_ru: Айн Хаас
+            type: storyteller
         5a1fd1f4882b520001307881:
             _id: 5a1fd1f4882b520001307881
             forename: Arved
@@ -63588,6 +63602,7 @@ persons:
                     title_et: Arved Plaks
                     title_en: Arved Plaks
                     title_ru: Арвед Плакс
+            type: storyteller
         5a1fd1f4882b520001307882:
             _id: 5a1fd1f4882b520001307882
             forename: Eva
@@ -63604,6 +63619,7 @@ persons:
                     title_et: Eva Brown (Truumees)
                     title_en: Eva Brown (Truumees)
                     title_ru: Эва Браун (Труумеэс)
+            type: storyteller
         5a1fd1f4882b520001307883:
             _id: 5a1fd1f4882b520001307883
             forename: Helga
@@ -63620,6 +63636,7 @@ persons:
                     title_et: Helga Merits
                     title_en: Helga Merits
                     title_ru: Хельга Меритс
+            type: storyteller
         5a1fd1f4882b520001307884:
             _id: 5a1fd1f4882b520001307884
             forename: Helgi Kirsti
@@ -63636,6 +63653,7 @@ persons:
                     title_et: Helgi Kirsti Valge
                     title_en: Helgi Kirsti Valge
                     title_ru: Хельги Кирсти Валге
+            type: storyteller
         5a1fd1f4882b520001307885:
             _id: 5a1fd1f4882b520001307885
             forename: Hinge-Mai
@@ -63652,6 +63670,7 @@ persons:
                     title_et: Hinge-Mai Raud-Pähn
                     title_en: Hinge-Mai Raud-Pähn
                     title_ru: Hinge-Mai Raud-Pähn
+            type: storyteller
         5a1fd1f4882b520001307886:
             _id: 5a1fd1f4882b520001307886
             forename: Ilvi
@@ -63668,6 +63687,7 @@ persons:
                     title_et: Ilvi Jõe-Cannon
                     title_en: Ilvi Jõe-Cannon
                     title_ru: Ilvi Jõe-Cannon
+            type: storyteller
         5a1fd1f4882b520001307887:
             _id: 5a1fd1f4882b520001307887
             forename: Indrik
@@ -63684,6 +63704,7 @@ persons:
                     title_et: Indrik Linask
                     title_en: Indrik Linask
                     title_ru: Indrik Linask
+            type: storyteller
         5a1fd1f4882b520001307888:
             _id: 5a1fd1f4882b520001307888
             forename: Inno
@@ -63700,6 +63721,7 @@ persons:
                     title_et: Inno Salasoo
                     title_en: Inno Salasoo
                     title_ru: Inno Salasoo
+            type: storyteller
         5a1fd1f4882b520001307889:
             _id: 5a1fd1f4882b520001307889
             forename: Jaak
@@ -63716,6 +63738,7 @@ persons:
                     title_et: Jaak Maandi
                     title_en: Jaak Maandi
                     title_ru: Jaak Maandi
+            type: storyteller
         5a1fd1f4882b52000130788a:
             _id: 5a1fd1f4882b52000130788a
             forename: Jaak
@@ -63732,6 +63755,7 @@ persons:
                     title_et: Jaak Treiman
                     title_en: Jaak Treiman
                     title_ru: Jaak Treiman
+            type: storyteller
         5a1fd1f4882b52000130788b:
             _id: 5a1fd1f4882b52000130788b
             forename: Jaan
@@ -63748,6 +63772,7 @@ persons:
                     title_et: Jaan Meri
                     title_en: Jaan Meri
                     title_ru: Jaan Meri
+            type: storyteller
         5a1fd1f4882b52000130788c:
             _id: 5a1fd1f4882b52000130788c
             forename: Jan-Peter
@@ -63764,6 +63789,7 @@ persons:
                     title_et: Jan-Peter Kimber
                     title_en: Jan-Peter Kimber
                     title_ru: Jan-Peter Kimber
+            type: storyteller
         5a1fd1f4882b52000130788d:
             _id: 5a1fd1f4882b52000130788d
             forename: Kaja
@@ -63780,6 +63806,7 @@ persons:
                     title_et: Kaja Telmet
                     title_en: Kaja Telmet
                     title_ru: Kaja Telmet
+            type: storyteller
         5a1fd1f4882b52000130788e:
             _id: 5a1fd1f4882b52000130788e
             forename: Kalev
@@ -63796,6 +63823,7 @@ persons:
                     title_et: Kalev Ehin
                     title_en: Kalev Ehin
                     title_ru: Kalev Ehin
+            type: storyteller
         5a1fd1f4882b52000130788f:
             _id: 5a1fd1f4882b52000130788f
             forename: Karin
@@ -63812,6 +63840,7 @@ persons:
                     title_et: Karin Zimmermann
                     title_en: Karin Zimmermann
                     title_ru: Karin Zimmermann
+            type: storyteller
         5a1fd1f4882b520001307890:
             _id: 5a1fd1f4882b520001307890
             forename: Linda Vaike
@@ -63828,6 +63857,7 @@ persons:
                     title_et: Linda Vaike Malmgren
                     title_en: Linda Vaike Malmgren
                     title_ru: Linda Vaike Malmgren
+            type: storyteller
         5a1fd1f4882b520001307891:
             _id: 5a1fd1f4882b520001307891
             forename: Lisa
@@ -63844,6 +63874,7 @@ persons:
                     title_et: Lisa Trei
                     title_en: Lisa Trei
                     title_ru: Lisa Trei
+            type: storyteller
         5a1fd1f4882b520001307892:
             _id: 5a1fd1f4882b520001307892
             forename: Maido
@@ -63860,6 +63891,7 @@ persons:
                     title_et: Maido Saarlas
                     title_en: Maido Saarlas
                     title_ru: Maido Saarlas
+            type: storyteller
         5a1fd1f4882b520001307893:
             _id: 5a1fd1f4882b520001307893
             forename: Merike
@@ -63876,6 +63908,7 @@ persons:
                     title_et: Merike Weiler
                     title_en: Merike Weiler
                     title_ru: Merike Weiler
+            type: storyteller
         5a1fd1f4882b520001307894:
             _id: 5a1fd1f4882b520001307894
             forename: Rein
@@ -63892,6 +63925,7 @@ persons:
                     title_et: Rein Abel
                     title_en: Rein Abel
                     title_ru: Rein Abel
+            type: storyteller
         5a1fd1f4882b520001307895:
             _id: 5a1fd1f4882b520001307895
             forename: Sale Katrin
@@ -63908,6 +63942,7 @@ persons:
                     title_et: Sale Katrin Marits
                     title_en: Sale Katrin Marits
                     title_ru: Sale Katrin Marits
+            type: storyteller
         5a1fd1f4882b520001307896:
             _id: 5a1fd1f4882b520001307896
             forename: Siim
@@ -63924,6 +63959,7 @@ persons:
                     title_et: Siim Sööt
                     title_en: Siim Sööt
                     title_ru: Siim Sööt
+            type: storyteller
         5a1fd1f4882b520001307897:
             _id: 5a1fd1f4882b520001307897
             forename: Viivianne Vaike
@@ -63940,6 +63976,7 @@ persons:
                     title_et: Viivianne Vaike Malmgren ja Liivia Linda Malmgren
                     title_en: Viivianne Vaike Malmgren and Liivia Linda Malmgren
                     title_ru: Вийвианне Вайке Мальмгрен и Лийвия Линда Мальмгрен
+            type: storyteller
         5a1fd1f4882b520001307898:
             _id: 5a1fd1f4882b520001307898
             forename: Liivia Linda
@@ -63956,6 +63993,7 @@ persons:
                     title_et: Viivianne Vaike Malmgren ja Liivia Linda Malmgren
                     title_en: Viivianne Vaike Malmgren and Liivia Linda Malmgren
                     title_ru: Вийвианне Вайке Мальмгрен и Лийвия Линда Мальмгрен
+            type: storyteller
         5a1fd1f4882b520001307899:
             _id: 5a1fd1f4882b520001307899
             forename: Eha-Kay
@@ -63972,6 +64010,7 @@ persons:
                     title_et: Eha-Kay Uibo
                     title_en: Eha-Kay Uibo
                     title_ru: Эха-Кай Уйбо
+            type: storyteller
         5a1fd1f4882b52000130789a:
             _id: 5a1fd1f4882b52000130789a
             forename: Heino
@@ -63988,6 +64027,7 @@ persons:
                     title_et: Heino Noor
                     title_en: Heino Noor
                     title_ru: Хейно Ноор
+            type: storyteller
         5a1fd1f4882b52000130789b:
             _id: 5a1fd1f4882b52000130789b
             forename: Kalju
@@ -64009,6 +64049,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b52000130789c:
             _id: 5a1fd1f4882b52000130789c
             forename: Regina
@@ -64025,6 +64066,7 @@ persons:
                     title_et: Regina Trubnikova
                     title_en: Regina Trubnikova
                     title_ru: Regina Trubnikova
+            type: storyteller
         5a1fd1f4882b52000130789d:
             _id: 5a1fd1f4882b52000130789d
             forename: Rutt
@@ -64041,6 +64083,7 @@ persons:
                     title_et: Rutt Kresling
                     title_en: Rutt Kresling
                     title_ru: Rutt Kresling
+            type: storyteller
         5a1fd1f4882b52000130789e:
             _id: 5a1fd1f4882b52000130789e
             forename: Sven Imanuel
@@ -64057,6 +64100,7 @@ persons:
                     title_et: Sven Imanuel Laurits
                     title_en: Sven Imanuel Laurits
                     title_ru: Sven Imanuel Laurits
+            type: storyteller
         5a1fd1f4882b52000130789f:
             _id: 5a1fd1f4882b52000130789f
             forename: Valve
@@ -64073,6 +64117,7 @@ persons:
                     title_et: Valve Luuka
                     title_en: Valve Luuka
                     title_ru: Valve Luuka
+            type: storyteller
         5a1fd1f4882b5200013078a0:
             _id: 5a1fd1f4882b5200013078a0
             forename: Karl
@@ -64089,6 +64134,7 @@ persons:
                     title_et: Karl Õiger
                     title_en: Karl Õiger
                     title_ru: Karl Õiger
+            type: storyteller
         5a1fd1f4882b5200013078a1:
             _id: 5a1fd1f4882b5200013078a1
             forename: Maire
@@ -64105,6 +64151,7 @@ persons:
                     title_et: Maire Joost
                     title_en: Maire Joost
                     title_ru: Maire Joost
+            type: storyteller
         5a1fd1f4882b5200013078a2:
             _id: 5a1fd1f4882b5200013078a2
             forename: Oleg
@@ -64121,6 +64168,7 @@ persons:
                     title_et: Oleg Sapožnin
                     title_en: Oleg Sapožnin
                     title_ru: Oleg Sapožnin
+            type: storyteller
         5a1fd1f4882b5200013078a3:
             _id: 5a1fd1f4882b5200013078a3
             forename: Vello
@@ -64137,6 +64185,7 @@ persons:
                     title_et: Vello Malken
                     title_en: Vello Malken
                     title_ru: Vello Malken
+            type: storyteller
         5a1fd1f4882b5200013078a4:
             _id: 5a1fd1f4882b5200013078a4
             forename: Juhan
@@ -64153,6 +64202,7 @@ persons:
                     title_et: Juhan Vaabel
                     title_en: Juhan Vaabel
                     title_ru: Juhan Vaabel
+            type: storyteller
         5a1fd1f4882b5200013078a5:
             _id: 5a1fd1f4882b5200013078a5
             forename: Nimetu 0956
@@ -64199,6 +64249,7 @@ persons:
                     title_et: Tiiu Teesalu
                     title_en: Tiiu Teesalu
                     title_ru: Tiiu Teesalu
+            type: storyteller
         5a1fd1f4882b5200013079cc:
             _id: 5a1fd1f4882b5200013079cc
             forename: Arnet
@@ -64215,6 +64266,7 @@ persons:
                     title_et: Arnet Keskmäe
                     title_en: Arnet Keskmäe
                     title_ru: Арнет Кескмяэ
+            type: storyteller
         5a1fd1f4882b520001307a04:
             _id: 5a1fd1f4882b520001307a04
             forename: Aleksander
@@ -64792,6 +64844,7 @@ persons:
                     title_et: Tiiu Teesalu
                     title_en: Tiiu Teesalu
                     title_ru: Tiiu Teesalu
+            type: author
         5a1fd1f4882b520001307ae4:
             _id: 5a1fd1f4882b520001307ae4
             forename: Lill
@@ -64839,6 +64892,7 @@ persons:
                     title_et: Toomas Sorra
                     title_en: Toomas Sorra
                     title_ru: Toomas Sorra
+            type: author
         5a1fd1f4882b520001307aec:
             _id: 5a1fd1f4882b520001307aec
             forename: James
@@ -64928,6 +64982,7 @@ persons:
                     title_et: Gustav Liblik
                     title_en: Gustav Liblik
                     title_ru: Gustav Liblik
+            type: storyteller
         5a1fd1f4882b520001307afb:
             _id: 5a1fd1f4882b520001307afb
             forename: Ave
@@ -65005,6 +65060,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b520001307b07:
             _id: 5a1fd1f4882b520001307b07
             forename: Ivar
@@ -65256,6 +65312,7 @@ persons:
                     title_et: Aina Ergle
                     title_en: Aina Ergle
                     title_ru: Aina Ergle
+            type: storyteller
         5a1fd1f4882b520001307b97:
             _id: 5a1fd1f4882b520001307b97
             forename: Maaja
@@ -65273,6 +65330,7 @@ persons:
                     title_et: Mara Kopa
                     title_en: Mara Kopa
                     title_ru: Mara Kopa
+            type: storyteller
         5a1fd1f4882b520001307b99:
             _id: 5a1fd1f4882b520001307b99
             forename: Megija
@@ -65284,6 +65342,7 @@ persons:
                     title_et: Megija Vizbule
                     title_en: Megija Vizbule
                     title_ru: Megija Vizbule
+            type: storyteller
         5a1fd1f4882b520001307b9a:
             _id: 5a1fd1f4882b520001307b9a
             forename: Mi Mi
@@ -65300,6 +65359,7 @@ persons:
                     title_et: Mi Mi Po Hti
                     title_en: Mi Mi Po Hti
                     title_ru: Mi Mi Po Hti
+            type: storyteller
         5a1fd1f4882b520001307b9b:
             _id: 5a1fd1f4882b520001307b9b
             forename: Rami
@@ -65311,6 +65371,7 @@ persons:
                     title_et: Rami Meling
                     title_en: Rami Meling
                     title_ru: Rami Meling
+            type: storyteller
         5a1fd1f4882b520001307b9c:
             _id: 5a1fd1f4882b520001307b9c
             forename: Reet
@@ -65322,6 +65383,7 @@ persons:
                     title_et: Reet Oras
                     title_en: Reet Oras
                     title_ru: Reet Oras
+            type: storyteller
         5a1fd1f4882b520001307b9d:
             _id: 5a1fd1f4882b520001307b9d
             forename: Silja
@@ -65333,6 +65395,7 @@ persons:
                     title_et: Silja Vurma
                     title_en: Silja Vurma
                     title_ru: Silja Vurma
+            type: storyteller
         5a1fd1f4882b520001307b9e:
             _id: 5a1fd1f4882b520001307b9e
             forename: Alo
@@ -65344,6 +65407,7 @@ persons:
                     title_et: Alo Aasma
                     title_en: Alo Aasma
                     title_ru: Alo Aasma
+            type: storyteller
         5a1fd1f4882b520001307b9f:
             _id: 5a1fd1f4882b520001307b9f
             forename: Andres
@@ -65355,6 +65419,7 @@ persons:
                     title_et: Andres Kasekamp
                     title_en: Andres Kasekamp
                     title_ru: Andres Kasekamp
+            type: storyteller
         5a1fd1f4882b520001307ba0:
             _id: 5a1fd1f4882b520001307ba0
             forename: Ants
@@ -65366,6 +65431,7 @@ persons:
                     title_et: Ants Laaneots
                     title_en: Ants Laaneots
                     title_ru: Ants Laaneots
+            type: storyteller
         5a1fd1f4882b520001307ba2:
             _id: 5a1fd1f4882b520001307ba2
             forename: Jaak
@@ -65377,6 +65443,7 @@ persons:
                     title_et: Jaak Ruus
                     title_en: Jaak Ruus
                     title_ru: Jaak Ruus
+            type: storyteller
         5a1fd1f4882b520001307ba3:
             _id: 5a1fd1f4882b520001307ba3
             forename: Maret
@@ -65393,6 +65460,7 @@ persons:
                     title_et: Maret Schultz
                     title_en: Maret Schultz
                     title_ru: Maret Schultz
+            type: storyteller
         5a1fd1f4882b520001307ba4:
             _id: 5a1fd1f4882b520001307ba4
             forename: Mari
@@ -65404,6 +65472,7 @@ persons:
                     title_et: Mari Pukkonen
                     title_en: Mari Pukkonen
                     title_ru: Mari Pukkonen
+            type: storyteller
         5a1fd1f4882b520001307ba5:
             _id: 5a1fd1f4882b520001307ba5
             forename: Mirjam
@@ -65415,6 +65484,7 @@ persons:
                     title_et: Mirjam Rausberg
                     title_en: Mirjam Rausberg
                     title_ru: Mirjam Rausberg
+            type: storyteller
         5a1fd1f4882b520001307ba6:
             _id: 5a1fd1f4882b520001307ba6
             forename: Paul
@@ -65426,6 +65496,7 @@ persons:
                     title_et: Paul Grünthal
                     title_en: Paul Grünthal
                     title_ru: Paul Grünthal
+            type: storyteller
         5a1fd1f4882b520001307ba7:
             _id: 5a1fd1f4882b520001307ba7
             forename: Sander
@@ -65437,6 +65508,7 @@ persons:
                     title_et: Sander Tuul
                     title_en: Sander Tuul
                     title_ru: Sander Tuul
+            type: storyteller
         5a1fd1f4882b520001307ba8:
             _id: 5a1fd1f4882b520001307ba8
             forename: Silvi
@@ -65448,6 +65520,7 @@ persons:
                     title_et: Silvi Teesalu
                     title_en: Silvi Teesalu
                     title_ru: Silvi Teesalu
+            type: storyteller
         5a1fd1f4882b520001307ba9:
             _id: 5a1fd1f4882b520001307ba9
             forename: Tuuli
@@ -65465,6 +65538,7 @@ persons:
                     title_et: Tuuli ja Paul Rehemaa
                     title_en: Tuuli and Paul Rehemaa
                     title_ru: Туули и Пауль Рехемаа
+            type: storyteller
         5a1fd1f4882b520001307bad:
             _id: 5a1fd1f4882b520001307bad
             forename: Janis
@@ -65476,6 +65550,7 @@ persons:
                     title_et: Janis Galakrodznieks ja Julija Spurina
                     title_en: Janis Galakrodznieks and Julija Spurina
                     title_ru: Янис Галакродзниекс и Юлия Спурина
+            type: storyteller
         5a1fd1f4882b520001307bae:
             _id: 5a1fd1f4882b520001307bae
             forename: Sarah
@@ -65612,6 +65687,7 @@ persons:
                     title_et: Hans Värnik
                     title_en: Hans Värnik
                     title_ru: Hans Värnik
+            type: storyteller
         5a1fd1f4882b520001307bc3:
             _id: 5a1fd1f4882b520001307bc3
             forename: Kaljo
@@ -65893,6 +65969,7 @@ persons:
                     title_et: Heino Tuum
                     title_en: Heino Tuum
                     title_ru: Хейно Туум
+            type: storyteller
         5a1fd1f4882b520001307bf2:
             _id: 5a1fd1f4882b520001307bf2
             forename: Raine
@@ -66161,6 +66238,7 @@ persons:
                     title_et: Iris Kosemets
                     title_en: Iris Kosemets
                     title_ru: Iris Kosemets
+            type: storyteller
         5a1fd1f4882b520001307c1d:
             _id: 5a1fd1f4882b520001307c1d
             forename: Maie
@@ -66250,6 +66328,7 @@ persons:
                     title_et: Silva Kangur
                     title_en: Silva Kangur
                     title_ru: Silva Kangur
+            type: storyteller
         5a1fd1f4882b520001307c2c:
             _id: 5a1fd1f4882b520001307c2c
             forename: Juris
@@ -66267,6 +66346,7 @@ persons:
                     title_et: Kirsti Portnov
                     title_en: Kirsti Portnov
                     title_ru: Kirsti Portnov
+            type: storyteller
         5a1fd1f4882b520001307c2e:
             _id: 5a1fd1f4882b520001307c2e
             forename: Lagle
@@ -66295,6 +66375,7 @@ persons:
                     title_et: Ester Rank
                     title_en: Ester Rank
                     title_ru: Ester Rank
+            type: storyteller
         5a1fd1f4882b520001307c31:
             _id: 5a1fd1f4882b520001307c31
             forename: Ago
@@ -66306,6 +66387,7 @@ persons:
                     title_et: Ago Ambre
                     title_en: Ago Ambre
                     title_ru: Аго Амбре
+            type: storyteller
         5a1fd1f4882b520001307c32:
             _id: 5a1fd1f4882b520001307c32
             forename: Arvid
@@ -66322,6 +66404,7 @@ persons:
                     title_et: Arvid Truumees
                     title_en: Arvid Truumees
                     title_ru: Arvid Truumees
+            type: storyteller
         5a1fd1f4882b520001307c33:
             _id: 5a1fd1f4882b520001307c33
             forename: Priit
@@ -66338,6 +66421,7 @@ persons:
                     title_et: Priit Vesilind
                     title_en: Priit Vesilind
                     title_ru: Priit Vesilind
+            type: storyteller
         5a1fd1f4882b520001307c34:
             _id: 5a1fd1f4882b520001307c34
             forename: Imbi
@@ -66354,6 +66438,7 @@ persons:
                     title_et: Imbi Truumees
                     title_en: Imbi Truumees
                     title_ru: Imbi Truumees
+            type: storyteller
         5a1fd1f4882b520001307c35:
             _id: 5a1fd1f4882b520001307c35
             forename: Kaja
@@ -66375,6 +66460,7 @@ persons:
                     title_et: Kaja Weeks
                     title_en: Kaja Weeks
                     title_ru: Kaja Weeks
+            type: storyteller
         5a1fd1f4882b520001307c36:
             _id: 5a1fd1f4882b520001307c36
             forename: Karl
@@ -66386,6 +66472,7 @@ persons:
                     title_et: Karl Altau
                     title_en: Karl Altau
                     title_ru: Karl Altau
+            type: storyteller
         5a1fd1f4882b520001307c37:
             _id: 5a1fd1f4882b520001307c37
             forename: Mari
@@ -66402,6 +66489,7 @@ persons:
                     title_et: Mari Teedla
                     title_en: Mari Teedla
                     title_ru: Мари Теэдла
+            type: storyteller
         5a1fd1f4882b520001307c38:
             _id: 5a1fd1f4882b520001307c38
             forename: Peeter
@@ -66418,6 +66506,7 @@ persons:
                     title_et: Peter Teedla
                     title_en: Peter Teedla
                     title_ru: Пеэтер Теэдла
+            type: storyteller
         5a1fd1f4882b520001307c39:
             _id: 5a1fd1f4882b520001307c39
             forename: Tiina
@@ -66434,6 +66523,7 @@ persons:
                     title_et: Tiina Ets
                     title_en: Tiina Ets
                     title_ru: Тийна Этс
+            type: storyteller
         5a1fd1f4882b520001307c3a:
             _id: 5a1fd1f4882b520001307c3a
             forename: Toomas
@@ -66445,6 +66535,7 @@ persons:
                     title_et: Toomas Sorra
                     title_en: Toomas Sorra
                     title_ru: Toomas Sorra
+            type: storyteller
         5a1fd1f4882b520001307c4f:
             _id: 5a1fd1f4882b520001307c4f
             forename: Alexandra
@@ -66461,6 +66552,7 @@ persons:
                     title_et: Ago Ambre
                     title_en: Ago Ambre
                     title_ru: Аго Амбре
+            type: author
         5a1fd1f4882b520001307c50:
             _id: 5a1fd1f4882b520001307c50
             forename: Suzanna
@@ -66477,6 +66569,7 @@ persons:
                     title_et: Arvid Truumees
                     title_en: Arvid Truumees
                     title_ru: Arvid Truumees
+            type: author
         5a1fd1f4882b520001307c51:
             _id: 5a1fd1f4882b520001307c51
             forename: Ian
@@ -66493,6 +66586,7 @@ persons:
                     title_et: Imbi Truumees
                     title_en: Imbi Truumees
                     title_ru: Imbi Truumees
+            type: author
         5a1fd1f4882b520001307c52:
             _id: 5a1fd1f4882b520001307c52
             forename: Emma
@@ -66509,6 +66603,7 @@ persons:
                     title_et: Kaja Weeks
                     title_en: Kaja Weeks
                     title_ru: Kaja Weeks
+            type: author
         5a1fd1f4882b520001307c53:
             _id: 5a1fd1f4882b520001307c53
             forename: Hannah
@@ -66535,6 +66630,7 @@ persons:
                     title_et: Peter Teedla
                     title_en: Peter Teedla
                     title_ru: Пеэтер Теэдла
+            type: author
         5a1fd1f4882b520001307c54:
             _id: 5a1fd1f4882b520001307c54
             forename: Grace
@@ -66551,6 +66647,7 @@ persons:
                     title_et: Priit Vesilind
                     title_en: Priit Vesilind
                     title_ru: Priit Vesilind
+            type: author
         5a1fd1f4882b520001307c55:
             _id: 5a1fd1f4882b520001307c55
             forename: Janae
@@ -66567,6 +66664,7 @@ persons:
                     title_et: Tiina Ets
                     title_en: Tiina Ets
                     title_ru: Тийна Этс
+            type: author
         5a1fd1f4882b520001307c57:
             _id: 5a1fd1f4882b520001307c57
             forename: Mari
@@ -66665,6 +66763,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: author
         5a1fd1f4882b520001307c64:
             _id: 5a1fd1f4882b520001307c64
             forename: Gelly
@@ -67081,6 +67180,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: author
         5a1fd1f4882b520001307d52:
             _id: 5a1fd1f4882b520001307d52
             forename: Arnold
@@ -67092,6 +67192,7 @@ persons:
                     title_et: Arnold Unt
                     title_en: Arnold Unt
                     title_ru: Arnold Unt
+            type: storyteller
         5a1fd1f4882b520001307d54:
             _id: 5a1fd1f4882b520001307d54
             forename: Haldi
@@ -67103,6 +67204,7 @@ persons:
                     title_et: Haldi Teras
                     title_en: Haldi Teras
                     title_ru: Haldi Teras
+            type: storyteller
         5a1fd1f4882b520001307d5f:
             _id: 5a1fd1f4882b520001307d5f
             forename: Kyllikki
@@ -67114,6 +67216,7 @@ persons:
                     title_et: Kyllikki Talikka
                     title_en: Kyllikki Talikka
                     title_ru: Kyllikki Talikka
+            type: storyteller
         5a1fd1f4882b520001307d62:
             _id: 5a1fd1f4882b520001307d62
             forename: Tatjana
@@ -67125,6 +67228,7 @@ persons:
                     title_et: Tatjana Meinert
                     title_en: Tatjana Meinert
                     title_ru: Tatjana Meinert
+            type: storyteller
         5a1fd1f4882b520001307d65:
             _id: 5a1fd1f4882b520001307d65
             forename: Julija
@@ -67136,6 +67240,7 @@ persons:
                     title_et: Janis Galakrodznieks ja Julija Spurina
                     title_en: Janis Galakrodznieks and Julija Spurina
                     title_ru: Янис Галакродзниекс и Юлия Спурина
+            type: storyteller
         5a1fd1f4882b520001307d9f:
             _id: 5a1fd1f4882b520001307d9f
             forename: Elvin
@@ -67218,6 +67323,7 @@ persons:
                     title_et: Theodore Balberyzszki
                     title_en: Theodore Balberyzszki
                     title_ru: Theodore Balberyzszki
+            type: storyteller
         5a1fd1f4882b520001307dad:
             _id: 5a1fd1f4882b520001307dad
             forename: Katariin
@@ -67265,6 +67371,7 @@ persons:
                     title_et: Hanna Zautina
                     title_en: Hanna Zautina
                     title_ru: Hanna Zautina
+            type: storyteller
         5a1fd1f4882b520001307f35:
             _id: 5a1fd1f4882b520001307f35
             forename: Nadja
@@ -67276,6 +67383,7 @@ persons:
                     title_et: Hanna Zautina
                     title_en: Hanna Zautina
                     title_ru: Hanna Zautina
+            type: author
         5a1fd1f4882b520001307f36:
             _id: 5a1fd1f4882b520001307f36
             forename: Emma
@@ -67311,6 +67419,7 @@ persons:
                     title_et: Helvi Lõhmus
                     title_en: Helvi Lõhmus
                     title_ru: Helvi Lõhmus
+            type: author
         5a1fd1f4882b52000130809b:
             _id: 5a1fd1f4882b52000130809b
             forename: Helvi Lõhmus
@@ -67321,6 +67430,7 @@ persons:
                     title_et: Helvi Lõhmus
                     title_en: Helvi Lõhmus
                     title_ru: Helvi Lõhmus
+            type: storyteller
         5a1fd1f4882b5200013081c0:
             _id: 5a1fd1f4882b5200013081c0
             forename: Erik
@@ -68312,6 +68422,7 @@ persons:
                     title_et: 28.12.84
                     title_en: 28.12.84
                     title_ru: 28.12.84
+            type: author
         5a1fd1f4882b520001308280:
             _id: 5a1fd1f4882b520001308280
             forename: 28.12.84
@@ -68322,6 +68433,7 @@ persons:
                     title_et: 28.12.84
                     title_en: 28.12.84
                     title_ru: 28.12.84
+            type: storyteller
         5a1fd1f4882b5200013082e6:
             _id: 5a1fd1f4882b5200013082e6
             forename: Rodion
@@ -69081,6 +69193,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b5200013086c8:
             _id: 5a1fd1f4882b5200013086c8
             forename: Matti
@@ -69092,6 +69205,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b5200013086c9:
             _id: 5a1fd1f4882b5200013086c9
             forename: Artur
@@ -69108,6 +69222,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b5200013086cb:
             _id: 5a1fd1f4882b5200013086cb
             forename: Ageeda
@@ -69119,6 +69234,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b5200013086cc:
             _id: 5a1fd1f4882b5200013086cc
             forename: Aarne
@@ -69130,6 +69246,7 @@ persons:
                     title_et: Video lugu
                     title_en: Video story
                     title_ru: Видео история
+            type: storyteller
         5a1fd1f4882b5200013086d3:
             _id: 5a1fd1f4882b5200013086d3
             forename: Pjotr
@@ -69189,6 +69306,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: storyteller
         5a1fd1f4882b52000130872a:
             _id: 5a1fd1f4882b52000130872a
             forename: Raul
@@ -69200,6 +69318,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: storyteller
         5a1fd1f4882b52000130872b:
             _id: 5a1fd1f4882b52000130872b
             forename: Inna-Leena
@@ -69211,6 +69330,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: storyteller
         5a1fd1f4882b52000130872e:
             _id: 5a1fd1f4882b52000130872e
             forename: Henno
@@ -69222,6 +69342,7 @@ persons:
                     title_et: '-'
                     title_en: '-'
                     title_ru: '-'
+            type: storyteller
         5a1fd1f4882b52000130877f:
             _id: 5a1fd1f4882b52000130877f
             forename: Ervin
