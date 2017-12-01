@@ -51,14 +51,14 @@ block content
                 footer
                     ul.details
                         if self.storyteller
-                            li Storyteller
+                            li= self.texts.video.storyteller
                                 = ' '
                                 each a in self.storyteller
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
                         if self.author
-                            li Author
+                            li= self.texts.video.author
                                 = ' '
                                 each a in self.author
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
@@ -71,19 +71,10 @@ block content
 
                     div.tags
                         ul.tags--list
-                            li
-                                a(href='') Heino Noor
-                            li
-                                a.u-red(href='') Quam Cras
-                            li
-                                a.u-purple(href='') Euismod
-                            li
-                                a.u-green(href='') Ipsum Commodo
-                            li
-                                a.u-orange(href='') Parturient
-                            li
-                                a.u-blue(href='') Parturient
-                        a(href='') Näita kõiki (54)
+                            each r in self._regions.sort((a,b) => a.time > b.time ? 1 : -1)
+                                li
+                                    a(href= (r.time === '00:00:00' ? '' : '?t=' + r.time.replace(':','h').replace(':','m')+'s'))
+                                        b= (r.time === '00:00:00' ? '' : r.time + ' ') + r['name_' + self.locale]
 
             include /map
             +map(false)

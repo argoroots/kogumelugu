@@ -224,6 +224,9 @@ async.waterfall([
                 if (tctype_name === 'region') {
                     new_tc.lng = tc_obj.lng
                     new_tc.lat = tc_obj.lat
+                    new_tc.name_et = tc_obj.name_et
+                    new_tc.name_en = tc_obj.name_en
+                    new_tc.name_ru = tc_obj.name_ru
                 }
                 video[_tctype_name].push(new_tc)
                 recAddVideo(rel_types_obj, rel_id, video)
