@@ -29,8 +29,8 @@ block content
     include /searchbox
 
     #map-items.hidden
-        if self.region
-            each r in self.region
+        if self._regions
+            each r in self._regions
                 .map-item(data-lat=r.lat, data-lng=r.lng,
                           data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
                           data-img='/assets/images/' + self.path + '.jpg',
