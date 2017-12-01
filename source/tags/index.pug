@@ -15,6 +15,7 @@ block vars
 
             if (type === 'storyteller') { return colors[0] }
             if (type === 'author') { return colors[4] }
+            if (type === 'mention') { return colors[3] }
             if (Number(type) >= 0) { return colors[Number(type)]}
 
             return colors[Math.floor(Math.random() * colors.length)]
@@ -146,4 +147,4 @@ block content
                             each i in persons
                                 if i.title
                                     li
-                                        a(class=getColor(i.type), href=videos_url + '#' + i._id)= i.title
+                                        a(class=getColor(i.type || 'mention'), href=videos_url + '#' + i._id)= i.title

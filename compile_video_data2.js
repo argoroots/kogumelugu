@@ -240,6 +240,48 @@ async.waterfall([
             })
             async.setImmediate(() => callback(null))
         }
+        const personsAndVideos = (all_data, callback) => {
+            let videos = all_data.videos
+            let persons = all_data.persons
+            async.each(videos, (video, callback) => {
+                if (video.storyteller) {
+                    video.storyteller.forEach((_id) => {
+                        video._persons.push({
+                            _id: _id,
+                            forename: persons[_id].forename || '-',
+                            surname: persons[_id].surname || '-'
+                        })
+                        persons[_id].type = 'storyteller'
+                        persons[_id]._videos.push({
+                            _id: video._id,
+                            title_et: video.title_et || '-',
+                            title_en: video.title_en || '-',
+                            title_ru: video.title_ru || '-'
+                        })
+                    })
+                }
+                if (video.author) {
+                    video.author.forEach((_id) => {
+                        video._persons.push({
+                            _id: _id,
+                            forename: persons[_id].forename || '-',
+                            surname: persons[_id].surname || '-'
+                        })
+                        persons[_id].type = 'author'
+                        persons[_id]._videos.push({
+                            _id: video._id,
+                            title_et: video.title_et || '-',
+                            title_en: video.title_en || '-',
+                            title_ru: video.title_ru || '-'
+                        })
+                    })
+                }
+                async.setImmediate(() => callback(null))
+            }, (err) => {
+                if (err) { return callback(err) }
+                return callback(null)
+            })
+        }
         // const enrichTree = (flat, tree, callback) => {
         //     async.each(tree, (node, callback) => {
         //         let flatNode = flat[node._id]
@@ -287,6 +329,7 @@ async.waterfall([
                 all_data,           // all data
                 'tag',              // type_name
                 callback),
+            pNv: (callback) => personsAndVideos(all_data, callback),
             all_data: (callback) => callback(null, all_data)
         }, (err, data) => { // just pass all_data
             if (err) { return callback(err) }
@@ -361,13 +404,5 @@ async.waterfall([
         PERSON_DATA_YAML,
         yaml.safeDump(persons_out, { indent: 4, lineWidth: 999999999, noRefs: true })
     )
-    // fs.writeFileSync(
-    //     HIERARCHY_DATA_YAML,
-    //     yaml.safeDump({
-    //         'regions': all_data.regions.tree,
-    //         'tags': all_data.tags.tree,
-    //         // 'persons': all_data.persons.tree,
-    //     }, { indent: 4, lineWidth: 999999999, noRefs: true })
-    // )
     console.log('ready')
 })
