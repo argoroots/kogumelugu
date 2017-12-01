@@ -217,7 +217,15 @@ async.waterfall([
                     async.setImmediate(() => callback(null))
                     return
                 }
-                video[_tctype_name].push({'_id': tc_obj._id, 'time': tc_relation.time})
+                let new_tc = {
+                    '_id': tc_obj._id,
+                    'time': tc_relation.time
+                }
+                if (tctype_name === 'region') {
+                    new_tc.lng = tc_obj.lng
+                    new_tc.lat = tc_obj.lat
+                }
+                video[_tctype_name].push(new_tc)
                 recAddVideo(rel_types_obj, rel_id, video)
                 async.setImmediate(() => callback(null))
                 return
