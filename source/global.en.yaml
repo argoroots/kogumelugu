@@ -20,6 +20,9 @@ menu:
 
 
 texts:
+    video:
+        storyteller: Storyteller
+        author: Author
     contact:
         title: Estonian Institute of Historical Memory
     mapTitle:

@@ -19,6 +19,9 @@ menu:
         path: /ru/#support
 
 texts:
+    video:
+        storyteller: Storyteller
+        author: Author
     contact:
         title: Эстонский институт исторической памяти (SA Eesti Mälu Instituut)
     mapTitle:
