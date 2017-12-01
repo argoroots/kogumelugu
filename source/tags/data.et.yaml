@@ -4,4 +4,4 @@ file:
     tags: ./tags/tags.yaml
     regions: ./tags/regions.yaml
     persons: ./tags/persons.yaml
-    hierarchical: ./tags/h.yaml
+    # hierarchical: ./tags/h.yaml

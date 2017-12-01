@@ -20,14 +20,11 @@ block vars
             return colors[Math.floor(Math.random() * colors.length)]
         }
 
-        var htags = self.file.hierarchical.tags.filter(a => {
-            return !!a['name_' + self.locale]
-        })
-
         var tags = self.file.tags.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
-            return { _id: a._id, title: a['name_' + self.locale] }
+            a.title = a['name_' + self.locale]
+            return a
         })
         tags.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -40,7 +37,8 @@ block vars
         var regions = self.file.regions.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
-            return { _id: a._id, title: a['name_' + self.locale] }
+            a.title = a['name_' + self.locale]
+            return a
         })
         regions.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -51,7 +49,8 @@ block vars
         var persons = self.file.persons.filter(a => {
             return (a.forename || a.surname)
         }).map(a => {
-            return { _id: a._id, title: [a.forename, a.surname].join(' '), type: a.type }
+            a.title = [a.forename, a.surname].join(' ')
+            return a
         })
         persons.sort((a, b) => {
             if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
@@ -80,34 +79,34 @@ block content
         article.article
             h1= self.texts.topics.title
             .tabs
-                each t in htags
+                each t in tags.filter((a) => a._parent.length === 0)
                     a.tabs--link.u-active(href='#'+t['name_' + self.locale])= t['name_' + self.locale]
 
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
-                each ht in htags
+                each ht in tags.filter((a) => a._parent.length === 0)
                     .tabs--item.u-open(id=ht['name_' + self.locale])
                         .tags
                             h2= ht['name_' + self.locale]
 
                             if ht._childs.length > 0
                                 ul.tags--list
-                                    each ht2 in ht._childs
+                                    each ht2 in tags.filter((a) => a._parent.indexOf(ht._id) >= 0)
                                         if ht2['name_' + self.locale]
                                             li
                                                 a(class=getColor(0), href=videos_url + '#' + ht2._id)= ht2['name_' + self.locale]
 
                                                 if ht2._childs.length > 0
                                                     ul.tags--list
-                                                        each ht3 in ht2._childs
+                                                        each ht3 in tags.filter((a) => a._parent.indexOf(ht2._id) >= 0)
                                                             if ht3['name_' + self.locale]
                                                                 li
                                                                     a(class=getColor(1), href=videos_url + '#' + ht3._id)= ht3['name_' + self.locale]
 
                                                                     if ht3._childs.length > 0
                                                                         ul.tags--list
-                                                                            each ht4 in ht3._childs
+                                                                            each ht4 in tags.filter((a) => a._parent.indexOf(ht3._id) >= 0)
                                                                                 if ht4['name_' + self.locale]
                                                                                     li
                                                                                         a(class=getColor(2), href=videos_url + '#' + ht4._id)= ht4['name_' + self.locale]
@@ -116,10 +115,27 @@ block content
                     .tags
                         h2= self.texts.topics.subtitles.regions.label
                         ul.tags--list
-                            each r in regions
-                                if r.title
-                                    li
-                                        a(class=getColor(), href=videos_url + '#' + r._id)= r.title
+                            each hr in regions.filter((a) => a._parent.length === 0)
+                                li
+                                    a(class=getColor(0), href=videos_url + '#' + hr._id)= hr.title
+
+                                    if hr._childs.length > 0
+                                        ul.tags--list
+                                            each hr2 in regions.filter((a) => a._parent.indexOf(hr._id) >= 0)
+                                                li
+                                                    a(class=getColor(1), href=videos_url + '#' + hr2._id)= hr2.title
+
+                                                    if hr2._childs.length > 0
+                                                        ul.tags--list
+                                                            each hr3 in regions.filter((a) => a._parent.indexOf(hr2._id) >= 0)
+                                                                li
+                                                                    a(class=getColor(2), href=videos_url + '#' + hr3._id)= hr3.title
+
+                                                                    if hr3._childs.length > 0
+                                                                        ul.tags--list
+                                                                            each hr4 in regions.filter((a) => a._parent.indexOf(hr3._id) >= 0)
+                                                                                li
+                                                                                    a(class=getColor(3), href=videos_url + '#' + hr4._id)= hr4.title
 
                 #persons.tabs--item
                     .tags
