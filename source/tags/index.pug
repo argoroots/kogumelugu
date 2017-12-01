@@ -69,6 +69,8 @@ block script
                 $(this).addClass('u-active')
                 $(id).addClass('u-open')
             })
+
+            $('.tabs--link[href="' + (window.location.hash || $('.tabs--link:first').attr('href')) + '"]').click()
         })
 
 
