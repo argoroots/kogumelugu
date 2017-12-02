@@ -373,39 +373,17 @@ async.waterfall([
     //     HIERARCHY_DATA_YAML + '4.yaml',
     //     yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
     // )
-    const isTagInVideo = (tag_key, videos) => {
-        if (videos.some(
-            (video) => {
-                if ((video.tag ? true : false) &&
-                    (video.tag.some((tag) => tag._id === tag_key))
-                ) { return true }
-                return false
-            })) { return true }
-        return false
-    }
-    const isRegionInVideo = (region_key, videos) => {
-        if (videos.some(
-            (video) => {
-                if ((video.region ? true : false) &&
-                    (video.region.some((region) => region._id === region_key))
-                ) { return true }
-                return false
-            })) { return true }
-        return false
-    }
 
     let videos_out = Object.keys(all_data.videos)
         .map((key) => all_data.videos[key])
     let tags_out = Object.keys(all_data.tags)
-        // .filter((key) => all_data.tags[key]._videos.length > 1)
-        .filter((key) => all_data.tags[key]._videos.length > 1)
+        .filter((key) => all_data.tags[key]._videos.length > 0)
         .map((key) => all_data.tags[key])
     let regions_out = Object.keys(all_data.regions)
-        .filter((key) => all_data.regions[key]._videos.length > 1)
-        // .filter((key) => isRegionInVideo(key, videos_out))
+        .filter((key) => all_data.regions[key]._videos.length > 0)
         .map((key) => all_data.regions[key])
     let persons_out = Object.keys(all_data.persons)
-        .filter((key) => all_data.persons[key]._videos.length > 1)
+        .filter((key) => all_data.persons[key]._videos.length > 0)
         .map((key) => all_data.persons[key])
 
     fs.writeFileSync(
