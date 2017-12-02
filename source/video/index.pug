@@ -54,17 +54,14 @@ block script
         var hideMapLabels = true
 
         $(function () {
-            search = location.search.substr(1).split('&')
-            var searchObj = {};
-            for (i = 0; i < search.length; i++) {
-                thing = search[i].split('=')
-                searchObj[thing[0]] = thing[1]
-            }
-
-            if (searchObj.t) {
-                var src = $('iframe#video').attr('src').replace('t=0&', 't=' + searchObj.t + '&')
-                $('iframe#video').attr('src', src)
-            }
+            $(window).on('hashchange', function() {
+                if (window.location.hash.substr(1)) {
+                    var src = $('iframe#video').attr('src').replace('t=0&', 't=' + window.location.hash.substr(1) + '&')
+                    $('iframe#video').attr('src', src)
+                    $('iframe#video')[0].contentWindow.location.reload(true)
+                    window.scrollTo(0, 0)
+                }
+            }).trigger('hashchange')
         })
 
 
@@ -74,11 +71,14 @@ block content
     #map-items.hidden
         if self._regions
             each r in self._regions
-                .map-item(data-lat=r.lat, data-lng=r.lng,
-                          data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time : '0s'),
-                          data-img='/assets/images/' + self.path + '.jpg',
-                          data-title=self['title_' + self.locale],
-                          data-subtitle=self['subtitle_' + self.locale])
+                .map-item(
+                    data-lat=r.lat,
+                    data-lng=r.lng,
+                    data-path='/' + self.locale + '/' + self.path + '#' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                    data-img='/assets/images/' + self.path + '.jpg',
+                    data-title=self['title_' + self.locale],
+                    data-subtitle=self['subtitle_' + self.locale]
+                )
 
     main.main.has-sidebar.u-container
         .content
@@ -116,12 +116,8 @@ block content
                         ul.tags--list
                             each timestamp in timestamps
                                 li
-                                    if timestamp.time === '00h00m00s'
-                                        a(class=getColor(timestamp.type))
-                                            b= timestamp.label
-                                    else
-                                        a(class=getColor(timestamp.type), href= (timestamp.time === '00h00m00s' ? '' : '?t=' + timestamp.time))
-                                            b= timestamp.label
+                                    a(class=getColor(timestamp.type), href= (timestamp.time === '00h00m00s' ? '' : '#' + timestamp.time))
+                                        b= timestamp.label
 
             include /map
             +map(false)
