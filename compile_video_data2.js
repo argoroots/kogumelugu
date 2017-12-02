@@ -183,7 +183,12 @@ async.waterfall([
                 let tc_obj = rel_types_obj[rel_id]
                 // console.log(require('util').inspect({rel_id,tc_obj}, { depth: null }));
                 if (tc_obj._videos.indexOf(video._id) === -1) {
-                    tc_obj._videos.push(video._id)
+                    tc_obj._videos.push({
+                        '_id': video._id,
+                        'title_et': video.title_et || '-',
+                        'title_en': video.title_en || '-',
+                        'title_ru': video.title_ru || '-',
+                    })
                 }
                 tc_obj._parent.forEach((_id) => {
                     if (_id in rel_types_obj) {
@@ -302,27 +307,54 @@ async.waterfall([
                 return callback(null)
             })
         }
-        // const enrichTree = (flat, tree, callback) => {
-        //     async.each(tree, (node, callback) => {
-        //         let flatNode = flat[node._id]
-        //         if (flatNode === undefined) {
-        //             async.setImmediate(() => callback(null))
-        //             return
-        //         }
-        //         node.name_et = flatNode.name_et
-        //         node.name_en = flatNode.name_en
-        //         node.name_ru = flatNode.name_ru
-        //
-        //         if (node._childs.length === 0) {
-        //             callback(null)
-        //         } else {
-        //             enrichTree(flat, node._childs, callback)
-        //         }
-        //     }, (err) => {
-        //         if (err) { return callback(err) }
-        //         return callback(null)
-        //     })
-        // }
+        const relateVideos = (all_data, callback) => {
+            let videos = all_data.videos
+            async.forEachOf(videos, (video, callback) => {
+                let related_videos = []
+                video._persons.forEach((person) => {
+                    related_videos = related_videos
+                        .concat(all_data.persons[person._id]._videos.map((a) => a._id))
+                })
+                video._tags.forEach((tag) => {
+                    related_videos = related_videos
+                        .concat(all_data.tags[tag._id]._videos.map((a) => a._id))
+                })
+                video._regions.forEach((region) => {
+                    related_videos = related_videos
+                        .concat(all_data.regions[region._id]._videos.map((a) => a._id))
+                })
+                // console.log(require('util').inspect(related_videos, { depth: null }))
+                for (let i = related_videos.length - 1; i >= 0; i--) {
+                    if (related_videos[i] === video._id) {
+                        related_videos.splice(i, 1)
+                    }
+                }
+                video._related_videos = []
+                while (related_videos.length > 0 && video._related_videos.length < 7) {
+                    let _id = related_videos[Math.floor(Math.random() * related_videos.length)]
+                    video._related_videos.push({
+                        'title_et': all_data.videos[_id].title_et || '-',
+                        'title_en': all_data.videos[_id].title_en || '-',
+                        'title_ru': all_data.videos[_id].title_ru || '-',
+                        'subtitle_et': all_data.videos[_id].subtitle_et || '-',
+                        'subtitle_en': all_data.videos[_id].subtitle_en || '-',
+                        'subtitle_ru': all_data.videos[_id].subtitle_ru || '-',
+                        'path': all_data.videos[_id].path || '',
+                        'photo': all_data.videos[_id].photo || '',
+                    })
+                    for (let i = related_videos.length - 1; i >= 0; i--) {
+                        if (related_videos[i] === _id) {
+                            related_videos.splice(i, 1)
+                        }
+                    }
+                }
+            }, (err) => {
+                if (err) { return callback(err) }
+                callback(null)
+            })
+            async.setImmediate(() => callback(null))
+        }
+
 
         async.series({
             zero: (callback) => initialize(all_data, callback),
@@ -350,6 +382,7 @@ async.waterfall([
                 'tag',              // type_name
                 callback),
             pNv: (callback) => personsAndVideos(all_data, callback),
+            rel: (callback) => relateVideos(all_data, callback),
             all_data: (callback) => callback(null, all_data)
         }, (err, data) => { // just pass all_data
             if (err) { return callback(err) }
