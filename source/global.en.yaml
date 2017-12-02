@@ -23,6 +23,7 @@ texts:
     video:
         storyteller: Storyteller
         author: Author
+        relatedVideos: Related videos
     contact:
         title: Estonian Institute of Historical Memory
     mapTitle:

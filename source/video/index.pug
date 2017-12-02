@@ -119,7 +119,7 @@ block content
 
         aside.sidebar
             section.videos--related
-                h2 Seotud videod
+                h2= self.texts.video.relatedVideos
                 each related_video in self._related_videos
                     article.videos--item(style='background-image:url(/assets/images/' + related_video.path + '.jpg)')
                         a(href='/' + self.locale + '/' + related_video.path + '/')

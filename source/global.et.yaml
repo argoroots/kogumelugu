@@ -23,6 +23,7 @@ texts:
     video:
         storyteller: Intervjueeritav
         author: Autor
+        relatedVideos: Seotud lood
     contact:
         title: SA Eesti Mälu Instituut
     mapTitle:
