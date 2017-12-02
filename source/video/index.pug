@@ -3,7 +3,50 @@ extends /layout
 
 block vars
     -
+        const getColor = (type) => {
+            const colors = {
+                'undefined':   '',
+                'tag':         'u-red',
+                'person':      'u-purple',
+                'region':      'u-green',
+                'author':      'u-orange',
+                'storyteller': 'u-gray',
+                'red':         'u-red',
+                'purple':      'u-purple',
+                'green':       'u-green',
+                'orange':      'u-orange',
+                'blue':        'u-blue',
+            }
+            return type ? colors[type] : colors['undefined']
+        }
         var videos_url = self.menu[0].path
+        var timestamps = self._regions
+            .map((a) => {
+                return {
+                    'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
+                    'label': (a.time ? a.time + ' ' : '') + a['name_' + self.locale],
+                    'type': 'region'
+                }
+            })
+            .concat(self._persons
+                .map((a) => {
+                    return {
+                        'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
+                        'label': (a.time ? a.time + ' ' : '') + a.forename + ' ' + a.surname,
+                        'type': a.type || 'person'
+                    }
+                })
+            )
+            .concat(self._tags
+                .map((a) => {
+                    return {
+                        'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
+                        'label': (a.time ? a.time + ' ' : '') + a['name_' + self.locale],
+                        'type': 'tag'
+                    }
+                })
+            )
+            .sort((a,b) => a.time > b.time ? 1 : -1)
 
 
 block script
@@ -32,7 +75,7 @@ block content
         if self._regions
             each r in self._regions
                 .map-item(data-lat=r.lat, data-lng=r.lng,
-                          data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                          data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time : '0s'),
                           data-img='/assets/images/' + self.path + '.jpg',
                           data-title=self['title_' + self.locale],
                           data-subtitle=self['subtitle_' + self.locale])
@@ -71,10 +114,14 @@ block content
 
                     div.tags
                         ul.tags--list
-                            each r in self._regions.sort((a,b) => a.time > b.time ? 1 : -1)
+                            each timestamp in timestamps
                                 li
-                                    a(href= (r.time === '00:00:00' ? '' : '?t=' + r.time.replace(':','h').replace(':','m')+'s'))
-                                        b= (r.time === '00:00:00' ? '' : r.time + ' ') + r['name_' + self.locale]
+                                    if timestamp.time === '00h00m00s'
+                                        a(class=getColor(timestamp.type))
+                                            b= timestamp.label
+                                    else
+                                        a(class=getColor(timestamp.type), href= (timestamp.time === '00h00m00s' ? '' : '?t=' + timestamp.time))
+                                            b= timestamp.label
 
             include /map
             +map(false)

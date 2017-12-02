@@ -51,7 +51,7 @@ const languages_arr = yaml.safeLoad(fs.readFileSync(LANGUAGES_YAML, 'utf8'))
 
 const arr2objAll = (callback) => {
 
-    const arr2obj = (arr, is_hierarchical, callback) => {
+    const arr2obj = (arr, callback) => {
         let obj = {}
 
         async.each(arr, (item, callback) => {
@@ -68,22 +68,22 @@ const arr2objAll = (callback) => {
 
     async.parallel({
         videos: (callback) => {
-            arr2obj(videos_arr, false, callback)
+            arr2obj(videos_arr, callback)
         },
         regions: (callback) => {    // tree
-            arr2obj(regions_arr, true, callback)
+            arr2obj(regions_arr, callback)
         },
         persons: (callback) => {
-            arr2obj(persons_arr, false, callback)
+            arr2obj(persons_arr, callback)
         },
         tags: (callback) => {       // tree
-            arr2obj(tags_arr, true, callback)
+            arr2obj(tags_arr, callback)
         },
         categories: (callback) => {
-            arr2obj(categories_arr, false, callback)
+            arr2obj(categories_arr, callback)
         },
         languages: (callback) => {
-            arr2obj(languages_arr, false, callback)
+            arr2obj(languages_arr, callback)
         }
     }, (err, all_data) => {
         if (err) { callback(err) }
@@ -219,14 +219,21 @@ async.waterfall([
                 }
                 let new_tc = {
                     '_id': tc_obj._id,
-                    'time': tc_relation.time
+                    'time': tc_relation.time || '00:00:00'
                 }
                 if (tctype_name === 'region') {
                     new_tc.lng = tc_obj.lng
                     new_tc.lat = tc_obj.lat
-                    new_tc.name_et = tc_obj.name_et
-                    new_tc.name_en = tc_obj.name_en
-                    new_tc.name_ru = tc_obj.name_ru
+                    new_tc.name_et = tc_obj.name_et || '-'
+                    new_tc.name_en = tc_obj.name_en || '-'
+                    new_tc.name_ru = tc_obj.name_ru || '-'
+                } else if (tctype_name === 'tag') {
+                    new_tc.name_et = tc_obj.name_et || '-'
+                    new_tc.name_en = tc_obj.name_en || '-'
+                    new_tc.name_ru = tc_obj.name_ru || '-'
+                } else if (tctype_name === 'person') {
+                    new_tc.forename = tc_obj.forename || '-'
+                    new_tc.surname = tc_obj.surname || '-'
                 }
                 video[_tctype_name].push(new_tc)
                 recAddVideo(rel_types_obj, rel_id, video)
@@ -260,7 +267,8 @@ async.waterfall([
                         video._persons.push({
                             _id: _id,
                             forename: persons[_id].forename || '-',
-                            surname: persons[_id].surname || '-'
+                            surname: persons[_id].surname || '-',
+                            type: 'storyteller'
                         })
                         persons[_id].type = 'storyteller'
                         persons[_id]._videos.push({
@@ -276,7 +284,8 @@ async.waterfall([
                         video._persons.push({
                             _id: _id,
                             forename: persons[_id].forename || '-',
-                            surname: persons[_id].surname || '-'
+                            surname: persons[_id].surname || '-',
+                            type: 'author'
                         })
                         persons[_id].type = 'author'
                         persons[_id]._videos.push({
