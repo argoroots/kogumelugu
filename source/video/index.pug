@@ -58,6 +58,8 @@ block script
                 if (window.location.hash.substr(1)) {
                     var src = $('iframe#video').attr('src').replace('t=0&', 't=' + window.location.hash.substr(1) + '&')
                     $('iframe#video').attr('src', src)
+                    $('iframe#video')[0].contentWindow.location.reload(true)
+                    window.scrollTo(0, 0)
                 }
             }).trigger('hashchange')
         })
