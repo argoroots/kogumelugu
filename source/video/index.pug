@@ -107,11 +107,6 @@ block content
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
-                        li
-                            a(href='') Seotud tunnikava
-                                = ' '
-                                b Etiam Parturient
-
                     div.tags
                         ul.tags--list
                             each timestamp in timestamps
