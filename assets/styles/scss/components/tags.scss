@@ -93,6 +93,13 @@
             background: $blue;
           }
         }
+        &.u-gray {
+          color: $gray;
+          border-color: $gray;
+          i {
+            background: $gray;
+          }
+        }
         i {
           display: block;
           width: 20px;
