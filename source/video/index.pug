@@ -95,15 +95,15 @@ block content
                     ul.details
                         if self.storyteller.length
                             li= self.texts.video.storyteller
-                                = ' '
                                 each a in self.storyteller
+                                    = ' '
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
                         if self.author.length
                             li= self.texts.video.author
-                                = ' '
                                 each a in self.author
+                                    = ' '
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
