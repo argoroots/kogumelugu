@@ -31,6 +31,7 @@ const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
         a.description_et = a.description_et || ''
         a.description_en = a.description_en || ''
         a.description_ru = a.description_ru || ''
+        a.videoUrl = a.videoUrl || ''
         return a
     })
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
