@@ -22,7 +22,9 @@ texts:
     video:
         storyteller: Storyteller
         author: Author
-        relatedVideos: Related videos
+        storytellers: Storytellers
+        authors: Authors
+  relatedVideos: Related videos
     contact:
         title: Эстонский институт исторической памяти (SA Eesti Mälu Instituut)
     mapTitle:

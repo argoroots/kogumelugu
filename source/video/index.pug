@@ -94,14 +94,14 @@ block content
                 footer
                     ul.details
                         if self.storyteller.length
-                            li= self.texts.video.storyteller
+                            li= self.storyteller.length === 1 ? self.texts.video.storyteller : self.texts.video.storytellers
                                 each a in self.storyteller
                                     = ' '
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
                         if self.author.length
-                            li= self.texts.video.author
+                            li= self.author.length === 1 ? self.texts.video.author : self.texts.video.authors
                                 each a in self.author
                                     = ' '
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
