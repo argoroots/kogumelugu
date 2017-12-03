@@ -21,6 +21,18 @@ CATEGORIES_YAML = process.env.CATEGORIES_YAML
 LANGUAGES_YAML = process.env.LANGUAGES_YAML
 
 const videos_arr = yaml.safeLoad(fs.readFileSync(VIDEOS_YAML, 'utf8'))
+    .map((a) => {
+        a.title_et = a.title_et || ''
+        a.title_en = a.title_en || ''
+        a.title_ru = a.title_ru || ''
+        a.subtitle_et = a.subtitle_et || ''
+        a.subtitle_en = a.subtitle_en || ''
+        a.subtitle_ru = a.subtitle_ru || ''
+        a.description_et = a.description_et || ''
+        a.description_en = a.description_en || ''
+        a.description_ru = a.description_ru || ''
+        return a
+    })
 const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
     .filter((r) => {
         if (r.name_et === undefined || r.name_en === undefined || r.name_ru === undefined) {
@@ -70,13 +82,13 @@ const arr2objAll = (callback) => {
         videos: (callback) => {
             arr2obj(videos_arr, callback)
         },
-        regions: (callback) => {    // tree
+        regions: (callback) => {
             arr2obj(regions_arr, callback)
         },
         persons: (callback) => {
             arr2obj(persons_arr, callback)
         },
-        tags: (callback) => {       // tree
+        tags: (callback) => {
             arr2obj(tags_arr, callback)
         },
         categories: (callback) => {
@@ -185,9 +197,9 @@ async.waterfall([
                 if (tc_obj._videos.indexOf(video._id) === -1) {
                     tc_obj._videos.push({
                         '_id': video._id,
-                        'title_et': video.title_et || '-',
-                        'title_en': video.title_en || '-',
-                        'title_ru': video.title_ru || '-',
+                        'title_et': video.title_et || '',
+                        'title_en': video.title_en || '',
+                        'title_ru': video.title_ru || '',
                     })
                 }
                 tc_obj._parent.forEach((_id) => {
@@ -229,16 +241,16 @@ async.waterfall([
                 if (tctype_name === 'region') {
                     new_tc.lng = tc_obj.lng
                     new_tc.lat = tc_obj.lat
-                    new_tc.name_et = tc_obj.name_et || '-'
-                    new_tc.name_en = tc_obj.name_en || '-'
-                    new_tc.name_ru = tc_obj.name_ru || '-'
+                    new_tc.name_et = tc_obj.name_et || ''
+                    new_tc.name_en = tc_obj.name_en || ''
+                    new_tc.name_ru = tc_obj.name_ru || ''
                 } else if (tctype_name === 'tag') {
-                    new_tc.name_et = tc_obj.name_et || '-'
-                    new_tc.name_en = tc_obj.name_en || '-'
-                    new_tc.name_ru = tc_obj.name_ru || '-'
+                    new_tc.name_et = tc_obj.name_et || ''
+                    new_tc.name_en = tc_obj.name_en || ''
+                    new_tc.name_ru = tc_obj.name_ru || ''
                 } else if (tctype_name === 'person') {
-                    new_tc.forename = tc_obj.forename || '-'
-                    new_tc.surname = tc_obj.surname || '-'
+                    new_tc.forename = tc_obj.forename || ''
+                    new_tc.surname = tc_obj.surname || ''
                 }
                 video[_tctype_name].push(new_tc)
                 recAddVideo(rel_types_obj, rel_id, video)
@@ -271,16 +283,16 @@ async.waterfall([
                     video.storyteller.forEach((_id) => {
                         video._persons.push({
                             _id: _id,
-                            forename: persons[_id].forename || '-',
-                            surname: persons[_id].surname || '-',
+                            forename: persons[_id].forename || '',
+                            surname: persons[_id].surname || '',
                             type: 'storyteller'
                         })
                         persons[_id].type = 'storyteller'
                         persons[_id]._videos.push({
                             _id: video._id,
-                            title_et: video.title_et || '-',
-                            title_en: video.title_en || '-',
-                            title_ru: video.title_ru || '-'
+                            title_et: video.title_et || '',
+                            title_en: video.title_en || '',
+                            title_ru: video.title_ru || ''
                         })
                     })
                 }
@@ -288,16 +300,16 @@ async.waterfall([
                     video.author.forEach((_id) => {
                         video._persons.push({
                             _id: _id,
-                            forename: persons[_id].forename || '-',
-                            surname: persons[_id].surname || '-',
+                            forename: persons[_id].forename || '',
+                            surname: persons[_id].surname || '',
                             type: 'author'
                         })
                         persons[_id].type = 'author'
                         persons[_id]._videos.push({
                             _id: video._id,
-                            title_et: video.title_et || '-',
-                            title_en: video.title_en || '-',
-                            title_ru: video.title_ru || '-'
+                            title_et: video.title_et || '',
+                            title_en: video.title_en || '',
+                            title_ru: video.title_ru || ''
                         })
                     })
                 }
@@ -333,12 +345,12 @@ async.waterfall([
                 while (related_videos.length > 0 && video._related_videos.length < 7) {
                     let _id = related_videos[Math.floor(Math.random() * related_videos.length)]
                     video._related_videos.push({
-                        'title_et': all_data.videos[_id].title_et || '-',
-                        'title_en': all_data.videos[_id].title_en || '-',
-                        'title_ru': all_data.videos[_id].title_ru || '-',
-                        'subtitle_et': all_data.videos[_id].subtitle_et || '-',
-                        'subtitle_en': all_data.videos[_id].subtitle_en || '-',
-                        'subtitle_ru': all_data.videos[_id].subtitle_ru || '-',
+                        'title_et': all_data.videos[_id].title_et || '',
+                        'title_en': all_data.videos[_id].title_en || '',
+                        'title_ru': all_data.videos[_id].title_ru || '',
+                        'subtitle_et': all_data.videos[_id].subtitle_et || '',
+                        'subtitle_en': all_data.videos[_id].subtitle_en || '',
+                        'subtitle_ru': all_data.videos[_id].subtitle_ru || '',
                         'path': all_data.videos[_id].path || '',
                         'photo': all_data.videos[_id].photo || '',
                     })

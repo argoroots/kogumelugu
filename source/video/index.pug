@@ -87,9 +87,11 @@ block content
                     .video-wrapper
                         iframe#video(src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0&autopause=1&autoplay=0&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
                     h1= self['title_' + self.locale]
-                    p
-                        b= self['subtitle_' + self.locale]
-                    p= self['description_' + self.locale]
+                    if self['subtitle_' + self.locale]
+                        p
+                            b= self['subtitle_' + self.locale]
+                    if self['description_' + self.locale]
+                        p= self['description_' + self.locale]
 
                 footer
                     ul.details
