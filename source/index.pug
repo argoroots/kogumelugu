@@ -167,6 +167,10 @@ block content
                                 input(type='number', id='amount', name='amount')
                                 span €
                             button.btn.btn--primary(type='submit')= self.texts.contribution.submit
+                        .form-check
+                            label.form-check-label
+                                input.form-check-input(type='checkbox')
+                                = ' ' + self.texts.contribution.checkboxlabel
                 aside.donate--side
                     .box
                             img(src='/assets/images/data/EV100.png', alt='EV100', width='136')

@@ -95,9 +95,10 @@ texts:
         div4: |
             Kõik Kogu Me Lugu suulise ajaloo portaali vahendusel tehtud annetused käivad läbi internetipanga,
             seega kogutavad andmed käsitletakse kliendiandmetena. Neid ei avaldata kolmandatele osapooltele.
-            
+
         amount: Sisesta summa
         submit: Toetan
+        checkboxlabel: Olen tutvunud annetamise tingimustega
         participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
         findOutMore: Loe lähemalt
         accountDetails: Pangakonto andmed

@@ -98,7 +98,8 @@ texts:
         accountDetails: Account Number
         descriptionLabel: "Description:"
         description: Toetan Kogu Me Lugu
-    searchbox:
+        checkboxlabel: Olen tutvunud annetamise tingimustega
+        searchbox:
         placeholder: Search…
         findButton: Find Story
     logolink: http://mnemosyne.ee/en/

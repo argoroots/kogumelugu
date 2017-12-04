@@ -96,6 +96,7 @@ texts:
         accountDetails: Номер счета
         descriptionLabel: "Пояснение:"
         description: Toetan Kogu Me Lugu
+        checkboxlabel: Olen tutvunud annetamise tingimustega
     searchbox:
         placeholder: Поиск…
         findButton: Найти историю
