@@ -67,7 +67,7 @@ export VIDEO_DATA_YAML=${SOURCE_DIR}/video/data.yaml
 export TAG_DATA_YAML=${SOURCE_DIR}/tags/tags.yaml
 export REGION_DATA_YAML=${SOURCE_DIR}/tags/regions.yaml
 export PERSON_DATA_YAML=${SOURCE_DIR}/tags/persons.yaml
-export HIERARCHY_DATA_YAML=${SOURCE_DIR}/tags/h.yaml
+export HIERARCHY_DATA_YAML=${TMP_DIR}/h.yaml
 node ./compile_video_data2.js
 
 
