@@ -49,14 +49,13 @@ block vars
 
         var persons = self.file.persons.filter(a => {
             return (a.forename || a.surname)
+        }).sort((a, b) => {
+            if ((a.forename + a.surname).toLowerCase() < (b.forename + b.surname).toLowerCase()) { return -1 }
+            if ((a.forename + a.surname).toLowerCase() > (b.forename + b.surname).toLowerCase()) { return 1 }
+            return 0
         }).map(a => {
             a.title = [a.forename, a.surname].join(' ')
             return a
-        })
-        persons.sort((a, b) => {
-            if (a.title.toLowerCase() < b.title.toLowerCase()) { return -1 }
-            if (a.title.toLowerCase() > b.title.toLowerCase()) { return 1 }
-            return 0
         })
 
 
