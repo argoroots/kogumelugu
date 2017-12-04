@@ -1,13 +1,13 @@
 menu:
     -
         title: Videoteek
-        path: /et/videos
+        path: /et/videoteek/
     -
         title: Teemad
-        path: /et/topics
+        path: /et/teemad/
     -
         title: Õppematerjalid
-        path: /et/materials
+        path: /et/oppematerjalid/
     -
         title: Tutvustus
         path: /et/#indroduction
@@ -20,6 +20,12 @@ menu:
 
 
 texts:
+    video:
+        storyteller: Intervjueeritav
+        author: Autor
+        storytellers: Intervjueeritavad
+        authors: Autorid
+        relatedVideos: Seotud lood
     contact:
         title: SA Eesti Mälu Instituut
     mapTitle:

@@ -1,13 +1,13 @@
 menu:
     -
         title: Videos
-        path: /en/videos
+        path: /en/videos/
     -
         title: Topics
-        path: /en/topics
+        path: /en/topics/
     -
         title: Materials
-        path: /en/materials
+        path: /en/materials/
     -
         title: Introduction
         path: /en/#introduction
@@ -20,6 +20,12 @@ menu:
 
 
 texts:
+    video:
+        storyteller: Storyteller
+        author: Author
+        storytellers: Storytellers
+        authors: Authors
+        relatedVideos: Related videos
     contact:
         title: Estonian Institute of Historical Memory
     mapTitle:

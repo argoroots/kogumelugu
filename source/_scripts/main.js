@@ -31,6 +31,13 @@ $(function () {
             }
         })
 
+        var oms = new OverlappingMarkerSpiderfier(map, {
+            markersWontMove: true,
+            markersWontHide: true,
+            basicFormatEvents: true,
+            keepSpiderfied: true
+        })
+
         $('#map-items > .map-item').each(function () {
             var marker = new google.maps.Marker({
                 position: {
@@ -38,7 +45,10 @@ $(function () {
                     lng: Number($(this).data('lng'))
                 },
                 map: map,
-                icon: '/assets/images/map/map-marker.svg'
+                icon: {
+                    url: '/assets/images/map/map-marker.svg',
+                    size: new google.maps.Size(24, 36)
+                }
             })
 
             var el = $('<div/>', {
@@ -72,7 +82,7 @@ $(function () {
             ib.setContent(el.get(0))
 
             if (!hideMapLabels) {
-                google.maps.event.addListener(marker, 'click', function () {
+                google.maps.event.addListener(marker, 'spider_click', function () {
                     closeInfoboxes()
                     ib.open(map, this)
                     map.setCenter(this.getPosition())
@@ -81,6 +91,7 @@ $(function () {
 
             markers.push(marker)
             infoboxes.push(ib)
+            oms.addMarker(marker)
         })
 
         var markerCluster = new MarkerClusterer(map, markers, {
@@ -97,6 +108,15 @@ $(function () {
                 textSize: 14,
                 fontWeight: 'bold'
             }]
+        })
+
+        google.maps.event.addListener(markerCluster, 'clusterclick', function (cluster) {
+            google.maps.event.addListener(map, 'zoom_changed', function () {
+            if (map.getZoom() > 15) {
+                    map.setZoom(15)
+                    google.maps.event.clearListeners(map, 'zoom_changed')
+                }
+            })
         })
 
         map.addListener('click', function () {

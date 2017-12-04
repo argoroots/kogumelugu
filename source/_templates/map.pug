@@ -4,3 +4,8 @@ mixin map(title)
             h2!= self.texts.mapTitle.left + '&nbsp;'
                 strong= self.texts.mapTitle.right
         #map
+
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB7vZpUo1jQNJFEpHtlFwO7c79wDJa1Omc')
+    script(src='/assets/scripts/markerclusterer.min.js')
+    script(src='/assets/scripts/infobox.min.js')
+    script(src='/assets/scripts/oms.min.js')

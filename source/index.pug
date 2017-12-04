@@ -65,13 +65,16 @@ block script
 block content
     #map-items.hidden
         each v in self.file.videos
-            if v.region
-                each r in v.region
-                    .map-item(data-lat=r.lat, data-lng=r.lng,
-                              data-path= '/' + self.locale + '/' + v.path + '?' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
-                              data-img='/assets/images/' + v.path + '.jpg',
-                              data-title=v['title_' + self.locale],
-                              data-subtitle=v['subtitle_' + self.locale])
+            if v._regions
+                each r in v._regions
+                    .map-item(
+                        data-lat=r.lat,
+                        data-lng=r.lng,
+                        data-path= '/' + self.locale + '/' + v.path + '#' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                        data-img='/assets/images/' + v.path + '.jpg',
+                        data-title=v['title_' + self.locale],
+                        data-subtitle=v['subtitle_' + self.locale]
+                    )
 
     main.main
         .hero(style='background-image:url(/assets/images/' + videos[0].path + '.jpg)')

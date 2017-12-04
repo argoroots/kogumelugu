@@ -1,22 +1,67 @@
 extends /layout
 
 
+block vars
+    -
+        const getColor = (type) => {
+            const colors = {
+                'undefined':   '',
+                'tag':         'u-red',
+                'person':      'u-purple',
+                'region':      'u-green',
+                'author':      'u-orange',
+                'storyteller': 'u-gray',
+                'red':         'u-red',
+                'purple':      'u-purple',
+                'green':       'u-green',
+                'orange':      'u-orange',
+                'blue':        'u-blue',
+            }
+            return type ? colors[type] : colors['undefined']
+        }
+        var videos_url = self.menu[0].path
+        var timestamps = self._regions
+            .map((a) => {
+                return {
+                    'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
+                    'label': (a.time ? a.time + ' ' : '') + a['name_' + self.locale],
+                    'type': 'region'
+                }
+            })
+            .concat(self._persons
+                .map((a) => {
+                    return {
+                        'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
+                        'label': (a.time ? a.time + ' ' : '') + a.forename + ' ' + a.surname,
+                        'type': a.type || 'person'
+                    }
+                })
+            )
+            .concat(self._tags
+                .map((a) => {
+                    return {
+                        'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
+                        'label': (a.time ? a.time + ' ' : '') + a['name_' + self.locale],
+                        'type': 'tag'
+                    }
+                })
+            )
+            .sort((a,b) => a.time > b.time ? 1 : -1)
+
+
 block script
     script.
         var hideMapLabels = true
 
         $(function () {
-            search = location.search.substr(1).split('&')
-            var searchObj = {};
-            for (i = 0; i < search.length; i++) {
-                thing = search[i].split('=')
-                searchObj[thing[0]] = thing[1]
-            }
-
-            if (searchObj.t) {
-                var src = $('iframe#video').attr('src').replace('t=0&', 't=' + searchObj.t + '&')
-                $('iframe#video').attr('src', src)
-            }
+            $(window).on('hashchange', function() {
+                if (window.location.hash.substr(1)) {
+                    var src = $('iframe#video').attr('src').replace('t=0&', 't=' + window.location.hash.substr(1) + '&')
+                    $('iframe#video').attr('src', src)
+                    $('iframe#video')[0].contentWindow.location.reload(true)
+                    window.scrollTo(0, 0)
+                }
+            }).trigger('hashchange')
         })
 
 
@@ -24,13 +69,16 @@ block content
     include /searchbox
 
     #map-items.hidden
-        if self.region
-            each r in self.region
-                .map-item(data-lat=r.lat, data-lng=r.lng,
-                          data-path='/' + self.locale + '/' + self.path + '?' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
-                          data-img='/assets/images/' + self.path + '.jpg',
-                          data-title=self['title_' + self.locale],
-                          data-subtitle=self['subtitle_' + self.locale])
+        if self._regions
+            each r in self._regions
+                .map-item(
+                    data-lat=r.lat,
+                    data-lng=r.lng,
+                    data-path='/' + self.locale + '/' + self.path + '#' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                    data-img='/assets/images/' + self.path + '.jpg',
+                    data-title=self['title_' + self.locale],
+                    data-subtitle=self['subtitle_' + self.locale]
+                )
 
     main.main.has-sidebar.u-container
         .content
@@ -39,89 +87,45 @@ block content
                     .video-wrapper
                         iframe#video(src='https://player.vimeo.com/video/' + self.videoUrl + '#t=0&autopause=1&autoplay=0&badge=0&byline=0&loop=0&portrait=0&title=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
                     h1= self['title_' + self.locale]
-                    p
-                        b= self['subtitle_' + self.locale]
-                    p= self['description_' + self.locale]
+                    if self['subtitle_' + self.locale]
+                        p
+                            b= self['subtitle_' + self.locale]
+                    if self['description_' + self.locale]
+                        p= self['description_' + self.locale]
 
                 footer
                     ul.details
-                        li Intervjueeritav
-                            = ' '
-                            b Heino Noor
-                        li Intervjueerija
-                            = ' '
-                            b Anna Hints
-                        li
-                            a(href='') Seotud tunnikava
-                                = ' '
-                                b Etiam Parturient
+                        if self.storyteller.length
+                            li= self.storyteller.length === 1 ? self.texts.video.storyteller : self.texts.video.storytellers
+                                each a in self.storyteller
+                                    = ' '
+                                    a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
+                                        b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+
+                        if self.author.length
+                            li= self.author.length === 1 ? self.texts.video.author : self.texts.video.authors
+                                each a in self.author
+                                    = ' '
+                                    a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
+                                        b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
 
                     div.tags
                         ul.tags--list
-                            li
-                                a(href='') Heino Noor
-                            li
-                                a.u-red(href='') Quam Cras
-                            li
-                                a.u-purple(href='') Euismod
-                            li
-                                a.u-green(href='') Ipsum Commodo
-                            li
-                                a.u-orange(href='') Parturient
-                            li
-                                a.u-blue(href='') Parturient
-                        a(href='') Näita kõiki (54)
+                            each timestamp in timestamps
+                                li
+                                    a(class=getColor(timestamp.type), href= (timestamp.time === '00h00m00s' ? '' : '#' + timestamp.time))
+                                        b= timestamp.label
 
             include /map
             +map(false)
 
         aside.sidebar
             section.videos--related
-                h2 Seotud videod
-                article.videos--item(style='background-image:url(images/data/ruth.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Ruth Sootaru (Pärntits)
-                            p Täispikk intervjuu
-
-                article.videos--item(style='background-image:url(images/data/kalju.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Kalju Mätik
-                            p Nõukogudeaegne vastupanuliikumine ja selle mahasurumise meetodid
-
-                article.videos--item(style='background-image:url(images/data/adam.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Adam Brown
-                            p Eesti päritolu väärtustamine
-
-                article.videos--item(style='background-image:url(images/data/sander.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Sander Tuul
-                            p Videolugu
-
-                article.videos--item(style='background-image:url(images/data/kaja.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Kaja Weeks
-
-                article.videos--item(style='background-image:url(images/data/sale.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Sale Katrin Marits
-                            p Täispikk intervjuu
-
-                article.videos--item(style='background-image:url(images/data/viivianne.png)')
-                    a(href='video-detail.html')
-                        .text
-                            h3
-                                span Viivianne Vaike  Malmgren
-                            p Usu roll küüditamise ja Siberi-aastate üleelamisel
+                h2= self.texts.video.relatedVideos
+                each related_video in self._related_videos
+                    article.videos--item(style='background-image:url(/assets/images/' + related_video.path + '.jpg)')
+                        a(href='/' + self.locale + '/' + related_video.path + '/')
+                            .text
+                                h3
+                                    span= related_video['title_' + self.locale]
+                                p= related_video['subtitle_' + self.locale]
