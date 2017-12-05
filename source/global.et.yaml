@@ -93,8 +93,8 @@ texts:
         div3: |
             Teie annetus arveldatakse eurodes.
         div4: |
-            Kõik Kogu Me Lugu suulise ajaloo portaali vahendusel tehtud annetused käivad läbi internetipanga,
-            seega kogutavad andmed käsitletakse kliendiandmetena. Neid ei avaldata kolmandatele osapooltele.
+            Kogu Me Lugu portaal ei kogu isikuandmeid. Annetamine toimub internetipanga vahendusel.
+            Selle käigus kogutud andmeid käsitletakse kliendiandmetena, mida ei anta kolmandale osapoolele.
 
         amount: Sisesta summa
         submit: Toetan
