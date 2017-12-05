@@ -99,7 +99,7 @@ texts:
         descriptionLabel: "Description:"
         description: Toetan Kogu Me Lugu
         checkboxlabel: Olen tutvunud annetamise tingimustega
-        searchbox:
+    searchbox:
         placeholder: Search…
         findButton: Find Story
     logolink: http://mnemosyne.ee/en/
