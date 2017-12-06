@@ -32,7 +32,7 @@ export ENTU_QUERY="_type.string=region&props=_parent,lat,lng,name_en,name_et,nam
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${REGIONS_YAML}
 
 export PERSONS_YAML=${TMP_DIR}/persons.yaml
-export ENTU_QUERY="_type.string=person&props=forename,surname&limit=9999"
+export ENTU_QUERY="_type.string=person&props=forename,surname,forename_ru,surname_ru&limit=9999"
 node ./node_modules/entu-ssg/helpers/entu2yaml.js ${PERSONS_YAML}
 
 export TCTAGS_YAML=${TMP_DIR}/timecodedTags.yaml

@@ -49,6 +49,15 @@ const regions_arr = yaml.safeLoad(fs.readFileSync(REGIONS_YAML, 'utf8'))
     })
 const tcregions_arr = yaml.safeLoad(fs.readFileSync(TCREGIONS_YAML, 'utf8'))
 const persons_arr = yaml.safeLoad(fs.readFileSync(PERSONS_YAML, 'utf8'))
+    .map((a) => {
+        a.forename_et = a.forename || ''
+        a.forename_en = a.forename || ''
+        a.forename_ru = a.forename_ru || ''
+        a.surname_et = a.surname || ''
+        a.surname_en = a.surname || ''
+        a.surname_ru = a.surname_ru || ''
+        return a
+    })
 const tcpersons_arr = yaml.safeLoad(fs.readFileSync(TCPERSONS_YAML, 'utf8'))
 const tags_arr = yaml.safeLoad(fs.readFileSync(TAGS_YAML, 'utf8'))
     .filter((r) => {
@@ -100,10 +109,10 @@ const arr2objAll = (callback) => {
         }
     }, (err, all_data) => {
         if (err) { callback(err) }
-        // fs.writeFileSync(
-        //     HIERARCHY_DATA_YAML + '1.yaml',
-        //     yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
-        // )
+        fs.writeFileSync(
+            HIERARCHY_DATA_YAML + '1.yaml',
+            yaml.safeDump(all_data, { indent: 4, lineWidth: 999999999, noRefs: true })
+        )
         callback(null, all_data)
     })
 }
@@ -250,8 +259,12 @@ async.waterfall([
                     new_tc.name_en = tc_obj.name_en || ''
                     new_tc.name_ru = tc_obj.name_ru || ''
                 } else if (tctype_name === 'person') {
-                    new_tc.forename = tc_obj.forename || ''
-                    new_tc.surname = tc_obj.surname || ''
+                    new_tc.forename_et = tc_obj.forename_et || ''
+                    new_tc.surname_et = tc_obj.surname_et || ''
+                    new_tc.forename_en = tc_obj.forename_en || ''
+                    new_tc.surname_en = tc_obj.surname_en || ''
+                    new_tc.forename_ru = tc_obj.forename_ru || ''
+                    new_tc.surname_ru = tc_obj.surname_ru || ''
                 }
                 video[_tctype_name].push(new_tc)
                 recAddVideo(rel_types_obj, rel_id, video)
@@ -284,8 +297,12 @@ async.waterfall([
                     video.storyteller.forEach((_id) => {
                         video._persons.push({
                             _id: _id,
-                            forename: persons[_id].forename || '',
-                            surname: persons[_id].surname || '',
+                            forename_et: persons[_id].forename_et || '',
+                            surname_et: persons[_id].surname_et || '',
+                            forename_en: persons[_id].forename_en || '',
+                            surname_en: persons[_id].surname_en || '',
+                            forename_ru: persons[_id].forename_ru || '',
+                            surname_ru: persons[_id].surname_ru || '',
                             type: 'storyteller'
                         })
                         persons[_id].type = 'storyteller'
@@ -301,8 +318,12 @@ async.waterfall([
                     video.author.forEach((_id) => {
                         video._persons.push({
                             _id: _id,
-                            forename: persons[_id].forename || '',
-                            surname: persons[_id].surname || '',
+                            forename_et: persons[_id].forename_et || '',
+                            surname_et: persons[_id].surname_et || '',
+                            forename_en: persons[_id].forename_en || '',
+                            surname_en: persons[_id].surname_en || '',
+                            forename_ru: persons[_id].forename_ru || '',
+                            surname_ru: persons[_id].surname_ru || '',
                             type: 'author'
                         })
                         persons[_id].type = 'author'

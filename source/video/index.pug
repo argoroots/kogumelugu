@@ -32,7 +32,7 @@ block vars
                 .map((a) => {
                     return {
                         'time': (a.time ? a.time.replace(':','h').replace(':','m')+'s' : '00h00m00s'),
-                        'label': (a.time ? a.time + ' ' : '') + a.forename + ' ' + a.surname,
+                        'label': (a.time ? a.time + ' ' : '') + a['forename_' + self.locale] + ' ' + a['surname_' + self.locale],
                         'type': a.type || 'person'
                     }
                 })
@@ -100,14 +100,14 @@ block content
                                 each a in self.storyteller
                                     = ' '
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
-                                        b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+                                        b= self._persons.filter((p) => p._id === a).map((p) => p['forename_' + self.locale] + ' ' + p['surname_' + self.locale])[0]
 
                         if self.author.length
                             li= self.author.length === 1 ? self.texts.video.author : self.texts.video.authors
                                 each a in self.author
                                     = ' '
                                     a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
-                                        b= self._persons.filter((p) => p._id === a).map((p) => p.forename + ' ' + p.surname)[0]
+                                        b= self._persons.filter((p) => p._id === a).map((p) => p['forename_' + self.locale] + ' ' + p['surname_' + self.locale])[0]
 
                     div.tags
                         ul.tags--list

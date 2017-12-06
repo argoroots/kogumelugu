@@ -48,13 +48,13 @@ block vars
         })
 
         var persons = self.file.persons.filter(a => {
-            return (a.forename || a.surname)
+            return (a['forename_' + self.locale] || a['surname_' + self.locale])
         }).sort((a, b) => {
-            if ((a.forename + a.surname).toLowerCase() < (b.forename + b.surname).toLowerCase()) { return -1 }
-            if ((a.forename + a.surname).toLowerCase() > (b.forename + b.surname).toLowerCase()) { return 1 }
+            if ((a['forename_' + self.locale] + a['surname_' + self.locale]).toLowerCase() < (b['forename_' + self.locale] + b['surname_' + self.locale]).toLowerCase()) { return -1 }
+            if ((a['forename_' + self.locale] + a['surname_' + self.locale]).toLowerCase() > (b['forename_' + self.locale] + b['surname_' + self.locale]).toLowerCase()) { return 1 }
             return 0
         }).map(a => {
-            a.title = [a.forename, a.surname].join(' ')
+            a.title = [a['forename_' + self.locale], a['surname_' + self.locale]].join(' ')
             return a
         })
 
