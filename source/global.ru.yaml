@@ -94,7 +94,7 @@ texts:
         div4: |
             Портал Kogu Me Lugu не собирает персональные данные. Все пожертвования проходят через интернет-банк.
             Таким образом собираемые данные являются клиентскими данными, которые не передаются третьим лицам.
-            
+
         amount: Сумма
         submit: Поддержать
         participate: Учавствуй в создании подарка на столетие Эстонской Республики или поддержи нас материально!
@@ -102,7 +102,7 @@ texts:
         accountDetails: Номер счета
         descriptionLabel: "Пояснение:"
         description: Toetan Kogu Me Lugu
-        checkboxlabel: Olen tutvunud annetamise tingimustega
+        checkboxlabel: Я прочитал условия пожертвования
     searchbox:
         placeholder: Поиск…
         findButton: Найти историю

@@ -104,7 +104,7 @@ texts:
         accountDetails: Account Number
         descriptionLabel: "Description:"
         description: Toetan Kogu Me Lugu
-        checkboxlabel: Olen tutvunud annetamise tingimustega
+        checkboxlabel: I have read the donation terms
     searchbox:
         placeholder: Search…
         findButton: Find Story
