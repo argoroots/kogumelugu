@@ -4,96 +4,86 @@ title: Õppematerjalid
 blocks:
     -
         text: |
-            ## Ajalooõpe
-            ### Kasutusvõimalused
+            ## Ajalooharidus
 
-            Morbi aliquet pellentesque nibh, in varius justo efficitur eu. Mauris volutpat neque non metus gravida pretium. Donec a mollis tellus, eget tempus purus.
         links:
             -
-                title: Integer pellentesque sapien.pdf
-                icon: fa-download
-                link:
-                info: (552KB, PDF)
+                title: Ajaloo teemapuu
+                icon: fa-list
+                link: /source/tags/data.et.yaml
+                info:
+        curriculum:
+            title:
+            items:
+                -
+                    title: NSVL ja kommunistlik süsteem – Eesti NSV
+                    text: |
+                        V kursus "Lähiajalugu II - Eesti ja maailm 20. sajandi teisel poolel
+                    links:
+                        -
+                            title: Tunnikava Karl Õiger
+                            icon: fa-download
+                            link: /assets/materials/Tunnikava_Karl_Õiger.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/karl-oiger-teekond/
+                            title: Karl Õiger. Noore poisi põgenemisteekond Venemaalt Eestisse
+                            text: |
+                                Karl Õiger kirjeldab oma keerulist põgenemisteekonda Venemaalt kodumaale.
+                -
+                    title: Inimsusevastased kuriteod - küüditamised
+                    text: |
+                        IV kursus „Lähiajalugu I – Eesti ja maailm 20. sajandi esimesel poolel“
+                    links:
+                        -
+                            title: Tunnikava Jaak Ruus
+                            icon: fa-download
+                            link: /assets/materials/Tunnikava_Jaak_Ruus.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/jaak_ruus/
+                            title: Jaak Ruus. Videolugu
+                            text: |
+
+    -
+        text: |
+            ## Inimõigusharidus
+
+        links:
             -
-                title: Vivamus a quam nunc.pdf
-                icon: fa-download
-                link:
-                info: (152KB, PDF)
-            -
-                title: Nam aliquam
+                title: Inimõiguste teemapuu
                 icon: fa-list
                 link:
                 info:
         curriculum:
-            title: Tunnikavad
+            title:
             items:
                 -
-                    title: Nullam malesuada
+                    title: Tunnikava
                     text: |
-                        Etiam nec elit at velit faucibus posuere eu eget orci. Phasellus nec diam in ante scelerisque mattis vitae at purus.
+
                     links:
                         -
-                            title: Nunc accumsan suscipit.pdf
+                            title: Tunnikava Eva Brown
                             icon: fa-download
-                            link:
-                            info: (352KB, PDF)
+                            link: /assets/materials/Tunnikava_Eva_Brown.pdf
+                            info:
                     videos:
                         -
-                            path: video/interview/adam_brown
-                            title: Adam Brown
+                            path: video/story/eva_brown_truumees/
+                            title: Eva Brown. Eestlaseks olemise lugu
                             text: |
-                                Donec a mollis tellus, eget tempus purus.
+                                Eva Brown meenutab oma lapsepõlve Eestis, põgenemisteed Saksmaale ning sealt edasi Ühendriikidessesse.
+                                Samuti on kõnealusteks teemadeks kontaktid Eestiga, eestluse säilitamine ning küsimus eestlaseks olemisest.
                 -
-                    title: Donec maximus erat tellus
+                    title: KOMPASS
                     text: |
-                        Nulla convallis, ante sed gravida porttitor, erat ante consequat quam, in lobortis metus nulla at dolor. Quisque pharetra tristique vehicula.
-                    videos:
-                        -
-                            path: video/interview/heino_noor
-                            title: Heino Noor
-                            text: |
-                                Etiam facilisis, eros eu eleifend facilisis.
-                -
-                    title: Nam aliquam commodo orci eget pellentesque
-                    text: |
-                        Suspendisse non pulvinar sapien, ac congue lorem. Cras tempus lorem eget diam dictum, vitae consequat arcu tempor. In scelerisque et tortor malesuada vestibulum.
+                        Noorte inimõigushariduse käsiraamat
                     links:
                         -
-                            title: Maecenas tristique lectus.pdf
+                            title: Kompassi koduleht
                             icon: fa-download
-                            link:
-                            info: (22MB, PDF)
-
-    -
-        text: |
-            ## Inimõiguste õpe
-            ### Kasutusvõimalused
-
-            Suspendisse malesuada ultricies diam sit amet rhoncus. Sed porttitor eget urna et dictum. Pellentesque ut sagittis orci. Phasellus ex urna, aliquet non nisl id, [feugiat ultricies nibh]().
-        links:
-            -
-                title: Donec sit amet.pdf
-                icon: fa-download
-                link:
-                info: (673KB, PDF)
-        curriculum:
-            title: Tunnikavad
-            items:
-                -
-                    title: Quisque ante nulla
-                    text: |
-                        Praesent auctor in orci vel congue. Curabitur feugiat porta dolor. Morbi eget eros ac nunc euismod ultrices in sollicitudin ligula. Etiam congue, mi eu euismod sagittis, augue risus viverra quam, non sollicitudin dolor justo eu quam. Pellentesque sed velit vitae mi convallis semper nec in nisi.
-                    links:
-                        -
-                            title: Etiam id dignissim.pdf
-                            icon: fa-download
-                            link:
-                            info: (984KB, PDF)
-                -
-                    title: Phasellus eu risus dapibus
-                    text: |
-                        Suspendisse fermentum vitae leo id interdum. Integer vehicula nulla arcu, at aliquet mi consequat quis. Etiam leo augue, euismod et sem nec, porttitor vulputate dolor. Aenean condimentum quis nisl laoreet bibendum.
-                    video:
-                        path: video/interview/kirsti_portnov
-                        title: Kirsti Portnov
-                        text: Curabitur eget justo tempus, dignissim quam.
+                            path: www.coe.int/et/web/compass
+                            info:

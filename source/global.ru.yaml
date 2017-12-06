@@ -35,12 +35,10 @@ texts:
         materials: Учебные материалы
         history: Учебные материалы по истории
         historyText: |
-            English posuere erat a ante venenatis dapibus posuere velit aliquet.
-            Cras mattis consectetur purus sit amet fermentum.
+
         humanRights: Учебные материалы по правам человека
         humanRightsText: |
-            English posuere erat a ante venenatis dapibus posuere velit aliquet.
-            Cras mattis consectetur purus sit amet fermentum.
+            
     culture:
         title1: Мы все наследуем
         title2: нашу культуру

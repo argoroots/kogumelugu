@@ -36,12 +36,10 @@ texts:
         materials: Education Materials
         history: History Education
         historyText: |
-            English posuere erat a ante venenatis dapibus posuere velit aliquet.
-            Cras mattis consectetur purus sit amet fermentum.
+
         humanRights: Human Rights Education
         humanRightsText: |
-            English posuere erat a ante venenatis dapibus posuere velit aliquet.
-            Cras mattis consectetur purus sit amet fermentum.
+            
     culture:
         title1: We all inherit
         title2: our culture

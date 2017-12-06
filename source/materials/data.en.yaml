@@ -5,9 +5,7 @@ blocks:
     -
         text: |
             ## Ajalooõpe
-            ### Kasutusvõimalused
 
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
         links:
             -
                 title: Metoodika.pdf
