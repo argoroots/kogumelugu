@@ -92,8 +92,10 @@ texts:
             For single donations please use the payment links below or make the donation to the bank account of the Institute.
             Account details are available below.
         div3: |
-
+            Your donation will be billed in euros.
         div4: |
+            The Kogu Me Lugu portal does not collect personal information. The donation is made via Internet bank.
+            The data collected in this process will be treated as customer data and will not be provided to a third party.
 
         amount: Insert amount
         submit: Support
