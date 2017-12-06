@@ -12,7 +12,7 @@ blocks:
             -
                 title: Metoodika.pdf
                 icon: fa-download
-                link:
+                link: /assets/materials/failinimi.pdf
                 info: (352KB, PDF)
             -
                 title: Teemad
@@ -34,7 +34,7 @@ blocks:
                             info: (352KB, PDF)
                     videos:
                         -
-                            path: video/adam-brown
+                            path: /et/video/story/armas_sootaru/
                             title: Adam Brown
                             text: |
                                 Eesti päritolu väärtustamine
