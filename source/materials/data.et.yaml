@@ -10,7 +10,7 @@ blocks:
             -
                 title: Ajaloo teemapuu
                 icon: fa-list
-                link: /tags/tags.yaml
+                link: /et/teemad/#Ajalugu
                 info:
         curriculum:
             title:
@@ -55,7 +55,7 @@ blocks:
             -
                 title: Inimõiguste teemapuu
                 icon: fa-list
-                link:
+                link: /et/teemad/#Inimõigused
                 info:
         curriculum:
             title:
