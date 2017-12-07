@@ -85,5 +85,5 @@ blocks:
                         -
                             title: Kompassi koduleht
                             icon: fa-external-link
-                            link: /www.coe.int/et/web/compass
+                            link: https://www.coe.int/et/web/compass
                             info:

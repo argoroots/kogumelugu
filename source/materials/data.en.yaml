@@ -85,5 +85,5 @@ blocks:
                         -
                             title: Compass Home Page
                             icon: fa-external-link
-                            link: /www.coe.int/en/web/compass
+                            link: https://www.coe.int/en/web/compass
                             info:

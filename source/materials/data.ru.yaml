@@ -36,5 +36,5 @@ blocks:
                         -
                             title: Домашняя страница
                             icon: fa-external-link
-                            link: /www.coe.int/ru/web/compass
+                            link: https://www.coe.int/ru/web/compass
                             info:
