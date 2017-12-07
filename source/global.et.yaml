@@ -35,10 +35,10 @@ texts:
         findOutMore: Loe lähemalt
         materials: Õppematerjalid
         history: Ajalooharidus
-        historyText: |
+        # historyText: |
 
         humanRights: Inimõigusharidus
-        humanRightsText: |
+        # humanRightsText: |
 
     culture:
         title1: Me kõik pärime

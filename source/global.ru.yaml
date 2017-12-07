@@ -34,10 +34,10 @@ texts:
         findOutMore: Узнай больше
         materials: Учебные материалы
         history: Учебные материалы по истории
-        historyText: |
+        # historyText: |
 
         humanRights: Учебные материалы по правам человека
-        humanRightsText: |
+        # humanRightsText: |
 
     culture:
         title1: Мы все наследуем

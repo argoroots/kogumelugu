@@ -35,10 +35,10 @@ texts:
         findOutMore: Find out more
         materials: Education Materials
         history: History Education
-        historyText: |
+        # historyText: |
 
         humanRights: Human Rights Education
-        humanRightsText: |
+        # humanRightsText: |
 
     culture:
         title1: We all inherit
