@@ -8,8 +8,6 @@ block vars
 
 block script
     script.
-        var hideMapLabels = false
-
         $(function () {
             var moveBG = function () {
                 if ($(window).width() < 560) {
@@ -70,10 +68,10 @@ block content
                     .map-item(
                         data-lat=r.lat,
                         data-lng=r.lng,
-                        data-path= '/' + self.locale + '/' + v.path + '#' + ('time' in r ? r.time.replace(':','h').replace(':','m')+'s' : '0s'),
+                        data-path= '/' + self.locale + '/' + v.path + (r.time ? '#' + r.time : ''),
                         data-img='/assets/images/' + v.path + '.jpg',
                         data-title=v['title_' + self.locale],
-                        data-subtitle=v['subtitle_' + self.locale]
+                        data-subtitle=v['subtitle_' + self.locale] + (r.time ? '<br>' + r.time : '')
                     )
 
     main.main

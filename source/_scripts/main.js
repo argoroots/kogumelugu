@@ -59,10 +59,12 @@ $(function () {
                 href: $(this).data('path'),
             }).appendTo(el)
 
-            var elImg = $('<img />', {
-                src: $(this).data('img'),
-                alt: $(this).data('title') + ' - ' + $(this).data('subtitle')
-            }).appendTo(elLink)
+            if ($(this).data('img')) {
+                var elImg = $('<img />', {
+                    src: $(this).data('img'),
+                    alt: $(this).data('title') + ' - ' + $(this).data('subtitle')
+                }).appendTo(elLink)
+            }
 
             var elTextWrap = $('<div/>', {
                 class: 'text'
@@ -75,19 +77,17 @@ $(function () {
             }).appendTo(elTitleWrap)
 
             var elText = $('<p/>', {
-                text: $(this).data('subtitle')
+                html: $(this).data('subtitle')
             }).appendTo(elTextWrap)
 
             var ib = new InfoBox(ibOptions)
             ib.setContent(el.get(0))
 
-            if (!hideMapLabels) {
-                google.maps.event.addListener(marker, 'spider_click', function () {
-                    closeInfoboxes()
-                    ib.open(map, this)
-                    map.setCenter(this.getPosition())
-                })
-            }
+            google.maps.event.addListener(marker, 'spider_click', function () {
+                closeInfoboxes()
+                ib.open(map, this)
+                map.setCenter(this.getPosition())
+            })
 
             markers.push(marker)
             infoboxes.push(ib)
