@@ -57,6 +57,12 @@ block vars
             a.title = [a['forename_' + self.locale], a['surname_' + self.locale]].join(' ')
             return a
         })
+        personsABC = {}
+        persons.forEach((a) => {
+            let fl = (a['forename_' + self.locale] + a['surname_' + self.locale]).charAt(0)
+            personsABC[fl] = personsABC[fl] || []
+            personsABC[fl].push(a)
+        })
 
 
 block script
@@ -143,7 +149,11 @@ block content
                     .tags
                         h2= self.texts.topics.subtitles.persons.label
                         ul.tags--list
-                            each i in persons
-                                if i.title
-                                    li
-                                        a(class=getColor(i.type || 'mention'), href=videos_url + '#' + i._id)= i.title
+                            each persons, l in personsABC
+                                li
+                                    a= l
+                                    ul.tags--list
+                                        each i in persons
+                                            if i.title
+                                                li
+                                                    a(class=getColor(i.type || 'mention'), href=videos_url + '#' + i._id)= i.title
