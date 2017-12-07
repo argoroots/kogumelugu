@@ -20,13 +20,13 @@ menu:
 
 texts:
     video:
-        storyteller: Storyteller
-        author: Author
-        storytellers: Storytellers
-        authors: Authors
-        relatedVideos: Related videos
+        storyteller: Интервьюируемый
+        author: Интервьюер/автор
+        storytellers: Интервьюируемые
+        authors: интервьюеры/авторы
+        relatedVideos: Похожие видео
     contact:
-        title: Эстонский институт исторической памяти (SA Eesti Mälu Instituut)
+        title: Эстонский институт исторической памяти
     mapTitle:
         left: Истории по всему
         right: свету
@@ -38,7 +38,7 @@ texts:
 
         humanRights: Учебные материалы по правам человека
         humanRightsText: |
-            
+
     culture:
         title1: Мы все наследуем
         title2: нашу культуру
@@ -107,7 +107,7 @@ texts:
     logolink: http://mnemosyne.ee/en/
 
     topics:
-        title: Teemad
+        title: Темы
         subtitles:
             history:
                 label: История
@@ -119,5 +119,5 @@ texts:
                 label: Регионы
                 anchor: regions
             persons:
-                label: Персоны
+                label: Люди
                 anchor: persons

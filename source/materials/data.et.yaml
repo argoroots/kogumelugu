@@ -10,7 +10,7 @@ blocks:
             -
                 title: Ajaloo teemapuu
                 icon: fa-list
-                link: /source/tags/data.et.yaml
+                link: /tags/tags.yaml
                 info:
         curriculum:
             title:
@@ -84,6 +84,6 @@ blocks:
                     links:
                         -
                             title: Kompassi koduleht
-                            icon: fa-download
-                            path: www.coe.int/et/web/compass
+                            icon: fa-external-link
+                            link: /www.coe.int/et/web/compass
                             info:

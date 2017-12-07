@@ -22,9 +22,9 @@ menu:
 texts:
     video:
         storyteller: Intervjueeritav
-        author: Autor
+        author: Intervjueerija/autor
         storytellers: Intervjueeritavad
-        authors: Autorid
+        authors: Intervjueerijad/autorid
         relatedVideos: Seotud lood
     contact:
         title: SA Eesti Mälu Instituut
@@ -34,12 +34,12 @@ texts:
     education:
         findOutMore: Loe lähemalt
         materials: Õppematerjalid
-        history: Ajaloo õppematerjalid
+        history: Ajalooharidus
         historyText: |
 
-        humanRights: Inimõiguste õppematerjalid
+        humanRights: Inimõigusharidus
         humanRightsText: |
-            
+
     culture:
         title1: Me kõik pärime
         title2: oma kultuuri

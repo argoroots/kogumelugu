@@ -21,10 +21,10 @@ menu:
 
 texts:
     video:
-        storyteller: Storyteller
-        author: Author
-        storytellers: Storytellers
-        authors: Authors
+        storyteller: Interviewee
+        author: Interviewer/Author
+        storytellers: Interviewee
+        authors: Interviewers/Authors
         relatedVideos: Related videos
     contact:
         title: Estonian Institute of Historical Memory
@@ -39,7 +39,7 @@ texts:
 
         humanRights: Human Rights Education
         humanRightsText: |
-            
+
     culture:
         title1: We all inherit
         title2: our culture

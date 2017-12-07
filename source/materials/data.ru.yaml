@@ -1,89 +1,43 @@
 path: uchebnye-materialy
-title: Materials
+title: Учебные материалы
 
 blocks:
     -
         text: |
-            ## Ajalooõpe
-            ### Kasutusvõimalused
+            ## Учебные материалы по истории
 
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
+            Не волнуйтесь! Материалы скоро появятся.
         links:
             -
-                title: Metoodika.pdf
-                icon: fa-download
-                link: /assets/materials/failinimi.pdf
-                info: (352KB, PDF)
-            -
-                title: Teemad
+                title: Темы по истории
                 icon: fa-list
-                link:
+                link: /tags/tags.yaml
                 info:
         curriculum:
-            title: Tunnikavad
+            title:
             items:
-                -
-                    title: Egestas Elit Malesuada
-                    text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                    links:
-                        -
-                            title: Metoodika.pdf
-                            icon: fa-download
-                            link:
-                            info: (352KB, PDF)
-                    videos:
-                        -
-                            path: video/adam-brown
-                            title: Adam Brown
-                            text: |
-                                Eesti päritolu väärtustamine
-
     -
         text: |
-            ## Inimõiguste õpe
-            ### Kasutusvõimalused
+            ## Учебные материалы по правам человека
 
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
+            Материалы в разработке.
+
         links:
             -
-                title: Metoodika.pdf
-                icon: fa-download
-                link:
-                info: (352KB, PDF)
-            -
-                title: Teemad
+                title: Темы по правам человека
                 icon: fa-list
                 link:
                 info:
         curriculum:
-            title: Tunnikavad
+            title:
             items:
                 -
-                    title: Egestas Elit Malesuada
+                    title: Компас
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                        Пособие по образованию в области прав человека с участием молодежи
                     links:
                         -
-                            title: Metoodika.pdf
-                            icon: fa-download
-                            link:
-                            info: (352KB, PDF)
-                    video:
-                        id: adam-brown
-                        title: Adam Brown
-                        text: Eesti päritolu väärtustamine
-                -
-                    title: Egestas Elit Malesuada
-                    text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                    links:
-                        -
-                            title: Metoodika.pdf
-                            icon: fa-download
-                            link:
-                            info: (352KB, PDF)
-                    video:
-                        id: adam-brown
-                        title: Adam Brown
-                        text: Eesti päritolu väärtustamine
+                            title: Домашняя страница
+                            icon: fa-external-link
+                            link: /www.coe.int/ru/web/compass
+                            info:

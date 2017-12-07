@@ -1,87 +1,89 @@
 path: materials
-title: Materials
+title: Learning Materials
 
 blocks:
     -
         text: |
-            ## Ajalooõpe
+            ## History Education
 
         links:
             -
-                title: Metoodika.pdf
-                icon: fa-download
-                link: /assets/materials/failinimi.pdf
-                info: (352KB, PDF)
-            -
-                title: Teemad
+                title: History Topics
                 icon: fa-list
-                link:
+                link: /tags/tags.yaml
                 info:
         curriculum:
-            title: Tunnikavad
+            title:
             items:
                 -
-                    title: Egestas Elit Malesuada
+                    title: The USSR and the Communist System – Estonian SSR
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                        Form V “Contemporary History II – Estonia and the World in the Latter Half of the 20th Century”
                     links:
                         -
-                            title: Metoodika.pdf
+                            title: Lesson Plan Karl Õiger
                             icon: fa-download
-                            link:
-                            info: (352KB, PDF)
+                            link: /assets/materials/Lesson_Plan_Karl_Õiger.pdf
+                            info:
                     videos:
                         -
-                            path: /et/video/story/armas_sootaru/
-                            title: Adam Brown
+                            path: en/video/story/karl-oiger-teekond/
+                            title: Karl Õiger. Video Story
                             text: |
-                                Eesti päritolu väärtustamine
+
+    -
+                    title: Crimes against humanity - Deportation
+                    text: |
+                        Form VI “Contemporary History I – Estonia and the World in the First Half of the 20th Century”
+                    links:
+                        -
+                            title: Lesson Plan Jaak Ruus
+                            icon: fa-download
+                            link: /assets/materials/Lesson_Plan_Jaak_Ruus.pdf
+                            info:
+                    videos:
+                        -
+                            path: en/video/story/jaak_ruus/
+                            title: Jaak Ruus. Video Story
+                            text: |
 
     -
         text: |
-            ## Inimõiguste õpe
-            ### Kasutusvõimalused
+            ## Human Rights Education
 
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur [purus sit amet fermentum]().
         links:
             -
-                title: Metoodika.pdf
-                icon: fa-download
-                link: /assets/materials/failinimi.pdf
-                info: (352KB, PDF)
-            -
-                title: Teemad
+                title: Human Rights Topics
                 icon: fa-list
                 link:
                 info:
         curriculum:
-            title: Tunnikavad
+            title:
             items:
                 -
-                    title: Egestas Elit Malesuada
+                    title: Lesson Plan
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+
                     links:
                         -
-                            title: Metoodika.pdf
+                            title: Lesson Plan Eva Brown
                             icon: fa-download
                             link:
-                            info: (352KB, PDF)
-                    video:
-                        id: adam-brown
-                        title: Adam Brown
-                        text: Eesti päritolu väärtustamine
+                            info:
+                    videos:
+                        -
+                        path: en/video/story/eva_brown_truumees/
+                        title: Eva Brown. Meaning of being an Estonian
+                        text: |
+                            Eva Brown recalls her childhood in Estonia, the escape to Germany and from there to the USA.
+                            Additionally, she reflects on her ties with Estonia, preserving her Estonian identity,and the question what being an Estonian means.
                 -
-                    title: Egestas Elit Malesuada
+                    title: COMPASS
                     text: |
-                        Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                        Manual for Human Rights Education with Young People
                     links:
                         -
-                            title: Metoodika.pdf
-                            icon: fa-download
-                            link:
-                            info: (352KB, PDF)
-                    video:
-                        id: adam-brown
-                        title: Adam Brown
-                        text: Eesti päritolu väärtustamine
+                            title: Compass Home Page
+                            icon: fa-external-link
+                            link: /www.coe.int/en/web/compass
+                            info:
