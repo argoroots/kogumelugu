@@ -33,8 +33,6 @@ block vars
             return 0
         })
 
-        var videos_url = self.menu[0].path
-
         var regions = self.file.regions.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
@@ -103,21 +101,21 @@ block content
                                     each ht2 in tags.filter((a) => a._parent.indexOf(ht._id) >= 0)
                                         if ht2['name_' + self.locale]
                                             li
-                                                a(class=getColor(0), href=videos_url + '#' + ht2._id)= ht2['name_' + self.locale]
+                                                a(class=getColor(0), href=self.searchPath + '?id=' + ht2._id)= ht2['name_' + self.locale]
 
                                                 if ht2._childs.length > 0
                                                     ul.tags--list
                                                         each ht3 in tags.filter((a) => a._parent.indexOf(ht2._id) >= 0)
                                                             if ht3['name_' + self.locale]
                                                                 li
-                                                                    a(class=getColor(1), href=videos_url + '#' + ht3._id)= ht3['name_' + self.locale]
+                                                                    a(class=getColor(1), href=self.searchPath + '?id=' + ht3._id)= ht3['name_' + self.locale]
 
                                                                     if ht3._childs.length > 0
                                                                         ul.tags--list
                                                                             each ht4 in tags.filter((a) => a._parent.indexOf(ht3._id) >= 0)
                                                                                 if ht4['name_' + self.locale]
                                                                                     li
-                                                                                        a(class=getColor(2), href=videos_url + '#' + ht4._id)= ht4['name_' + self.locale]
+                                                                                        a(class=getColor(2), href=self.searchPath + '?id=' + ht4._id)= ht4['name_' + self.locale]
 
                 #regions.tabs--item
                     .tags
@@ -125,25 +123,25 @@ block content
                         ul.tags--list
                             each hr in regions.filter((a) => a._parent.length === 0)
                                 li
-                                    a(class=getColor(0), href=videos_url + '#' + hr._id)= hr.title
+                                    a(class=getColor(0), href=self.searchPath + '?id=' + hr._id)= hr.title
 
                                     if hr._childs.length > 0
                                         ul.tags--list
                                             each hr2 in regions.filter((a) => a._parent.indexOf(hr._id) >= 0)
                                                 li
-                                                    a(class=getColor(1), href=videos_url + '#' + hr2._id)= hr2.title
+                                                    a(class=getColor(1), href=self.searchPath + '?id=' + hr2._id)= hr2.title
 
                                                     if hr2._childs.length > 0
                                                         ul.tags--list
                                                             each hr3 in regions.filter((a) => a._parent.indexOf(hr2._id) >= 0)
                                                                 li
-                                                                    a(class=getColor(2), href=videos_url + '#' + hr3._id)= hr3.title
+                                                                    a(class=getColor(2), href=self.searchPath + '?id=' + hr3._id)= hr3.title
 
                                                                     if hr3._childs.length > 0
                                                                         ul.tags--list
                                                                             each hr4 in regions.filter((a) => a._parent.indexOf(hr3._id) >= 0)
                                                                                 li
-                                                                                    a(class=getColor(3), href=videos_url + '#' + hr4._id)= hr4.title
+                                                                                    a(class=getColor(3), href=self.searchPath + '?id=' + hr4._id)= hr4.title
 
                 #persons.tabs--item
                     .tags
@@ -156,4 +154,4 @@ block content
                                         each i in persons
                                             if i.title
                                                 li
-                                                    a(class=getColor(i.type || 'mention'), href=videos_url + '#' + i._id)= i.title
+                                                    a(class=getColor(i.type || 'mention'), href=self.searchPath + '?id=' + i._id)= i.title

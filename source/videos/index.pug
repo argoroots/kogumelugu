@@ -16,10 +16,39 @@ block vars
 
 block script
     script.
-        if (window.location.hash.substr(1)) {
-            $('article.videos--item').hide()
-            $('.filter-item[data-id="' + window.location.hash.substr(1) + '"]').parent().show()
-        }
+        $(function () {
+            var urlParam = function(name){
+                var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href)
+                if (results==null) {
+                   return null
+                } else {
+                   return results[1] || 0
+                }
+            }
+
+            var id = urlParam('id')
+            var q = urlParam('q')
+
+            if (q || id) {
+                $('article.videos--item').hide()
+            }
+
+            if (id) {
+                $('.filter-item[data-id="' + id.toLowerCase() + '"]').parent().show()
+            }
+
+            if (q) {
+                q = decodeURIComponent(q).replace( /\+/g, ' ' )
+                qArray = q.split(' ')
+
+                for (var i = 0; i < qArray.length; i++) {
+                    $('.filter-item[data-q*="' + qArray[i].toLowerCase() + '"]').parent().show()
+                }
+
+                $('input[name="q"]').val(q)
+                $('input[name="q"]').focus()
+            }
+        })
 
 
 block content
@@ -35,17 +64,31 @@ block content
                                 span= v['title_' + self.locale]
                             p= v['subtitle_' + self.locale]
 
+                    .filter-item.hidden(data-q=('' + v['title_' + self.locale]).toLowerCase())
+                    .filter-item.hidden(data-q=('' + v['subtitle_' + self.locale]).toLowerCase())
+                    .filter-item.hidden(data-q=('' + v['description_' + self.locale]).toLowerCase())
+
                     each t in getList(v.tag)
+                        .filter-item.hidden(data-q=('' + t['name_' + self.locale]).toLowerCase())
                         .filter-item.hidden(data-id=t._id)
+
                     each t in getList(v._persons)
                         .filter-item.hidden(data-id=t._id)
+
                     each t in getList(v._tags)
+                        .filter-item.hidden(data-q=('' + t['name_' + self.locale]).toLowerCase())
                         .filter-item.hidden(data-id=t._id)
+
                     each t in getList(v._regions)
+                        .filter-item.hidden(data-q=('' + t['name_' + self.locale]).toLowerCase())
                         .filter-item.hidden(data-id=t._id)
+
                     each r in getList(v.regions)
+                        .filter-item.hidden(data-q=('' + r['name_' + self.locale]).toLowerCase())
                         .filter-item.hidden(data-id=r._id)
+
                     each a in getList(v.author)
                         .filter-item.hidden(data-id=a._id)
+
                     each s in getList(v.storyteller)
                         .filter-item.hidden(data-id=s._id)

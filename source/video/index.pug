@@ -19,7 +19,7 @@ block vars
             }
             return type ? colors[type] : colors['undefined']
         }
-        var videos_url = self.menu[0].path
+
         var timestamps = self._regions
             .map((a) => {
                 return {
@@ -98,8 +98,9 @@ block content
         .content
             article.article
                 .u-content
-                    .video-wrapper
-                        #video(data-vimeo-id='https://player.vimeo.com/video/' + self.videoUrl)
+                    if self.videoUrl
+                        .video-wrapper
+                            #video(data-vimeo-id='https://player.vimeo.com/video/' + self.videoUrl)
                     h1= self['title_' + self.locale]
                     if self['subtitle_' + self.locale]
                         p
@@ -113,14 +114,14 @@ block content
                             li= self.storyteller.length === 1 ? self.texts.video.storyteller : self.texts.video.storytellers
                                 each a in self.storyteller
                                     = ' '
-                                    a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
+                                    a(href= self.searchPath + '?id=' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p['forename_' + self.locale] + ' ' + p['surname_' + self.locale])[0]
 
                         if self.author.length
                             li= self.author.length === 1 ? self.texts.video.author : self.texts.video.authors
                                 each a in self.author
                                     = ' '
-                                    a(href= videos_url + '#' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
+                                    a(href= self.searchPath + '?id=' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p['forename_' + self.locale] + ' ' + p['surname_' + self.locale])[0]
 
                     div.tags

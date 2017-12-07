@@ -18,6 +18,7 @@ menu:
         title: Toeta
         path: /et/#support
 
+searchPath: /et/videoteek/
 
 texts:
     video:
