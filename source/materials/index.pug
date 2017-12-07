@@ -49,7 +49,7 @@ block content
                                                                             small= l.info
                                                     if i.videos
                                                         each v in i.videos
-                                                            a.video-teaser(href='/' + self.locale + '/' + v.path)
+                                                            a.video-teaser(href='/' + self.locale + '/' + v.path + '/')
                                                                 img(src='/assets/images/' + v.path + '.jpg', alt=v.title)
                                                                 .text
                                                                     p.title
