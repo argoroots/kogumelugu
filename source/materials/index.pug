@@ -31,25 +31,26 @@ block content
 
                             h3= b.curriculum.title
                             .accordion
-                                each i in b.curriculum.items
-                                    .accordion--item
-                                        a(href='')= i.title
-                                        .accordion--content
-                                            +markdown(i.text)
-                                            if i.links
-                                                ul.links
-                                                    each l in i.links
-                                                        li
-                                                            i.fa(class=l.icon)
-                                                            a(href=l.link)
-                                                                span= l.title
-                                                                if l.info
-                                                                    small= l.info
-                                            if i.videos
-                                                each v in i.videos
-                                                    a.video-teaser(href='/' + self.locale + '/' + v.path)
-                                                        img(src='/assets/images/' + v.path + '.jpg', alt=v.title)
-                                                        .text
-                                                            p.title
-                                                                span= v.title
-                                                            +markdown(v.text)
+                                if b.curriculum.items
+                                    each i in b.curriculum.items
+                                        .accordion--item
+                                            a(href='')= i.title
+                                            .accordion--content
+                                                +markdown(i.text)
+                                                if i.links
+                                                    ul.links
+                                                        each l in i.links
+                                                            li
+                                                                i.fa(class=l.icon)
+                                                                a(href=l.link)
+                                                                    span= l.title
+                                                                    if l.info
+                                                                        small= l.info
+                                                if i.videos
+                                                    each v in i.videos
+                                                        a.video-teaser(href='/' + self.locale + '/' + v.path)
+                                                            img(src='/assets/images/' + v.path + '.jpg', alt=v.title)
+                                                            .text
+                                                                p.title
+                                                                    span= v.title
+                                                                +markdown(v.text)
