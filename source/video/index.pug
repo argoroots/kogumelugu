@@ -60,12 +60,13 @@ block script
                 title: false
             })
 
-            var playVideo = function() {
+            var playVideo = function () {
                 var startTime = 0
 
                 if (window.location.hash.substr(1)) {
                     var timeArray = window.location.hash.substr(1).split(':')
-                    startTime = parseInt(timeArray[0]) * 3600 + parseInt(timeArray[1]) * 60 + parseInt(timeArray[2])
+                    timeArray.unshift('0', '0', '0')
+                    startTime = parseInt(timeArray[timeArray.length-3]) * 3600 + parseInt(timeArray[timeArray.length-2]) * 60 + parseInt(timeArray[timeArray.length-1])
                 }
 
                 player.setCurrentTime(startTime)
@@ -74,7 +75,7 @@ block script
             }
             playVideo()
 
-            $(window).on('hashchange', function() {
+            $(window).on('hashchange', function () {
                 playVideo()
             })
         })
