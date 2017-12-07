@@ -10,7 +10,7 @@ blocks:
             -
                 title: Темы по истории
                 icon: fa-list
-                link: /tags/tags.yaml
+                link: /ru/temy/#История
                 info:
         curriculum:
             title:
@@ -23,7 +23,7 @@ blocks:
             -
                 title: Темы по правам человека
                 icon: fa-list
-                link:
+                link: /ru/temy/#Права%20человека
                 info:
         curriculum:
             title:

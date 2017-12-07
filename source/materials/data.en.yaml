@@ -10,7 +10,7 @@ blocks:
             -
                 title: History Topics
                 icon: fa-list
-                link: /tags/tags.yaml
+                link: /en/topics/#History
                 info:
         curriculum:
             title:
@@ -55,7 +55,7 @@ blocks:
             -
                 title: Human Rights Topics
                 icon: fa-list
-                link:
+                link: /en/topics/#Human%20Rights
                 info:
         curriculum:
             title:
