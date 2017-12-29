@@ -68,11 +68,6 @@ texts:
             Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
     mailingList:
         join: Liitu meie uudiskirjaga
-        div1: |
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-            suscipit nostrum obcaecati aliquam, et! Expedita quae,
-            exercitationem ducimus mollitia error, perferendis eum delectus
-            nesciunt debitis praesentium, id voluptas ipsam rem.
         yourEmail: Sisesta oma e-posti aadress
         joinButton: Liitu uudiskirjaga
     partners: Koostööpartnerid

@@ -1,3 +1,123 @@
+menu:
+    -
+        title: Videoteek
+        path: /et/videoteek/
+    -
+        title: Teemad
+        path: /et/teemad/
+    -
+        title: Õppematerjalid
+        path: /et/oppematerjalid/
+    -
+        title: Tutvustus
+        path: /et/#indroduction
+    -
+        title: Tegijad
+        path: /et/#team
+    -
+        title: Toeta
+        path: /et/#support
+
+
+texts:
+    video:
+        storyteller: Intervjueeritav
+        author: Intervjueerija/autor
+        storytellers: Intervjueeritavad
+        authors: Intervjueerijad/autorid
+        relatedVideos: Seotud lood
+    contact:
+        title: SA Eesti Mälu Instituut
+    mapTitle:
+        left: Lood ümber
+        right: maailma
+    education:
+        findOutMore: Loe lähemalt
+        materials: Õppematerjalid
+        history: Ajalooharidus
+        # historyText: |
+
+        humanRights: Inimõigusharidus
+        # humanRightsText: |
+
+    culture:
+        title1: Me kõik pärime
+        title2: oma kultuuri
+        div1: |
+            Igaühel meist on oma lugu ja oma roll teiste lugudes.
+            Kõik me oleme kellegi lapsed ja mingi piirkonna elanikud,
+            kõik me pärime oma kultuuri, kodukoha ja perekonna pärandi.
+            Eesti lugu, kogu me lugu, moodustub erinevate Eesti inimeste lugudest.
+        div2: |
+            Need lood ei edasta minevikust täielikku pilti, vaid annavad seda edasi
+            läbi rääkija objektiivi, mis võib olla vägagi erinev meie enda omast.
+            Neid lugusid kuulates kogeme maailma teistsugusel, vahest harjumatul
+            viisil. Pealtnäha olemegi erinevad, kordumatud.
+            See, mis aga peitub igas inimeses sügaval sisimas, on meil ühine.
+        div3: |
+            Kogu Me Lugu on suulise ajaloo portaal. Kogume, uurime ja jagame videoformaadis
+            eesti inimeste lugusid üle maailma, mis räägivad Eesti mäletatava ajastu
+            minevikukogemustest, andes aimu ka olevikust. Selleks kogume, uurime ja jagame
+            Nõukogude või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest
+            Eestist põgenenud või nende tegevuse tulemusena Eestisse sattunud inimeste mälestusi
+            (otsetunnistajad ja nende lähedased). Kogutud mälestusi kasutatakse õppematerjalide
+            arendamisel, uurimistöös ning avalikkuses mälestuspäevadel, näitustel ja muuseumides
+            nii Eestis kui mujal maailmas. Kogu Me Lugu sai alguse 14. juunil 2013. aastal.
+        div4: |
+            Iga lugu on omapärane, samas osa suuremast loost.
+            Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
+    mailingList:
+        join: Liitu meie uudiskirjaga
+        yourEmail: Sisesta oma e-posti aadress
+        joinButton: Liitu uudiskirjaga
+    partners: Koostööpartnerid
+    financiers: Suurtoetajad
+    thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!
+    contribution:
+        title1: Sinu panus loeb,
+        title2: toeta portaali!
+        div1: |
+            Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda.
+            Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
+        div2: |
+            Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituut kontole.
+            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituudi pangakontole.
+            Konto andmed on nähtaval allpool.
+        div3: |
+            Teie annetus arveldatakse eurodes.
+        div4: |
+            Kogu Me Lugu portaal ei kogu isikuandmeid. Annetamine toimub internetipanga vahendusel.
+            Selle käigus kogutud andmeid käsitletakse kliendiandmetena, mida ei anta kolmandale osapoolele.
+
+        amount: Sisesta summa
+        submit: Toetan
+        checkboxlabel: Olen tutvunud annetamise tingimustega
+        participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
+        findOutMore: Loe lähemalt
+        accountDetails: Pangakonto andmed
+        descriptionLabel: "Selgitus:"
+        description: Toetan Kogu Me Lugu
+    searchbox:
+        placeholder: Otsi…
+        findButton: Leia lugu
+    logolink: http://mnemosyne.ee/
+
+    topics:
+        title: Teemad
+        subtitles:
+            history:
+                label: Ajalugu
+                anchor: history
+            humanRights:
+                label: Inimõigused
+                anchor: humanrights
+            regions:
+                label: Regioonid
+                anchor: regions
+            persons:
+                label: Isikud
+                anchor: persons
+
 file:
 #     coProducers: ./data/coproducers.yaml
 #     partners: ./data/partners.yaml

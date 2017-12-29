@@ -67,11 +67,6 @@ texts:
             в тоже самое время являясь частью истории Эстониии и всего человечества.
     mailingList:
         join: Подпишись на новостную рассылку
-        div1: |
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-            suscipit nostrum obcaecati aliquam, et! Expedita quae,
-            exercitationem ducimus mollitia error, perferendis eum delectus
-            nesciunt debitis praesentium, id voluptas ipsam rem.
         yourEmail: Ваша электронная почта
         joinButton: Подписаться
     partners: Партнеры

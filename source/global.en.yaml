@@ -68,11 +68,6 @@ texts:
             Each story is the Estonian story and also the story of mankind.
     mailingList:
         join: Join our mailing list
-        div1: |
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-            suscipit nostrum obcaecati aliquam, et! Expedita quae,
-            exercitationem ducimus mollitia error, perferendis eum delectus
-            nesciunt debitis praesentium, id voluptas ipsam rem.
         yourEmail: Enter your e-mail address
         joinButton: Join mailing list
     partners: Partners

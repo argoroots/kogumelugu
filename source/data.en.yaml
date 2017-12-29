@@ -1,3 +1,123 @@
+menu:
+    -
+        title: Videos
+        path: /en/videos/
+    -
+        title: Topics
+        path: /en/topics/
+    -
+        title: Materials
+        path: /en/materials/
+    -
+        title: Introduction
+        path: /en/#introduction
+    -
+        title: Team
+        path: /en/#team
+    -
+        title: Support
+        path: /en/#support
+
+texts:
+    video:
+        storyteller: Interviewee
+        author: Interviewer/Author
+        storytellers: Interviewee
+        authors: Interviewers/Authors
+        relatedVideos: Related videos
+    contact:
+        title: Estonian Institute of Historical Memory
+    mapTitle:
+        left: Stories around the
+        right: world
+    education:
+        findOutMore: Find out more
+        materials: Education Materials
+        history: History Education
+        # historyText: |
+
+        humanRights: Human Rights Education
+        # humanRightsText: |
+
+    culture:
+        title1: We all inherit
+        title2: our culture
+        div1: |
+            Each of us has a story and a role in other stories.
+            We are all children of our parents and residents of where we live.
+            We all inherit our cultural, regional and family heritage.
+            The Estonian story, our entire story, is made of different stories of the Estonian people.
+        div2: |
+            These stories do not provide a complete picture of the past,
+            but represent it through the lens of the speaker, which can be very different from our own.
+            Listening to these stories we experience life in different, perhaps unfamiliar ways.
+            Indeed, as individuals we are different, unique.
+            However, what we share deep inside us is common to all.
+        div3: |
+            Kogu Me Lugu (translates into Collect Our Story, We're Collecting The Story,
+            also Our Entire Story) is an online oral history portal.
+            We collect, preserve and share the family stories of Estonians from around the world in video format.
+            We focus on the memories of people who were repressed by the Soviet or Nazi regimes,
+            people who escaped Estonia during the occupations of said regimes or arrived in Estonia as a result of the occupations.
+            The collected memories are used for developing educational materials,
+            research and raising public awareness in Estonia and elsewhere.
+            Kogu Me Lugu was launched on 14 June 2013.
+        div4: |
+            Each story is unique, yet part of a larger story.
+            Each story is the Estonian story and also the story of mankind.
+    mailingList:
+        join: Join our mailing list
+        yourEmail: Enter your e-mail address
+        joinButton: Join mailing list
+    partners: Partners
+    financiers: Financiers
+    thanks4allTheFishAndSofa: Thanks to all friends and supporters!
+    contribution:
+        title1: Your donation counts,
+        title2: support our portal!
+        div1: |
+            Thanks to your financial support, more stories can be told and therefore the story of the Estonian community will be richer.
+            Your financial gift will also support the administration and development of the Kogu Me Lugu online platform.
+        div2: |
+            You can support Kogu Me Lugu through both single donations or standing order donations
+            to the account of the Estonian Institute of Historical Memory (SA Eesti Mälu Instituut).
+            For single donations please use the payment links below or make the donation to the bank account of the Institute.
+            Account details are available below.
+        div3: |
+            Your donation will be billed in euros.
+        div4: |
+            The Kogu Me Lugu portal does not collect personal information. The donation is made via Internet bank.
+            The data collected in this process will be treated as customer data and will not be provided to a third party.
+
+        amount: Insert amount
+        submit: Support
+        participate: Participate in the Republic of Estonia 100th Anniversary gift project or donate!
+        findOutMore: Find out more
+        accountDetails: Account Number
+        descriptionLabel: "Description:"
+        description: Toetan Kogu Me Lugu
+        checkboxlabel: I have read the donation terms
+    searchbox:
+        placeholder: Search…
+        findButton: Find Story
+    logolink: http://mnemosyne.ee/en/
+
+    topics:
+        title: Topics
+        subtitles:
+            history:
+                label: History
+                anchor: history
+            humanRights:
+                label: Human Rights
+                anchor: humanrights
+            regions:
+                label: Regions
+                anchor: regions
+            persons:
+                label: Persons
+                anchor: persons
+
 file:
 #     coProducers: ./data/coproducers.yaml
 #     partners: ./data/partners.yaml
