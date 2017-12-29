@@ -230,7 +230,7 @@ async.waterfall([
                     return
                 }
                 if (tc_relation.time === undefined) {
-                    tc_relation.time = '00:00:00'
+                    tc_relation.time = null
                 }
                 let video = all_data['videos'][tc_relation._parent]
                 if (video === undefined) {
@@ -246,7 +246,7 @@ async.waterfall([
                 }
                 let new_tc = {
                     '_id': tc_obj._id,
-                    'time': tc_relation.time || '00:00:00'
+                    'time': tc_relation.time
                 }
                 if (tctype_name === 'region') {
                     new_tc.lng = tc_obj.lng

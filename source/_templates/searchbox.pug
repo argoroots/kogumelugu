@@ -1,6 +1,6 @@
 .searchbox
     .u-container
-        form(action='video-list.html')
+        form(method='GET', action=self.searchPath)
             i.fa.fa-search
-            input(type='search', placeholder=self.texts.searchbox.placeholder)
+            input(type='search', name='q', placeholder=self.texts.searchbox.placeholder)
             button.btn.btn--primary(type='submit')= self.texts.searchbox.findButton

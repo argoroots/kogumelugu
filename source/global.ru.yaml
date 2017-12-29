@@ -18,6 +18,8 @@ menu:
         title: Поддержи нас
         path: /ru/#support
 
+searchPath: /ru/video/
+
 texts:
     video:
         storyteller: Интервьюируемый

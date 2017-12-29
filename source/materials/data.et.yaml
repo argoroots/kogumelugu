@@ -27,7 +27,7 @@ blocks:
                             info:
                     videos:
                         -
-                            path: video/story/karl-oiger-teekond/
+                            path: video/story/karl-oiger-teekond
                             title: Karl Õiger. Noore poisi põgenemisteekond Venemaalt Eestisse
                             text: |
                                 Karl Õiger kirjeldab oma keerulist põgenemisteekonda Venemaalt kodumaale.
@@ -43,7 +43,7 @@ blocks:
                             info:
                     videos:
                         -
-                            path: video/story/jaak_ruus/
+                            path: video/story/jaak_ruus
                             title: Jaak Ruus. Videolugu
                             text: |
 
@@ -72,7 +72,7 @@ blocks:
                             info:
                     videos:
                         -
-                            path: video/story/eva_brown_truumees/
+                            path: video/story/eva_brown_truumees
                             title: Eva Brown. Eestlaseks olemise lugu
                             text: |
                                 Eva Brown meenutab oma lapsepõlve Eestis, põgenemisteed Saksmaale ning sealt edasi Ühendriikidessesse.
