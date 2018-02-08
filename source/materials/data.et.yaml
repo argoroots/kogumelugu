@@ -8,6 +8,11 @@ blocks:
 
         links:
             -
+                title: Kogu Me Lugu juhendmaterjal õpetajale
+                icon: fa-download
+                link: /assets/materials/Juhendmaterjal_opetajale.pdf
+                info:
+            -
                 title: Ajaloo teemapuu
                 icon: fa-list
                 link: /et/teemad/#Ajalugu
