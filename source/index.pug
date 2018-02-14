@@ -3,7 +3,17 @@ extends /layout
 
 block vars
     -
-        const videos = self.file.videos.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort > b.sort ? 1 : -1).map((a) => a.value)
+        const isTrue = (o) => {
+            if (o === undefined) { return false }
+            if (o === true) { return true }
+            if (o.boolean === undefined) { return false }
+            if (o.boolean === true) { return true }
+        }
+        const videos = self.file.videos
+            .map((a) => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort > b.sort ? 1 : -1)
+            .map((a) => a.value)
+            .sort((v1, v2) => (isTrue(v1.featured) && !isTrue(v2.featured)) === true ? -1 : 1 )
 
 
 block script
