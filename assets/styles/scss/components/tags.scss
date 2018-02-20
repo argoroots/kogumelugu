@@ -37,10 +37,12 @@
     }
     li {
       display: block;
-      margin: 10px 10px 0 0;
+      margin: 10px 10px 10px 10px;
+      border: 1px solid $black;
+      border-radius: 3px;
       padding: 0;
       &:first-child {
-        margin: 10px 10px 0 0;
+        margin: 10px 10px 10px 10px;
       }
       &:before {
         display: none;
@@ -48,13 +50,13 @@
       a {
         display: flex;
         padding: 4px 9px;
-        border: 1px solid $black;
+        // border: 1px solid $black;
         color: $black;
         font-weight: 700;
         font-size: 12px;
         text-decoration: none;
         text-transform: uppercase;
-        border-radius: 3px;
+        // border-radius: 3px;
         &:hover {
           transform: scale(1.05);
         }
