@@ -32,7 +32,7 @@ blocks:
                             info:
                     videos:
                         -
-                            path: en/video/story/karl-oiger-teekond
+                            path: video/story/karl-oiger-teekond
                             title: Karl Õiger. Video Story
                             text: |
 
@@ -48,7 +48,7 @@ blocks:
                             info:
                     videos:
                         -
-                            path: en/video/story/jaak_ruus
+                            path: video/story/jaak_ruus
                             title: Jaak Ruus. Video Story
                             text: |
 
@@ -73,11 +73,11 @@ blocks:
                         -
                             title: Lesson Plan Eva Brown
                             icon: fa-download
-                            link:
+                            link: /assets/materials/Tunnikava_Eva_Brown.pdf
                             info:
                     videos:
                         -
-                            path: en/video/story/eva_brown_truumees
+                            path: video/story/eva_brown_truumees
                             title: Eva Brown. Meaning of being an Estonian
                             text: |
                                 Eva Brown recalls her childhood in Estonia, the escape to Germany and from there to the USA.

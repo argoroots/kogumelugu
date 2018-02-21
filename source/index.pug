@@ -3,7 +3,17 @@ extends /layout
 
 block vars
     -
-        const videos = self.file.videos.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort > b.sort ? 1 : -1).map((a) => a.value)
+        const isTrue = (o) => {
+            if (o === undefined) { return false }
+            if (o === true) { return true }
+            if (o.boolean === undefined) { return false }
+            if (o.boolean === true) { return true }
+        }
+        const videos = self.file.videos
+            .map((a) => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort > b.sort ? 1 : -1)
+            .map((a) => a.value)
+            .sort((v1, v2) => (isTrue(v1.featured) && !isTrue(v2.featured)) === true ? -1 : 1 )
 
 
 block script
@@ -69,7 +79,7 @@ block content
                         data-lat=r.lat,
                         data-lng=r.lng,
                         data-path= '/' + self.locale + '/' + v.path + (r.time ? '#' + r.time : ''),
-                        data-img='/assets/images/' + v.path + '.jpg',
+                        data-img='/assets/images/' + v.path + '_tb.png',
                         data-title=v['title_' + self.locale],
                         data-subtitle=v['subtitle_' + self.locale] + (r.time ? '<br>' + r.time : '')
                     )
@@ -82,7 +92,7 @@ block content
                     p= videos[0]['subtitle_' + self.locale]
             .posts-list
                 each v in videos.slice(1, 5)
-                    a(href='/' + self.locale + '/' + v.path + '/', style='background-image:url(/assets/images/' + v.path + '.jpg)')
+                    a(href='/' + self.locale + '/' + v.path + '/', style='background-image:url(/assets/images/' + v.path + '_tb.png)')
                         h3= v['title_' + self.locale]
                         p= v['subtitle_' + self.locale]
 

@@ -50,7 +50,7 @@ block content
                                                     if i.videos
                                                         each v in i.videos
                                                             a.video-teaser(href='/' + self.locale + '/' + v.path + '/')
-                                                                img(src='/assets/images/' + v.path + '.jpg', alt=v.title)
+                                                                img(src='/assets/images/' + v.path + '_tb.png', alt=v.title)
                                                                 .text
                                                                     p.title
                                                                         span= v.title
