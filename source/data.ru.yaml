@@ -177,7 +177,7 @@ partners:
         url: https://www.balther.net/ru/
     -
         title: Центр развития образования
-        url: http://www.iac.edu.lv/par-mums-ru/misija-ru/
+        url: http://www.iac.edu.lv/home-ru-ru/
     -
         title: Художественный музей Эстонии
         url: https://kunstimuuseum.ekm.ee/ru/
@@ -240,3 +240,7 @@ sponsors:
         title: Министерство внутренних дел
         picture: Sisemin_rus.png
         url: https://www.siseministeerium.ee/ru
+    -
+        title: Министерство юстиции
+        picture: justiitsmin_eng.png
+        url: https://www.just.ee/ru

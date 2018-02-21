@@ -178,7 +178,7 @@ partners:
         url: https://www.balther.net/
     -
         title: Education Development Centre
-        url: http://www.iac.edu.lv/home-en-US/
+        url: http://www.iac.edu.lv/home-en/
     -
         title: Art Museum of Estonia
         url: https://kunstimuuseum.ekm.ee/en/
@@ -202,7 +202,7 @@ partners:
         url: https://www.facebook.com/EdwardvonL6ngus/
     -
         title: Williams College
-        url: https://www.williams.edu/            
+        url: https://www.williams.edu/
 
 sponsors:
     -
@@ -241,3 +241,7 @@ sponsors:
         title: Ministry of the Interior
         picture: Sisemin_eng.png
         url: https://www.siseministeerium.ee/en
+    -
+        title: Ministry of Justice
+        picture: justiitsmin_eng.png
+        url: https://www.just.ee/en

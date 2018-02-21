@@ -178,7 +178,7 @@ partners:
         url: https://www.balther.net/et/
     -
         title: Education Development Centre
-        url: http://www.iac.edu.lv/home-en-US/
+        url: http://www.iac.edu.lv/home-en/
     -
         title: Eesti Kunstimuuseum
         url: https://kunstimuuseum.ekm.ee/
@@ -241,3 +241,7 @@ sponsors:
         title: Siseministeerium
         picture: sisemin.png
         url: https://www.siseministeerium.ee/et
+    -
+        title: Justiitsministeerium
+        picture: justiitsmin.png
+        url: https://www.just.ee/et
