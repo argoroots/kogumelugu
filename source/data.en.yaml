@@ -141,9 +141,6 @@ partners:
         title: Naiskodukaitse
         url: http://www.naiskodukaitse.ee/Introduction_1218
     -
-        title: Stanford Libraries
-        url: http://library.stanford.edu/
-    -
         title: VEMU/Estonian Studies Center
         url: http://vemu.ca/index.php/en/
     -
@@ -222,6 +219,18 @@ sponsors:
         picture: erc.png
         url: http://www.estoreliefusa.org/news_eng.html
     -
+        title: Stanford Libraries
+        picture: stanford_libraries.png
+        url: https://searchworks.stanford.edu/view/11838748
+    -
+        title: Embassy of the Federal Republic of Germany, Tallinn
+        picture: saksamaa_eng.png
+        url: http://www.tallinn.diplo.de/
+    -
+        title: Kistler-Ritso Sihtasutus
+        picture:
+        url:
+    -
         title: Ministry of Education and Research
         picture: HTM_eng.png
         url: https://www.hm.ee/en
@@ -229,10 +238,6 @@ sponsors:
         title: Ministry of Defence
         picture: Kaitsemin_eng.png
         url: http://www.kmin.ee/en
-    -
-        title: Kistler-Ritso Sihtasutus
-        picture:
-        url:
     -
         title: Ministry of Culture
         picture: Kultuurimin_eng.png
