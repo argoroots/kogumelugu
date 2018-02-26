@@ -1,3 +1,12 @@
+data:
+#     coProducers: /data/coproducers.yaml
+#     partners: /data/partners.yaml
+#     producers: /data/producers.yaml
+#     sponsors: /data/sponsors.yaml
+#     supporters: /data/supporters.yaml
+#     team: /data/team.yaml
+    videos: /video/data.yaml
+
 menu:
     -
         title: Видео
@@ -116,15 +125,6 @@ texts:
             persons:
                 label: Люди
                 anchor: persons
-
-file:
-#     coProducers: ./data/coproducers.yaml
-#     partners: ./data/partners.yaml
-#     producers: ./data/producers.yaml
-#     sponsors: ./data/sponsors.yaml
-#     supporters: ./data/supporters.yaml
-#     team: ./data/team.yaml
-    videos: ./video/data.yaml
 
 partners:
     -

@@ -6,7 +6,7 @@ block vars
 
 
 mixin markdown(text)
-    | !{ self.toMarkdown(text) }
+    | !{ self.md(text) }
 
 
 doctype html
@@ -50,13 +50,13 @@ html(lang=self.locale)
 
     body
         .wrap
-            include /header
+            include /_templates/header.pug
 
             block content
 
-            include /footer
+            include /_templates/footer.pug
 
         script(src='/assets/scripts/jquery-3.2.1.min.js')
 
         block script
-        script(src='/' + self.locale + '/script.js')
+        script(src='/script.js')

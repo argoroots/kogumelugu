@@ -1,4 +1,4 @@
-extends /layout
+extends /_templates/layout.pug
 
 
 block vars
@@ -9,7 +9,7 @@ block vars
             if (o.boolean === undefined) { return false }
             if (o.boolean === true) { return true }
         }
-        const videos = self.file.videos
+        const videos = self.data.videos
             .map((a) => ({sort: Math.random(), value: a}))
             .sort((a, b) => a.sort > b.sort ? 1 : -1)
             .map((a) => a.value)
@@ -72,7 +72,7 @@ block script
 
 block content
     #map-items.hidden
-        each v in self.file.videos
+        each v in self.data.videos
             if v._regions
                 each r in v._regions
                     .map-item(
@@ -96,9 +96,9 @@ block content
                         h3= v['title_' + self.locale]
                         p= v['subtitle_' + self.locale]
 
-        include /searchbox
+        include /_templates/searchbox.pug
 
-        include /map
+        include /_templates/map.pug
         +map(true)
 
         section.section.materials

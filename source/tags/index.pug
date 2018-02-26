@@ -1,4 +1,4 @@
-extends /layout
+extends /_templates/layout.pug
 
 
 block vars
@@ -21,7 +21,7 @@ block vars
             return colors[Math.floor(Math.random() * colors.length)]
         }
 
-        var tags = self.file.tags.filter(a => {
+        var tags = self.data.tags.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
             a.title = a['name_' + self.locale]
@@ -33,7 +33,7 @@ block vars
             return 0
         })
 
-        var regions = self.file.regions.filter(a => {
+        var regions = self.data.regions.filter(a => {
             return !!a['name_' + self.locale]
         }).map(a => {
             a.title = a['name_' + self.locale]
@@ -45,7 +45,7 @@ block vars
             return 0
         })
 
-        var persons = self.file.persons.filter(a => {
+        var persons = self.data.persons.filter(a => {
             return (a['forename_' + self.locale] || a['surname_' + self.locale])
         }).sort((a, b) => {
             if ((a['forename_' + self.locale] + a['surname_' + self.locale]).toLowerCase() < (b['forename_' + self.locale] + b['surname_' + self.locale]).toLowerCase()) { return -1 }
@@ -79,7 +79,7 @@ block script
 
 
 block content
-    //- include /searchbox
+    //- include /_templates/searchbox.pug
 
     main.main.u-container
         article.article
