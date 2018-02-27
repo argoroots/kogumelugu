@@ -8,7 +8,7 @@ blocks:
 
         links:
             -
-                title: Juhendmaterjal õpetajale ja noorsootöötajale
+                title: Juhend õpetajale ja noorsootöötajale
                 icon: fa-download
                 link: /assets/materials/Juhendmaterjal_opetajale.pdf
                 info:
