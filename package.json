@@ -6,7 +6,8 @@
     "entu-ssg": "^4.1.3"
   },
   "scripts": {
-    "build": "./build.sh"
+    "build": "./build.sh",
+    "start": "pushd ./build; python -m SimpleHTTPServer; popd"
   },
   "repository": {
     "type": "git",
