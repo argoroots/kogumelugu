@@ -58,7 +58,7 @@ block content
         .videos
             each v in self.data.videos
                 article.videos--item(style='background-image:url(/assets/images/' + v.path + '_tb.png)')
-                    a(href='/' + self.locale + '/' + v.path + '/')
+                    a(href=getPath(v.path))
                         .text
                             h2
                                 span= v['title_' + self.locale]

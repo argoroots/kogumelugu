@@ -3,6 +3,13 @@ block vars
 
 -
     const title = self.title ? self.title + ' · Kogu Me Lugu!' : 'Kogu Me Lugu!'
+    const getPath = path => {
+        if (self.locale === self.defaultLocale) {
+            return '/' + (path ? path + '/' : '')
+        } else {
+            return '/' + self.locale + '/' + (path ? path + '/' : '')
+        }
+    }
 
 
 mixin markdown(text)

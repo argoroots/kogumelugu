@@ -139,7 +139,7 @@ block content
                 h2= self.texts.video.relatedVideos
                 each related_video in self._related_videos
                     article.videos--item(style='background-image:url(/assets/images/' + related_video.path + '_tb.png)')
-                        a(href='/' + self.locale + '/' + related_video.path + '/')
+                        a(href=getPath(related_video.path))
                             .text
                                 h3
                                     span= related_video['title_' + self.locale]
