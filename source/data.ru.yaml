@@ -7,26 +7,6 @@ data:
 #     team: /data/team.yaml
     videos: /video/data.yaml
 
-menu:
-    -
-        title: Видео
-        path: /ru/video/
-    -
-        title: Темы
-        path: /ru/temy/
-    -
-        title: Учебные материалы
-        path: /ru/uchebnye-materialy/
-    -
-        title: Введение
-        path: /ru/#introduction
-    -
-        title: Спонсоры
-        path: /ru/#team
-    -
-        title: Поддержи нас
-        path: /ru/#support
-
 texts:
     video:
         storyteller: Интервьюируемый

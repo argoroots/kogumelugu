@@ -7,26 +7,6 @@ data:
 #     team: /data/team.yaml
     videos: /video/data.yaml
 
-menu:
-    -
-        title: Videos
-        path: /en/videos/
-    -
-        title: Topics
-        path: /en/topics/
-    -
-        title: Materials
-        path: /en/materials/
-    -
-        title: Introduction
-        path: /en/#introduction
-    -
-        title: Team
-        path: /en/#team
-    -
-        title: Support
-        path: /en/#support
-
 texts:
     video:
         storyteller: Interviewee

@@ -10,26 +10,6 @@ data:
     videos: /video/data.yaml
 
 
-menu:
-    -
-        title: Videoteek
-        path: /et/videoteek/
-    -
-        title: Teemad
-        path: /et/teemad/
-    -
-        title: Õppematerjalid
-        path: /et/oppematerjalid/
-    -
-        title: Tutvustus
-        path: /et/#indroduction
-    -
-        title: Tegijad
-        path: /et/#team
-    -
-        title: Toeta
-        path: /et/#support
-
 texts:
     video:
         storyteller: Intervjueeritav

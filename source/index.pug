@@ -37,6 +37,10 @@ block script
             })
 
             if (window.location.hash) {
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href') + window.location.hash)
+                })
+
                 var div = $(window.location.hash)
 
                 if (div.length > 0) {
@@ -47,6 +51,11 @@ block script
             }
 
             $('.main-menu a[href*="#"]').click(function (event) {
+                var hash = this.hash
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href').split('#')[0] + hash)
+                })
+
                 if ( location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash)
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
