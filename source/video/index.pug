@@ -1,4 +1,4 @@
-extends /layout
+extends /_templates/layout.pug
 
 
 block vars
@@ -82,7 +82,7 @@ block script
 
 
 block content
-    include /searchbox
+    include /_templates/searchbox.pug
 
     #map-items.hidden
         if self._regions
@@ -110,14 +110,14 @@ block content
 
                 footer
                     ul.details
-                        if self.storyteller.length
+                        if self.storyteller && self.storyteller.length
                             li= self.storyteller.length === 1 ? self.texts.video.storyteller : self.texts.video.storytellers
                                 each a in self.storyteller
                                     = ' '
                                     a(href= self.searchPath + '?id=' + self._persons.filter((p) => p._id === a).map((p) => p._id)[0])
                                         b= self._persons.filter((p) => p._id === a).map((p) => p['forename_' + self.locale] + ' ' + p['surname_' + self.locale])[0]
 
-                        if self.author.length
+                        if self.author && self.author.length
                             li= self.author.length === 1 ? self.texts.video.author : self.texts.video.authors
                                 each a in self.author
                                     = ' '
@@ -131,7 +131,7 @@ block content
                                     a(class=getColor(timestamp.type), href=(timestamp.time ? '#' + timestamp.time : null))
                                         b= timestamp.label
 
-            include /map
+            include /_templates/map.pug
             +map(false)
 
         aside.sidebar
@@ -139,7 +139,7 @@ block content
                 h2= self.texts.video.relatedVideos
                 each related_video in self._related_videos
                     article.videos--item(style='background-image:url(/assets/images/' + related_video.path + '_tb.png)')
-                        a(href='/' + self.locale + '/' + related_video.path + '/')
+                        a(href=getPath(related_video.path))
                             .text
                                 h3
                                     span= related_video['title_' + self.locale]

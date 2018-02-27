@@ -1,6 +1,6 @@
 header.header
     .u-container
-        a.logo(href='/' + self.locale + '/')
+        a.logo(href=getPath(''))
             img(src='/assets/images/logo.png', alt='Kogu Me Lugu!')
 
         button.btn.menu--toggle(type='button')
@@ -8,13 +8,9 @@ header.header
         nav.main-menu
             ul
                 each n in self.menu
-                    li(class=n.path === '/' + self.locale + '/' + self.path ? 'u-active' : '')
+                    li(class=(n.path === self.path ? 'u-active' : ''))
                         a(href=n.path)= n.title
 
         nav.lang-menu
-            if self.locale !== 'et'
-                a(href='/et/') ET
-            if self.locale !== 'en'
-                a(href='/en/') EN
-            if self.locale !== 'ru'
-                a(href='/ru/') RU
+            each p, locale in self.otherLocalePaths
+                a(href=(p !== '/' ? p + '/' : '/'))= locale.toUpperCase()

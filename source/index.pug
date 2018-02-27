@@ -1,4 +1,4 @@
-extends /layout
+extends /_templates/layout.pug
 
 
 block vars
@@ -9,7 +9,7 @@ block vars
             if (o.boolean === undefined) { return false }
             if (o.boolean === true) { return true }
         }
-        const videos = self.file.videos
+        const videos = self.data.videos
             .map((a) => ({sort: Math.random(), value: a}))
             .sort((a, b) => a.sort > b.sort ? 1 : -1)
             .map((a) => a.value)
@@ -37,6 +37,10 @@ block script
             })
 
             if (window.location.hash) {
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href') + window.location.hash)
+                })
+
                 var div = $(window.location.hash)
 
                 if (div.length > 0) {
@@ -47,6 +51,11 @@ block script
             }
 
             $('.main-menu a[href*="#"]').click(function (event) {
+                var hash = this.hash
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href').split('#')[0] + hash)
+                })
+
                 if ( location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash)
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
@@ -72,13 +81,13 @@ block script
 
 block content
     #map-items.hidden
-        each v in self.file.videos
+        each v in self.data.videos
             if v._regions
                 each r in v._regions
                     .map-item(
                         data-lat=r.lat,
                         data-lng=r.lng,
-                        data-path= '/' + self.locale + '/' + v.path + (r.time ? '#' + r.time : ''),
+                        data-path=getPath(v.path) + (r.time ? '#' + r.time : ''),
                         data-img='/assets/images/' + v.path + '_tb.png',
                         data-title=v['title_' + self.locale],
                         data-subtitle=v['subtitle_' + self.locale] + (r.time ? '<br>' + r.time : '')
@@ -86,19 +95,19 @@ block content
 
     main.main
         .hero(style='background-image:url(/assets/images/' + videos[0].path + '.jpg)')
-            a.main-post(href='/' + self.locale + '/' + videos[0].path + '/')
+            a.main-post(href=getPath(videos[0].path))
                 .text
                     h2= videos[0]['title_' + self.locale]
                     p= videos[0]['subtitle_' + self.locale]
             .posts-list
                 each v in videos.slice(1, 5)
-                    a(href='/' + self.locale + '/' + v.path + '/', style='background-image:url(/assets/images/' + v.path + '_tb.png)')
+                    a(href=getPath(v.path), style='background-image:url(/assets/images/' + v.path + '_tb.png)')
                         h3= v['title_' + self.locale]
                         p= v['subtitle_' + self.locale]
 
-        include /searchbox
+        include /_templates/searchbox.pug
 
-        include /map
+        include /_templates/map.pug
         +map(true)
 
         section.section.materials

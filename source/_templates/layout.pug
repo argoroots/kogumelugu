@@ -3,10 +3,17 @@ block vars
 
 -
     const title = self.title ? self.title + ' · Kogu Me Lugu!' : 'Kogu Me Lugu!'
+    const getPath = path => {
+        if (self.locale === self.defaultLocale) {
+            return '/' + (path ? path + '/' : '')
+        } else {
+            return '/' + self.locale + '/' + (path ? path + '/' : '')
+        }
+    }
 
 
 mixin markdown(text)
-    | !{ self.toMarkdown(text) }
+    | !{ self.md(text) }
 
 
 doctype html
@@ -50,13 +57,13 @@ html(lang=self.locale)
 
     body
         .wrap
-            include /header
+            include /_templates/header.pug
 
             block content
 
-            include /footer
+            include /_templates/footer.pug
 
         script(src='/assets/scripts/jquery-3.2.1.min.js')
 
         block script
-        script(src='/' + self.locale + '/script.js')
+        script(src='/script.js')

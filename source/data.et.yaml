@@ -1,22 +1,11 @@
-menu:
-    -
-        title: Videoteek
-        path: /et/videoteek/
-    -
-        title: Teemad
-        path: /et/teemad/
-    -
-        title: Õppematerjalid
-        path: /et/oppematerjalid/
-    -
-        title: Tutvustus
-        path: /et/#indroduction
-    -
-        title: Tegijad
-        path: /et/#team
-    -
-        title: Toeta
-        path: /et/#support
+data:
+#     coProducers: /data/coproducers.yaml
+#     partners: /data/partners.yaml
+#     producers: /data/producers.yaml
+#     sponsors: /data/sponsors.yaml
+#     supporters: /data/supporters.yaml
+#     team: /data/team.yaml
+    videos: /video/data.yaml
 
 
 texts:
@@ -117,15 +106,6 @@ texts:
             persons:
                 label: Isikud
                 anchor: persons
-
-file:
-#     coProducers: ./data/coproducers.yaml
-#     partners: ./data/partners.yaml
-#     producers: ./data/producers.yaml
-#     sponsors: ./data/sponsors.yaml
-#     supporters: ./data/supporters.yaml
-#     team: ./data/team.yaml
-    videos: ./video/data.yaml
 
 partners:
     -

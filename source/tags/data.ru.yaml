@@ -1,7 +1,7 @@
 path: temy
 title: Темы
-file:
-    tags: ./tags/tags.yaml
-    regions: ./tags/regions.yaml
-    persons: ./tags/persons.yaml
-    # hierarchical: ./tags/h.yaml
+data:
+    tags: tags.yaml
+    regions: regions.yaml
+    persons: persons.yaml
+    # hierarchical: h.yaml

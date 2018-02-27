@@ -1,22 +1,11 @@
-menu:
-    -
-        title: Видео
-        path: /ru/video/
-    -
-        title: Темы
-        path: /ru/temy/
-    -
-        title: Учебные материалы
-        path: /ru/uchebnye-materialy/
-    -
-        title: Введение
-        path: /ru/#introduction
-    -
-        title: Спонсоры
-        path: /ru/#team
-    -
-        title: Поддержи нас
-        path: /ru/#support
+data:
+#     coProducers: /data/coproducers.yaml
+#     partners: /data/partners.yaml
+#     producers: /data/producers.yaml
+#     sponsors: /data/sponsors.yaml
+#     supporters: /data/supporters.yaml
+#     team: /data/team.yaml
+    videos: /video/data.yaml
 
 texts:
     video:
@@ -116,15 +105,6 @@ texts:
             persons:
                 label: Люди
                 anchor: persons
-
-file:
-#     coProducers: ./data/coproducers.yaml
-#     partners: ./data/partners.yaml
-#     producers: ./data/producers.yaml
-#     sponsors: ./data/sponsors.yaml
-#     supporters: ./data/supporters.yaml
-#     team: ./data/team.yaml
-    videos: ./video/data.yaml
 
 partners:
     -

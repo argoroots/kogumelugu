@@ -13,9 +13,6 @@ protectedFromCleanup:
     - assets
     - index.html
 
-pug:
-    basedir: ./source/_templates
-
 server:
     port: 4000
     assets: /assets/

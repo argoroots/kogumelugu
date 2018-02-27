@@ -1,4 +1,4 @@
-extends /layout
+extends /_templates/layout.pug
 
 
 block vars
@@ -52,13 +52,13 @@ block script
 
 
 block content
-    include /searchbox
+    include /_templates/searchbox.pug
 
     main.main.u-container
         .videos
-            each v in self.file.videos
+            each v in self.data.videos
                 article.videos--item(style='background-image:url(/assets/images/' + v.path + '_tb.png)')
-                    a(href='/' + self.locale + '/' + v.path + '/')
+                    a(href=getPath(v.path))
                         .text
                             h2
                                 span= v['title_' + self.locale]

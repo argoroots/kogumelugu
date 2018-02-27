@@ -1,22 +1,11 @@
-menu:
-    -
-        title: Videos
-        path: /en/videos/
-    -
-        title: Topics
-        path: /en/topics/
-    -
-        title: Materials
-        path: /en/materials/
-    -
-        title: Introduction
-        path: /en/#introduction
-    -
-        title: Team
-        path: /en/#team
-    -
-        title: Support
-        path: /en/#support
+data:
+#     coProducers: /data/coproducers.yaml
+#     partners: /data/partners.yaml
+#     producers: /data/producers.yaml
+#     sponsors: /data/sponsors.yaml
+#     supporters: /data/supporters.yaml
+#     team: /data/team.yaml
+    videos: /video/data.yaml
 
 texts:
     video:
@@ -117,15 +106,6 @@ texts:
             persons:
                 label: Persons
                 anchor: persons
-
-file:
-#     coProducers: ./data/coproducers.yaml
-#     partners: ./data/partners.yaml
-#     producers: ./data/producers.yaml
-#     sponsors: ./data/sponsors.yaml
-#     supporters: ./data/supporters.yaml
-#     team: ./data/team.yaml
-    videos: ./video/data.yaml
 
 partners:
     -
