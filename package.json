@@ -1,0 +1,19 @@
+{
+  "name": "kogumelugu",
+  "version": "2.0.0",
+  "description": "Kogu Me Lugu!",
+  "dependencies": {
+    "entu-ssg": "^4.1.3"
+  },
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/argoroots/kogumelugu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/argoroots/kogumelugu/issues"
+  },
+  "homepage": "https://www.kogumelugu.ee"
+}

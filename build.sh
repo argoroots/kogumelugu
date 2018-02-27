@@ -14,10 +14,6 @@ echo --------- SETUP
 rm -rf ${BUILD_DIR}
 mkdir -p ${BUILD_DIR}/assets
 cp -r ./assets/* ${BUILD_DIR}/assets
-cp ./_redirects ${BUILD_DIR}/_redirects
-
-rm -r node_modules
-npm install -q entu-ssg
 
 
 echo
