@@ -1,0 +1,7 @@
+path: temy
+title: Темы
+data:
+    tags: tags.yaml
+    regions: regions.yaml
+    persons: persons.yaml
+    # hierarchical: h.yaml

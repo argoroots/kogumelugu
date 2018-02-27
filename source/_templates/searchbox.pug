@@ -1,0 +1,6 @@
+.searchbox
+    .u-container
+        form(method='GET', action=self.searchPath)
+            i.fa.fa-search
+            input(type='search', name='q', placeholder=self.texts.searchbox.placeholder)
+            button.btn.btn--primary(type='submit')= self.texts.searchbox.findButton

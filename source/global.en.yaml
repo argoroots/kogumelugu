@@ -1,0 +1,70 @@
+menu:
+    -
+        title: Videos
+        path: /en/videos/
+    -
+        title: Topics
+        path: /en/topics/
+    -
+        title: Materials
+        path: /en/materials/
+    -
+        title: Introduction
+        path: /en/#introduction
+    -
+        title: Team
+        path: /en/#team
+    -
+        title: Support
+        path: /en/#support
+
+searchPath: /en/videos/
+
+texts:
+    video:
+        storyteller: Interviewee
+        author: Interviewer/Author
+        storytellers: Interviewee
+        authors: Interviewers/Authors
+        relatedVideos: Related videos
+    contact:
+        title: Estonian Institute of Historical Memory
+    mapTitle:
+        left: Stories around the
+        right: world
+    education:
+        findOutMore: Find out more
+        materials: Education Materials
+        history: History Education
+        # historyText: |
+
+        humanRights: Human Rights Education
+        # humanRightsText: |
+
+    mailingList:
+        join: Join our mailing list
+        yourEmail: Enter your e-mail address
+        joinButton: Join mailing list
+    partners: Partners
+    financiers: Financiers
+    thanks4allTheFishAndSofa: Thanks to all friends and supporters!
+    searchbox:
+        placeholder: Search…
+        findButton: Find Story
+    logolink: http://mnemosyne.ee/en/
+
+    topics:
+        title: Topics
+        subtitles:
+            history:
+                label: History
+                anchor: history
+            humanRights:
+                label: Human Rights
+                anchor: humanrights
+            regions:
+                label: Regions
+                anchor: regions
+            persons:
+                label: Persons
+                anchor: persons

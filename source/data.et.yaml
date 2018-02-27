@@ -1,0 +1,235 @@
+data:
+#     coProducers: /data/coproducers.yaml
+#     partners: /data/partners.yaml
+#     producers: /data/producers.yaml
+#     sponsors: /data/sponsors.yaml
+#     supporters: /data/supporters.yaml
+#     team: /data/team.yaml
+    videos: /video/data.yaml
+
+
+texts:
+    video:
+        storyteller: Intervjueeritav
+        author: Intervjueerija/autor
+        storytellers: Intervjueeritavad
+        authors: Intervjueerijad/autorid
+        relatedVideos: Seotud lood
+    contact:
+        title: SA Eesti Mälu Instituut
+    mapTitle:
+        left: Lood ümber
+        right: maailma
+    education:
+        findOutMore: Loe lähemalt
+        materials: Õppematerjalid
+        history: Ajalooharidus
+        # historyText: |
+
+        humanRights: Inimõigusharidus
+        # humanRightsText: |
+
+    culture:
+        title1: Me kõik pärime
+        title2: oma kultuuri
+        div1: |
+            Igaühel meist on oma lugu ja oma roll teiste lugudes.
+            Kõik me oleme kellegi lapsed ja mingi piirkonna elanikud,
+            kõik me pärime oma kultuuri, kodukoha ja perekonna pärandi.
+            Eesti lugu, kogu me lugu, moodustub erinevate Eesti inimeste lugudest.
+        div2: |
+            Need lood ei edasta minevikust täielikku pilti, vaid annavad seda edasi
+            läbi rääkija objektiivi, mis võib olla vägagi erinev meie enda omast.
+            Neid lugusid kuulates kogeme maailma teistsugusel, vahest harjumatul
+            viisil. Pealtnäha olemegi erinevad, kordumatud.
+            See, mis aga peitub igas inimeses sügaval sisimas, on meil ühine.
+        div3: |
+            Kogu Me Lugu on suulise ajaloo portaal. Kogume, uurime ja jagame videoformaadis
+            eesti inimeste lugusid üle maailma, mis räägivad Eesti mäletatava ajastu
+            minevikukogemustest, andes aimu ka olevikust. Selleks kogume, uurime ja jagame
+            Nõukogude või Saksa okupatsiooni ajal Eestis elanud, nimetatud võimude eest
+            Eestist põgenenud või nende tegevuse tulemusena Eestisse sattunud inimeste mälestusi
+            (otsetunnistajad ja nende lähedased). Kogutud mälestusi kasutatakse õppematerjalide
+            arendamisel, uurimistöös ning avalikkuses mälestuspäevadel, näitustel ja muuseumides
+            nii Eestis kui mujal maailmas. Kogu Me Lugu sai alguse 14. juunil 2013. aastal.
+        div4: |
+            Iga lugu on omapärane, samas osa suuremast loost.
+            Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
+    mailingList:
+        join: Liitu meie uudiskirjaga
+        yourEmail: Sisesta oma e-posti aadress
+        joinButton: Liitu uudiskirjaga
+    partners: Koostööpartnerid
+    financiers: Suurtoetajad
+    thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!
+    contribution:
+        title1: Sinu panus loeb,
+        title2: toeta portaali!
+        div1: |
+            Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda.
+            Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
+        div2: |
+            Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituut kontole.
+            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituudi pangakontole.
+            Konto andmed on nähtaval allpool.
+        div3: |
+            Teie annetus arveldatakse eurodes.
+        div4: |
+            Kogu Me Lugu portaal ei kogu isikuandmeid. Annetamine toimub internetipanga vahendusel.
+            Selle käigus kogutud andmeid käsitletakse kliendiandmetena, mida ei anta kolmandale osapoolele.
+
+        amount: Sisesta summa
+        submit: Toetan
+        checkboxlabel: Olen tutvunud annetamise tingimustega
+        participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
+        findOutMore: Loe lähemalt
+        accountDetails: Pangakonto andmed
+        descriptionLabel: "Selgitus:"
+        description: Toetan Kogu Me Lugu
+    searchbox:
+        placeholder: Otsi…
+        findButton: Leia lugu
+    logolink: http://mnemosyne.ee/
+
+    topics:
+        title: Teemad
+        subtitles:
+            history:
+                label: Ajalugu
+                anchor: history
+            humanRights:
+                label: Inimõigused
+                anchor: humanrights
+            regions:
+                label: Regioonid
+                anchor: regions
+            persons:
+                label: Isikud
+                anchor: persons
+
+partners:
+    -
+        title: Black Ribbon Day Foundation
+        url: http://www.blackribbonday.org/
+    -
+        title: Eesti Vabariik 100
+        url: https://www.ev100.ee/
+    -
+        title: Georg Eckert Institute
+        url: http://www.gei.de/en/the-institute.html
+    -
+        title: Naiskodukaitse
+        url: http://www.naiskodukaitse.ee/
+    -
+        title: VEMU/Eesti Õppetöö Keskus
+        url: http://vemu.ca/index.php/et/#.VvEcVZOLRHY
+    -
+        title: Eva Sepping
+        url:
+    -
+        title: EUROCLIO
+        url: https://euroclio.eu/
+    -
+        title: Eesti Kirjandusmuuseum
+        url: http://www.kirmus.ee/
+    -
+        title: Eesti Rahva Muuseum
+        url: http://www.erm.ee/
+    -
+        title: Entusiastid OÜ
+        url: https://www.entu.ee/
+    -
+        title: MTÜ Tulipisar
+        url: http://tulipisar.ee/
+    -
+        title: Okupatsioonide Muuseum
+        url: http://www.okupatsioon.ee/index.php/en/
+    -
+        title: Ruudu Rahumaru
+        url: http://rahumaru.tumblr.com/
+    -
+        title: Tallinna ülikool
+        url: https://www.tlu.ee/
+    -
+        title: Baltic Heritage Network
+        url: https://www.balther.net/et/
+    -
+        title: Education Development Centre
+        url: http://www.iac.edu.lv/home-en/
+    -
+        title: Eesti Kunstimuuseum
+        url: https://kunstimuuseum.ekm.ee/
+    -
+        title: Eesti Rahvusringhääling
+        url: http://www.err.ee/
+    -
+        title: Inimõiguste Instituut
+        url: http://www.humanrightsestonia.ee/
+    -
+        title: Kino Artis
+        url: http://www.kino.ee/
+    -
+        title: Rahvusarhiiv
+        url: http://www.ra.ee/
+    -
+        title: Tartu ülikool
+        url: https://www.ut.ee/et
+    -
+        title: Edward von Lõngus
+        url: https://www.facebook.com/EdwardvonL6ngus/
+    -
+        title: Williams College
+        url: https://www.williams.edu/
+    -
+        title: Zeitzeugen Büro
+        url: https://www.zeitzeugenbuero.de/index.php?id=websites
+
+sponsors:
+    -
+        title: Amalfi
+        picture:
+        url:
+    -
+        title: Eesti Rahvuskomitee Ühendriikides
+        picture: ERKY.png
+        url: http://www.estosite.org/
+    -
+        title: SANA
+        picture: SANA_Archimedes.png
+        url: http://noored.ee/
+    -
+        title: Eesti Abistamiskomitee USA's
+        picture: erc.png
+        url: http://www.estoreliefusa.org/news_eng.html
+    -
+        title: Stanford ülikooli raamatukogu
+        picture: stanford_libraries.png
+        url: https://searchworks.stanford.edu/view/11838748
+    -
+        title: Saksamaa Liitvabariigi Suursaatkond, Tallinn
+        picture: saksamaa_est.png
+        url: http://www.tallinn.diplo.de/
+    -
+        title: Kistler-Ritso Sihtasutus
+        picture:
+        url:
+    -
+        title: Haridus- ja Teadusministeerium
+        picture: haridusmin.png
+        url: https://www.hm.ee/et
+    -
+        title: Kaitseministeerium
+        picture: kaitsemin.png
+        url: http://www.kmin.ee/et
+    -
+        title: Kultuuriministeerium
+        picture: kultuurimin.png
+        url: http://www.kul.ee/et
+    -
+        title: Siseministeerium
+        picture: sisemin.png
+        url: https://www.siseministeerium.ee/et
+    -
+        title: Justiitsministeerium
+        picture: justiitsmin.png
+        url: https://www.just.ee/et

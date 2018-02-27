@@ -1,0 +1,94 @@
+path: materials
+title: Learning Materials
+
+blocks:
+    -
+        text: |
+            ## History Education
+
+        links:
+            -
+                title: For Teachers and Youth Workers
+                icon: fa-download
+                link: /assets/materials/Instructional_Material_for_Teachers.pdf
+                info:
+            -
+                title: History Topics
+                icon: fa-list
+                link: /en/topics/#History
+                info:
+        curriculum:
+            title:
+            items:
+                -
+                    title: The USSR and the Communist System – Estonian SSR
+                    text: |
+                        Form V “Contemporary History II – Estonia and the World in the Latter Half of the 20th Century”
+                    links:
+                        -
+                            title: Lesson Plan Karl Õiger
+                            icon: fa-download
+                            link: /assets/materials/Lesson_Plan_Karl_Õiger.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/karl-oiger-teekond
+                            title: Karl Õiger. Video Story
+                            text: |
+
+                -
+                    title: Crimes against humanity - Deportation
+                    text: |
+                        Form VI “Contemporary History I – Estonia and the World in the First Half of the 20th Century”
+                    links:
+                        -
+                            title: Lesson Plan Jaak Ruus
+                            icon: fa-download
+                            link: /assets/materials/Lesson_Plan_Jaak_Ruus.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/jaak_ruus
+                            title: Jaak Ruus. Video Story
+                            text: |
+
+    -
+        text: |
+            ## Human Rights Education
+
+        links:
+            -
+                title: Human Rights Topics
+                icon: fa-list
+                link: /en/topics/#Human%20Rights
+                info:
+        curriculum:
+            title:
+            items:
+                -
+                    title: Lesson Plan
+                    text: |
+
+                    links:
+                        -
+                            title: Lesson Plan Eva Brown
+                            icon: fa-download
+                            link: /assets/materials/Tunnikava_Eva_Brown.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/eva_brown_truumees
+                            title: Eva Brown. Meaning of being an Estonian
+                            text: |
+                                Eva Brown recalls her childhood in Estonia, the escape to Germany and from there to the USA.
+                                Additionally, she reflects on her ties with Estonia, preserving her Estonian identity,and the question what being an Estonian means.
+                -
+                    title: COMPASS
+                    text: |
+                        Manual for Human Rights Education with Young People
+                    links:
+                        -
+                            title: Compass Home Page
+                            icon: fa-external-link
+                            link: https://www.coe.int/en/web/compass
+                            info:

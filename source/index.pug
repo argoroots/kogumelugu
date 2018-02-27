@@ -1,0 +1,208 @@
+extends /_templates/layout.pug
+
+
+block vars
+    -
+        const isTrue = (o) => {
+            if (o === undefined) { return false }
+            if (o === true) { return true }
+            if (o.boolean === undefined) { return false }
+            if (o.boolean === true) { return true }
+        }
+        const videos = self.data.videos
+            .map((a) => ({sort: Math.random(), value: a}))
+            .sort((a, b) => a.sort > b.sort ? 1 : -1)
+            .map((a) => a.value)
+            .sort((v1, v2) => (isTrue(v1.featured) && !isTrue(v2.featured)) === true ? -1 : 1 )
+
+
+block script
+    script.
+        $(function () {
+            var moveBG = function () {
+                if ($(window).width() < 560) {
+                    var bgimg = $('.hero').attr('style')
+                    $('.main-post').attr('style', bgimg)
+                    $('.hero').removeAttr('style')
+                } else {
+                    var bgimg = $('.main-post').attr('style')
+                    $('.hero').attr('style', bgimg)
+                    $('.main-post').removeAttr('style')
+                }
+            }
+            moveBG()
+
+            $(window).resize(function (event) {
+                moveBG()
+            })
+
+            if (window.location.hash) {
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href') + window.location.hash)
+                })
+
+                var div = $(window.location.hash)
+
+                if (div.length > 0) {
+                    $('html, body').animate({
+                        scrollTop: div.offset().top - $('.header').outerHeight()
+                    }, 200)
+                }
+            }
+
+            $('.main-menu a[href*="#"]').click(function (event) {
+                var hash = this.hash
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href').split('#')[0] + hash)
+                })
+
+                if ( location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash)
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
+                    if (target.length) {
+                        event.preventDefault()
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - $('.header').outerHeight()
+                        }, 200, function () {
+                            var $target = $(target)
+                            $target.focus()
+                            if ($target.is(':focus')) {
+                                return false
+                            } else {
+                                $target.attr('tabindex','-1')
+                                $target.focus()
+                            }
+                        })
+                    }
+                }
+            })
+        })
+
+
+block content
+    #map-items.hidden
+        each v in self.data.videos
+            if v._regions
+                each r in v._regions
+                    .map-item(
+                        data-lat=r.lat,
+                        data-lng=r.lng,
+                        data-path=getPath(v.path) + (r.time ? '#' + r.time : ''),
+                        data-img='/assets/images/' + v.path + '_tb.png',
+                        data-title=v['title_' + self.locale],
+                        data-subtitle=v['subtitle_' + self.locale] + (r.time ? '<br>' + r.time : '')
+                    )
+
+    main.main
+        .hero(style='background-image:url(/assets/images/' + videos[0].path + '.jpg)')
+            a.main-post(href=getPath(videos[0].path))
+                .text
+                    h2= videos[0]['title_' + self.locale]
+                    p= videos[0]['subtitle_' + self.locale]
+            .posts-list
+                each v in videos.slice(1, 5)
+                    a(href=getPath(v.path), style='background-image:url(/assets/images/' + v.path + '_tb.png)')
+                        h3= v['title_' + self.locale]
+                        p= v['subtitle_' + self.locale]
+
+        include /_templates/searchbox.pug
+
+        include /_templates/map.pug
+        +map(true)
+
+        section.section.materials
+            .section--content.u-container
+                h2.section--title= self.texts.education.materials
+                .materials--list
+                    .materials--item
+                        h3.section--subtitle= self.texts.education.history
+                        p= self.texts.education.historyText
+                        a.btn.btn--default(href=self.menu[2].path)= self.texts.education.findOutMore
+                    .materials--item
+                        h3.section--subtitle= self.texts.education.humanRights
+                        p= self.texts.education.humanRightsText
+                        a.btn.btn--default(href=self.menu[2].path)= self.texts.education.findOutMore
+
+        section#introduction.section.about
+            .section--content.u-container
+                h2.section--title= self.texts.culture.title1
+                    strong= self.texts.culture.title2
+                .u-content
+                    p= self.texts.culture.div1
+                    p= self.texts.culture.div2
+                    p= self.texts.culture.div3
+                    .intro
+                        p= self.texts.culture.div4
+
+        section.section.newsletter
+            .section--content.u-container
+                h2.section--title= self.texts.mailingList.join
+                .newsletter--content
+                    .u-content
+                        p= self.texts.mailingList.div1
+                    form.newsletter-form(action='mailto:info@kogumelugu.ee')
+                        .input
+                            label(for='email')= self.texts.mailingList.yourEmail
+                            input(type='email', id='email')
+                        button.btn.btn--secondary(type='submit')= self.texts.mailingList.joinButton
+
+        section#team.section
+            .section--content.u-container
+                .partners
+                    h2.section--title= self.texts.partners
+                    ul.partners--list
+                        each p in self.partners
+                            li
+                                a(href=p.url)= p.title
+                .supporters
+                    h3.section--subtitle= self.texts.financiers
+                    ul.supporters--list
+                        each s in self.sponsors
+                            li
+                                a(href=s.url)
+                                    if s.picture
+                                        img(src='/assets/images/sponsors/' + s.picture, alt=s.title, height='50')
+                                    else
+                                        span= s.title
+                .thanks
+                    h3.section--subtitle= self.texts.thanks4allTheFishAndSofa
+
+        section#support.section.donate
+            .section--content.u-container
+                .donate--content
+                    h2.section--title= self.texts.contribution.title1
+                        strong= self.texts.contribution.title2
+                    .u-content
+                        p= self.texts.contribution.div1
+                        p= self.texts.contribution.div2
+                        p= self.texts.contribution.div3
+                        p= self.texts.contribution.div4
+
+                        form.donation-form(action='https://payment.maksekeskus.ee/pay/1/link.html?shopId=23d7bb0e-3372-4644-8440-eb7bec5562b1&paymentId=Toetan+Kogu+Me+Lugu')
+                            .input
+                                label(for='sum')= self.texts.contribution.amount
+                                input(type='number', id='amount', name='amount')
+                                span €
+                            button.btn.btn--primary(type='submit')= self.texts.contribution.submit
+                        .form-check
+                            label.form-check-label
+                                input.form-check-input(type='checkbox')
+                                = ' ' + self.texts.contribution.checkboxlabel
+                aside.donate--side
+                    .box
+                            img(src='/assets/images/data/EV100.png', alt='EV100', width='136')
+                            p= self.texts.contribution.participate
+                    h3= self.texts.contribution.accountDetails
+                    ul
+                        li
+                            strong IBAN:
+                            span &nbsp;EE422200221039992298
+                        li
+                            strong BIC:
+                            span &nbsp;HABAEE2X
+                        li
+                            strong Swedbank:
+                            span &nbsp;Liivalaia 8, 15040 Tallinn, Estonia
+                        li
+                            strong= self.texts.contribution.descriptionLabel
+                            span!= '&nbsp;' + self.texts.contribution.description

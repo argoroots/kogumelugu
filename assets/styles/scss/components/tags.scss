@@ -1,0 +1,119 @@
+.tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 20px;
+  margin-bottom: 40px;
+  footer & {
+    margin: 20px 0 0;
+    padding-top: 10px;
+    border-top: 2px solid #f7f7f7;
+  }
+  > a {
+    display: block;
+    margin-top: 10px;
+    color: $text-color;
+    text-decoration: underline;
+    font-size: 11px;
+    &:hover {
+      color: $green;
+    }
+  }
+  h2 {
+    font-family: $oswald;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 40px 0 10px;
+  }
+  ul {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-right: 20px;
+    .tabs & {
+      width: 100%
+    }
+    li {
+      display: block;
+      margin: 10px 10px 10px 10px;
+      border: 1px solid $black;
+      border-radius: 3px;
+      padding: 0;
+      &:first-child {
+        margin: 10px 10px 10px 10px;
+      }
+      &:before {
+        display: none;
+      }
+      a {
+        display: flex;
+        padding: 4px 9px;
+        // border: 1px solid $black;
+        color: $black;
+        font-weight: 700;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        // border-radius: 3px;
+        &:hover {
+          transform: scale(1.05);
+        }
+        &.u-green {
+          color: $green;
+          border-color: $green;
+          i {
+            background: $green;
+          }
+        }
+        &.u-purple {
+          color: $purple;
+          border-color: $purple;
+          i {
+            background: $purple;
+          }
+        }
+        &.u-red {
+          color: $red;
+          border-color: $red;
+          i {
+            background: $red;
+          }
+        }
+        &.u-orange {
+          color: $orange;
+          border-color: $orange;
+          i {
+            background: $orange;
+          }
+        }
+        &.u-blue {
+          color: $blue;
+          border-color: $blue;
+          i {
+            background: $blue;
+          }
+        }
+        &.u-gray {
+          color: $gray;
+          border-color: $gray;
+          i {
+            background: $gray;
+          }
+        }
+        i {
+          display: block;
+          width: 20px;
+          text-align: center;
+          margin: -4px -9px -4px 10px;
+          padding: 4px;
+          font-size: 10px;
+          line-height: 20px;
+          color: $white;
+          background: $black;
+        }
+      }
+    }
+  }
+}

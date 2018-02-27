@@ -1,1 +1,15 @@
+secure.sh
+package-lock.json
+
+tmp
+build
 node_modules
+
+assets/images/video
+geonames/data
+
+source/tags/persons.yaml
+source/tags/regions.yaml
+source/tags/tags.yaml
+source/video/data.yaml
+source/tags/h.yaml

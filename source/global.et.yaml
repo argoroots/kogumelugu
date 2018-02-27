@@ -1,0 +1,70 @@
+menu:
+    -
+        title: Videoteek
+        path: /videoteek/
+    -
+        title: Teemad
+        path: /teemad/
+    -
+        title: Õppematerjalid
+        path: /oppematerjalid/
+    -
+        title: Tutvustus
+        path: '#introduction'
+    -
+        title: Tegijad
+        path: '#team'
+    -
+        title: Toeta
+        path: '#support'
+
+searchPath: /videoteek/
+
+texts:
+    video:
+        storyteller: Intervjueeritav
+        author: Intervjueerija/autor
+        storytellers: Intervjueeritavad
+        authors: Intervjueerijad/autorid
+        relatedVideos: Seotud lood
+    contact:
+        title: SA Eesti Mälu Instituut
+    mapTitle:
+        left: Lood ümber
+        right: maailma
+    education:
+        findOutMore: Loe lähemalt
+        materials: Õppematerjalid
+        history: Ajalooharidus
+        # historyText: |
+
+        humanRights: Inimõigusharidus
+        # humanRightsText: |
+
+    mailingList:
+        join: Liitu meie uudiskirjaga
+        yourEmail: Sisesta oma e-posti aadress
+        joinButton: Liitu uudiskirjaga
+    partners: Koostööpartnerid
+    financiers: Suurtoetajad
+    thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!
+    searchbox:
+        placeholder: Otsi…
+        findButton: Leia lugu
+    logolink: http://mnemosyne.ee/
+
+    topics:
+        title: Teemad
+        subtitles:
+            history:
+                label: Ajalugu
+                anchor: history
+            humanRights:
+                label: Inimõigused
+                anchor: humanrights
+            regions:
+                label: Regioonid
+                anchor: regions
+            persons:
+                label: Isikud
+                anchor: persons

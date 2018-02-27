@@ -1,0 +1,40 @@
+path: uchebnye-materialy
+title: Учебные материалы
+
+blocks:
+    -
+        text: |
+            ## Учебные материалы по истории
+            Не волнуйтесь! Материалы скоро появятся.
+        links:
+            -
+                title: Темы по истории
+                icon: fa-list
+                link: /ru/temy/#История
+                info:
+        curriculum:
+            title:
+            items:
+    -
+        text: |
+            ## Учебные материалы по правам человека
+            Материалы в разработке.
+        links:
+            -
+                title: Темы по правам человека
+                icon: fa-list
+                link: /ru/temy/#Права%20человека
+                info:
+        curriculum:
+            title:
+            items:
+                -
+                    title: Компас
+                    text: |
+                        Пособие по образованию в области прав человека с участием молодежи
+                    links:
+                        -
+                            title: Домашняя страница
+                            icon: fa-external-link
+                            link: https://www.coe.int/ru/web/compass
+                            info:

@@ -1,0 +1,94 @@
+path: oppematerjalid
+title: Õppematerjalid
+
+blocks:
+    -
+        text: |
+            ## Ajalooharidus
+
+        links:
+            -
+                title: Juhend õpetajale ja noorsootöötajale
+                icon: fa-download
+                link: /assets/materials/Juhendmaterjal_opetajale.pdf
+                info:
+            -
+                title: Ajaloo teemapuu
+                icon: fa-list
+                link: /teemad/#Ajalugu
+                info:
+        curriculum:
+            title:
+            items:
+                -
+                    title: NSVL ja kommunistlik süsteem – Eesti NSV
+                    text: |
+                        V kursus "Lähiajalugu II - Eesti ja maailm 20. sajandi teisel poolel
+                    links:
+                        -
+                            title: Tunnikava Karl Õiger
+                            icon: fa-download
+                            link: /assets/materials/Tunnikava_Karl_Õiger.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/karl-oiger-teekond
+                            title: Karl Õiger. Noore poisi põgenemisteekond Venemaalt Eestisse
+                            text: |
+                                Karl Õiger kirjeldab oma keerulist põgenemisteekonda Venemaalt kodumaale.
+                -
+                    title: Inimsusevastased kuriteod - küüditamised
+                    text: |
+                        IV kursus „Lähiajalugu I – Eesti ja maailm 20. sajandi esimesel poolel“
+                    links:
+                        -
+                            title: Tunnikava Jaak Ruus
+                            icon: fa-download
+                            link: /assets/materials/Tunnikava_Jaak_Ruus.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/jaak_ruus
+                            title: Jaak Ruus. Videolugu
+                            text: |
+
+    -
+        text: |
+            ## Inimõigusharidus
+
+        links:
+            -
+                title: Inimõiguste teemapuu
+                icon: fa-list
+                link: /teemad/#Inimõigused
+                info:
+        curriculum:
+            title:
+            items:
+                -
+                    title: Tunnikava
+                    text: |
+
+                    links:
+                        -
+                            title: Tunnikava Eva Brown
+                            icon: fa-download
+                            link: /assets/materials/Tunnikava_Eva_Brown.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/eva_brown_truumees
+                            title: Eva Brown. Eestlaseks olemise lugu
+                            text: |
+                                Eva Brown meenutab oma lapsepõlve Eestis, põgenemisteed Saksmaale ning sealt edasi Ühendriikidessesse.
+                                Samuti on kõnealusteks teemadeks kontaktid Eestiga, eestluse säilitamine ning küsimus eestlaseks olemisest.
+                -
+                    title: KOMPASS
+                    text: |
+                        Noorte inimõigushariduse käsiraamat
+                    links:
+                        -
+                            title: Kompassi koduleht
+                            icon: fa-external-link
+                            link: https://www.coe.int/et/web/compass
+                            info:

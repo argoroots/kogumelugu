@@ -1,0 +1,57 @@
+extends /_templates/layout.pug
+
+
+block script
+    script.
+        $(function () {
+            $('.accordion--item > a').click(function (e) {
+                e.preventDefault()
+                $(this).parent().toggleClass('u-open')
+            })
+        })
+
+
+block content
+    main.main.u-container
+        article.article
+            h1= self.title
+            .u-content
+                .u-content--split
+                    each b in self.blocks
+                        .u-content--block
+                            +markdown(b.text)
+                            ul.links
+                                each l in b.links
+                                    li
+                                        i.fa(class=l.icon)
+                                        a(href=l.link)
+                                            span= l.title
+                                            if l.info
+                                                small= l.info
+
+                            if b.curriculum
+                                h3= b.curriculum.title
+                                .accordion
+                                    if b.curriculum.items
+                                        each i in b.curriculum.items
+                                            .accordion--item
+                                                a(href='')= i.title
+                                                .accordion--content
+                                                    +markdown(i.text)
+                                                    if i.links
+                                                        ul.links
+                                                            each l in i.links
+                                                                li
+                                                                    i.fa(class=l.icon)
+                                                                    a(href=l.link)
+                                                                        span= l.title
+                                                                        if l.info
+                                                                            small= l.info
+                                                    if i.videos
+                                                        each v in i.videos
+                                                            a.video-teaser(href=getPath(v.path))
+                                                                img(src='/assets/images/' + v.path + '_tb.png', alt=v.title)
+                                                                .text
+                                                                    p.title
+                                                                        span= v.title
+                                                                    +markdown(v.text)

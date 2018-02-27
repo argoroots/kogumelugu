@@ -1,0 +1,235 @@
+data:
+#     coProducers: /data/coproducers.yaml
+#     partners: /data/partners.yaml
+#     producers: /data/producers.yaml
+#     sponsors: /data/sponsors.yaml
+#     supporters: /data/supporters.yaml
+#     team: /data/team.yaml
+    videos: /video/data.yaml
+
+texts:
+    video:
+        storyteller: Interviewee
+        author: Interviewer/Author
+        storytellers: Interviewee
+        authors: Interviewers/Authors
+        relatedVideos: Related videos
+    contact:
+        title: Estonian Institute of Historical Memory
+    mapTitle:
+        left: Stories around the
+        right: world
+    education:
+        findOutMore: Find out more
+        materials: Education Materials
+        history: History Education
+        # historyText: |
+
+        humanRights: Human Rights Education
+        # humanRightsText: |
+
+    culture:
+        title1: We all inherit
+        title2: our culture
+        div1: |
+            Each of us has a story and a role in other stories.
+            We are all children of our parents and residents of where we live.
+            We all inherit our cultural, regional and family heritage.
+            The Estonian story, our entire story, is made of different stories of the Estonian people.
+        div2: |
+            These stories do not provide a complete picture of the past,
+            but represent it through the lens of the speaker, which can be very different from our own.
+            Listening to these stories we experience life in different, perhaps unfamiliar ways.
+            Indeed, as individuals we are different, unique.
+            However, what we share deep inside us is common to all.
+        div3: |
+            Kogu Me Lugu (translates into Collect Our Story, We're Collecting The Story,
+            also Our Entire Story) is an online oral history portal.
+            We collect, preserve and share the family stories of Estonians from around the world in video format.
+            We focus on the memories of people who were repressed by the Soviet or Nazi regimes,
+            people who escaped Estonia during the occupations of said regimes or arrived in Estonia as a result of the occupations.
+            The collected memories are used for developing educational materials,
+            research and raising public awareness in Estonia and elsewhere.
+            Kogu Me Lugu was launched on 14 June 2013.
+        div4: |
+            Each story is unique, yet part of a larger story.
+            Each story is the Estonian story and also the story of mankind.
+    mailingList:
+        join: Join our mailing list
+        yourEmail: Enter your e-mail address
+        joinButton: Join mailing list
+    partners: Partners
+    financiers: Financiers
+    thanks4allTheFishAndSofa: Thanks to all friends and supporters!
+    contribution:
+        title1: Your donation counts,
+        title2: support our portal!
+        div1: |
+            Thanks to your financial support, more stories can be told and therefore the story of the Estonian community will be richer.
+            Your financial gift will also support the administration and development of the Kogu Me Lugu online platform.
+        div2: |
+            You can support Kogu Me Lugu through both single donations or standing order donations
+            to the account of the Estonian Institute of Historical Memory (SA Eesti Mälu Instituut).
+            For single donations please use the payment links below or make the donation to the bank account of the Institute.
+            Account details are available below.
+        div3: |
+            Your donation will be billed in euros.
+        div4: |
+            The Kogu Me Lugu portal does not collect personal information. The donation is made via Internet bank.
+            The data collected in this process will be treated as customer data and will not be provided to a third party.
+
+        amount: Insert amount
+        submit: Support
+        participate: Participate in the Republic of Estonia 100th Anniversary gift project or donate!
+        findOutMore: Find out more
+        accountDetails: Account Number
+        descriptionLabel: "Description:"
+        description: Toetan Kogu Me Lugu
+        checkboxlabel: I have read the donation terms
+    searchbox:
+        placeholder: Search…
+        findButton: Find Story
+    logolink: http://mnemosyne.ee/en/
+
+    topics:
+        title: Topics
+        subtitles:
+            history:
+                label: History
+                anchor: history
+            humanRights:
+                label: Human Rights
+                anchor: humanrights
+            regions:
+                label: Regions
+                anchor: regions
+            persons:
+                label: Persons
+                anchor: persons
+
+partners:
+    -
+        title: Black Ribbon Day Foundation
+        url: http://www.blackribbonday.org/
+    -
+        title: Eesti Vabariik 100
+        url: https://www.ev100.ee/en
+    -
+        title: Georg Eckert Institute
+        url: http://www.gei.de/en/the-institute.html
+    -
+        title: Naiskodukaitse
+        url: http://www.naiskodukaitse.ee/Introduction_1218
+    -
+        title: VEMU/Estonian Studies Center
+        url: http://vemu.ca/index.php/en/
+    -
+        title: Eva Sepping
+        url:
+    -
+        title: EUROCLIO
+        url: https://euroclio.eu/
+    -
+        title: Estonian Literary Museum
+        url: http://www.kirmus.ee/est/info/in-english/
+    -
+        title: Estonian National Museum
+        url: http://www.erm.ee/en
+    -
+        title: Entusiastid OÜ
+        url: https://www.entu.ee/
+    -
+        title: MTÜ Tulipisar
+        url: http://tulipisar.ee/
+    -
+        title: Museum of Occupations
+        url: http://www.okupatsioon.ee/index.php/et/
+    -
+        title: Ruudu Rahumaru
+        url: http://rahumaru.tumblr.com/
+    -
+        title: Tallinn University
+        url: https://www.tlu.ee/en
+    -
+        title: Baltic Heritage Network
+        url: https://www.balther.net/
+    -
+        title: Education Development Centre
+        url: http://www.iac.edu.lv/home-en/
+    -
+        title: Art Museum of Estonia
+        url: https://kunstimuuseum.ekm.ee/en/
+    -
+        title: Eesti Rahvusringhääling
+        url: http://news.err.ee/
+    -
+        title: Estonian Institute of Human Rights
+        url: http://www.humanrightsestonia.ee/en/
+    -
+        title: Cinema Artis
+        url: http://www.kino.ee/eng/
+    -
+        title: Rahvusarhiiv
+        url: http://www.ra.ee/en/
+    -
+        title: University of Tartu
+        url: https://www.ut.ee/en
+    -
+        title: Edward von Lõngus
+        url: https://www.facebook.com/EdwardvonL6ngus/
+    -
+        title: Williams College
+        url: https://www.williams.edu/
+    -
+        title: Zeitzeugen Büro
+        url: https://www.zeitzeugenbuero.de/index.php?id=websites
+
+sponsors:
+    -
+        title: Amalfi
+        picture:
+        url:
+    -
+        title: Estonian American National Council
+        picture: ERKY.png
+        url: http://www.estosite.org/
+    -
+        title: SANA
+        picture: SANA_Archimedes.png
+        url: http://noored.ee/
+    -
+        title: Estonian Relief Committee
+        picture: erc.png
+        url: http://www.estoreliefusa.org/news_eng.html
+    -
+        title: Stanford Libraries
+        picture: stanford_libraries.png
+        url: https://searchworks.stanford.edu/view/11838748
+    -
+        title: Embassy of the Federal Republic of Germany, Tallinn
+        picture: saksamaa_eng.png
+        url: http://www.tallinn.diplo.de/
+    -
+        title: Kistler-Ritso Sihtasutus
+        picture:
+        url:
+    -
+        title: Ministry of Education and Research
+        picture: HTM_eng.png
+        url: https://www.hm.ee/en
+    -
+        title: Ministry of Defence
+        picture: Kaitsemin_eng.png
+        url: http://www.kmin.ee/en
+    -
+        title: Ministry of Culture
+        picture: Kultuurimin_eng.png
+        url: http://www.kul.ee/en
+    -
+        title: Ministry of the Interior
+        picture: Sisemin_eng.png
+        url: https://www.siseministeerium.ee/en
+    -
+        title: Ministry of Justice
+        picture: justiitsmin_eng.png
+        url: https://www.just.ee/en

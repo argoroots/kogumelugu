@@ -1,0 +1,7 @@
+path: topics
+title: Topics
+data:
+    tags: tags.yaml
+    regions: regions.yaml
+    persons: persons.yaml
+    # hierarchical: h.yaml

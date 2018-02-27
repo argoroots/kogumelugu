@@ -1,27 +1,13 @@
 {
-  "private": true,
   "name": "kogumelugu",
-  "version": "1.0.1",
-  "description": "kogumelugu.ee",
-  "homepage": "https://github.com/argoroots/kogumelugu",
-  "author": {
-    "email": "argo@roots.ee",
-    "name": "Argo Roots"
+  "version": "2.0.0",
+  "description": "Kogu Me Lugu!",
+  "dependencies": {
+    "entu-ssg": "^4.1.3"
   },
-  "contributors": [
-    {
-      "email": "argo@roots.ee",
-      "name": "Argo Roots"
-    },
-    {
-      "email": "kaur.kirikall@gloch.eu",
-      "name": "Kaur Kirikall"
-    },
-    {
-      "email": "mihkel.putrinsh@gmail.com",
-      "name": "michelek"
-    }
-  ],
+  "scripts": {
+    "build": "./build.sh"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/argoroots/kogumelugu.git"
@@ -29,28 +15,5 @@
   "bugs": {
     "url": "https://github.com/argoroots/kogumelugu/issues"
   },
-  "scripts": {
-    "start": "node ./master.js"
-  },
-  "main": "worker.js",
-  "engines": {
-    "node": "6.x"
-  },
-  "dependencies": {
-    "async": "1.x",
-    "body-parser": "1.x",
-    "cluster": "0.x",
-    "cookie-parser": "1.x",
-    "express": "4.x",
-    "jade": "1.x",
-    "lodash": "4.x",
-    "marked": "0.x",
-    "newrelic": "1.x",
-    "object-path": "0.x",
-    "randomstring": "1.x",
-    "raven": "0.x",
-    "request": "2.x",
-    "sanitize-html": "1.x",
-    "vimeo": "1.x"
-  }
+  "homepage": "https://www.kogumelugu.ee"
 }
