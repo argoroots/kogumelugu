@@ -16,13 +16,14 @@ block content
         article.article
             h1= self.title
             .u-content
-                each l in self.links
-                    li
-                        i.fa(class=l.icon)
-                        a(href=l.link)
-                            span= l.title
-                            if l.info
-                                small= l.info
+                ul.links
+                    each l in self.links
+                        li
+                            i.fa(class=l.icon)
+                            a(href=l.link)
+                                span= l.title
+                                if l.info
+                                    small= l.info
                 .u-content--split
                     each b in self.blocks
                         .u-content--block
