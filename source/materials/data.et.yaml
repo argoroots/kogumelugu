@@ -1,17 +1,16 @@
 path: oppematerjalid
 title: Õppematerjalid
-
+    -
+        title: Juhend õpetajale ja noorsootöötajale
+        icon: fa-download
+        link: /assets/materials/Suulise_ajaloo_kasutamine_õppematerjalina_juhend_õpetajale_ja_noorsootöötajale.pdf
+        info:
 blocks:
     -
         text: |
             ## Ajalooharidus
 
         links:
-            -
-                title: Juhend õpetajale ja noorsootöötajale
-                icon: fa-download
-                link: /assets/materials/Juhendmaterjal_opetajale.pdf
-                info:
             -
                 title: Ajaloo teemapuu
                 icon: fa-list

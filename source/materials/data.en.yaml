@@ -1,17 +1,16 @@
 path: materials
 title: Learning Materials
-
+    -
+        title: Guide for Teachers and Youth Workers
+        icon: fa-download
+        link: /assets/materials/Oral_History_as_Learning_Material_Guide_for_teachers_and_youth_workers.pdf
+        info:
 blocks:
     -
         text: |
             ## History Education
 
         links:
-            -
-                title: For Teachers and Youth Workers
-                icon: fa-download
-                link: /assets/materials/Instructional_Material_for_Teachers.pdf
-                info:
             -
                 title: History Topics
                 icon: fa-list
