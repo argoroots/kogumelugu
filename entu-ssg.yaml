@@ -6,12 +6,13 @@ defaultLocale: et
 
 source: ./source
 build: ./build
-assets: ./assets
 
+cleanup: true
 protectedFromCleanup:
-    - .git
-    - assets
     - index.html
+    - en/index.html
+    - ru/index.html
+    - assets
 
 server:
     port: 4000

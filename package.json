@@ -2,6 +2,7 @@
   "name": "kogumelugu",
   "version": "2.0.0",
   "description": "Kogu Me Lugu!",
+  "private": true,
   "dependencies": {
     "entu-ssg": "^4.1.3"
   },

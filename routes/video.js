@@ -120,15 +120,15 @@ router.get('/json', function(req, res, next) {
 
             var video = videos[i]
 
-            var subjects = splitFormulaValues(video.get('subjectFullname-et.value', '') + ';' + video.get('subjectFullname-en.value', '') + ';' + video.get('subjectFullname-ru.value', ''))
-            var regions = splitFormulaValues(video.get('regionFullname.value', ''))
-            var generations = splitFormulaValues(video.get('storytellerBirthYear.value', ''))
+            var subjects = splitFormulaValues(video.get('subject_fullname_et.value', '') + ';' + video.get('subject_fullname_en.value', '') + ';' + video.get('subject_fullname_ru.value', ''))
+            var regions = splitFormulaValues(video.get('region_fullname.value', ''))
+            var generations = splitFormulaValues(video.get('storyteller_birth_year.value', ''))
 
             results.push({
                 id: video.get('_id'),
                 name: video.get('storyteller.0.value', ''),
                 info: video.get('title-' + res.locals.lang + '.value', ''),
-                video: video.get('videoUrl.value'),
+                video: video.get('video_url.value'),
                 generations: generations,
                 regions: regions,
                 subjects: subjects,

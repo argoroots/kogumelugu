@@ -98,9 +98,9 @@ block content
         .content
             article.article
                 .u-content
-                    if self.videoUrl
+                    if self.video_url
                         .video-wrapper
-                            #video(data-vimeo-id='https://player.vimeo.com/video/' + self.videoUrl)
+                            #video(data-vimeo-id='https://player.vimeo.com/video/' + self.video_url)
                     h1= self['title_' + self.locale]
                     if self['subtitle_' + self.locale]
                         p
