@@ -65,7 +65,7 @@ export TAG_DATA_YAML=${SOURCE_DIR}/tags/tags.yaml
 export REGION_DATA_YAML=${SOURCE_DIR}/tags/regions.yaml
 export PERSON_DATA_YAML=${SOURCE_DIR}/tags/persons.yaml
 export HIERARCHY_DATA_YAML=${TMP_DIR}/h.yaml
-node ./compile_video_data2.js
+node ./build_scripts/compile_video_data2.js
 
 
 echo
@@ -77,7 +77,7 @@ echo
 echo --------- PICTURES
 export PICTURES_YAML=${SOURCE_DIR}/video/data.yaml
 export PICTURES_DIR=${BUILD_DIR}/assets/images
-node ./fetch_pictures.js
+node ./build_scripts/fetch_pictures.js
 
 
 echo

@@ -5,7 +5,7 @@ build
 node_modules
 
 assets/images/video
-geonames/data
+build_scripts/geonames/data
 
 source/tags/persons.yaml
 source/tags/regions.yaml
