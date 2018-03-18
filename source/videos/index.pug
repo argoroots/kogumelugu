@@ -13,36 +13,54 @@ block vars
             }
         }
 
+        const splitStr = (s) => {
+            if (!s) {
+                return []
+            } else if (Array.isArray(s)) {
+                return s.join(' ').toLowerCase().split(' ')
+            } else {
+                return s.toLowerCase().split(' ')
+            }
+        }
+
 
 block script
     script.
         $(function () {
-            var urlParam = function(name){
+            $('input[name="q"]').focus()
+
+            var urlParam = function (name) {
                 var results = new RegExp('[\?&]' + name + '=([^]*)').exec(window.location.href)
-                if (results==null) {
+                if (results === null) {
                    return null
                 } else {
-                   return results[1] || 0
+                   return results[1] || ''
                 }
             }
 
             var id = urlParam('id')
             var q = urlParam('q')
 
-            if (q || id) {
-                $('article.videos--item').hide()
-            }
-
             if (id) {
-                $('.filter-item[data-id="' + id.toLowerCase() + '"]').parent().show()
+                $('article.videos--item').hide()
+                $('article.videos--item[data-id*=";' + id.trim().toLowerCase() + ';"]').show()
             }
 
             if (q) {
-                q = decodeURIComponent(q).replace( /\+/g, ' ' )
+                $('article.videos--item').show()
+
+                q = decodeURIComponent(q).replace(/\+/g, ' ').trim()
+
+                $('input[name="q"]').val(q)
+
                 qArray = q.split(' ')
 
                 for (var i = 0; i < qArray.length; i++) {
-                    $('.filter-item[data-q*="' + qArray[i].toLowerCase() + '"]').parent().show()
+                    $('article.videos--item').each(function () {
+                        if (!$(this).data('q').includes(';' + qArray[i].toLowerCase() + ';')) {
+                            $(this).hide()
+                        }
+                    })
                 }
 
                 $('input[name="q"]').val(q)
@@ -57,38 +75,30 @@ block content
     main.main.u-container
         .videos
             each v in self.data.videos
-                article.videos--item(style='background-image:url(/assets/images/' + v.path + '_tb.png)')
+                -
+                    var q = []
+                    q = q.concat(splitStr(v['title_' + self.locale]))
+                    q = q.concat(splitStr(v['subtitle_' + self.locale]))
+                    q = q.concat(splitStr(v['description_' + self.locale]))
+                    q = q.concat(getList(v.tag).map(a => splitStr(a['name_' + self.locale])))
+                    q = q.concat(getList(v._tags).map(a => splitStr(a['name_' + self.locale])))
+                    q = q.concat(getList(v._regions).map(a => splitStr(a['name_' + self.locale])))
+                    q = q.concat(getList(v.regions).map(a => splitStr(a['name_' + self.locale])))
+                    q = q.filter(x => q.indexOf(x) !== -1)
+
+                    var id = []
+                    id = id.concat(getList(v.tag).map(a => a._id))
+                    id = id.concat(getList(v._persons).map(a => a._id))
+                    id = id.concat(getList(v._tags).map(a => a._id))
+                    id = id.concat(getList(v._regions).map(a => a._id))
+                    id = id.concat(getList(v.regions).map(a => a._id))
+                    id = id.concat(getList(v.author).map(a => a._id))
+                    id = id.concat(getList(v.storyteller).map(a => a._id))
+                    id = id.filter(x => x && id.indexOf(x) !== -1)
+
+                article.videos--item(style='background-image:url(/assets/images/' + v.path + '_tb.png)', data-q=';' + q.join(';') + ';', data-id=';' + id.join(';') + ';')
                     a(href=getPath(v.path))
                         .text
                             h2
                                 span= v['title_' + self.locale]
                             p= v['subtitle_' + self.locale]
-
-                    .filter-item.hidden(data-q=('' + v['title_' + self.locale]).toLowerCase())
-                    .filter-item.hidden(data-q=('' + v['subtitle_' + self.locale]).toLowerCase())
-                    .filter-item.hidden(data-q=('' + v['description_' + self.locale]).toLowerCase())
-
-                    each t in getList(v.tag)
-                        .filter-item.hidden(data-q=('' + t['name_' + self.locale]).toLowerCase())
-                        .filter-item.hidden(data-id=t._id)
-
-                    each t in getList(v._persons)
-                        .filter-item.hidden(data-id=t._id)
-
-                    each t in getList(v._tags)
-                        .filter-item.hidden(data-q=('' + t['name_' + self.locale]).toLowerCase())
-                        .filter-item.hidden(data-id=t._id)
-
-                    each t in getList(v._regions)
-                        .filter-item.hidden(data-q=('' + t['name_' + self.locale]).toLowerCase())
-                        .filter-item.hidden(data-id=t._id)
-
-                    each r in getList(v.regions)
-                        .filter-item.hidden(data-q=('' + r['name_' + self.locale]).toLowerCase())
-                        .filter-item.hidden(data-id=r._id)
-
-                    each a in getList(v.author)
-                        .filter-item.hidden(data-id=a._id)
-
-                    each s in getList(v.storyteller)
-                        .filter-item.hidden(data-id=s._id)
