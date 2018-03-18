@@ -9,7 +9,7 @@ export TMP_DIR=./tmp
 
 
 echo
-echo --------- SETUP
+echo --------- PREFETCH
 
 rm -rf ${BUILD_DIR}
 mkdir -p ${BUILD_DIR}/assets
@@ -78,9 +78,6 @@ echo --------- PICTURES
 export PICTURES_YAML=${SOURCE_DIR}/video/data.yaml
 export PICTURES_DIR=${BUILD_DIR}/assets/images
 node ./fetch_pictures.js
-
-
-rm -rf ${TMP_DIR}
 
 
 echo
