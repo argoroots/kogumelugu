@@ -66,15 +66,26 @@ block vars
 block script
     script.
         $(function () {
-            $('.tabs--link').click(function () {
-                var id = $(this).attr('href')
+            $('.tabs--link').click(function (e) {
+                e.preventDefault()
+
+                var hash = $(this).attr('href')
+                history.pushState(null, document.title, hash)
+
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href').split('#')[0] + hash)
+                })
+
+                var id = '#tab-' + hash.toLowerCase().replace('#', '')
                 $('.tabs--link').not(this).removeClass('u-active')
                 $('.tabs--item').not(id).removeClass('u-open')
                 $(this).addClass('u-active')
                 $(id).addClass('u-open')
             })
 
-            $('.tabs--link[href="' + (window.location.hash || $('.tabs--link:first').attr('href')) + '"]').click()
+            $(window).on('hashchange', function() {
+                $('.tabs--link[href="' + (window.location.hash || $('.tabs--link:first').attr('href')) + '"]').click()
+            }).trigger('hashchange')
         })
 
 
@@ -86,13 +97,13 @@ block content
             h1= self.texts.topics.title
             .tabs
                 each t in tags.filter((a) => a._parent.length === 0)
-                    a.tabs--link.u-active(href='#'+t['name_' + self.locale])= t['name_' + self.locale]
+                    a.tabs--link.u-active(href='#'+t._id)= t['name_' + self.locale]
 
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.regions.anchor)= self.texts.topics.subtitles.regions.label
                 a.tabs--link.u-active(href='#'+self.texts.topics.subtitles.persons.anchor)= self.texts.topics.subtitles.persons.label
 
                 each ht in tags.filter((a) => a._parent.length === 0)
-                    .tabs--item.u-open(id=ht['name_' + self.locale])
+                    .tabs--item.u-open(id='tab-' + ht._id)
                         .tags
                             h2= ht['name_' + self.locale]
 
@@ -117,7 +128,7 @@ block content
                                                                                     li
                                                                                         a(class=getColor(2), href=self.searchPath + '?id=' + ht4._id)= ht4['name_' + self.locale]
 
-                #regions.tabs--item
+                #tab-regions.tabs--item
                     .tags
                         h2= self.texts.topics.subtitles.regions.label
                         ul.tags--list
@@ -143,7 +154,7 @@ block content
                                                                                 li
                                                                                     a(class=getColor(3), href=self.searchPath + '?id=' + hr4._id)= hr4.title
 
-                #persons.tabs--item
+                #tab-persons.tabs--item
                     .tags
                         h2= self.texts.topics.subtitles.persons.label
                         ul.tags--list

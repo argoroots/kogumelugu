@@ -10,13 +10,13 @@ menu:
         path: /oppematerjalid/
     -
         title: Tutvustus
-        path: '#introduction'
+        path: /#introduction
     -
         title: Tegijad
-        path: '#team'
+        path: /#team
     -
         title: Toeta
-        path: '#support'
+        path: /#support
 
 searchPath: /videoteek/
 

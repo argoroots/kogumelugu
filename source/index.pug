@@ -52,6 +52,8 @@ block script
 
             $('.main-menu a[href*="#"]').click(function (event) {
                 var hash = this.hash
+                history.pushState(null, document.title, '/' + hash)
+
                 $('nav.lang-menu a').each(function () {
                     $(this).attr('href', $(this).attr('href').split('#')[0] + hash)
                 })
