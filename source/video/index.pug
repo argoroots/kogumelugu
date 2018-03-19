@@ -138,7 +138,7 @@ block content
             section.videos--related
                 h2= self.texts.video.relatedVideos
                 each related_video in self._related_videos
-                    article.videos--item(style='background-image:url(/assets/images/' + related_video.path + '_tb.png)')
+                    article.videos--item(style='background-image:url(/assets/images/' + related_video.path + '.jpg)')
                         a(href=getPath(related_video.path))
                             .text
                                 h3

@@ -83,7 +83,7 @@ block script
                 $(id).addClass('u-open')
             })
 
-            $(window).on('hashchange', function() {
+            $(window).on('hashchange', function () {
                 $('.tabs--link[href="' + (window.location.hash || $('.tabs--link:first').attr('href')) + '"]').click()
             }).trigger('hashchange')
         })

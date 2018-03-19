@@ -90,7 +90,7 @@ block content
                         data-lat=r.lat,
                         data-lng=r.lng,
                         data-path=getPath(v.path) + (r.time ? '#' + r.time : ''),
-                        data-img='/assets/images/' + v.path + '_tb.png',
+                        data-img='/assets/images/' + v.path + '.jpg',
                         data-title=v['title_' + self.locale],
                         data-subtitle=v['subtitle_' + self.locale] + (r.time ? '<br>' + r.time : '')
                     )
@@ -103,7 +103,7 @@ block content
                     p= videos[0]['subtitle_' + self.locale]
             .posts-list
                 each v in videos.slice(1, 5)
-                    a(href=getPath(v.path), style='background-image:url(/assets/images/' + v.path + '_tb.png)')
+                    a(href=getPath(v.path), style='background-image:url(/assets/images/' + v.path + '.jpg)')
                         h3= v['title_' + self.locale]
                         p= v['subtitle_' + self.locale]
 

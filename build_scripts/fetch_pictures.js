@@ -89,28 +89,3 @@ async.eachLimit(videos, 5, (video, callback) => {
         return
     }
 })
-// Thumbs
-async.eachLimit(videos, 5, (video, callback) => {
-    if (video.path === undefined) {
-        return callback()
-    }
-    if (video.thumb === undefined) {
-        return callback()
-    }
-    const videoPath = path.join(PICTURES_DIR, video.path + '_tb.png')
-
-    if (video.thumb._id === undefined) {
-        console.log(require('util').inspect(video, { depth: null }));
-    }
-    console.log(video.thumb._id, videoPath)
-    fs.ensureDir(path.dirname(videoPath))
-    .then(() => download(video.thumb._id, videoPath, callback))
-}, function (err){
-    if( err ) {
-        console.log('A file failed to process')
-        return
-    } else {
-        console.log('All thumbs have been processed successfully')
-        return
-    }
-})

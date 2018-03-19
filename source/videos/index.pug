@@ -74,6 +74,16 @@ block script
                     $(this).attr('href', $(this).attr('href').split('?')[0] + '?q=' + q)
                 })
             }
+
+            $(window).scroll(function () {
+                console.log('aaa')
+                $('article.videos--item.no-image').each(function () {
+                    if ($(this).is(':visible') && $(this).offset().top < ($(window).scrollTop() + $(window).height() + 100) ) {
+                        $(this).css('background-image', 'url(' + $(this).data('image') + ')')
+                        $(this).removeClass('no-image')
+                    }
+                })
+            }).trigger('scroll')
         })
 
 
@@ -104,7 +114,7 @@ block content
                     id = id.concat(getList(v.storyteller).map(a => a._id))
                     id = id.filter(x => x && id.indexOf(x) !== -1)
 
-                article.videos--item(style='background-image:url(/assets/images/' + v.path + '_tb.png)', data-q=';' + q.join(';') + ';', data-id=';' + id.join(';') + ';')
+                article.videos--item.no-image(data-image='/assets/images/' + v.path + '.jpg', data-q=';' + q.join(';') + ';', data-id=';' + id.join(';') + ';')
                     a(href=getPath(v.path))
                         .text
                             h2
