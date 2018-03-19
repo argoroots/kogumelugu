@@ -114,7 +114,7 @@ block content
                     id = id.concat(getList(v.storyteller).map(a => a._id))
                     id = id.filter(x => x && id.indexOf(x) !== -1)
 
-                article.videos--item.no-image(data-image='/assets/images/' + v.path + '.jpg', data-q=';' + q.join(';') + ';', data-id=';' + id.join(';') + ';')
+                article.videos--item.no-image(data-image='/assets/images/' + v.path + '_small.jpg', data-q=';' + q.join(';') + ';', data-id=';' + id.join(';') + ';')
                     a(href=getPath(v.path))
                         .text
                             h2
