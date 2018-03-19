@@ -103,7 +103,7 @@ block content
                     p= videos[0]['subtitle_' + self.locale]
             .posts-list
                 each v in videos.slice(1, 5)
-                    a(href=getPath(v.path), style='background-image:url(/assets/images/' + v.path + '.jpg)')
+                    a(href=getPath(v.path), style='background-image:url(/assets/images/' + v.path + '_small.jpg)')
                         h3= v['title_' + self.locale]
                         p= v['subtitle_' + self.locale]
 

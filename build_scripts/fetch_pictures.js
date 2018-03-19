@@ -64,12 +64,15 @@ const download = (id, filename, callback) => {
 
 const videos = yaml.safeLoad(fs.readFileSync(PICTURES_YAML, 'utf8'))
 
-// Originals
+// Originals (for featured videos)
 async.eachLimit(videos, 5, (video, callback) => {
     if (video.path === undefined) {
         return callback()
     }
     if (video.photo === undefined) {
+        return callback()
+    }
+    if (video.featured !== true) {
         return callback()
     }
     const videoPath = path.join(PICTURES_DIR, video.path + '.jpg')
