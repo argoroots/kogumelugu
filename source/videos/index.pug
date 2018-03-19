@@ -44,6 +44,10 @@ block script
             if (id) {
                 $('article.videos--item').hide()
                 $('article.videos--item[data-id*=";' + id.trim().toLowerCase() + ';"]').show()
+
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href').split('?')[0] + '?id=' + id)
+                })
             }
 
             if (q) {
@@ -65,6 +69,10 @@ block script
 
                 $('input[name="q"]').val(q)
                 $('input[name="q"]').focus()
+
+                $('nav.lang-menu a').each(function () {
+                    $(this).attr('href', $(this).attr('href').split('?')[0] + '?q=' + q)
+                })
             }
         })
 
