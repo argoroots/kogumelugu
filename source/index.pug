@@ -175,20 +175,7 @@ block content
                         p= self.texts.contribution.div3
                         p= self.texts.contribution.div4
 
-                        form.donation-form(action='https://payment.maksekeskus.ee/pay/1/link.html)
-                            .input
-                                input(type='hidden', name='shopId', value='8d909056-8098-466a-96c7-df8145cdddbc')
-                                input(type='hidden', name='amount', value='10')
-                                input(type='hidden', name='paymentId', value='123')
-                                input(type='hidden', name='locale', value='et')
-                                input(type='hidden', name='country', value='ee')
-                                input(type='hidden', name='donate', value='true')
-                                input(type='submit', value='10€')
-                            button.btn.btn--primary(type='submit')= self.texts.contribution.submit
-                        .form-check
-                            label.form-check-label
-                                input.form-check-input(type='checkbox')
-                                = ' ' + self.texts.contribution.checkboxlabel
+                        form.donation-form(action="https://payment.maksekeskus.ee/pay/1/link.html"><input type="hidden" name="shopId" value="8d909056-8098-466a-96c7-df8145cdddbc"><input type="hidden" name="amount" value="10"><input type="hidden" name="paymentId" value="123"><input type="hidden" name="locale" value="et"><input type="hidden" name="country" value="ee"><input type="hidden" name="donate" value="true"><input type="submit" value="10€")
                 aside.donate--side
                     .box
                             img(src='/assets/images/EV100.png', alt='EV100', width='136')
