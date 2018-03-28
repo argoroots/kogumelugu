@@ -56,8 +56,9 @@ texts:
             Each story is the Estonian story and also the story of mankind.
     mailingList:
         join: Join our mailing list
-        yourEmail: Enter your e-mail address
-        joinButton: Join mailing list
+        div1: |
+            Would you love to know more about our activities and plans?
+            Write us: info@kogumelugu.ee
     partners: Partners
     financiers: Financiers
     thanks4allTheFishAndSofa: Thanks to all friends and supporters!

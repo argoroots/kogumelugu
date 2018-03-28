@@ -57,8 +57,9 @@ texts:
             Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
     mailingList:
         join: Liitu meie uudiskirjaga
-        yourEmail: Sisesta oma e-posti aadress
-        joinButton: Liitu uudiskirjaga
+        div1: |
+            Sooviksid rohkem infot meie tegevuste ja plaanide kohta?
+            Kirjuta meile: info@kogumelugu.ee
     partners: Koostööpartnerid
     financiers: Suurtoetajad
     thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!
