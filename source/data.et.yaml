@@ -56,10 +56,9 @@ texts:
             Iga lugu on omapärane, samas osa suuremast loost.
             Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
     mailingList:
-        join: Liitu meie uudiskirjaga
+        join: Ootame Sinu küsimusi-ettepanekuid: info@kogumelugu.ee
         div1: |
-            Sooviksid rohkem infot meie tegevuste ja plaanide kohta?
-            Kirjuta meile: info@kogumelugu.ee
+
     partners: Koostööpartnerid
     financiers: Suurtoetajad
     thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!
@@ -201,7 +200,7 @@ sponsors:
     -
         title: Erasmus +
         picture: Erasmus.png
-        url: https://ec.europa.eu/programmes/erasmus-plus/node_et        
+        url: https://ec.europa.eu/programmes/erasmus-plus/node_et
     -
         title: Eesti Abistamiskomitee USA's
         picture: erc.png
