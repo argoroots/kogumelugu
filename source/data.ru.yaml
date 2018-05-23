@@ -55,8 +55,9 @@ texts:
             История каждого человека уникальна,
             но в тоже время каждая из них является частью истории Эстонии и всего человечества.
     mailingList:
-        join: Ждём Ваши вопросы и идеи: info@kogumelugu.ee
-        div1:
+        join: info@kogumelugu.ee
+        div1: |
+            Мы ждём Ваши вопросы и идеи!
     partners: Партнеры
     financiers: Спонсоры
     thanks4allTheFishAndSofa: Благодарим всех друзей и спонсоров!

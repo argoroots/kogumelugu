@@ -56,8 +56,9 @@ texts:
             Iga lugu on omapärane, samas osa suuremast loost.
             Iga lugu on Eesti lugu ja ühtlasi kogu inimkonna lugu.
     mailingList:
-        join: Ootame Sinu küsimusi-ettepanekuid: info@kogumelugu.ee
-        div1:
+        join: info@kogumelugu.ee
+        div1: |
+            Ootame Sinu küsimusi ja ettepanekuid!
     partners: Koostööpartnerid
     financiers: Suurtoetajad
     thanks4allTheFishAndSofa: Täname kõiki kaasamõtlejaid, -tegijaid ja hooandjaid!

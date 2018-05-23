@@ -55,8 +55,9 @@ texts:
             Each story is unique, yet part of a larger story.
             Each story is the Estonian story and also the story of mankind.
     mailingList:
-        join: Send us Your questions and ideas: info@kogumelugu.ee
-        div1:
+        join: info@kogumelugu.ee
+        div1: |
+            We are interested in Your questions and ideas!
     partners: Partners
     financiers: Financiers
     thanks4allTheFishAndSofa: Thanks to all friends and supporters!
