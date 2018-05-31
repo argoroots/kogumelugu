@@ -66,21 +66,22 @@ texts:
         title1: Sinu panus loeb,
         title2: toeta portaali!
         div1: |
+            TOETAMISTINGIMUSED
+        div2: |
             Tänu Sinu rahalisele panusele on meil võimalik salvestada lugusid, mis rikastavad ja elavdavad Eesti kogukonda.
             Samuti on Sinu rahaline toetus abiks Kogu Me Lugu portaali haldamisel ja arendamisel.
-        div2: |
-            Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituut kontole.
-            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituudi pangakontole.
-            Konto andmed on nähtaval allpool.
         div3: |
-            Teie annetus arveldatakse eurodes.
+            Kogu Me Lugu on võimalik toetada nii ühekordse maksega kui püsikorraldusega Sihtasutuse Eesti Mälu Instituudi kontole.
+            Ühekordse makse puhul kasuta allolevat makselinki või ülekannet SA Eesti Mälu Instituudi pangakontole.
         div4: |
+            Sinu toetus arveldatakse eurodes.
+            Kui Sina soovid oma annetust tagasi saada või Sinul tekib muid küsimusi, palun võta meiega ühendust info@kogumelugu.ee
+        div5: |
             Kogu Me Lugu portaal ei kogu isikuandmeid. Annetamine toimub internetipanga vahendusel.
             Selle käigus kogutud andmeid käsitletakse kliendiandmetena, mida ei anta kolmandale osapoolele.
-
         amount: Sisesta summa
         submit: Toetan
-        checkboxlabel: Olen tutvunud annetamise tingimustega
+        checkboxlabel: Olen tutvunud toetamistingimustega
         participate: Löö kaasa Kogu Me Lugu Eesti Vabariik 100 kingiprojektis või toeta meid rahaliselt!
         findOutMore: Loe lähemalt
         accountDetails: Pangakonto andmed

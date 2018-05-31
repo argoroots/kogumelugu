@@ -65,19 +65,21 @@ texts:
         title1: Your donation counts,
         title2: support our portal!
         div1: |
+            DONATION TERMS
+        div2: |
             Thanks to your financial support, more stories can be told and therefore the story of the Estonian community will be richer.
             Your financial gift will also support the administration and development of the Kogu Me Lugu online platform.
-        div2: |
+        div3: |
             You can support Kogu Me Lugu through both single donations or standing order donations
             to the account of the Estonian Institute of Historical Memory (SA Eesti Mälu Instituut).
             For single donations please use the payment links below or make the donation to the bank account of the Institute.
             Account details are available below.
-        div3: |
-            Your donation will be billed in euros.
         div4: |
+            Your donation will be billed in euros.
+            If You want to get a refund of Your donation or You have any other questions, please contact us info@kogumelugu.ee
+        div5: |
             The Kogu Me Lugu portal does not collect personal information. The donation is made via Internet bank.
             The data collected in this process will be treated as customer data and will not be provided to a third party.
-
         amount: Insert amount
         submit: Support
         participate: Participate in the Republic of Estonia 100th Anniversary gift project or donate!
