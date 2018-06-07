@@ -176,16 +176,12 @@ block content
                         p= self.texts.contribution.div4
                         p= self.texts.contribution.div5
 
-                        form.donation-form(action='https://payment.maksekeskus.ee/pay/1/link.html?shopId=8d909056-8098-466a-96c7-df8145cdddbc&paymentId=annetus&locale=et&country=ee')
+                        form.donation-form(action='https://igw-demo.every-pay.com/lp/gtm2i8')
                             .input
                                 label(for='sum')= self.texts.contribution.amount
                                 input(type='number', id='amount', name='amount')
                                 span €
                             button.btn.btn--primary(type='submit')= self.texts.contribution.submit
-                        .form-check
-                            label.form-check-label
-                                input.form-check-input(type='checkbox')
-                                = ' ' + self.texts.contribution.checkboxlabel
                 aside.donate--side
                     .box
                             img(src='/assets/images/EV100.png', alt='EV100', width='136')
