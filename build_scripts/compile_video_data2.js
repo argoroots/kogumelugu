@@ -295,6 +295,7 @@ async.waterfall([
             async.each(videos, (video, callback) => {
                 if (video.storyteller) {
                     video.storyteller.forEach((_id) => {
+                        if (!persons[_id]) { return }
                         video._persons.push({
                             _id: _id,
                             forename_et: persons[_id].forename_et || '',
@@ -316,6 +317,7 @@ async.waterfall([
                 }
                 if (video.author) {
                     video.author.forEach((_id) => {
+                        if (!persons[_id]) { return }
                         video._persons.push({
                             _id: _id,
                             forename_et: persons[_id].forename_et || '',
