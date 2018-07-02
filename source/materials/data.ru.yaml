@@ -2,16 +2,15 @@ path: uchebnye-materialy
 title: Учебные материалы
 links:
     -
-        title: Руководство для учителя и молодежного работника (EN)
+        title: Руководство для учителей и специалистов по работе с молодежью
         icon: fa-download
-        link: /assets/materials/Oral_History_as_Learning_Material_Guide_for_teachers_and_youth_workers.pdf
+        link: /assets/materials/Руководство_для_учителей_и_специалистов_по_работе_с_молодежью.pdf
         info:
-
 blocks:
     -
         text: |
             ## Учебные материалы по истории
-            Не волнуйтесь! Материалы скоро появятся.
+
         links:
             -
                 title: Темы по истории
@@ -21,6 +20,21 @@ blocks:
         curriculum:
             title:
             items:
+                -
+                    title: СССР и коммунистическая система – Эстонская ССР
+                    text: |
+                        V курс, «Новейшая история II – Эстония и мир во второй половине 20-го века»
+                    links:
+                        -
+                            title: План урока Карл Ыйгер
+                            icon: fa-download
+                            link: /assets/materials/План_урока_Карл_Ыйгер.pdf
+                            info:
+                    videos:
+                        -
+                            path: video/story/karl-oiger-teekond
+                            title: Karl Õiger. Video Story
+                            text: |
     -
         text: |
             ## Учебные материалы по правам человека
