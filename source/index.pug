@@ -177,10 +177,6 @@ block content
                         p= self.texts.contribution.div5
 
                         form.donation-form(action='https://igw-demo.every-pay.com/lp/gtm2i8')
-                            .input
-                                label(for='sum')= self.texts.contribution.amount
-                                input(type='number', id='amount', name='amount')
-                                span €
                             button.btn.btn--primary(type='submit')= self.texts.contribution.submit
                         .form-check
                             label.form-check-label
