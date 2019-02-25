@@ -87,6 +87,7 @@ texts:
         accountDetails: Account Number
         descriptionLabel: "Description:"
         description: Toetan Kogu Me Lugu
+        everypay: https://pay.every-pay.eu/lp/z4w2ek
         checkboxlabel: I have read the donation terms
     searchbox:
         placeholder: Search…
