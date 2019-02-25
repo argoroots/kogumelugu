@@ -87,6 +87,7 @@ texts:
         accountDetails: Pangakonto andmed
         descriptionLabel: "Selgitus:"
         description: Toetan Kogu Me Lugu
+        everypay: https://pay.every-pay.eu/lp/z4w2ek
     searchbox:
         placeholder: Otsi…
         findButton: Leia lugu

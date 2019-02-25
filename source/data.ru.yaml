@@ -86,6 +86,7 @@ texts:
         accountDetails: Номер счета
         descriptionLabel: "Пояснение:"
         description: Toetan Kogu Me Lugu
+        everypay: https://pay.every-pay.eu/lp/vvizos
         checkboxlabel: Я прочитал условия пожертвования
     searchbox:
         placeholder: Поиск…
