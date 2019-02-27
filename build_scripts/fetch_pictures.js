@@ -30,7 +30,7 @@ const PICTURES_DIR = process.env.PICTURES_DIR
 
 const download = (id, filename, callback) => {
     request({
-        url: 'https://api.entu.ee/auth',
+        url: 'https://api.entu.app/auth',
         method: 'GET',
         json: true,
         'auth': {
@@ -44,7 +44,7 @@ const download = (id, filename, callback) => {
         let token = _.get(body, [ENTU_DB, 'token'], '')
 
         let options = {
-            url: 'https://api.entu.ee/property/' + id + '?download',
+            url: 'https://api.entu.app/property/' + id + '?download',
             method: 'GET',
             auth: { 'bearer': token }
         }
